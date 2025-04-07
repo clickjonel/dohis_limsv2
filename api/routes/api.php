@@ -1,0 +1,89 @@
+<?php
+
+use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DeliveryController;
+use App\Http\Controllers\FundSourceController;
+use App\Http\Controllers\MeasurementController;
+use App\Http\Controllers\OfficeController;
+use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\StockCardCategoryController;
+use App\Http\Controllers\StockCardController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\WarehouseController;
+use App\Models\Delivery;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+
+Route::get('/user', function (Request $request) {
+    return $request->user();
+})->middleware('auth:sanctum');
+
+Route::get('/sanctum/csrf-cookie', function () {
+    return response()->json(['message' => 'CSRF cookie set']);
+});
+
+// Authentication Routes
+Route::post('/login',[AuthenticationController::class,'login']);
+Route::post('/logout',[AuthenticationController::class,'logout'])->middleware('auth:sanctum');
+
+// Warehouse Routes
+Route::get('/warehouse/list',[WarehouseController::class,'list'])->middleware('auth:sanctum');
+
+// Measurement Routes
+Route::get('/measurement/list',[MeasurementController::class,'list'])->middleware('auth:sanctum');
+Route::get('/measurement/selection',[MeasurementController::class,'measurementSelectionList'])->middleware('auth:sanctum');
+
+// Fund Source Routes
+Route::get('/fund_source/list',[FundSourceController::class,'list'])->middleware('auth:sanctum');
+
+// Office Routes
+Route::get('/office/list',[OfficeController::class,'list'])->middleware('auth:sanctum');
+
+// Stock Card Category Routes
+Route::get('/stock_card_category/list',[StockCardCategoryController::class,'list'])->middleware('auth:sanctum');
+
+// Delivery Routes
+Route::post('/delivery/create',[DeliveryController::class,'create'])->middleware('auth:sanctum');
+Route::post('/delivery/update',[DeliveryController::class,'update'])->middleware('auth:sanctum');
+Route::post('/delivery/validate/items',[DeliveryController::class,'validateDeliveryItems'])->middleware('auth:sanctum');
+Route::get('/delivery/list',[DeliveryController::class,'list'])->middleware('auth:sanctum');
+// Route::get('/delivery/generate/iar',[DeliveryController::class,'generateDeliveryIAR'])->middleware('auth:sanctum');
+Route::get('/delivery/find',[DeliveryController::class,'fetchDelivery'])->middleware('auth:sanctum');
+Route::get('/delivery/generate/iar',[DeliveryController::class,'fetchIARGenerationDetails'])->middleware('auth:sanctum');
+
+Route::post('/delivery/create/invoice',[DeliveryController::class,'saveInvoice'])->middleware('auth:sanctum');
+Route::post('/delivery/update/invoice',[DeliveryController::class,'updateInvoice'])->middleware('auth:sanctum');
+Route::delete('/delivery/delete/invoice',[DeliveryController::class,'deleteInvoice'])->middleware('auth:sanctum');
+
+Route::post('/delivery/create/receipt',[DeliveryController::class,'saveReceipt'])->middleware('auth:sanctum');
+Route::post('/delivery/update/receipt',[DeliveryController::class,'updateReceipt'])->middleware('auth:sanctum');
+Route::delete('/delivery/delete/receipt',[DeliveryController::class,'deleteReceipt'])->middleware('auth:sanctum');
+
+Route::post('/delivery/create/item',[DeliveryController::class,'saveItem'])->middleware('auth:sanctum');
+Route::post('/delivery/update/item',[DeliveryController::class,'updateItem'])->middleware('auth:sanctum');
+Route::delete('/delivery/delete/item',[DeliveryController::class,'deleteItem'])->middleware('auth:sanctum');
+
+Route::get('/delivery/exists/iar',[DeliveryController::class,'checkIARExists'])->middleware('auth:sanctum');
+// Route::get('/delivery/item/invalid_cost',[DeliveryController::class,'getInvalidCostDeliveryItems'])->middleware('auth:sanctum');
+// Route::get('/delivery/find/iar',[DeliveryController::class,'findDeliveryByIAR'])->middleware('auth:sanctum');
+
+
+// Stock Card Routes
+Route::get('/stock_card/list',[StockCardController::class,'list'])->middleware('auth:sanctum');
+Route::get('/stock_card/find',[StockCardController::class,'find'])->middleware('auth:sanctum');
+Route::post('/stock_card/create',[StockCardController::class,'create'])->middleware('auth:sanctum');
+Route::post('/stock_card/update',[StockCardController::class,'update'])->middleware('auth:sanctum');
+Route::get('/stock_card/generate/stock_card',[StockCardController::class,'fetchStockCardGenerationDetails'])->middleware('auth:sanctum');
+Route::post('/stock_card/transaction/issue',[StockCardController::class,'issue'])->middleware('auth:sanctum');
+
+// Property Routes
+Route::get('/property/list',[PropertyController::class,'list'])->middleware('auth:sanctum');
+Route::post('/property/create',[PropertyController::class,'create'])->middleware('auth:sanctum');
+
+// User Routes
+Route::get('/user/data',[UserController::class,'getUserData'])->middleware('auth:sanctum');
+Route::get('/user/selection',[UserController::class,'userSelectionList'])->middleware('auth:sanctum');
+
+// Dashboard Routes
+Route::get('/dashboard/user',[DashboardController::class,'getUserDashboardData'])->middleware('auth:sanctum');

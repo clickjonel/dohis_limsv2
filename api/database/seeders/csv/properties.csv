@@ -1,0 +1,1615 @@
+item_no,property_no,acquisition_date,measurement_unit,quantity,particulars, unit_cost ,remarks,end_user,status
+1,2020-1931,2020-12-04,17,1,"Calculator, compact, 12 digits, Chanyi Brand",197.6,,272,Active
+2,2023-275,2023-06-01,17,1,"Gaming Chair, Black","7,000.00",,272,Active
+3,2023-554,2023-10-03,17,1,"Stereo Bluetooth Head23, Logitech","9,000.00",,272,Active
+4,2023-737,2023-11-17,17,1,"Office Table, glass top with side drawers","7,425.00",,272,Active
+1,2021-1087,2021-08-03,30,1,"UPS, EATON 5L 1200 USB, 1200VA/600W, 230V","6,800.00",,NULL,COA-Haydee
+2,87-15,2015-08-07,30,1,Swivel Chair w/ Arm Rest,"3,699.40",,NULL,COA-Haydee
+3,15-66,2015-07-03,30,1,Computer table,"1,361.00",,NULL,COA-Haydee
+4,2019-457,2019-05-16,30,1,"Swivel Chair, ergodynamic","2,995.00",,NULL,COA-Haydee
+5,"2019-881,2019-882",2019-11-25,30,1,"Swivel Chair, black leather","6,450.00",,NULL,COA-Haydee
+6,1050-2K,1997-04-30,30,1,Computer Desktop,"62,000.00",,NULL,COA-Haydee
+7,966-11,2011-11-11,30,1,Computer Desktop,"40,660.00",,NULL,COA-Haydee
+8,2020-06-0166,2019-12-27,30,1,CPU Assembled,"33,514.54",,NULL,COA-Haydee
+9,2020-01-005,2020-02-18,30,1,"Printer, Epson L5190","17,000.00",,NULL,COA-Haydee
+10,2023-016,2022-12-09,17,1,"Paper Shredder, Strip Cut, Acura","2,180.00",,NULL,COA-Haydee
+11,2021-1515,2021-03-10,17,1,"Webcam, Logitech","7,990.00",,NULL,COA-Haydee
+12,2023-047,2023-12-09,17,1,Puncher,145,,NULL,COA-Haydee
+13,2021-1086,2021-08-03,30,1,"UPS, EATON 5L 1200 USB, 1200VA/600W, 230V","6,800.00",from: M. Dulnuan,NULL,COA-Haydee
+14,2019-856,2019-11-18,17,1,"Calculator, Casio",345,from: M. Dulnuan,NULL,COA-Haydee
+15,2022-189,2022-03-11,17,1,"Keyboard, A4Tech",330,from: M. Dulnuan,NULL,COA-Haydee
+16,2022-548,2022-09-30,17,1,"Mouse, A4Tech",150,from: M. Dulnuan,NULL,COA-Haydee
+17,2022-644,2022-09-08,30,1,CPU Assembled,"32,327.00",from: M. Dulnuan,NULL,COA-Haydee
+18,2022-483,2022-09-05,17,1,"Keyboard, A4Tech",400,from: M. Dulnuan,NULL,COA-Haydee
+19,2022-475,2022-09-02,17,1,"Monitor, Viewplus 23.8""","5,671.00",from: M. Dulnuan,NULL,COA-Haydee
+20,2022-679,2022-01-31,30,1,"Printer, Brother MFC T920DW","14,150.00",from: M. Dulnuan,NULL,COA-Haydee
+21,2021-1528,2021-03-10,17,1,"Webcam, Logitech","7,990.00",from: M. Dulnuan,NULL,COA-Haydee
+22,2022-670,2022-11-18,17,1,"UPS, Secure 1000VA","3,945.00",from: M. Dulnuan,NULL,COA-Haydee
+23,2023-196,2023-05-05,30,1,"Drawer Steel Lateral Filing Cabinet, 2 Layers, Drawer Type","10,990.00",from: M. Dulnuan,NULL,COA-Haydee
+1,15-155,2015-06-10,30,1,"Computer Desktop ( Acer Model, X4620G)","25,000.00",from: M. Bania-ao,137,Active
+2,2021-1057,2021-08-03,17,1,"UPS, EATON 5L,1200 USB, 1200VA/600W, 230V","6,800.00",,137,Active
+3,2019-924,1905-07-11,30,1,"Barcode Scanner/ Reader, 3D","5,990.00",from: M. Bania-ao,137,Active
+4,2018-102,2018-02-15,30,1,"Portable Desk Scanner, Brother DS-620","6,700.00",from: M. Bania-ao,137,Active
+5,2022-729,2022-12-22,30,1,CPU Assembled,"40,700.00",,137,Active
+6,2022-556,2022-09-30,17,1,"Mouse, A4Tech",150,,137,Active
+7,2022-495,2022-09-07,17,1,"Monitor, Atlas, Gamdias 21.5""","4,870.00",,137,Active
+8,2022-487,2022-09-05,17,1,"Keyboard, A4Tech",400,,137,Active
+9,2024-080,2024-01-03,30,1,"Printer, Epson L5290","14,000.00",,137,Active
+10,2022-620,2022-10-26,30,1,"Webcam, Logitech","11,200.00",,137,Active
+1,"2017-521,2017-522",2017-10-27,30,2,"Hand Truck, Heavy duty hand truck, load capacity 220kgs","2,680.00",from: B. Andaya,466,Active
+2,2019-474,2019-05-28,30,1,"MOP Bucket, heavy duty, hard","2,000.00",,466,Active
+3,"2020-1184,2020-1185",2020-03-10,30,2,Spineboard,"8,400.00",from: B. Andaya,466,Active
+1,2021-059,2021-01-14,17,1,"Webcam, A4Tech, 1080p","1,493.00",,144,Active
+2,2021-035,2021-01-14,17,1,"Puncher, heavy duty, w/ 2 holes guide","1,493.00",,144,Active
+3,2021-584,2021-03-23,17,1,Mobile Pedestal Cabinet,"1,493.00",,144,Active
+4,2021-590,2021-04-15,30,1,Tablet (Samsung TABA),"1,493.00",,144,Active
+5,2021-1017,2021-07-30,30,1,USB Head23 with microphone and noise cancellation,"1,493.00",,144,Active
+6,21-08-84,2021-08-19,30,1,CPU Assembled,"1,493.00",,144,Active
+7,2022-076,2022-01-06,17,1,"External Hard Drive 1TB, Toshiba","1,493.00",,144,Active
+8,2020-1104(1),2020-03-09,30,1,"Printer, BROTHER MFC-T810W","14,395.00",from: M. Olarte,144,Active
+9,SPLV-2025-02-098,2025-02-25,17,1,"Laser Distance Meter, INGCO","4,925.00",,144,Active
+10,"SPLV-2025-02-101, SPLV-2025-02-102",2025-02-25,17,2,"Scientific Calculator, Casio",982,,144,Active
+1,0338-13,2013-06-06,30,1,"Camera, Digital, Samsung","7,990.00",,154,Active
+2,2019-170,2019-08-06,17,1,"Storage Box, Plastic, size: 50L",510,from: E. Baclig,154,Active
+3,"2020-1512,2020-1513",2020-09-16,17,1,"Hard Drive 1TB, Transcend","3,500.00",,154,Active
+4,"2020-1679,2020-1680",2020-10-14,17,2,"HDMI Cable, 10M",750,,154,Active
+5,2021-060,2021-01-14,17,1,"Webcam, A4Tech, 1080p","1,493.00",,154,Active
+6,2021-181,2021-01-27,17,1,"Steel Cabinet, 2 drawers, vertical, 465 wide x 620 deep x 700 highm gray","6,120.00",,154,Active
+7,2021-1021,2021-07-30,30,1,USB Head23 with microphone and noise cancellation,"1,900.00",,154,Active
+8,2021-1737(1),2021-11-04,17,1,"USB Wired Optical Mouse, Logitech M100R",465,,154,Active
+9,2021-1896,2021-12-10,30,1,"Printer, HP 615","14,500.00",,154,Active
+10,2021-1857,2021-12-02,17,1,VGA to HDMI Adapter,550,,154,Active
+11,2021-1863,2021-12-02,17,1,Digital Voice Recorder,"4,395.00",,154,Active
+12,2022-075,2022-01-06,17,1,HDMI Cable for laptop to projector,195,,154,Active
+13,2022-008,2022-01-07,17,1,7-Port USB 3.0 Hub,795,,154,Active
+14,2018-818,2018-12-21,30,1,Safety Deposit Box,800,from: T. Abenes,154,Active
+15,"2019-182,2019-183,2019-184",2019-02-01,17,3,"Storage Box, Plastic: size, 50L",510,from: T. Abenes,154,Active
+16,2019-178,2019-02-01,17,1,"Storage Box, Plastic: size, 50L",510,,154,Active
+17,2019-985,2019-12-11,30,1,"OFFICE TABLE, 120cm x 60cm x 75 with 4 drawers","4,490.00",From: V. Salacyao,154,Active
+18,2021-1797,2021-11-17,17,1,"Wireless Presenter, Logitech","1,800.00",,154,Active
+19,22-08-062,2021-11-26,30,1,"Laptop, Acer Nitro An515-57-53SB- i5","64,950.00",,154,Active
+20,2023-215,2023-05-15,17,1,"Office Table, 4 drawers, light brown","5,700.00",,154,Active
+21,2019-092,2019-01-09,30,1,"SCANNER, Brother DS-720 D, Portable","11,650.00",from: N. Cara,154,Active
+22,SPHV-2024-03-422,2024-03-13,30,1,"Monitor, AOC 27""","6,850.00",,154,Active
+23,SPLV-2024-03-474,2024-03-22,30,1,"UPS, AWP 1500VA.900W","4,750.00",,154,Active
+1,2019-1012,2020-01-15,17,1,"MOnitor, LED-Backlit monitor, size 22"" Full HD; HDMI; VGA input connction (ACER)","6,700.00",from: A. Lamsen ,169,Active
+2,2020-1031,2020-02-12,30,1,"Extension Cord, 1-2 meters cord, 5 gang with switch",650,from: A. Lamsen ,169,Active
+3,2021-832,NULL,17,1,"Cork Board 24"" x 36""",795,from: A. Lamsen ,169,Active
+4,21-08-59,2021-08-03,30,1,CPU Assembled,"44,603.00",from: A. Lamsen ,169,Active
+5,2021-1109,2021-08-03,17,1,"Keyboard, Logitech",700,from: A. Lamsen ,169,Active
+6,2021-1410,2021-08-03,17,1,"Mouse, Logitech",400,from: A. Lamsen ,169,Active
+7,2021-1631,2021-10-19,30,1,Microwave Oven,"2,690.00",from: A. Lamsen ,169,Active
+8,2021-1587,2021-10-06,17,1,"Monitor, Viewplus 23.8""","5,692.20",from: A. Lamsen ,169,Active
+9,21-12-213,2021-12-14,30,1,"Laptop Computer, Acer Nitro 5","60,750.00",from: A. Lamsen ,169,Active
+10,2021-1618,2021-10-06,17,1,"Monitor, AOC 21.5""","6,678.00",,169,Active
+11,22-04-013,2022-04-06,30,1,Assembled CPU,"44,603.00",,169,Active
+12,2021-1381,2021-08-26,17,1,"Keyboard, Logitech",700,,169,Active
+13,2021-1090,2021-08-03,17,1,"UPS, EATON 5L 1200 USB, 1200VA/600W,230V","6,800.00",,169,Active
+14,2021-975,2021-07-16,30,1,Brother DCP 720 DW,"14,500.00",from: A. Lamsen ,169,Active
+15,2022-266,2022-04-11,17,1,"Stapler, Standard",180,,169,Active
+16,2022-611,2022-10-20,17,1,"Mobile Pedestal Steel Cabinet, 3 drawers, office steel cabinet","4,200.00",,169,Active
+17,2023-033,2023-01-13,17,1,Puncher,120,,169,Active
+18,2023-034,2023-01-13,17,1,"Tape Dispenser, heavy duty",110,,169,Active
+19,2023-188,2023-04-26,30,1,"Paper Shredder, Vistron","12,500.00",,169,Active
+20,2017-511,2017-11-20,30,1,"Portable Scanner, Brother DS-720D","11,900.00",from: E.Calinao,169,Active
+21, 2019-382,2019-04-26,17,1,"Pencil sharpener, manual, single cutterhead",365,from: E.Calinao,169,Active
+22,2019-1046,1905-07-11,30,1,"Swivel Chair, without armrest, 6 metal feet and wheels, GD C 605G","4,960.00",from: E.Calinao,169,Active
+23,"2021-154,2021-155",2021-01-22,17,2,"4K Webcam with HDR abd Windows Hello support, 4K Ultra HD video calling, Logitech C930e","9,580.00",from: E.Calinao,169,Active
+24,2021-1939,2021-12-17,17,1,Extension Cord,689,from: E.Calinao,169,Active
+25,2018-01-007,1905-07-10,30,1,"Projector, Epson","47,300.00",from: E.Calinao,169,Active
+26,2021-1617,2021-10-06,17,1,"Monitor, AOC 21.5""","6,678.00",from: E.Calinao,169,Active
+28,2021-1382,2021-08-26,17,1,"Keyboard, Logitech",700,from: E.Calinao,169,Active
+29,2021-1089,2021-08-03,17,1,"UPS, EATON 5L 1200 USB, 1200VA/600W,230V","6,800.00",from: E.Calinao,169,Active
+30,"2022-264,2022-265",2022-04-11,17,2,"Stapler, Standard",180,from: E.Calinao,169,Active
+31,2022-311,2022-01-20,30,1,"Printer, HP Laser 107W","8,176.00",from: E.Calinao,169,Active
+32,2019-12-091,2020-01-13,30,1,"Keyboard, Acer",,from: E.Calinao,169,Active
+33,2019-12-091A(1),2020-01-13,30,1,"Monitor, Acer",,from: E.Calinao,169,Active
+34,"2022-420,2022-421(2)",2022-06-14,17,2,"Office Table, with center drawer & 3 side drawers with lock, narra plywood, strong & durable, natural color, L100 x W50cm x H75cm","4,500.00",from: E.Calinao,169,Active
+35,15-84,2015-08-03,30,1,"Executive Swivel Chair, high back end, black with arm rest, adjustable","3,699.40",from: E.Calinao,169,Active
+36,2021-168,2021-01-22,17,1,"4K Webcam with HDR and Windows Hello support, 4K Ultra HD video calling, Logitech C930e","9,580.00",from: E.Calinao,169,Active
+37,2022-615,2022-10-25,17,1,"Whiteboard, 4 x 5 feet","6,000.00",from: E.Calinao,169,Active
+38,2022-643,2022-09-08,30,1,CPU Assembled,"32,327.00",from: E.Calinao,169,Active
+39,2022-339,2022-05-30,30,1,"Keyboard and Mouse, Logitech",600,from: E.Calinao,169,Active
+40,2022-654,2022-11-04,30,1,"Laptop, Lenovo Ideapad Slim, 15.6""","48,383.00",from: E.Calinao,169,Active
+41,"2022-459,2022-460,2022-461,2022-462,2022-463",2022-07-20,17,5,"Video Web Cam, Ovation","1,050.00",from: E.Calinao,169,Active
+42,22-04-012,2022-04-07,30,1,Assembled CPU,"44,603.00",from: E.Calinao,169,Active
+43,2023-498,2023-08-25,30,1,"Computer Processing Unit, Intel Core i7","39,200.00",,169,Active
+44,2023-499,2023-08-25,30,1,"Monitor, AOC 27""","7,050.00",,169,Active
+45,2023-500,2023-08-25,30,1,"UPS, Secure 2000VA","5,300.00",,169,Active
+46,2023-501,2023-08-25,17,1,"Keyboard, Logitech",350,,169,Active
+47,2023-502,2023-08-25,17,1,"Mouse, A4Tech",250,,169,Active
+48,2023-691,2023-11-17,30,1,"CPU, Intel i7-12700, Darkfash DK351, Gigabyte GP-0D850 GM, Kingston KF432C14BB, Gigabyte GA-B760M","38,400.00",,169,Active
+49,2023-692,2023-11-17,30,1,"Monitor, AOC 24""","5,850.00",,169,Active
+50,"2023-693,2023-694,2023-695,2023-696",2023-11-17,30,4,"UPS, Eaton 5A 1200VA/650Watts","6,000.00",,169,Active
+51,2023-697,2023-11-17,30,1,"Keyboard, Logitech K120",400,,169,Active
+52,2023-698,2023-11-17,30,1,"Mouse, Logitech B100",200,,169,Active
+53,2024-050,2023-12-29,30,1,"Portable Tablet, Samsung S9 fe+, 12.4 inches, w/ book cover, keyboard and adapter","42,615.00",,169,Active
+54,2023-857,2023-12-06,30,1,"Printer, Epson L5290","14,200.00",from: C. Mamaradlo,169,Active
+55,"SPLV-2024-03-347,SPLV-2024-03-348",2024-03-05,30,2,"Puncher, heavy duty, 2-hole guide",150,,169,Active
+56,SPLV-2024-03-444,2024-03-13,30,1,"Keyboard and Mouse, Logitech",700,,169,Active
+57,"SPLV-2024-07-676,SPLV-2024-07-677,SPLV-2024-07-678",2024-06-27,30,3,"Stapler, standard type, Joy",201.4,,169,Active
+58,SPLV-2024-08-740,2024-07-19,30,1,"Head23, Redragon H848 IRE Pro Ultra Light Wireless ","1,900.00",,169,Active
+59,SPHV-2024-10-883,2024-09-24,30,1,"Air-conditioning Unit, AUX","43,000.00",,169,Active
+60,2019-364,1905-07-11,30,1,"Swivel Chair, Executive, 6 metal feet and duty adjustable","4,950.00",from: E.Calinao,169,Active
+61,2020-1101(1),2020-02-20,17,1,"Wooden Table, Height:0.7 meter, L-1 meter, W-0.8 meter, Thickness of wood-1 & 1/2""","6,300.00",from: V. Delposo,169,Active
+62,2023-200 ,2023-05-03,30,1,"Office Table , glass top with side drawer","7,999.00",from: J. Tamondong,169,Active
+63,2022-282,2022-04-26,30,1,"Office Table, 6 drawers","6,490.00",from: J. Tamondong,169,Active
+64,SPHV-2024-12-1163,2024-12-20,30,1,"Smart Phone, Samnsung A16","10,500.00",,169,Active
+65,SPLV-2025-01-034,2025-01-13,30,1,"Extension Wheel, Omni 15meters","1,800.00",,169,Active
+1,2020-1933,2020-12-09,30,1,"Webcam Brio Ultra HD Pro Webcam with Light-weight Tripod, Logitech","14,300.00",,364,Active
+2,"2020-1961,2020-1962,2020-1963",2020-12-15,30,3,"Head23 with Microphones. Plantronics Voyager Focus UC, Bluetooth, USB ","14,285.00",,364,Active
+3,"2021-257,2021-259,2021-260",2021-02-15,17,3,"Computer Chair, leather back executive office chair, adjustable height, with arm rest, swivel function, w/ 5-6 stand foot","3,600.00",,364,Active
+4,2021-1471,2021-09-17,30,1,"Active Noise Cancelling Stereo Bluetooth Head23, JBL T660 BT NC","5,700.00",,364,Active
+5,2021-1592 ,2021-10-06,17,1,"Monitor, Viewplus 23.8""","5,692.20",,364,Active
+6,2021-1802,2021-11-18,17,1,"USB Speakerphone, Jabra 519","8,250.00",,364,Active
+7,2021-1850,2021-11-29,30,1,Webcam Ultra HP PRO,"13,500.00",,364,Active
+8,2021-1111(2),2021-08-03,17,1,"Keyboard, Logitech",700,,364,Active
+9,2021-1331,2021-08-03,17,1,"Mouse, Logitech",400,,364,Active
+10,21-08-71,2021-08-03,30,1,CPU Assembled,"44,603.00",,364,Active
+11,1256-2K,1995-06-19,17,1,Filing Cabinet w/ cover (wooden),"6,500.00",from: A. Gawidan,364,Active
+12,2021-1711,2021-10-21,30,1,Bluetooth Receiver,500,,364,Active
+13,2024-168,2024-01-12,30,1,"Portable Tablet, Samsung S9 fe+, 12.4 inches, w/ book cover, keyboard and adapter","43,900.00",,364,Active
+14,2024-225,2024-01-24,17,1,"Swivel Chair, High Back, Leatherette, Black, Chrome Base Jersey JS-289","4,485.00",from: G. Dacanay,364,Active
+1,"ICS 15-208,ICS 15-209,ICS 15-210,ICS 15-211,ICS 15-212,ICS 15-213",2015-08-17,17,6,"Stool, heavy duty, padded stool, 8"" H",519,fr. M. Ab-abo,173,Active
+2,PAR 15-90,2015-08-17,17,1,"Pedestal Ladder, heavy duty, alum. 5 ft","2,195.00",fr. M. Ab-abo,173,Active
+3,"2019-704,2019-705",2019-09-27,30,2,"Industrial Fan, Heavy duty","14,886.00",,173,Active
+4,"2019-534,2019-535,2019-536,2019-537,2019-538,2019-539,2019-540,2019-541,2019-542,2019-543,2019-544,2019-545,2019-546,2019-547,2019-548,2019-549,2019-550,2019-551,2019-552,2019-553,2019-554,2019-555,2019-556,2019-557,2019-558,2019-559,2019-560,2019-561,2019-562,2019-563,2019-564,2019-565,2019-566,2019-567,2019-568,2019-569,2019-570,2019-571,2019-572,2019-573,2019-574,2019-575,2019-576,2019-577,2019-578,2019-579,2019-580,2019-581,2019-582,2019-583,2019-584,2019-585,2019-586,2019-587,2019-588,2019-589,2019-590,2019-591,2019-592,2019-593,2019-594,2019-595,2019-596,2019-597,2019-598,2019-599,2019-600,2019-601,2019-602,2019-603,2019-604,2019-605,2019-606,2019-607,2019-608,2019-609,2019-610,2019-611,2019-612,2019-613,2019-614,2019-615,2019-616,2019-617,2019-618,2019-619,2019-620,2019-621,2019-622,2019-623,2019-624,2019-625,2019-626,2019-627,2019-628,2019-629,2019-630,2019-631,2019-632,2019-633",2019-07-31,17,100,Industrial Palettes,"2,000.00",,173,Active
+5,2019-861,2019-11-22,30,1,"Printer, 3-in-1 Brother T710W","13,995.00",,173,Active
+6,2020-1083,2020-02-10,17,1,"Manual Hand Pallet Truck, Hand pallet jacklift, 2,500 kg capacity","14,500.00",at Loakan WH,173,Active
+7,2020-1160,2020-02-05,30,1,"Filling Cabinet, 3 drawer steel cabinet","6,890.00",,173,Active
+8,"2020-16,2020-17",2020-01-16,17,2,"Cork Pin Board, size 2'x3'",644,,173,Active
+9,2020-1504,2020-09-10,30,1,Ladder 5ft Aluminum,"1,899.75",at COAs Office,173,Active
+10,"2021-505,2021-506",2021-05-28,30,2,Manual Hand Trolley,"4,150.00",2021-505 at Marcos WH,173,Active
+11,2019-073,2019-01-18,17,1,3-in-1 Hybrid Convertible Handtruck,"11,400.00",,173,Active
+12,2021-853,2021-07-19,30,1,HP Multi-Function Laserjet Printer,"11,180.00",,173,Active
+13,"2021-1648, 2021-1649",2021-10-25,17,2,"Floor Mop, heavy duty with squeezer","1,199.75",at Loakan WH,173,Active
+14,068-12,2012-04-15,30,1,"Steel Cabinet, 3 layers, Hermaco","8,100.00",from: C. Kimmakim,173,Active
+15,2020-1705,2020-10-19,17,1,"Office Table, 4 drawers, wood fabricated, with lock and key","4,500.00",,173,Active
+16,"2021-1877,2021-1878",1905-07-13,17,2,Puncher,454.32,,173,Active
+17,504-10,2010-11-24,30,1,"Steel Cabinet, 3 drawers","7,000.00",from: A. Dizon,173,Active
+18,"2022-676,2022-677",2022-11-18,30,2,"Emergency Light, Omni","1,350.00",,173,Active
+19,"728-14E,730-14E,729-14E",2014-01-01,30,3,"Filing Steel cabinet, 3 drawers","8,888.00",,173,Active
+20,2023-282,2023-06-09,17,1,"Stapler, standard type, Joy Brand",148.4,,173,Active
+21,"2023-485,2023-486",2023-08-17,30,2,"Client Chair, heavy duty, fabric material, armrest, high and fixed back , Balck","3,500.00",,173,Active
+22,"2023-461,2023-462",2023-08-09,30,2,"UPS, AWP 1500VA","5,070.00",,173,Active
+23,"2023-474,2023-475",2023-08-15,30,2,"Computer Central Processing Unit, Intel Core i7 12700, B660 Motherboard, Kingston 16GB DDR4, 512GB SSD M2, Seagate 1TB, Antec casing, Antec 850W Gold","41,300.00",,173,Active
+24,2023-700,2023-11-22,30,1,"8-Port Gigabit Desktop Switch, TP Link","1,050.00",,173,Active
+25,2023-810,2023-12-06,30,1,"Tape Dispenser, Black, DLOffice",150,,173,Active
+26,2022-584,2022-09-30,17,1,"Mouse, A4Tech",150,,173,Active
+27,SPLV-2024-07-694,2024-07-17,30,1,"Calculator, Exact ET-826",260,,173,Active
+28,20-01,2001-02-28,30,1,Pedestal Cabinet,"13,619.00",from: F. Carlos,173,Active
+29,SPHV-2024-03-450,2024-03-13,30,1,"Printer, Brother T720DW","14,300.00",,173,Active
+1,2020-1552,2020-09-17,30,1,"Uninterruptible Power Supply, 550watts/1100VA, with two battery back ups, with universal & IEC sockets, with surge protector, heavy duty","7,000.00",,153,Active
+2,21-09-165,2021-09-14,30,1,Synology 4 Bay Nas Disk Station DS918+ (Diskless),"32,330.00",,153,Active
+3,2021-1144,2021-08-03,30,1,"External Hard Disk Drive, 4TB","7,500.00",,153,Active
+4,2023-123,2023-03-28,17,1,"Water Dispenser, Table Top, Hot and Cold, American Home","3,000.00",,153,Active
+5,"2023-104,2023-105,2023-106,2023-107",2023-03-28,17,4,"Storage Box with wheels and lid, Megabox 50L",595,,153,Active
+6,"2023-108,2023-109",2023-03-28,17,2,"Storage Box with wheels and lid, Megabox 70L",995,,153,Active
+7,2023-166,2023-04-20,17,1,"Swivel Chair, DOMINO C-606-HB highback executive chair, leatherette back and seat, nylon starbase/ armrest black","4,000.00",,153,Active
+8,2022-598,2022-01-31,30,1,"Printer, Brother MFC T920DW","14,150.00",from: K. Lonogan,153,Active
+9,2023-006,2022-12-23,17,1,"Hub, USB Orico 4 Ports",495,from: K. Lonogan,153,Active
+10,2023-007,2022-12-23,17,1,"Adapter, HDMI Video Capture",945,from: K. Lonogan,153,Active
+11,2023-008,2022-12-23,17,1,Condenser Microphone,"6,000.00",from: K. Lonogan,153,Active
+12,"2021-1529,2023-1531,2023-1530",2021-03-10,17,3,"Webcam, Logitech","7,990.00",from: K. Lonogan,153,Active
+13,"2023-054,2023-055",2023-01-11,17,2,Wireless Lavalier Microphone System with Mini Lapel Bodypack Transmitter Receiver,"1,200.00",from: K. Lonogan,153,Active
+14,2023-056,2023-01-16,17,1,"Handheld Gimbal, Moza Aircross 3 Axis","29,500.00",from: K. Lonogan,153,Active
+15,2023-057,2023-01-16,17,1,"Metal Adjustable Teleprompter, Desview T12, foldable","15,000.00",from: K. Lonogan,153,Active
+16,2023-005,2022-12-23,17,1,"HDMI Adapter Splitter, 5 to 1 Switch",825,from: K. Lonogan,153,Active
+17,"2022-570,2022-572",2022-09-30,17,3,"Mouse, A4Tech",150,,153,Active
+18,"2023-260,2023-261,2023-262,2023-263,2023-264,2023-265",2023-04-17,17,6,"Office Table with glass top, 3 drawers","4,900.00",,153,Active
+19,"2023-266,2023-267,2023-268",2023-04-17,17,3,"Swivel Chair, executive faux leather, high back, with arm rest, 6 metal feet and wheels, heavy duty, Black","5,300.00",,153,Active
+20,2023-225,2023-05-17,17,1,"Tape Dispenser, Joy Brand",95,,153,Active
+21,"2023-243,2023-244",2023-05-16,17,2,"Extension Cord, 5 meters, 4 gang, Deli Brand",995,,153,Active
+22,"2023-233,2023-234",2023-05-16,17,2,"Stapler, Standard Type, Joy Brand",120,,153,Active
+23,2023-288,2023-06-06,17,1,"Corkboard, 3 x 4","2,850.00",,153,Active
+24,2023-290,2023-06-14,17,1,"Calculator, TM-12",200,,153,Active
+25,"2023-321,2023-322,2023-323,2023-324",2023-07-10,17,4,"Externsion Wheel, Omni, 15M","2,050.00",,153,Active
+26,2022-624,2022-10-26,17,1,"Speakerphone, Jabra Speak 510 +","10,000.00",,153,Active
+27,2023-320,2023-07-10,17,1,"Boom Microphone, Logitech","5,600.00",,153,Active
+28,2023-026,2023-01-12,17,1,"Camera Tripod, Benro T890 Photo and Video Hybrid Tripod with Fluid Head","2,850.00",from: D. Babon,153,Active
+29,2023-386,2023-07-14,30,1,"Network Attached Storage, 10TB, Synology DS220J","24,980.00",,153,Active
+30,"2023-403,2023-404",2023-07-25,17,2,Table Tennis Net,420,,153,Active
+31,"2023-405,2023-406",2023-07-25,23,2,"Chess and Drama Board, 2 in 1",695,,153,Active
+32,"2023-407,2023-408",2023-07-25,17,2,Mini Portable Hand Air Pump with gauge,600,,153,Active
+33,"2023-401,2023-402",2023-07-21,23,2,Word Factory Board,450,,153,Active
+34,"2023-397,2023-398 ",2023-07-25,23,2,"Table Tennis Racket, RRJ","1,500.00",,153,Active
+35,"2023-399,2023-400",2023-07-25,23,2,"Badminton Racket, YONEX","1,600.00",,153,Active
+36,2023-411,2023-08-02,30,1,Globe at Home Prepaid Wi-Fi Modem with Antennas,"2,950.00",,153,Active
+37,2023-384,2023-07-17,30,1,"Printer, Brother DCP-T720DW","14,400.00",,153,Active
+38,2023-506,2023-09-04,17,1,"Voice Recoder, Sony","8,300.00",,153,Active
+39,2023-420,2023-08-01,17,1,"Mirrorless Digital Camera (Body Only), Sony A6400","49,950.00",,153,Active
+40,2023-421,2023-08-01,17,1,E-Mount Lens for Sony (55-210mm),"15,000.00",,153,Active
+41,2023-422,2023-08-01,17,1,"External Flas for mirrorless camera with flash trigger, YONGNU Speedlight YN685EX-RF","11,130.00",,153,Active
+42,2023-423,2023-08-01,17,1,Reflector (collapsible) 110cm,954,,153,Active
+43,2023-424,2023-08-01,17,1,"Document Scanner, Epson DS-360W","15,000.00",,153,Active
+44,2023-425,2023-08-01,17,1,"Camera Drone with Accessories, DJI Mini 3","35,404.00",,153,Active
+45,2023-533,2023-08-01,17,1,"Studio Lighting Kit, 2pcs, 50*70 single soft box, 2pcs x 1.9M light stand; 1 pc 2x3M","6,000.00",,153,Active
+46,2023-531,2023-09-12,30,1,"Printer, Brother DCP-L2550DW","14,400.00",,153,Active
+47,2023-637,2023-10-20,17,1,"Office Puncher, Carl Brand","3,350.00",,153,Active
+48,"2023-635,2023-636",2023-10-26,17,2,"Heavy Duty Plastic Storage Box, 95L with wheels and lid","1,250.00",,153,Active
+49,"2023-745,2023-746",2023-11-14,17,2,"Audio Cable, Remax 3.5Aux",250,,153,Active
+50,2023-672,2023-11-21,30,1,"Portable Wireless Microphone, with 2 microphones, with remote system, JBL","8,200.00",,153,Active
+51,2023-765,2023-11-28,30,1,"Portable Speaker, JBL Party Box 310","33,000.00",,153,Active
+52,"2023-666,2023-667,2023-668,2023-669,2023-670,2023-671",2023-11-22,17,6,"Heavy Duty Plastic Storage Box, 50L with wheels and lid",795,,153,Active
+53,"2023-806,2023-807",2023-11-14,17,2,"SDXC Memory Card for Sony Handycam 4K, 128GB","1,100.00",,153,Active
+54,2023-795,2023-08-23,17,1,Badminton 23,475,,153,Active
+55,2023-796,2023-08-23,17,1,Dart Board,"2,550.00",,153,Active
+56,2023-867(1),2023-12-06,30,1,"Portable Projector, Viewsonic M1 Mini Plus","14,800.00",,153,Active
+57,2023-805,2023-11-03,17,1,"Chromakey, Backdrop, color green with stand","3,250.00",,153,Active
+58,2023-868,2023-12-06,30,1,"Portable Speaker, JBL Party Box on the Go","22,500.00",,153,Active
+59,"2023-569,2023-570, 2023-873,2023-874,2023-875",2023-10-09,17,5,Heavy Duty Shovel,395,,153,Active
+60,2023-00-10605030-0008-CMU,2023-08-01,17,1,"Video Camcorder, Sony 4K Handycam, w/ SD cards and Camra Bag","53,450.00",,153,Active
+61,2023-867(2),2023-12-06,30,1,"Portable Projector, Viewsonic M1 Mini Plus","14,800.00",,153,Active
+62,2023-774,2023-11-24,17,1,"Wireless Wi-Fi Receiver, Anycat M2 Plus","1,695.00",,153,Active
+63,2024-001,2023-12-27,17,1,"Camera Dehumidifying dry Cabinet, ANDBON AD-180S 180L Electronic Automatic Digital Storage","31,000.00",,153,Active
+64,2024-002,2023-12-28,30,1,"Camera Lens, Sigma 10mm F2.8 for Nikon","42,990.00",,153,Active
+65,2024-003,2023-12-28,30,1,"Camera Cleaner Kit 23 for Canon, Nikon, Sony","1,200.00",,153,Active
+66,2024-139,2024-01-08,17,1,"Camera Lens for Sony APS-C mirrorless camera, Sigma 56mm F/1.4 DC DN","29,500.00",,153,Active
+67,"2024-140,2024-141",2024-01-08,17,2,"Camera Cage for Sony 6400 APS-C Camera, Small rig cage","4,950.00",,153,Active
+68,2024-083,2024-01-04,17,1,"Balloon Inflator, electric, automatic, heavy duty",980,,153,Active
+69,"2024-084,2024-085",2024-01-04,17,2,"Newspaper Rack, 3-tier, aluminum, portable, Deli","3,990.00",,153,Active
+70,"2024-086,2024-087",2024-01-04,17,2,"Rechargeable Reading Lamp, clip on type, Yolomo Brand, White, 4W 5V",905,,153,Active
+71,21-09-113,2021-07-09,30,1,"Laptop Computer, Acer Nitro 5","50,562.00",,153,Active
+72,2024-092,2024-01-18,30,1,"UPS, APC 1200VA","8,200.00",,153,Active
+73,2024-142,2024-01-03,17,1,Studio Flash Strobe Godox QS400II,"9,850.00",,153,Active
+74,2024-143,2024-01-03,17,1,"S-type Flash Bracket Bowens S Mount Holder for Softbox, Godox","1,500.00",,153,Active
+75,"2024-185,2024-186",2024-01-15,17,2,"Orico USB C Docking Station, 8 in 1 USB C Songle with HDMI 4K","2,850.00",,153,Active
+76,2024-187,2024-01-15,17,1,"Portable Power Station, Yoqu","19,500.00",,153,Active
+77,"2024-188,2024-189,2024-190",2024-01-15,17,3,"Mechanical Keyboard, Aula","2,200.00",,153,Active
+78,2024-191,2024-01-15,17,1,"Portable Power Speaker, JBL Party Box 310","33,000.00",,153,Active
+79,2024-192,2024-01-15,17,1,"Wireless Microphone, 2 pieces, JBL VM-860","8,200.00",,153,Active
+80,2024-193,2024-01-15,17,1,"4 Slot AA Battery Charger + 8 pieces 2,000MAH Rechargeable Batteries","4,800.00",,153,Active
+81,2024-194,2024-01-15,17,1,"Wireless Presenter Pointer, Rapoo XR200","1,500.00",,153,Active
+82,"2024-195,2024-196",2024-01-15,17,1,"4 in 1 USB/ Type C Card Reader for SD/TF/CF MS Memory Smart Card, Ugreen 4 Ports","1,350.00",,153,Active
+83,"2024-197,2024-198,2024-199",2024-01-15,17,3,"Wireless Mouse, Logitech",850,,153,Active
+84,2024-200,2024-01-15,17,1,"HDMI Cable, 3M",350,,153,Active
+85,2024-253,2024-01-24,17,1,"Tape Dispenser, table top, heavy duty, MGK",106.95,,153,Active
+86,2024-254,2024-01-24,30,1,"Dish Drainer, plastic, with cover, Megabox",985,,153,Active
+87,"2024-261,2024-262",2024-01-29,23,2,"Full Duplex Wireless Communication  (Intercom System), Saramonic Witalk 4D, 4 in 1 23","49,990.00",,153,Active
+88,2024-255,2024-01-24,17,1,"DSLR Camera (body only), EOS 250D, 64GB SD","49,500.00",,153,Active
+89,2024-256,2024-01-24,17,1,"DSLR Telephone Lens, Canon ER 70-3000","49,999.00",,153,Active
+90,2023-905,2023-11-03,17,1,LED Video Light with accessories,"9,500.00",,153,Active
+91,"2023-906,2023-915",2023-11-03,17,2,"Light Stand Tripod for studio Softbox, stainless steel, heavy duty","9,000.00",,153,Active
+92,2023-907,2023-11-03,17,1,Wireless Flash Trigger for Sony Camera,"2,990.00",,153,Active
+93,"2023-908,2023-909",2023-11-03,17,2,120cm Reflector Parabolic Soft Box for Bowens Mount,"4,990.00",,153,Active
+94,2023-910,2023-11-03,23,1,"U-Shaped Curved Reflector, 4 in 1 23","6,990.00",,153,Active
+95,2023-911,2023-11-03,17,1,Round Head Camera Flash Speedlite Wireless 2.4g for Sony,"12,999.00",,153,Active
+96,2023-912,2023-11-03,23,1,"Seamless Background Paper, 3 in1 23","4,500.00",,153,Active
+97,2023-913,2023-11-03,17,1,"Reflector Umbrella for Photography Studio Shooting, 40""","1,400.00",,153,Active
+98,2023-914,2023-11-03,17,1,"USB Extension Cable, 15ft.",495,,153,Active
+99,2024-263,2024-01-29,17,1,"Guitar Jack Cable, Blue",995,,153,Active
+100,2024-184,2024-01-08,30,1,"Paper Shredder, Heavy Duty, Aurora","9,800.00",WMR 25-02-040,153,Active
+101,SPLV-2024-03-379,2024-03-08,17,1,"Calculator, Casio MX-12B",450,,153,Active
+102,2020-04-012,2020-04-29,30,1,"LAPTOP, HP Elitebook x 360 1030 G2 with carrying Case","68,650.00",,153,Active
+103,"SPLV-2024-04-517,SPLV-2024-04-518,SPLV-2024-04-519,SPLV-2024-04-520",2024-03-13,30,4,Stainless Flag Pole with Stand,"3,000.00",,153,Active
+104,"2024-287,2024-288",2024-02-05,17,2,Cleaning Kit for Camera Lens,350,,153,Active
+105,"2024-289,2024-290",2024-01-23,17,2,"Webcam, Logitech Brio 300","4,200.00",,153,Active
+106,2024-291,2024-01-23,17,1,"8-Port Gigabit Easy Smart Switch/Hub, TP Link","2,750.00",,153,Active
+107,2024-149,2024-01-23,30,1,Nikon Z50 Body Only,"49,500.00",,153,Active
+108,"2023-924,2023-925,2023-926,2023-928(1)",2023-12-27,17,4,"Stapler, standard type, Metro Brand",145,,153,Active
+109,2023-928(2),2023-12-27,17,1,"Stapler, standard type, DL Brand",145,,153,Active
+110,SPLV-2024-03-395,2024-03-08,17,1,"Tape Dispenser, Heavy Duty, Table Top, Sure Brand",95,,153,Active
+111,SPHV-2024-10-924,2024-09-26,17,1,"Camera Lens for Nikon, Viltrox","33,820.00",,153,Active
+112,SPLV-2024-10-925,2024-09-26,17,1,Camera Battery for Canon,"3,380.00",,153,Active
+113,SPLV-2024-10-926,2024-09-26,17,1,Camera Battery for Nikon,"4,449.00",,153,Active
+114,SPHV-2024-10-927,2024-09-26,17,1,"Camera Lens for Sony E-Mount, Tamron","43,000.00",,153,Active
+115,"SPLV-2024-09-799,SPLV-2024-09-800",2024-08-21,17,2,4 Port USB 3.0 C Hub Ultra Slim High Speed USB Splitter,450,,153,Active
+116,SPHV-2024-12-1108,2024-08-21,17,1,"Communication Hub Base Station, Saramonic Intercom","20,990.00",,153,Active
+117,SPHV-2024-12-1070,2024-12-05,30,1,"Printer, Epson L5290","14,000.00",,153,Active
+118,SPHV-2024-12-1071,2024-12-05,30,1,"Printer, Canon CP1500","12,100.00",,153,Active
+119,"SPLV-2024-12-1156,SPLV-2024-12-1157",2024-12-18,17,2,Large Capacity Camera Backpack,"4,980.00",,153,Active
+120,SPHV-2024-12-1158,2024-12-23,30,1,"Air Purifier, Dowell","19,499.00",,153,Active
+121,SPHV-2024-03-426,2024-03-13,30,1,"Monitor, AOC 27""","6,850.00",,153,Active
+122,"SPLV-2024-10-928,SPLV-2024-10-929",2024-09-11,17,2,HDMI Video Capture,580,,153,Active
+123,"SPLV-2024-930SPLV-2024-10-931,SPLV-2024-10-932",2024-09-11,17,3,"Flash Drive, Samsung, 256GB",545,,153,Active
+124,"SPLV-2024-10-933,SPLV-2024-10-934,SPLV-2024-10-935,SPLV-2024-10-936",2024-09-11,17,4,USB Adapter USB C to USB Male Adapter USB Female (Type-C) to USB 2.0 Male (USB-A) Data Sync OTG Adapter Connector,190,,153,Active
+125,SPHV-2024-12-1168,2024-12-17,30,1,"Micro-Cut Heavy Duty Paper Shredder, Comix S6610 35L","24,950.00",,153,Active
+126,"SPHV-2024-12-1137,SPHV-2024-12-1138",2024-12-17,30,2,"Printer, Brother DCP-T720DW","13,950.00",,153,Active
+127,"SPLV-2024-12-1170,SPLV-2024-12-1171,SPLV-2024-12-1172,SPLV-2024-12-1173,SPLV-2024-12-1174",2024-12-27,17,5,"Portable Booth, Customized Kiosk","4,400.00",,153,Active
+128,SPHV-2024-12-1179,2024-12-20,17,1,Modern Podium with Baffle Plate,"5,750.00",,153,Active
+129,"SPLV-2024-12-1177,SPLV-2024-12-1178",2024-12-20,17,2,"USB Docking Station, Type-C to HDTV 8 in 1, Gray Color",999,,153,Active
+1,120-14,2014-05-12,30,1,Biometric Machine,"20,100.00",from: C. Kimmakim,56,Active
+2,PAR 16-008,2016-04-11,30,1,CPU Assembled,"30,782.00",from: C. Kimmakim,56,Active
+3,2020-1090,2020-01-30,17,1,"Mouse USB interface, A4 Tech",270,from: C. Kimmakim,56,Active
+4,"2019-1043,2019-1044",2019-11-28,30,2,"Swivel Chair, without armrest, 6 metal feet and wheels, heavy duty adjustable material, GD C 605G","2,480.00",from: C. Kimmakim,56,Active
+5,2020-1411,2020-07-16,30,1,"Xenon LED TV 32""","11,280.00",from: C. Kimmakim,56,Active
+6,2020-12-0181,1905-07-12,30,1,CPU Assembled,"28,587.00",from: C. Kimmakim,56,Active
+7,2017-513,2017-11-20,30,1,"Portable Scanner, Brother DS-720D","11,900.00",from: S. Judan,56,Active
+8,2019-468,2019-05-21,30,1,"Laptop Touch Screen, OS Windows 10, ACER Intel Celeron, 100GB(1TB), 2 GB 11.5"", Win 10","14,990.00",from: S. Judan,56,Active
+9,2019-470,2019-05-21,17,1,"External Hard Drive, Silicon Power Armor A30","3,495.00",from: S. Judan,56,Active
+10,2019-383D,2019-04-26,17,1,"Stapler, Heavy duty, metal base",165,from: S. Judan,56,Active
+11,818-2K,1998-10-30,17,1,Glass Cabinet,"7,300.00",from: S. Judan,56,Active
+12,2019-523(1),2019-06-13,17,1,"Portable Scanner, Epson DS-310","14,990.00",from: S. Judan,56,Active
+13,2019-760,2019-10-18,17,1,"Calculator, Two, way power 12 digits, Tilt Display, JS-120, Casio 512 of, 12 digits, Solar & Battery",725,from: S. Judan,56,Active
+14,2020-1032,2020-01-30,30,1,Extension Cord,650,from: S. Judan,56,Active
+15,"2021-1044,2021-1076",2021-08-03,17,2,"UPS, EATON 5L 1200 USB, 1200VA/600W,230V","6,800.00",,56,Active
+16,21-08-58,2021-08-03,30,1,CPU Assembled,"44,603.00",,56,Active
+17,2021-1108,2021-08-03,17,1,"Keyboard, Logitech",700,,56,Active
+18,2021-1406,2021-08-03,17,1,"Mouse, Logitech",400,,56,Active
+19,2021-1276,2021-08-27,17,1,Self-inkinmg stamp,995,,56,Active
+20,21-09-106,2021-07-09,30,1,"Laptop Computer, Acer Nitro 5","50,562.00",,56,Active
+21,2021-1588,2021-10-06,17,1,"Monitor, Viewsonic 23.8""","5,692.20",,56,Active
+22,2021-482,2021-04-27,17,1,Whiteboard,"4,150.00",from: A. Lamsen,56,Active
+23,2021-600,2021-04-27,17,1,Cork Board with Frame,840,from: A. Lamsen,56,Active
+24,2021-118,2021-01-22,17,1,"Speakerphone, Mid-range portable USB and Bluetooth Speakerphone Speak 510, Jabra Speak 510","8,985.00",from: E. Calinao,56,Active
+25,"2021-1560,2021-1561",2021-10-04,17,2,"Extension Cord, 10 meters with 6 universal gang","1,000.00",from: C. Dirige,56,Active
+26,2022-003,2021-12-28,23,1,"Keyboard & Mouse, Rise DS-139",400,,56,Active
+27,2021-747,2021-05-07,30,1,VGA Male to HDMI Female Adapter,695,from: E. Calinao,56,Active
+28,2019-976 ,2019-12-11,30,1,"OFFICE TABLE, 120cm x 60cm x 75 with 4 drawers","4,490.00",from: E. Calinao,56,Active
+29,2019-12-091A(2),2020-01-13,17,1,Monitor,,from: E. Lagera,56,Active
+30,2020-1898,2020-12-23,30,1,"Water Dispenser, Electrolux","12,995.00",from: E. Calinao,56,Active
+31,2019-09-044,1905-07-11,30,1,"Heavy duty copier with full tank of ink, Develop-Ineo 287","205,344.00",from: E. Calinao,56,Active
+32,2016-09-0004,2016-09-01,30,1,"Airconditioning, split type","34,706.25",from: E. Calinao,56,Active
+33,2016-09-0003,2016-09-01,30,1,Aircon Split-type,"34,706.25",from: E. Calinao,56,Active
+34,2018-073,2018-01-29,30,1,"Swivel Chair, Ergonomic design, with foam covered with mesh bright colored, NL 2063","2,990.00",from: D. Cayachen,56,Active
+35,"2022-410,2022-411,2022-412",2022-06-14,17,3,"Office Table, with center drawer & 3 side drawers with lock, narra plywood, strong & durable, natural color, L100 x W50cm x H75cm","4,500.00",,56,Active
+36,2023-004,2022-12-28,17,1,"Extension Cord, 16 gang, Tower type","1,150.00",,56,Active
+37,2022-194,2022-03-11,17,1,"Keyboard, A4Tech",330,,56,Active
+38,2019-523(2),2019-06-13,17,1,"Portable Scanner, Epson DS-310","14,990.00",from: T. Abenes,56,Active
+39,2019-763,2019-10-18,17,1,"Calculator, Two-way power, 12 digits, Tilt Display, JS-120, Casio 512 OF, 12 digits/Solar & Battery",725,from: T. Abenes,56,Active
+40,16-627,2016-11-08,30,1,"Office table, 39"" x 30"" w/ center drawer","2,228.00",from: T. Abenes,56,Active
+41,2019-370,NULL,30,1,"Paper Shredder, cutting width: 3mm-4mm, Aurora AS1601CT","3,750.00",from: T. Abenes,56,Active
+42,2019-1018,2019-12-16,17,1,"UPS, 100 VA 230 with AVR Universal and IEC Sockets, AWP 1500 VA 2 years warranty","5,200.00",from: T. Abenes,56,Active
+43,2020-015,2020-01-10,30,1,Puncher,135,from: T. Abenes,56,Active
+44,2020-1089,2020-01-30,17,1,"Mouse USB Interface, click once of twice, 2x button, A4 Tech",270,from: T. Abenes,56,Active
+45,2021-1611,2022-10-06,30,1,"Monitor, Viewplus 23.8""","6,678.00",from: T. Abenes,56,Active
+46,2021-1901,2021-11-23,30,1,"External Hard Disk Drive, 2TB, ADATA","4,273.49",from: T. Abenes,56,Active
+47,22-06-036,2022-06-14,30,1,Assembled CPU,"37,928.00",from: T. Abenes,56,Active
+48,"2022-415,2022-416",2022-06-14,17,2,"Office Table, with center drawer & 3 side drawers with lock, narra plywood, strong & durable, natural color, L100 x W50cm x H75cm","4,500.00",from: T. Abenes,56,Active
+49,2019-895,2019-11-25,30,1,"Swivel Chair, Black leather managers office swivel chair, adjustable (SHIVLAX)","4,250.00",from: T. Abenes,56,Active
+50,2022-499,2022-09-08,17,1,"Speakerphone, Jabra Speak 510","7,950.00",from: T. Abenes,56,Active
+51,"2022-530,2022-531",2022-09-30,17,2,"Keyboard, A4Tech",400,,56,Active
+52,2022-569,2022-09-30,17,1,"Mouse, A4Tech",150,,56,Active
+53,2022-711,2022-12-09,30,1,"Laptop, Acer TravelMate P2","42,800.00",from: C. Mamaradlo,56,Active
+54,2023-237,2023-05-16,17,1,"Stapler, standard type, Joy Brand",120,,56,Active
+55,2023-189,2023-05-04,30,1,"Whiteboard, 3 ft. x 3ft., with metal frame","1,350.00",,56,Active
+56,2023-183,2023-04-28,17,1,"Stapler, heavy duty, binder type",850,,56,Active
+57,2019-154,2016-02-06,17,1,"Monitor, LED 20"", Black","4,795.00",from: K. Raguindin,56,Active
+58,2023-291,2023-06-14,17,1,"Calculator, TM-12",200,,56,Active
+59,21-08-65,2021-08-03,30,1,CPU Assembled,"44,603.00",from: E. Calinao,56,Active
+60,2020-06-0170,NULL,30,1,CPU assembled,"38,550.85",from: C. Mamaradlo,56,Active
+61,2022-725,2022-12-22,30,1,CPU Assembled,"40,700.00",from: R. Marquez,56,Active
+62,2019-12-096,2019-12-04,30,1,"DESKTOP COMPUTER, Acer Veriton M2640G - Monitor Only","39,208.00",,56,Active
+63,2019-12-097,2019-12-04,30,1,"DESKTOP COMPUTER, Acer Veriton M2640G - Monitor Only","39,208.00",,56,Active
+64,2024-052,2023-12-29,30,1,"Portable Tablet, Samsung S9 fe+, 12.4 inches, w/ book cover, keyboard and adapter","42,615.00",,56,Active
+65,SPLV-2024-03-337,2024-03-05,17,1,"Puncher, heavy duty, 2-hole guide",150,,56,Active
+66,2022-312,2022-01-20,30,1,"Printer, HP Laser 107W","8,176.00",from: N. Pagadut,56,Active
+67,2023-859,2023-12-06,30,1,"Printer, Epson L5290","14,200.00",,56,Active
+68,SPLV-2024-03-441,2024-03-13,23,1,"Keyboard and Mouse Combo, Logitech",700,,56,Active
+69,"SPLV-2024-07-671,SPLV-2024-07-672",2024-06-27,30,2,"Stapler, standard type, Joy Brand",201.4,,56,Active
+70,SPLV-2024-08-736,2024-07-19,30,1,"Head23, Redragon H848 IRE Pro Ultra Light Wireless","1,900.00",,56,Active
+71,SPHV-2024-08-747,2024-07-19,30,1,"Printer, Epson L5290","14,000.00",,56,Active
+72,541-10,2010-12-02,17,1,Printer Laserjet HP P2035N,"25,800.00",from: A. Gawidan,56,Active
+73,2017-12-048,2017-12-08,30,1,"Desktop Computer, HP 280 G2 Microtower","49,151.74",from: A. Gawidan,56,Active
+74,2020-1156,2020-03-10,30,1,"Calculator, two-way power. 12 digits, tilt display. JS-120",920,from: A. Gawidan,56,Active
+75,2016-068,2015-10-12,17,1,"Water Dispenser, Hanabishi","4,799.00",from: A. Gawidan,56,Active
+76,2021-116,2021-01-22,17,1,"Speakerphone, Mid-range portable USB and Bluetooth Speakerphone Speak 510, Jabra Speak 510","8,985.00",from: A. Gawidan,56,Active
+77,2021-153,2021-01-22,17,1,"4K Webcam with HDR abd Windows Hello support, 4K Ultra HD video calling, Logitech C930e","9,580.00",from: A. Gawidan,56,Active
+78,2020-1420,2020-07-16,30,1,"Xenon LED TV 32""","11,280.00",from: A. Gawidan,56,Active
+79,15-209,2015-06-10,30,1,"UPS, Infinite, Model: APX1200MA","6,153.99",from: A. Gawidan,56,Active
+80,2021-1230,2021-08-13,17,1,"Self-Inking Stamp ""Anna Theresa Gawidan""","1,000.00",from: A. Gawidan,56,Active
+81,2021-1233,2021-08-13,17,1,"Self-Inking Stamp, Specimen Signature","1,000.00",from: A. Gawidan,56,Active
+82,505-10,2010-11-24,17,1,"Filing Cabinet, 3 drawers, steel","7,000.00",from: A. Gawidan,56,Active
+83,2022-617,2022-10-26,30,1,"UPS, Secure 1000VA","3,945.00",from: A. Gawidan,56,Active
+84,2022-549,2022-09-30,17,1,"Mouse, A4Tech",150,from: A. Gawidan,56,Active
+85,2022-648,2022-09-08,30,1,CPU Assembled,"32,327.00",from: A. Gawidan,56,Active
+86,"2023-210,2023-211",2023-05-11,17,2,"Stapler with staple remover, heavy duty, Joy Brand",148.4,from: A. Gawidan,56,Active
+87,2023-389,2023-07-24,17,1,"Monitor, AOC 27""","7,050.00",from: A. Gawidan,56,Active
+88,2023-467,2023-08-09,30,1,"Monitor, Skyworth 23.8""/IPS/144HZ","7,720.00",from: A. Gawidan,56,Active
+89,2023-476,2023-08-15,30,1,"Computer Central Processing Unit, Intel Core i7 12700, B660 Motherboard, Kingston 16GB DDR4, 512GB SSD M2, Seagate 1TB, Antec casing, Antec 850W Gold","41,300.00",from: A. Gawidan,56,Active
+90,2023-341,2023-07-17,23,1,"Keyboard and Mouse, Logitech",700,from: A. Gawidan,56,Active
+91,2020-1029,2020-01-30,30,1,"Extension Cord, 1-2 meters cord, 5 gang with switch",650,from: A. Gawidan,56,Active
+92,21-08-73,2021-08-03,30,1,CPU assembled,"44,603.00",from: A. Gawidan,56,Active
+93,SPLV-2024-03-336,2024-03-05,17,1,"Puncher, heavy duty, 2-hole guide",150,from: A. Gawidan,56,Active
+94,SPLV-2024-08-734,2024-07-19,30,1,"Head23, Redragon H848 IRE Pro Ultra Light Wireless","1,900.00",from: A. Gawidan,56,Active
+95,15-151,2015-06-10,30,1,"Computer Desktop, Acer (CPU Only)","25,000.00",from: A. Gawidan,56,Active
+96,15-180,2015-06-10,30,1,"Monitor, LCD, Acer","5,000.00",from: A. Gawidan,56,Active
+97,SPHV-2024-07-693,2024-07-17,30,1,"Shredder, Aurora AS1219CE","10,995.00",from: A. Gawidan,56,Active
+98,"SPLV-2024-09-877,SPLV-2024-09-878",2024-09-18,30,2,"Stapler, heavy duty, Joy Brand",931.25,,56,Active
+99,SPLV-2024-12-1086,2024-12-05,30,1,"UPS, Eaton 5A 700I-NEMA 700VA/360W","2,050.00",,56,Active
+100,"SPHV-2024-12-1161,SPHV-2024-12-1162",2024-12-20,30,2,"Smart Phone, Samsung A16","10,500.00",,56,Active
+1,2019-797,2019-11-07,30,1,"Android tablet, 8"" Wuxga TFT capacitative display, 1290 x 1200 px. S-Pen support, OS: Samsung one IU (Android 9.0 Pie) Samsung Tab A","14,990.00",,351,Active
+2,1573-16 ,2020-06-05,30,1,Misting Machine,"200,000.00",,351,Active
+3,1574-16,2020-06-05,30,1,Misting Machine,"200,000.00",,351,Active
+4,2019-962,2019-11-27,30,1,"Laptop, windows 10 home; processor; intel celeron N3060 processor, dual core processor, ACER A114-32-COB4, CEL N4000 14"", 4GB DDR","14,900.00",From: T. Daway,351,Active
+5,2020-1207,2020-03-19,30,1,Plastic Storage Box,"1,090.00",From: T. Daway,351,Active
+6,2020-1491,2020-09-09,17,1,Jabra Speak 510 (Portable Conference Omni-Directional Speakerphone,"7,280.00",From: T. Daway,351,Active
+7,2020-1506,2020-09-16,17,1,"Tripod, WF 3740","1,990.00",From: T. Daway,351,Active
+8,"2020-1649,2020-1650",2020-09-30,17,2,"Mouse and Keyboard, Logitech Mk120",750,From: T. Daway,351,Active
+9,"2020-1677,2020-1678",2020-10-08,17,2,"Monitor Panel Type, Asus V2 239He, 23"", IPS","7,900.00",From: T. Daway,351,Active
+10,2020-1676,2020-10-08,17,1,Full HD Webcam,"8,295.00",From: T. Daway,351,Active
+11,2020-1732,2020-10-27,17,1,VGA to HDMI Adapter,495,From: T. Daway,351,Active
+12,2020-1733,2020-10-27,17,1,"Hard Disk Drive, External, 1 TB with USB Cable Connector","3,200.00",From: T. Daway,351,Active
+13,2020-1848,2020-12-04,17,1,"Plastic Storage Box, 120L","1,100.00",,351,Active
+14,2021-081,2021-01-21,17,1,"Paper Cutter, A3, metal/steel base ","1,200.00",,351,Active
+15,2021-093,2021-01-22,30,1,"Printer, Epson L5190","14,750.00",,351,Active
+16,2021-200,2021-02-02,17,1,"File Cabinet , 2 drawers, with lock","5,200.00",,351,Active
+17,2021-201,2021-02-02,17,1,"Plastic Storage Box, 120L","1,100.00",,351,Active
+18,21-02-19,2021-01-29,30,1,Assembled CPU,"41,040.00",,351,Active
+19,21-02-20,2021-01-29,30,1,Assembled CPU,"41,040.00",,351,Active
+20,2021-265,2021-02-09,30,1,"Projector, w/ HDMI/ VGA Port, VANKYO 470","12,995.00",,351,Active
+21,2021-273,2021-03-04,17,1,"Office Chair, mid-back, 360 degrees swivel function, tilting mechanism, pneumatic height adjustment, 300mm, nylon bse with PU casters, 100kg maximum weight capacity","5,000.00",,351,Active
+22,2017-01-001,2016-12-17,30,1,Ultra Low Volume Misting Machine,"124,000.16",,351,Active
+23,2017-01-002,2016-12-17,30,1,Ultra Low Volume Misting Machine,"124,000.16",,351,Active
+24,969-11,2011-11-04,30,1,"Filing Cabinet, steel, 3 drawers, gray","6,984.34",from: C. Caluza,351,Active
+25,2020-1608,2020-10-08,30,1,"HDMI Cable, braided with cap on both sides, 5M, gold plated, durable","1,400.00",from: C. Caluza,351,Active
+26,2020-1742,2020-10-29,17,1,Tripod,"1,900.00",from: C. Caluza,351,Active
+27,2021-030,2021-01-12,17,1,"Individual Switch Extension Cord 6 gang, 1 meter",740,from: C. Caluza,351,Active
+28,2022-274,2022-04-08,17,1,"Corkboard without frame, 2 x 3ft.",345,,351,Active
+29,276-2K,1993-01-01,30,1,"Stereomicroscope with stereozoom, Electric, Leica Zoom 2000","30,000.00",from: U. Segundo,351,Active
+30,837-2K,1998-06-29,30,1,"Stereoscope, American Optical, manual","30,000.00",from: U. Segundo,351,Active
+31,698-2K,NULL,30,1,"Stereoscope, AO Spencer, No.5 complete with access","25,000.00",from: U. Segundo,351,Active
+32,952-2K,NULL,30,1,"Microscope, binocular, Olympus","63,950.00",from: U. Segundo,351,Active
+33,242-10,2010-05-31,30,1,"Microscope, Olympus, CX21, Japan, SN 0A81734","38,500.00",,351,Active
+34,018-06,2003-09-01,30,1,"Sprayer, Malaria Spray Can, Hudson X-Pert, Stainless Steel Compression","35,000.00",,351,Active
+35,2022-663,2022-01-31,30,1,"Printer, Brother MFC T920DW","14,150.00",,351,Active
+36,202-06,2006-05-15,30,1,"Microscope, Model CX21FSI","27,227.27",,351,Active
+37,20-06,2006-06-30,30,1,"Microscope, binocular, Olympus","75,000.00",,351,Active
+38,23-06,2006-06-30,30,1,"Microscope, binocular, Olympus","75,000.00",,351,Active
+39,"62-12,63-12",2012-01-24,30,2,Ningbo Microscope,"14,743.00",,351,Active
+40,2023-451,2023-08-14,17,1,"UPS, Secure 2000VA","5,300.00",,351,Active
+41,"2023-813,2023-814",2023-12-04,17,2,"Swivel Chair, executive faux leather, high back, with fixed armrest, 5 metal feet and wheels, heavy duty, tilt lock mechanism, adjustable, Black","7,500.00",,351,Active
+42,2024-212,2024-01-24,17,1,"Swivel Chair, High Back, Leatherette, Black, Chrome Base Jersey JS-289","4,485.00",,351,Active
+43,2021-1517,2021-03-10,30,1,"C930c Webcam, Logitech","7,990.00",,351,Active
+44,2024-282,2024-01-18,17,1,"Stapler, standard type, SQI Brand",165,,351,Active
+45,SPLV-2024-02-304,2024-02-14,17,1,"Folding Table, 6 ft., heavy duty","3,050.00",,351,Active
+46,SPHV-2024-07-644,2024-06-20,30,1,"Ergonomic Office Chair, Gaming Chair","7,500.00",,351,Active
+47,2020-1720,2020-10-21,30,1,"Monitor, 23"" full HD, IPS Panel, HDMI and VGA inputs, V239 Asus","9,990.00",from: J. Dongbo,351,Active
+48,2024-232,2024-01-24,17,4,"Executive Office Chair, Leather, Fixed Arm Rest, High back, Black, Jersey - JS289","4,485.00",from: J. Dongbo,351,Active
+49,2022-583,2022-09-30,17,1,"Mouse, A4Tech",150,,351,Active
+50,2024-00-10402990-01-VDPCP,2024-05-23,30,1,Spray Blower w/ Back Pack,"441,000.00",,351,Active
+51,2024-00-10402990-02-VDPCP,2024-05-23,30,1,Spray Blower w/ Back Pack,"441,000.00",,351,Active
+52,2024-00-10402990-03-VDPCP,2024-05-23,30,1,Spray Blower w/ Back Pack,"441,000.00",,351,Active
+53,2024-00-10402990-04-VDPCP,2024-05-23,30,1,Spray Blower w/ Back Pack,"441,000.00",,351,Active
+54,2024-00-10402990-05-VDPCP,2024-05-23,30,1,Spray Blower w/ Back Pack,"441,000.00",,351,Active
+55,2024-00-10402990-06-VDPCP,2024-05-23,30,1,Spray Blower w/ Back Pack,"441,000.00",,351,Active
+56,2024-00-10402990-07-VDPCP,2024-05-23,30,1,Spray Blower w/ Back Pack,"441,000.00",,351,Active
+57,2024-00-10402990-08-VDPCP,2024-05-23,30,1,Spray Blower w/ Back Pack,"441,000.00",,351,Active
+58,2024-00-10402990-09-VDPCP,2024-05-23,30,1,Spray Blower w/ Back Pack,"441,000.00",,351,Active
+59,2024-00-10402990-10-VDPCP,2024-05-23,30,1,Spray Blower w/ Back Pack,"441,000.00",,351,Active
+60,2024-00-10402990-11-VDPCP,2024-05-23,30,1,Spray Blower w/ Back Pack,"441,000.00",,351,Active
+1,2020-1400,2020-08-11,23,1,Head23 w/ Microphone and active noise cancelling fetaure,"5,850.00",,396,Active
+2,2020-1668,2020-10-08,17,1,"Ergonomic Chair, C-BH151, black","4,800.00",,396,Active
+3,2021-170,2021-01-22,17,1,"4K Webcam with HDR abd Windows Hello support, 4K Ultra HD video calling, Logitech C930e","9,580.00",,396,Active
+4,2021-1470,2021-09-14,17,1,"External Hard Drive, 1TB,Toshiba","2,950.00",,396,Active
+5,2021-1774,2021-11-16,17,1,A4 Tech Keyboard and Mouse,600,,396,Active
+6,2021-1777,2021-11-16,17,1,"Head23 Microphone, Logitech 370","2,000.00",,396,Active
+7,2021-1890,2021-12-10,17,1,"Speaker, VOIN Conference Station","6,990.00",,396,Active
+8,2021-1783,2021-11-16,17,1,VGA-HDMI Converter/Adapter,450,,396,Active
+9,2021-1941 ,2021-12-22,17,1,"Office Calculator, Deli 837",205,,396,Active
+10,2022-015 ,2022-01-07,17,1,"Monitor, LG, 27""","12,900.00",,396,Active
+11,2019-1001,2020-01-02,30,1,"Pedestal steel Cabinet, small size","14,550.00",,396,Active
+12,2022-657,2022-11-04,30,1,"Laptop, Lenovo Ideapad Slim, 15.6""","48,383.00",,396,Active
+13,2019-1002,2020-01-02,30,1,"Pedestal steel Cabinet, small size","14,550.00",from: R. Liwaliw,396,Active
+14,2022-522,2022-09-30,17,1,"Keyboard, A4Tech",400,,396,Active
+15,2022-559,2022-09-30,17,1,"Mouse, A4Tech",150,,396,Active
+16,2022-705,2022-12-09,30,1,"Laptop, Acer Travelmate P2","42,800.00",,396,Active
+17,2022-726,2022-12-23,30,1,CPU Assembled,"40,700.00",,396,Active
+18,2022-324,2022-05-26,30,1,"UPS, APC 1000VA","5,900.00",,396,Active
+19,2019-512,2019-06-21,17,1,Pocket Wifi communication sysrem: LTE FDD/LTE Huawei 35573,"3,445.00",from: C. Caluza,396,Active
+20,2020-076,2020-01-20,30,1,"File Cabinet, 2 drawers, with lock","12,300.00",from: C. Caluza,396,Active
+21,2023-600,2023-10-17,17,1,"Swivel Chair, Acer LK-810 Predator Gaming Chair","5,000.00",,396,Active
+22,2023-601,2023-10-17,17,1,"Computer's Central Processing Unit, Intel i7-12700","38,400.00",,396,Active
+23,2023-602,2023-10-17,17,1,"UPS, AWP","5,500.00",,396,Active
+24,2023-603,2023-10-17,17,1,"Monitor, AOC 23.8""","5,850.00",,396,Active
+25,2023-604,2023-10-17,17,1,"Keyboard and Mouse, Logitech MK200",900,,396,Active
+26,"2023-811,2023-812",2023-12-06,17,2,"Stapler, standard type, Joy Brand",125,,396,Active
+27,2023-797,2023-11-24,17,1,"Portable Projector with white screen, Epson X51","32,550.00",,396,Active
+28,2023-798,2023-11-24,17,1,"Wireless Presentation Clicker Remote, Logitech R800","3,600.00",,396,Active
+29,2023-778,2023-12-04,17,1,"Extension Wheel, Omni 10M","1,380.00",,396,Active
+30,2023-777,2023-12-04,17,1,"Puncher, 2 hole, MGK, Blue",160,,396,Active
+31,2023-862,2023-12-06,30,1,"Printer, Epson L5290","14,200.00",,396,Active
+32,2024-062,2024-01-03,17,1,"Laptop, MSI G43 Core i7, 15.6""","49,700.00",,396,Active
+33,2023-930,2023-12-27,30,1,"Document Scanner, Epson ES-60W","8,495.00",,396,Active
+34,2023-929,2023-12-22,17,1,"Printer, Brother T720W","15,500.00",,396,Active
+35,"2024-205,2024-206,2024-207",2024-01-23,17,1,"Smartphone, Samsung Galaxy A14 5G 6GB/128GB","14,500.00",,396,Active
+36,2024-211,2024-01-24,17,1,"Swivel Chair, High Back, Leatherette, Black, Chrome Base Jersey JS-289","4,485.00",,396,Active
+37,2024-286,2024-01-18,17,1,"Stapler, standard type, SQI Brand",165,,396,Active
+38,SPHV-2024-02-293,2024-02-08,30,1,"Portable Tablet, Samsung S9 fe+, 12.4 inches, w/ book cover, keyboard and adapter","46,000.00",,396,Active
+39,SPHV-2024-03-480,2024-03-12,17,1,"Camera 360, Intax 360 X3","38,000.00",,396,Active
+40,2023-431,NULL,30,1,"Office Table, With drawers and cabinet with lock","9,000.00",,396,Active
+41,SPHV-2024-08-769,2024-08-05,30,1,"Printer, Epson L5290","20,950.00",,396,Active
+42,SPLV-2024-07-755,2024-07-30,17,1,"HDMI Cable, Dtech 8K","4,995.00",,396,Active
+43,SPHV-2024-08-773,2024-07-30,30,1,"Wireless Microphone System, VM200, JBL","24,999.00",,396,Active
+44,SPLV-2024-08-772,2024-08-07,17,1,"HDMI Splitter, 4K 4x1","1,450.00",,396,Active
+45,SPHV-2024-10-960,2024-10-09,17,1,DSLR Camera (Body Only),"49,990.00",,396,Active
+46,SPHV-2024-11-982,2024-10-21,30,1,"DSLR Camera Lens, Tamron B061","34,990.00",,396,Active
+47,SPHV-2024-12-1140,2024-12-13,17,1,"Swivel Chair, executive faux leather, high back, with arm rest, 5 metal feet and wheels, heavy duty, tilt lock mechanism, adjustable, F005","6,895.00",,396,Active
+1,2018-019,2017-12-19,30,1,"Water Dispenser, Hot, Cold and Normal (Hyundai HWD303C)","6,995.00",,135,Active
+2,2019-659,2019-08-19,30,1,"Tablet, Built-in Convenient Stylus Pen, Samsung Tab A w/ Sign Pen, P335","14,990.00",,135,Active
+3,2019-788,2019-10-30,30,1,"Voice recorder,4gb built-in memory, USB connection charging, Sony","7,800.00",,135,Active
+4,2021-135,2021-01-22,17,1,"Speakerphone, Mid-range portable USB and Bluetooth Speakerphone Speak 510, Jabra Speak 510","8,985.00",,135,Active
+5,2021-172,2021-01-22,17,1,"4K Webcam with HDR abd Windows Hello support, 4K Ultra HD video calling, Logitech C930e","9,580.00",,135,Active
+6,2019-656,2019-08-16,17,1,"Calculator, two-way power system with solar cell and one button type battery",400,from C. Kimmakim,135,Active
+7,2021-347,2021-05-17,17,1,"Office Chair, Jersey","3,795.00",,135,Active
+8,2016-12-0036,2016-12-13,30,1,ASUS X550ZE Laptop w/ Carrying Case and Mouse,"21,533.13",,135,Active
+9,2021-1051,2021-08-03,17,1,"UPS, EATON 5L 1200 USB, 1200V/600W,230V","6,800.00",from: P. Castro,135,Active
+10,2021-1907,2021-11-23,30,1,"External Hard Disk Drive, 2TB, ADATA","4,272.49",,135,Active
+11,2018-069,2018-01-29,30,1,"Computer table, wood, mahogany like color laminated wood with color, 45""x22"" 2, CST-838","3,995.00",from: R. Oyammi,135,Active
+12,2020-1863,2020-12-01,30,1,"Printer, Epson L5190","14,900.00",from: R. Oyammi,135,Active
+14,22-06-040,2022-06-14,30,1,Assembled CPU,"37,928.00",,135,Active
+15,"2022-437,2022-438",2022-07-07,17,2,Puncher,170,,135,Active
+16,2022-457,2022-08-04,17,1,"Tape Dispenser, HBW",113.05,,135,Active
+17,2022-458,2022-08-04,17,1,"Calculator, Casio",363.85,,135,Active
+18,"2022-439,2022-440",2022-07-07,17,2,"Stapler, standard type",95,,135,Active
+19,1229-2K,,30,1,Filing cabinet w/ shelves & cover (wooden),"6,500.00",cash Section,135,Active
+20,2022-602,2022-10-18,17,1,"Computer Chair.Mesh Chair, Chrome Legs , with arm rest & gas lift, color black","3,495.00",,135,Active
+21,2022-614,2022-10-20,17,1,"Executive Chair, heavy duty, high quality leatherette material, adjustable height, reclinable up to 150 degrees","3,850.00",,135,Active
+22,2022-684,2022-12-02,17,1,Gaming Mouse,490,,135,Active
+23,"2023-036,2023-037",2023-01-13,30,2,"Keyboard, A4TEch",450,,135,Active
+24,"2023-039,2023-040,2023-041",2023-01-13,30,3,"Mouse, A4TEch",380,,135,Active
+25,"2023-284,2023-285",2023-01-13,17,2,"Mouse, Wired, A4Tech",200,,135,Active
+26,"2023-332,2023-333,2023-334,2023-335",2023-06-14,30,4,"Executive Chair, High back, Black","6,720.00",,135,Active
+27,SPLV-2024-04-566,2024-04-05,30,1,"Executive Office Chair, Black Synthetic Leather, with lumbar support, heavy duty","4,500.00",,135,Active
+28,SPHV-2024-03-419,2024-03-13,30,1,"Monitor, AOC 27""","6,850.00",,135,Active
+29,SPHV-2024-10-941,2024-10-04,17,1,"Monitor, Samsung 27""","6,950.00",,135,Active
+30,SPHV-2024-10-944,2024-10-04,17,1,"Printer, Epson L5290","14,800.00",,135,Active
+31,SPLV-2024-12-1077,2024-11-05,30,1,"Wirelss Mouse, Logitech",700,,135,Active
+1,ICS 15-335,2015-09-21,17,1,Hand Truck,"2,035.00",L. Martin,417,Active
+2,ARE 15-71,2015-06-22,30,1,Executive Swivel Office Chair,"3,713.00",L. Martin,417,Active
+3,ARE 15-77,2015-07-03,30,1,Office Table with 4 drawers,"5,197.00",K. Lonogan,417,Active
+1,2017-372,2017-08-04,30,1,Swivel Chair,"3,795.00",,479,Active
+2,2019-01-022,1905-07-10,30,1,"Tablet, android Samsung TAB S2,8""","22,098.00",,479,Active
+3,2019-12-084,2019-12-04,30,1,"Laptop, Hp Elitebook x 360 1030 G2, processor: Intel core i5-7th Gen processor base clock speed, 2.5 Ghz Max turbo frequency 3.1GHz Max turbo frequency 3.1 Ghz cache 3mb cache, 2 cores; Memory 8gb DDR4-2133onboard; storage/hard disk-256GB solid state drive; camera-720p HD camera: SN: 5CG8491M3Q","68,640.00",,479,Active
+4,21-01-17,2020-11-20,30,1,Diesel Generator (Model Promate 8100D ES),"78,000.00",,479,Active
+5,2021-1700,2021-11-08,30,1,"Headset Microphone, Logitech H390","1,995.00",,479,Active
+6,2021-1556,2021-09-30,30,1,"Printer with Scanner, Epson L5190","14,800.00",,479,Active
+7,"2021-1222,2021-1223",2021-08-11,17,2,"Puncher, paper, heavy duty, with two hole guide",150,,479,Active
+8,"21-12-177,21-12-178",2021-12-03,30,2,Laptop Acer Travel Mate P2,"43,800.00",,479,Active
+9,21-09-90,2021-09-03,30,1,Assembled CPU,"44,903.00",,479,Active
+10,"2021-1028,2021-1035, 2021-1066",2021-08-03,17,3,"UPS, EATON 5L 1200USB, 1200VA/600W, 230V","6,800.00",,479,Active
+11,"2021-1317, 2021-1321",2021-09-03,17,2,"Keyboard, multi media laser priting, USB wired and 1.5meter cable",700,,479,Active
+12,"2021-1327,2021-1401",2021-09-03,17,2,"Mouse, optical, USB connection type",400,,479,Active
+13,21-08-79,2021-08-03,30,1,Assembled CPU,"44,603.00",,479,Active
+14,2022-058,2022-01-13,30,1,"All-in-One Wireless Printer, HP 615","13,990.00",,479,Active
+15,22-01-006,2022-01-10,30,1,"Laptop, Lenovo Legion 5","67,000.00",,479,Active
+16,2022-114,2022-01-24,30,1,"Powerstation for Cellphone and Computer Laptop, Promate 240s","10,800.00",,479,Active
+17,2022-079,2022-01-24,17,1,"OTG-USB, 32GB, Sandisk","1,695.00",,479,Active
+18,2020-1502(2),2020-08-07,17,1,Webcam for Voice Over Internet Protocol Calls,"8,900.00",from: B. Andaya,479,Active
+19,2020-1496,2020-09-07,17,1,JABRA Speak 410 (Speakerphone for voice over Internet Protocol Calls),"6,160.00",from: B. Andaya,479,Active
+20,21-01-05,2020-06-16,30,1,"Photocopier, Ineo 206","50,000.00",from: B. Andaya,479,Active
+21,183-12,2012-12-12,30,1,Refrigerator,"9,500.00",from: B. Andaya,479,Active
+22,2018-01-002,2017-12-21,30,1,"Projector, EPSON","47,300.00",from: B. Andaya,479,Active
+23,2019-049,2019-01-15,30,1,"Televison, Full HD w/ Smart TV Functionally, Pensonic","9,400.00",from: B. Andaya,479,Active
+24,2017-523,2017-10-13,30,1,"Automatic Voltage Regulator (AVR), 5KVA, 5,000 watts, SVC 5000N","8,000.00",from: B. Andaya,479,Active
+25,2020-051,2020-01-13,30,1,"Printer, 3-in-1, Refillable Ink Tank System Printer, Epson L3110","8,050.00",from: B. Andaya,479,Active
+26,2021-1463,2021-09-14,17,1,"External Hard Drive, 1TB,Toshiba","2,950.00",from: B. Andaya,479,Active
+27,2022-430,2022-07-01,17,1,"Lateral Filing Cabinet, 4 drawers","12,730.00",,479,Active
+28,"2022-543,2022-544,2022-545",2022-09-30,17,3,"Mouse, A4Tech",150,,479,Active
+29,SPLV-2024-08-788,2024-08-22,30,1,Whiteboard  3x5 ft.,"2,029.00",,479,Active
+30,SPLV-2024-08-789,2024-08-22,30,1,Corkboard 3x4 ft.,"1,350.00",,479,Active
+1,2017-12-056,2017-12-08,30,1,"Desktop Computer, HP 280 G2 Microtower","49,151.74",,157,Active
+2,2018-268,2018-07-09,17,1,"Printer, toner-type, HP Laserjet Pro M203dn","13,462.00",,157,Active
+3,2020-089,2020-01-24,17,1,"Steel Cabinet, 4 layers","6,995.00",,157,Active
+4,2020-1110,2020-06-24,17,1,"Multifunctional Wood Desk Organizer, with FHC Cluster print design",400,,157,Active
+5,2020-1284,2020-06-29,30,1,"Extension Cord, durable made with high quality materials, easy install, 3 outlet with cord, 5 meter, OMNI",300,,157,Active
+6,2020-1168,2020-03-09,30,1,"Steel Cabinet, 400W x 550H x 650mmD, Black","3,880.00",,157,Active
+7,2020-1418,2020-07-16,30,1,"Xenon LED TV 32""","11,280.00",at Loakan WH,157,Stock
+8,"2020-1655,2020-1656,2020-1657",2020-10-14,30,3,"Steel Cabinet, 4 layers w/ keys, Black powder coated w/ centralized lock, 1316mm x 600mm, JERSEY Brand","7,000.00",,157,Active
+9,2020-1741,2020-11-03,17,1,"TV Electronic Antenna, Magnetic, 5M",600,at Loakan WH,157,Stock
+10,2020-1760,2020-11-17,30,1,"TV Mount/Stand, Model: PSW831, Full M otion, Capacity Weight max. 25kg/55lbs., for screen size 17""-42"", Distance form wall: 55-342mm","1,900.00",,157,Active
+11,2020-1884,2020-12-04,17,1,"Tape Dispenser, table top, for 24mm width tape",130,,157,Active
+12,2020-1901,2020-12-23,17,1,Wall Charger,450,,157,Active
+13,2021-003,2021-01-05,17,1,"Extension Wire, Wheel Tyoe, 15 meters, 3 gang","1,995.00",,157,Active
+14,2021-029,2021-01-13,17,1,"Multimedia Presenter with USB Receiver 1, Pisen Rechargeable","1,100.00",,157,Active
+15,2021-263,2021-02-15,30,1,"USB Speakerphone, Jabra Speak 510 UC Conference Kit","7,280.00",,157,Active
+16,2021-126,2021-01-22,17,1,"Speakerphone, Mid-range portable USB and Bluetooth Speakerphone Speak 510, Jabra Speak 510","8,985.00",,157,Active
+17,2021-163,2021-01-22,17,1,"4K Webcam with HDR abd Windows Hello support, 4K Ultra HD video calling, Logitech C930e","9,580.00",,157,Active
+18,2020-1975,2020-12-09,30,1,"Desk Monitor, Lenovo 1271-28","10,350.00",,157,Active
+19,2021-284,2021-03-05,17,1,"Adapter, USB 2.0 to Rj45 Ethernet",315,,157,Active
+20,"2021-295,2021-296,2021-297",2021-03-11,17,3,"Steel Cabinet, Small Size","4,300.00",,157,Active
+21,21-04-030,2020-12-07,30,1,"Laptop iP, slim I5-1035GI, 8GB DDR4, 512GB SSD, 2GB MX330VIN, 15.6"" FHD, WIN10)","48,000.00",,157,Active
+22,2021-710,2021-05-10,17,1,"Puncher, heavy duty, 2-hole (7cm hole punch) with centering gauge",220,,157,Active
+23,2020-1766,2020-10-22,30,1,USB Bluetooth Adapter for PC,500,,157,Active
+24,2020-1774,2020-10-22,30,1,External USB Sound Card,500,,157,Active
+25,2021-1897,2021-11-23,30,1,"Black & White Laserjet Printer, Hewlett Packard","11,180.00",,157,Active
+26,2021-1904,2021-11-23,30,1,"External Hard Disk Drive, 2TB, ADATA","4,273.49",,157,Active
+27,2022-642,2022-09-08,30,1,CPU Assembled,"32,327.00",,157,Active
+28,2022-471,2022-09-02,30,1,"Monitor, Viewplus 23.8""","5,671.00",,157,Active
+29,2022-616,2022-10-26,30,1,"UPS, Secure 1000VA","3,945.00",,157,Active
+30,2022-565,2022-09-30,17,1,"Mouse, A4Tech",150,,157,Active
+31,"2023-059,2023-060",2023-02-17,30,2,Powered Air Purifying Respirator (PAPR),"15,666.00",,157,Active
+32,2023-340,2023-07-17,23,1,"Keyboard & Mouse, Logitech",700,,157,Active
+1,492-10,2010-11-24,17,1,"Cabinet, steel, 2 drawers, lateral","7,295.00",,309,Active
+2,2020-1342,2020-07-02,30,1,"Portable/Mobile Scanner, USB powered, Brother DS720D, 8ppm/ Black, 8.5 x 32''","14,990.00",,309,Active
+3,2020-1364,2020-07-22,17,1,"Corkboard, 31.5"" x 19.69"", without stand",845,,309,Active
+4,"2020-1561,2020-1562",2020-08-20,30,2,"Mop Bucket, heavy duty, hard plastic","2,332.00",,309,Active
+5,"2020-1602,2020-1603",2020-10-08,17,2,"Large Bulletin Cork Board, with silver aluminum frame 36 x 60 inches (5 x 3ft.), wall type","2,000.00",,309,Active
+6,2020-1604,2020-10-08,17,1,"HDMI Cable, 10m, 1080p resolution at 30Hz refresh rate","2,750.00",,309,Active
+7,"2020-1605,2020-1606",2020-10-08,17,2,"HDMI Cable, 10m, 1080p resolution at 30Hz refresh rate","2,500.00",,309,Active
+8,"2020-1610,2020-1611,2020-1612,2020-1613,2020-1614,2020-1615,2020-1616,2020-1617,2020-1618,2020-1619,2020-1620,2020-1621,2020-1622,2020-1623,2020-1624,2020-1625,2020-1626,2020-1627,2020-1628,2020-1629,2020-1630,2020-1631,2020-1632,2020-1633,2020-1634",2020-10-07,17,25,"Dual OTG Flash Drive 3.0, 32GB meta; pen drive, waterproof, with lanyard",399,,309,Active
+9,2018-289,,30,1,"HDMI Cable, 5.0meters",900,,309,Active
+10,"2020-1683,2020-1684",2020-10-16,30,2,"Smartphone, Note 9 Xiaomi, 18W, 6/128GB","14,500.00",,309,Active
+11,2020-1781,2020-11-19,17,1,"Whiteboard, mobile magnetic with stand (48 x 26in), silver frame","1,315.00",,309,Active
+12,2020-1899,2020-12-21,17,1,"Speaker, Konzert KX-450+","6,850.00",,309,Active
+13,"2020-1987,2020-1988",2020-12-21,17,2,"Wall Fan, 16"", Brand: Standard, Model: SWF-16Q","1,450.00",,309,Active
+14,"2020-1990,2020-1991",2020-12-21,17,2,"Swivel Chair, Executive, faux leather, high back, w/ arm rest, 6 metal feet and wheels, heavy duty, adjustable","2,950.00",,309,Active
+15,"2020-1992,2020-1993",2020-12-21,17,2,"Multi-Outlet 3 plug Heavy Duty Extension Cord, 220V",750,,309,Active
+16,"2021-016,2021-017",2021-01-08,17,2,"Hard Disk Drive, 2TB, Seagate Slim","4,995.00",,309,Active
+17,"2021-065,2021-066",2021-01-18,17,2,"Perforator (Puncher), Carl",850,,309,Active
+18,"2021-069,2021-070",2021-01-15,17,2,Multimedia Speaker System,"6,850.00",,309,Active
+19,2021-071,2021-01-18,17,1,"Scanner, Brother DS-720D","11,800.00",,309,Active
+20,"2021-075,2021-076",2021-01-20,17,2,"Portable Connectivity Speaker, anker soudcore Flake 2","6,495.00",,309,Active
+21,"2021-077,2021-078,2021-079,2021-080",2021-01-20,17,4,"Headphone, Phillips","3,695.00",,309,Active
+22,"2021-236,2021-237,2021-238",2021-09-30,17,3,Multimedia Presenter,"1,100.00",,309,Active
+23,2021-239,2021-02-09,23,1,"Kitchen Organizer/ Food Storage Rack, 4 tier","3,200.00",,309,Active
+24,"2021-240,2021-241",2021-02-09,17,2,"Shoe Rack, Wood,  4 layer, durable","2,000.00",,309,Active
+25,"2021-242,2021-243,2021-244,2021-245,2021-246,2021-247,2021-248,2021-249,2021-250,2021-251",2021-02-09,17,10,"Camping Family Tent, waterproof, automatic, outdoor","1,420.00",,309,Active
+26,"2021-483,2021-484,2021-485,2021-486",2021-03-30,17,4,Window Brocade Curtain,"1,080.00",,309,Active
+27,"2021-487,2021-488,2021-489,2021-490,2021-491,2021-492,2021-493,2021-494,2021-495,2021-496,2021-497,2021-498,2021-499,2021-500,2021-501",2021-03-30,17,15,Comforter/Warmer,"1,820.00",,309,Active
+28,"2021-574,2021-575",2021-03-30,17,2,Trash Bin,"5,150.00",,309,Active
+29,"2021-552,2021-553,2021-554",2021-03-30,17,3,Recheargeable Emergency LED solar torch light,970,,309,Active
+30,2021-579,2021-03-30,17,1,Percolator Coffee Maker,"5,400.00",,309,Active
+31,21-05-34,2021-01-18,30,1,"LCD Projector, Epson EB-U42","41,500.00",,309,Active
+32,"2021-511,2021-512,2021-513",2021-06-16,17,3,"Megaphone, 25watt, Siren (Loud Hailer), volume control, detachable mircrophone, effective distance: 700M, takes 8XUM - 1 battery, Horn diamter: 230mm, with recording","2,485.00",,309,Active
+33,"2021-835,2021-836,2021-837,2021-838,2021-839,2021-840",2021-07-12,30,6,"Wired Mouse, Logitech",350,,309,Active
+34,2021-841,2021-07-12,17,1,"Laminating Machine, HD-9","3,700.00",,309,Active
+35,2021-842,2021-07-12,17,1,"Telephone Set, Panasonic",850,,309,Active
+36,2021-845,2021-06-02,17,1,"8-Port 10/100Mbps Desktop Network Switch, TP Link TL-SF10080; SN: 219B11000116",800,,309,Active
+37,"2021-985,2021-986",2021-07-29,17,2,Plastic Storage Box,"1,450.00",,309,Active
+38,"2021-1098,2021-1099",2021-07-30,30,2,"Glue Gun, heavy duty",400,,309,Active
+39,21-08-55,2021-01-11,30,1,"Laptop, HP X360, DH1062 TX","57,995.00",,309,Active
+40,"2021-1197,2021-1198",2021-07-30,4,2,"Heavy Duty Stapler, 10mm",180,,309,Active
+41,"2022-062,2022-063,2022-064,2022-065,2022-066",2022-01-13,17,5,Portable Butane Gas Stove,"1,595.00",,309,Active
+42,2022-067,2022-01-13,17,1,Burner Gas Stove,"2,950.00",,309,Active
+43,22-08-056,2022-07-21,30,1,Water Test Kit,"166,599.00",,309,Active
+44,2016-12-058,2016-12-13,30,1,Acer Veriton X4110G Desktop Set,"26,509.60",,309,Active
+45,750AB-2K,1989-12-31,17,1,"Filing Cabinet, 4 drawers, steel","5,880.00",,309,Active
+46,2022-047,2022-01-10,30,1,"Monitor, Atlas 22""","6,500.00",,309,Active
+47,22-11-087,2022-11-02,30,1,CPU Assembled,"44,603.00",,309,Active
+48,2021-1886,2021-12-09,17,1,"Powerbank, 6000MAH",795,,309,Active
+49,2023-171,2023-04-14,17,1,"Swivel Chair, Shivtech, Gaming Chair","8,995.00",,309,Active
+50,2021-510,2021-05-27,17,1,"Multifunction Printer, Epson L5190","14,990.00",from: J. Pira,309,Active
+51,2019-726,2019-10-11,17,1,"LED Monitor, 22 inches with DVI port for desktop computer, Viewsonic VA 2261-2","4,900.00",from: M. Piluden,309,Active
+52,2020-092,2020-01-24,17,1,"Steel Cabinet, 4 layers","6,995.00",from: M. Piluden,309,Active
+53,2020-1169,2020-03-06,30,1,"Steel cabinet, 400W x 550H x 650mm, Black","3,880.00",from: M. Piluden,309,Active
+54,2020-1285,2020-06-25,30,1,"Extension Cord, durable, made with high quality materials, easy install, 3 outlet with cord, 5 meter, OMNI",300,from: M. Piluden,309,Active
+55,2020-1105,2020-06-22,17,1,"Multifunctional Wood Desk Organizer, with FHC Cluster print design",400,from: M. Piluden,309,Active
+56,2019-651,2019-08-02,17,1,"Extension Cord, 3 outlet with cord",288,from: M. Piluden,309,Active
+57,2020-1768,2020-10-22,30,1,USB Bluetooth Adapter for PC,500,from: M. Piluden,309,Active
+58,2020-1776,2020-10-22,30,1,External USB Sound Card,500,from: M. Piluden,309,Active
+59,2021-028,2021-01-13,17,1,"Multimedia Presenter with USB Receiver 1, Pisen Rechargeable","1,100.00",from: M. Piluden,309,Active
+60,2021-286,2021-03-05,17,1,"Adapter, USB 2.0 to Rj45 Ethernet",315,from: M. Piluden,309,Active
+61,2021-709,2021-05-10,17,1,"Puncher, heavy duty, 2-hole (7cm hole punch) with centering gauge",220,from: M. Piluden,309,Active
+62,2020-1018 ,2020-01-30,30,1,Powerbank,"6,250.00",from: M. Piluden,309,Active
+63,2021-1821,2021-11-26,17,1,"Wireless Mouse for Computer, Rapoo","1,095.00",from: M. Piluden,309,Active
+64,2021-1823,2021-11-26,17,1,"Headset, JBL","6,000.00",from: M. Piluden,309,Active
+65,2021-1824,2021-11-26,17,1,"HP Pro Web Camera with Tripod, Logitech C922 PRO","8,900.00",from: M. Piluden,309,Active
+66,2021-1865,2021-12-09,17,1,"Portable Conference Omni-Directional Speakerphone, Jabra Speak 510 Wireless","9,650.00",from: M. Piluden,309,Active
+67,2020-1800,2020-11-20,17,1,"Keyboard, USB Wired, A4Tech KRS 85",595,from: M. Piluden,309,Active
+68,2024-091,2024-01-18,30,1,"Laptop, Asus TUF FX506, 15.6""","49,999.00",,309,Active
+69,2024-217,2024-01-24,17,1,"Swivel Chair, High Back, Leatherette, Black, Chrome Base Jersey JS-289","4,485.00",,309,Active
+70,2024-170,2024-01-12,30,1,"Portable Tablet, Samsung S9 fe+, 12.4 inches, w/ book cover, keyboard and adapter","43,900.00",,309,Active
+71,"2024-175,2024-176",2024-01-12,30,2,"Monitor, Asus 27""","11,300.00",,309,Active
+72,2024-237,2024-01-18,17,1,"Extension Cord, 15M, Omni","1,850.00",,309,Active
+73,2024-203,2024-01-18,30,1,"Wireless Bluetooth Speaker with Mic, Jabra Speak 510","7,940.00",,309,Active
+74,SPLV-2024-02-302,2024-02-14,17,1,"Folding Table, 4 ft., heavy duty","2,500.00",,309,Active
+75,"SPHV-2024-07-649,SPHV-2024-07-650,SPHV-2024-07-651,SPHV-2024-07-652,SPHV-2024-07-653,SPHV-2024-07-654,SPHV-2024-07-655,SPHV-2024-07-656",2024-06-25,30,8,"Ergonomic Office Chair, Gaming Chair","7,500.00",,309,Active
+76,2022-480,2022-09-05,30,1,"Laptop, Acer Aspire 7","40,500.00",from: V. Ingen,309,Active
+77,SPHV-2024-07-710,2024-07-17,30,1,"Portable tablet, Samsung Tab S9+","42,900.00",,309,Active
+78,SPHV-2024-10-893,2024-10-01,17,1,"Portable Aircon, Fujidenzo ","18,700.00",,309,Active
+79,SPHV-2024-07-701,2024-07-17,30,1,"Printer, Epson L5290","14,800.00",,309,Active
+80,"SPLV-2024-11-1026,SPLV-2024-11-1027,SPLV-2024-11-1028,SPLV-2024-11-1029,SPLV-2024-11-1030",2024-11-25,17,5,"Cooler, Box, Orocan 8L, Red","1,581.00",,309,Active
+1,2018-520,2018-10-23,30,1,"LAPTOP, ACER ASPIRE ES 14, Intel Celeron N3160, 2 GB DDR, 500GB 11.6"", Endless OS","14,900.00",from: A. Baigen,265,Active
+2,"2018-521,2018-522,2018-523",2018-10-23,17,3,"EXTENSION CORD, 4 gang for universal outlet","1,400.00",from: A. Baigen,265,Active
+3,"2019-768,2019-769",2019-10-28,17,2,"Individual Cell Battery ( with LED charge indicator) with 4 A4 size, at least 1500 mAh, 1500 cycle, Nickel-Metal Hydride Rechargeable batteries","1,295.00",from: A. Baigen,265,Active
+5,2018-519,2020-01-08,30,1,Laptop Acer Aspire ES 14,"14,900.00",from: A. Baigen,265,Active
+7,2020-1551,2020-09-17,30,1,"Tripod for Web Cam, with rubberized joint rings and feet for grip","1,000.00",from: A. Baigen,265,Active
+8,2020-1727,2020-10-28,17,1,"Extension Cord (Wheel), Omni 15M","1,995.00",from: A. Baigen,265,Active
+9,2020-1783,2020-11-17,30,1,"UPS, APC 1100 VA","7,100.00",from: A. Baigen,265,Active
+10,2020-1909,2020-12-04,17,1,"Shelf, metal frame, 4-5 layers, 300*100*200","8,000.00",from: A. Baigen,265,Active
+13,2018-634,2018-11-06,30,1,"Printer, Multifunction, Colred, Brother T810W","14,500.00",from: A. Baigen,265,Active
+14,"21-09-108,21-09-114",2021-09-07,30,2,"Laptop Computer, Acer Nitro 5","50,562.00",,265,Active
+15,2020-06-0146,2020-06-03,30,1,"Desktop Computer, Acer Veriton M2640G","39,208.00",,265,Active
+20,"2017-509,2017-510",2017-11-28,30,2,"Revolving Stool, w/ 4 legs","3,200.00",from: G. Austria,265,Active
+22,2020-1407,2020-07-16,30,1,"Xenon LED TV 32""","11,280.00",from: G. Austria,265,Active
+23,"2019-318,2019-319",2019-03-22,30,2,"Label Printer, QL 800 Brother","12,650.00",from: G. Austria,265,Active
+27,"2020-1724,2020-1725",2020-10-28,17,2,"Extension Cord (Wheel), Omni 15M","1,995.00",from: G. Austria,265,Active
+33,"2021-1656,2021-1657,2021-1658",2021-10-25,17,3,Specimen Transport Box,"1,800.00",from: G. Austria,265,Active
+34,2022-205,2022-03-11,30,1,"UPS, APC 1200VA/650W","6,420.00",,265,Active
+35,2022-703,2022-11-28,17,1,"Paper Shredder, Deli 9906","19,890.00",,265,Active
+36,2022-743,2022-12-22,17,1,"Battery, Charger, Jiabao","1,800.00",,265,Active
+37,2023-052,2023-01-19,17,1,HDMI to VGA Adapter,180,,265,Active
+38,2022-739,2022-12-21,17,1,"Mouse, A4Tech",350,,265,Active
+39,2023-815,2023-12-04,17,1,"Swivel Chair, executive faux leather, high back, with fixed armrest, 5 metal feet and wheels, heavy duty, tilt lock mechanism, adjustable, Black","7,500.00",,265,Active
+40,"2020-06-0161,2020-06-0162",2020-06-24,30,2,CPU Assembled,"53,054.96",from: K. Raguindin,265,Active
+1,2019-1020,2019-12-13,17,1,"Printer, 3-in-1 color inkjet, ink technology, EPSON L3110","7,950.00",from: L. Say-Awen,366,Active
+2,ICS 16-298,2016-05-23,30,1,Windows Combi Blinds,"15,000.00",from: L. Say-Awen,366,Active
+3,2019-475,2019-05-31,30,1,"Extension Cord, heavy Duty, Universal outlet, ICC Accredited, 4 gang, 12 ft.",650,from: L. Say-Awen,366,Active
+4,2019-713,2019-10-01,30,1,"Office Chair, med-bak, 360 dwegrees, swivel function","3,495.00",from: L. Say-Awen,366,Active
+5,2019-078,2019-01-17,17,1,Heavy Duty Paper Cutter,"1,495.00",from: L. Say-Awen,366,Active
+6,2018-693,2018-11-26,30,1,"Heavy Duty Plastic Box, 4 wheels, blue","1,500.00",from: L. Say-Awen,366,Active
+7,2019-810,2019-11-07,30,1,"Document Scanner, scan size up to legal, 60 sheets feeder capacity, Epson DS 310","14,999.00",from: L. Say-Awen,366,Active
+8,2018-710,2018-11-26,17,1,"Anycast, m4plus, high definition, supports IOS & Android","1,790.00",from: L. Say-Awen,366,Active
+9,22-08-083,2022-05-21,30,1,"Laptop, Acer Aspire 5, Intel Core i7 1165 G7, 8GB x 2+16Gb, 1TB + 256GB, Win 10 Home, 14""","59,300.00",,366,Active
+10,2022-646,2022-09-08,30,1,CPU Assembled,"32,327.00",,366,Active
+11,"2022-488,2022-489,2022-490",2022-09-05,30,3,"UPS, APC 1000VA/600W","5,850.00",,366,Active
+12,2022-673,2022-11-23,30,1,"Bluetooth Headset, Poly Voyager 4220","13,500.00",,366,Active
+13,2022-674,2022-11-23,30,1,"Printer, Brother DCP-T420W","10,800.00",,366,Active
+14,2023-316,2023-07-13,17,1,"LCD Projector with white screen, Epson EB-X51","30,500.00",,366,Active
+15,2022-496,2022-09-07,17,1,"Monitor, Atlas, Gamdias 21.5""","4,870.00",from: D. Babon,366,Active
+16,"2023-190,2023-191,2023-192",2023-05-05,17,3,"Office Table, with glass top, 3 side drawers","9,900.00",from: D. Babon,366,Active
+17,"2023-435,2023-436",2023-08-07,17,2,"UPS, AWP 1000VA/600W","3,250.00",,366,Active
+18,2023-434,2023-08-04,17,1,"Printer, Epson L5290, Wireless","14,000.00",,366,Active
+19,"2023-678,2023-679",2023-11-06,17,2,"Central Processing Unit, Intel Core i5-11400 Processor, B560M Motherboard, Kingston 16GB RAM, Samsung 1TB NVME M.2 SSD, Samsung 1TB Sata SSD, Gigabyte 850W 80+ Gold PSU, Casing MEsh w/ 4 pcs ARGB Fans","42,250.00",,366,Active
+20,"2023-680,2023-681",2023-11-06,17,2,"Wireless Keyboard and Mouse, A4Tech",750,,366,Active
+21,"2023-682,2023-683",2023-11-06,17,2,"Monitor, AOC 27""","7,050.00",,366,Active
+22,"2023-684,2023-685(2)",2023-11-06,17,2,"UPS, Secure 2000VA/1400Watts","5,300.00",,366,Active
+23,"2023-750,2023-751",2023-11-15,17,2,"HDMI Cable, Ugreen 10 meters","1,064.00",,366,Active
+24,2023-347,2023-07-17,23,1,"Keyboard and Mouse, Logitech",700,,366,Active
+25,"2024-096,2024-097,2024-098,2024-099,2024-100,2024-101",2024-01-03,17,6,"Headphone, Logitech G733, Wireless","5,500.00",,366,Active
+26,2024-183,2023-12-21,17,1,"Portable Speakerphone, Jabra","15,000.00",,366,Active
+27,"2024-241,2024-242,2024-243,2024-244,2024-245",2024-01-19,17,5,"Heavy Duty Office Stapler with staple remover, Metro Brand",105,,366,Active
+28,2023-385,2023-07-24,30,1,Computer Central Processing Unit,"3,050.00",,366,Active
+29,SPLV-2024-04-533,2023-10-16,17,1,"Extension Cord, Panther PSP-0394,5 meters, 6 outlets, 2500Watts","1,380.00",,366,Active
+30,"SPLV-2024-04-552,SPLV-2024-04-553,SPLV-2024-04-554,SPLV-2024-04-555",2024-04-05,30,1,"Executive Office Chair, Black Synthetic Leather, with lumbar support, heavy duty","4,500.00",,366,Active
+31,SPLV-2024-04-576,2024-04-05,30,1,"16-Port Network Switch, Black",185,,366,Active
+32,SPLV-2024-07-683,2024-06-25,30,1,"HDMI Splitter, Ugreen, 1x4","1,650.00",,366,Active
+33,SPHV-2024-07-688,2024-07-09,30,1,"Laptop, Acer AL14-51M-57HI i5-1235U 8GB 512GB SSD 14"" Shared Win 11 H&S Silver ","36,150.00",,366,Active
+34,SPHV-2024-07-709,2024-07-17,30,1,"Portable Tablet, Samsung Tab S9+","42,900.00",,366,Active
+35,"SPLV-2024-12-1046,SPLV-2024-12-1047,SPLV-2024-12-1048,SPLV-2024-12-1049,SPLV-2024-12-1050",2024-11-28,30,5,"Extension Wheel, 15M 2500W, Omni","1,700.00",,366,Active
+36,"SPHV-2025-01-038,SPHV-2025-01-039",2025-01-20,23,2,XTUGA M-6604S Professional 4 Channel UHF Wireless,"20,000.00",,366,Active
+1,2018-474A,2018-10-15,30,1,"Portable Audio System, INGKA F34, 1 pc Microphone","7,000.00",,335,Active
+2,2019-098,2019-01-23,30,1,"UPS, KSTAR Line Interactive 1200VA/900W","5,460.00",,335,Active
+3,"2019-743,2019-744",2019-10-16,17,2,"Mouse Optical, USB Connection type, A4Tech",220,,335,Active
+4,2020-0103,2020-01-20,30,1,"LAPTOP, Windows 10 Home, Processor: Intel Celeron N3060 Processor, Dual Core Processor, LENOVO IDEAPAD S130","14,900.00",,335,Active
+5,2020-1607,2020-10-08,30,1,"Full HD Webcam, Logitech C930E","8,500.00",,335,Active
+6,2020-1609,2020-10-08,30,1,"Monitor, Asus V2239 HE 23"" IPS","8,000.00",,335,Active
+7,2020-1675,2020-10-12,30,1,"Portable Conference Omni-Directional Speakerphone, JABRA 510","12,990.00",,335,Active
+8,21-08-69,2021-08-03,30,1,CPU Assembled,"44,603.00",,335,Active
+9,2021-1615,2021-10-06,17,1,"Monitor, Viewplus 23.8""","6,678.00",,335,Active
+10,2023-881,2023-12-15,30,1,"Laptop, Acer TMP-214, 14""","40,250.00",,335,Active
+11,2023-882,2023-12-18,30,1,"Swivel Chair, Executive, faux leather, with fixed arm rest, 5 metal feet and wheels, heavy duty, tilt lock mechanism, adjustable","5,000.00",,335,Active
+12,SPLV-2024-04-530,2024-08-04,30,1,"Wireless Clicker, Prolink PWR 108G","1,000.00",,335,Active
+14,2017-539,2017-12-13,17,1,Perculator 15L,"5,532.00",for waste,335,For Waste
+17,SPHV-2024-11-979,2024-10-30,30,1,"Printer, Epson L5290","14,000.00",,335,Active
+18,SPHV-2024-12-1133,2024-12-16,30,1,"Laptop, MSI Modern 15","48,900.00",,335,Active
+1,2017-209,2017-03-20,30,1,"Overhead Projector, Portable, Pocket","12,790.00",,248,Active
+2,"ICS 16-330,ICS 16-331,ICS 16-332",2016-06-24,17,2,Folding Bed ,990,,248,Active
+3,ICS 16-545,2016-11-07,17,1,"24' flat color TV, LED","8,500.00",,248,Active
+4,ICS 16-542,2016-11-07,17,1,Paper Ream Cutter A3 Size ,"1,300.00",,248,Active
+5,"ICS 16-352,16-353",2016-04-15,17,2,"Stoke Basket, stainless","9,700.00",,248,Active
+6,"2017-221,2017-222,2017-223,2017-224,2017-225,2017-226,2017-227,2017-228,2017-229,2017-230",2017-04-03,30,10,"Waterproff VHF 128 Channel Handheld Radio, Black (ICOM icv 88)","12,100.00",,248,Active
+7,"2017-231,2017-232,2017-233,2017-234,2017-235,2017-236,2017-237,2017-238,2017-239,2017-240",2017-04-03,30,9,"Emergency Light, Rechargeable, Solar Powered (Firefly w/ Solar Charger & USB Mobile Phone Charger","3,200.00",,248,Active
+8,"2017-394,2017-395",2017-10-24,17,2,Portable External Hard Drive,"5,388.00",,248,Active
+9,ICS 490-10,,17,1,"Steel Cabinet, 2 drawers, lateral","7,295.00",,248,Active
+10,2018-267,2018-07-09,17,1,"Digital Camera, with at elast 20MP at least 24x optical zoom, Sony D5C H300 ","12,508.00",,248,Active
+11,2017-241,,30,1,Microwave touch control panel electrical display,"5,055.00",,248,Active
+12, 2016-037,2016-10-27,17,1,VHF Radio Transceiver,"14,040.00",,248,Active
+13,"2018-538,2018-539,2018-540,2018-541,2018-542,2018-543,2018-544,2018-545,2018-546,2018-547,2018-548,2018-549,2018-550,2018-551",2018-07-01,17,14,"CPR Mannequin, CHILD","14,995.00",,248,Active
+14,"2018-552,2018-553,2018-554,2018-555,2018-556,2018-557,2018-558,2018-559,2018-560,2018-561,2018-562",2018-07-01,17,11,"CPR Mannequin, ADULT","14,995.00",,248,Active
+15,2019-09-054,1905-07-11,30,1,"Laptop, Apple Notebook, Macairbook 13.3"" x 1.8 Ghz, Dual COre, Intel Core i5 18GB/126GB HD Graphics","65,100.00",,248,Active
+16,2019-09-050,1905-07-11,30,1,"Pocket LCD Projector, 150 lumens, built in 6000mAh Battery up to 5 hour projection, powerbank Acer C200","29,000.00",,248,Active
+17,1714-16E,,30,1,"CPR Mannequin, half body Child with Clicker","15,000.00",,248,Active
+18,"1725-16E,1726-16E,1727-16E,1728-16E",,30,4,"CPR Mannequin, half body Child with Clicker","15,000.00",,248,Active
+19,"802-15E,820-15E,821-15E,822-15E,823-15E,824-15E",,30,6,KENDRICKS EXTRACATION DEVICE (KED),"7,300.00",,248,Active
+20,2018-856,1905-07-10,30,1,Portable PA System,"14,880.00",,248,Active
+21,2020-1033,2020-01-09,30,1,LPG GAs Tank 11kg,"3,950.00",,248,Active
+22,2019-456(1),1905-07-11,30,1,"SWIVEL CHAIR, executive, leather, high back",,,248,Active
+23,"2019-305,2019-306,2019-307,2019-308,2019-309",2019-03-22,17,5,Wireless mouse,"1,650.00",Fr. K.Son,248,Active
+24,"2019-315,2019-316",2019-03-22,17,2,"extension cord, 4.5 meter, 6 sockets","1,650.00",Fr. K.Son,248,Active
+25, 2019-310,2019-03-22,30,1,"tablet, 8"", samsung galaxy Tab A w/ S pen","14,700.00",Fr. K.Son,248,Active
+26,"2019-011,2019-012",2019-01-04,17,2,Pocket wifi. Communication system,"3,295.00",Fr. K.Son,248,Active
+27,"2019-013,2019-014",2019-01-04,17,2,"USB hub (3-4 ports, USB 3.0)",425,Fr. K.Son,248,Active
+28,2018-816,2018-12-20,30,1,"Label Printer, Brother QL 800w, Leadtime: 2-3","13,000.00",Fr. K.Son,248,Active
+29,"2019-330,2019-331,2019-332,2019-333",1905-07-10,30,4,Spine board,"8,400.00",Fr. K.Son,248,Active
+30,2019-328,2019-03-29,30,1,water shower heater,"4,800.00",Fr. K.Son,248,Active
+31,2019-329,2019-03-29,23,1,"Kitchen utensils Set: (1 ladle, 1 vegetable peler, 1 9"" Utility Knife 1 Deep Spoon, 1 Rubber Tong)","2,500.00",Fr. K.Son,248,Active
+32,"2019-339,2019-340",2019-04-22,17,2,"Signal Booster, All-in-one, 2G, 3G, 4G LTE","4,500.00",Fr. K.Son,248,Active
+33,2019-09-051,1905-07-11,30,1,"Pocket Lcd Projector, 150 lumens, built in 6000mAh battery up to 5 hour projection powerbank Acer C200","29,000.00",Fr. K.Son,248,Active
+34,2019-456(2),2019-05-08,17,1,"Swivel Chair, Faux leather, high (soho)","3,195.00",Fr. K.Son,248,Active
+35,2019-672,2019-09-02,17,1,"Wall clock (plastic, 35cm x 5cm)",850,Fr. K.Son,248,Active
+36,2019-526,2019-06-20,17,1,"Whiteboard (48x36) mobile magnetic with stand, silver","1,800.00",Fr. K.Son,248,Active
+37,2019-481,2019-06-04,17,1,"UPS, 650VA, heavy duty, APC 1100V A","6,990.00",Fr. K.Son,248,Active
+38,2021-1839,2021-11-25,30,8,"Mobile Phone, Samsung Galaxy A12 (6GB + 128GB)","9,990.00",from: M. Munoz,248,Active
+39,186-2K,2000-03-20,17,1,"Office Table 28"" x48""","5,950.00",from: M. Calpito,248,Active
+40,2021-1063,2021-08-03,17,1,"UPS, EATON 5L 1200 USB, 1200VA/600W, 230V","6,800.00",,248,Active
+41,21-08-95,2021-08-03,30,1,CPU Assembled,"44,603.00",,248,Active
+42,2021-1364,2021-08-06,30,1,"Keyboard, Logitech",700,,248,Active
+43,2021-1437,2021-08-03,17,1,"Mouse, Logitech",400,,248,Active
+44,2021-1815,2021-10-28,17,1,"Monitor, Viewplus 23""","6,678.00",,248,Active
+45,2023-278,2023-06-01,17,1,"Gaming Chair, Black","7,000.00",,248,Active
+46,2023-551,2023-10-03,17,1,"Stereo Bluetooth Headset, Logitech","9,000.00",,248,Active
+47,2023-548,2023-10-02,30,1,"Notebook, Galaxy Tab 8, Gray, 128GB/4GB","20,600.00",,248,Active
+48,2023-627,2023-10-19,17,1,"Printer, Epson L6270","18,000.00",,248,Active
+49,2020-1500,2023-08-07,17,1,Webcam for Voice Over Internet Protocol Calls,"8,900.00",from: M. Calpito,248,Active
+50,2023-740,2023-11-17,17,1,"Office Table, glass top with side drawers","7,425.00",,248,Active
+1,862-11,2011-09-21,30,1,"Cabinet, 3 drawers, stainless","7,000.00",,270,Active
+2,910-11,2011-10-07,30,1,"LCD Multimedia Projector, Acer","22,425.00",,270,Active
+3,032-12,2012-02-13,30,1,"Refrigerator, 4cu. Ft., Eurotek","6,562.00",,270,Active
+4,078-12,2012-05-02,30,1,Steel cabinet,"5,565.00",,270,Active
+5,181-12,2012-12-12,30,1,"Refrigerator, Sanyo, 6cu.ft.","9,500.00",,270,Active
+6,0010-13,2013-01-16,30,1,"Digital camera, powershot A, 4000 IS 16","8,900.00",,270,Active
+7,40-04,2004-07-22,30,1,Overhead projector portable,"8,500.00",,270,Active
+8,498-10,2010-11-24,30,1,"Cabinet, 2 drawers/lateral (steel)","7,295.00",,270,Active
+9,ARE 14-335,2014-09-18,30,1,Executive Swivel chair,"2,106.38",,270,Active
+10,544-15E,2015-04-14,30,1,Sphygmomanometr,"9,890.00",,270,Active
+11,644-15E,2015-04-14,30,1,Stethoscope,"6,000.00",,270,Active
+12,2016-007,2016-12-06,17,1,"Portable external drive, ultra slim","5,900.00",,270,Active
+13,"2017-216,2017-217,2017-218",2017-03-30,30,3,"Conference table, foldable, plastic ,rectangle, 72""x30"" whi8te or gray","10,500.00",,270,Active
+14,16-228,2016-04-28,30,1,Biometrics Fingerprint Reader,"13,750.00",,270,Active
+15,2017-007,2016-12-06,30,1,"Portable External Drive, 2 TB","5,900.00",,270,Active
+16,2017-12-042,2017-12-08,30,1,"Desktop Computer, HP 280 G2 Microtower","49,151.74",,270,Active
+17,2018-01-001,2017-12-21,30,1,"Projector, EPSON","47,300.00",,270,Active
+18,ARE 14-336,2014-09-18,30,1,Executive Swivel chair,"2,106.38",,270,Active
+19,2018-454,2018-09-26,30,1,MASCOT FOR STI/HIV AIDS Advocacy (Condom),"14,150.00",,270,Active
+20,2019-050,2019-01-15,30,1,"TELEVISION, Full HD w/ Smart TV Functionally, PENSONIC","9,400.00",,270,Active
+21,15-116,2015-06-10,30,1,"COMPUTER DESKTOP (Acer Model, X4620G)","25,000.00",,270,Active
+22,2019-01-013,2018-06-19,30,1,"TABLET, Android, Samsung TAB S2, 8""","22,098.00",,270,Active
+23,2019-12-078,2019-12-04,30,1,"Laptop, Hp Elitebook x 360 1030 G2, processor: Intel core i5-7th Gen processor base clock speed, 2.5 Ghz Max turbo frequency 3.1GHz Max turbo frequency 3.1 Ghz cache 3mb cache, 2 cores; Memory 8gb DDR4-2133onboard; storage/hard disk-256GB solid state drive; camera-720p HD camera: SN: 5CG84920BD","68,640.00",,270,Active
+24,"2020-1573,2020-1574,2020-1575,2020-1576,2020-1577,2020-1578,2020-1579,2020-1580",2020-09-24,17,8,"Single Foldable Table, 25.9""L x 19.9"", 28 inches in Height Top color white granite","1,450.00",,270,Active
+25,2020-1661,2020-10-08,17,1,"Heavy Duty Extension Cord Reel, 3ft., 3-4gang","1,450.00",,270,Active
+26,"2020-1934,2020-1935,2020-1936,2020-1937,2020-1938,2020-1939,2020-1940,2020-1941,2020-1942,2020-1943,2020-1944,2020-1945",2020-11-27,17,12,Palettes,"2,180.00",,270,Active
+27,21-01-03,2020-06-16,30,1,"Photocopier, Ineo 206","50,000.00",,270,Active
+28,"2021-094,2021-095,2021-096,2021-097,2021-098,2021-099,2021-100,2021-101,2021-102,2021-103",2021-01-18,23,10,"Table, foldable, adjustable, portable, plastic top with metal steel base, Lifetime","1,799.00",,270,Active
+29,2020-1494,2020-09-07,17,1,JABRA Speak 410 (Speakerphone for voice over Internet Protocol Calls),"6,160.00",,270,Active
+30,2021-852,2021-07-19,30,1,HP Multi-Function Laserjet Printer,"11,180.00",,270,Active
+31,2021-715,2021-05-07,17,1,"HDMI Converter, male to female VGA",695,,270,Active
+32,2021-364,2021-03-11,17,1,Adapter C Type to LAN,790,,270,Active
+33,2021-722,2021-05-07,17,1,HDMI to VGA Adapter,695,,270,Active
+34,"2021-1238,2021-1239",2021-08-20,17,2,"Emergency Light, NSS brand","1,400.00",,270,Active
+35,"2021-1292,2021-1293",2021-09-03,30,2,"Camera, C920E, Logitech CP20E","5,000.00",,270,Active
+36,"2021-1454,2021-1456",2021-09-14,17,2,"External Hard Drive, 1TB,Toshiba","2,950.00",,270,Active
+37,"2021-1624,2021-1625,2021-1626",2021-10-15,17,3,"Rescue/Emergency Stertcher, JK-F1-7","6,500.00",,270,Active
+38,2021-1692,2021-10-29,17,1,"Voice Recorder, 4GB Sony","4,000.00",,270,Active
+39,2021-1828,2021-11-25,30,1,"Mobile Phone, Samsung Galaxy A12 (6GB+128GB)","9,990.00",,270,Active
+40,21-05-39,1905-07-13,30,1,"Laptop, Acer Nitro 5","57,000.00",,270,Active
+41,2021-1416,2021-09-03,17,1,"Headphone, Plantronics","3,220.00",,270,Active
+42,2019-01-014,2018-06-01,30,1,"TABLET, Android SAMSUNG TAB S2, 8""","22,098.00",from: J. Bestre,270,Active
+43,ARE 14-337,2014-09-18,30,1,Executive Swivel chair,"2,106.38",from: J. Bestre,270,Active
+45,"2022-017(2),2022-018",2022-01-07,17,2,"Steel rack Organizer w/ Wheels, 3 layers","3,400.00",,270,Active
+46,"2022-019,2022-020,2022-021,2022-022,2022-023,2022-024,2022-025,2022-026,2022-027,2022-028",2022-01-07,17,10,"Folding Table, 18"" x 26""","2,500.00",,270,Active
+47,22-01-004,2022-01-10,30,1,"Laptop, Lenovo Legion 5","67,000.00",,270,Active
+48,"2019-406,2019-407",1905-07-11,30,2,"Huawei Pocket Wifi, with globe and smart sim card","3,918.85",,270,Active
+49,2019-326,,30,1,"Dating and Stamping Machine, Heavy Duty",485,,270,Active
+50,2019-320,,30,1,"Printer, Brother T700","12,000.00",,270,Active
+51,2020-047A,2020-01-13,30,1,"Printer, Epson L3110","8,050.00",,270,Active
+52,2022-134,2021-12-10,30,1,Megaphone Speaker,"2,450.00",,270,Active
+53,2022-140,2021-12-10,30,1,"Public Address, Konzert","7,500.00",,270,Active
+54,2022-113,2022-01-24,30,1,"Powerstation for Cellphone and Computer Laptop, Promate 240s","10,800.00",,270,Active
+55,32-03,2003-11-30,30,1,CPU with complete accessories,"37,504.26",,270,Active
+56,408-14,2013-01-16,30,1,"Desktop Computer, Acer, Monitor Only","49,745.00",,270,Active
+57,2017-548,2017-08-11,30,1,"Air Cooler, Dowell, ARC 18, Black","3,495.00",,270,Active
+58,2023-079,2023-03-08,30,1,"Laptop, MSI GF63 Thin","48,760.00",,270,Active
+59,2023-087,2023-03-08,17,1,"External Hard Drive, Transcend","3,100.00",,270,Active
+60,21-09-129,2021-07-09,30,1,"Laptop Computer, Acer Nitro 5","50,562.00",,270,Active
+61,2023-117,2023-04-12,17,1,"Swivel Chair, Executive, Leather, High back with armrest, 6 metal feet and wheels, heavy duty, adjustable, black","5,950.00",,270,Active
+62,2023-174,2023-04-13,17,1,"Office Table, with center drawer & 3-side drawers with lock, narra plywood, strong and durable, natural color","8,000.00",,270,Active
+63,2023-274,2023-06-01,17,1,"Gaming Chair, Black","7,000.00",,270,Active
+64,2023-550,2023-10-03,17,1,"Stereo Bluetooth Headset, Logitech","9,000.00",,270,Active
+65,2023-626,2023-10-19,17,1,"Printer, Epson L6270","18,000.00",,270,Active
+66,2023-736,2023-11-17,17,1,"Office Table, glass top with side drawers","7,425.00",,270,Active
+67,2023-743,2023-11-15,30,1,"Mirrorless Camera, Sony 16-50mm Power zoom for Alpha 6400","14,800.00",,270,Active
+68,2023-744,2023-11-15,30,1,"Mirrorless Camera Body, Sony A6400","49,995.00",,270,Active
+69,SPHV-2024-04-537,2024-04-11,30,1,"Laptop,  Asus FA506NF-HN005W Ryzen 5 7535HS 8GB 512GB SSD, 15.6""Win 11, with bag","48,600.00",,270,Active
+70,SPHV-2024-03-407,2024-03-08,17,1,"Portable Scanner, Epson DS-310","19,495.00",,270,Active
+71,SPHV-2024-11-1002,2024-11-15,23,1,Food Model Set,"25,000.00",,270,Active
+72,SPHV-2024-12-1113,2024-12-11,17,1,"HEavy Duty Comb Binding Machine, Officom","9,000.00",,270,Active
+73,SPHV-2024-12-1109,2024-12-10,23,1,"Desktop Computer Unit, CPU- intel i5, UPS-AWP 650VA/390W, Wired Keyboard and Mouse-Rapoo; Monitor-NVision 23.8"" 100hz","32,750.00",,270,Active
+74,SPHV-2024-12-1130,2024-12-13,17,1,"Water Dispenser,   Xtreme Cool","8,400.00",,270,Active
+1,22-08-059,2021-09-14,30,1,"Laptop, Acer Nitro 5","64,000.00",,404,Active
+2,2021-1383,2021-08-26,17,1,"Keyboard, Logitech",700,,404,Active
+3,074-12,2012-04-26,30,1,"Office Table, Pinewood","8,700.00",from: J. Daoas,404,Active
+4,2019-531,2019-07-11,30,1,Foldable Trolley,"4,240.00",from: J. Daoas,404,Active
+5,2019-707,2019-10-01,30,1,"Heavy Duty Foldable Trolley, 300kg capacity, 4 wheels platforms trolly, 7.5kg weight, 75 x 50 x 90cm","3,500.00",from: J. Daoas,404,Active
+6,2020-1081,2020-02-06,30,1,"Printer, HP Laserjet Pro M12A ","5,195.00",from: J. Daoas,404,Active
+7,2020-1012,2020-01-22,30,1,"Oscillating Tower Fan, with ionizer, caster wheels with stopper, ermote and manual control, 32-height","3,199.75",from: J. Daoas,404,Active
+8,2020-1497,2020-09-07,30,1,Jabra Speak 410 (Speakerphone for Voice Over Internet Protocol Calls),"6,160.00",from: J. Daoas,404,Active
+9,2020-1502(1),2020-08-07,30,1,"Webcam for Voice Over Internet Protocol Calls, Logitech","8,900.00",from: J. Daoas,404,Active
+10,2022-484,2022-09-05,17,1,"Keyboard, A4Tech",400,,404,Active
+11,2022-492,2022-09-07,17,1,"Monitor, Atlas, Gamdias 21.5""","4,870.00",,404,Active
+12,2022-730,2022-12-28,30,1,CPU Assembled,"40,700.00",,404,Active
+13,2023-082,2023-03-08,30,1,"Laptop, MSI GF63 Thin","48,760.00",,404,Active
+14,2023-090,2023-03-08,17,1,"External Hard Drive, Transcend","3,100.00",,404,Active
+15,2022-553,2022-09-30,17,1,"Mouse, A4Tech",150,,404,Active
+16,2022-061,2022-01-13,30,1,"All-in-One Wireless Printer, HP 615","13,990.00",,404,Active
+17,2023-177,2023-04-13,17,1,"Office Table, with center drawer & 3-side drawers with lock, narra plywood, strong and durable, natural color","8,000.00",,404,Active
+18,2023-120,2023-04-12,17,1,"Swivel Chair, Executive, Leather, High back with armrest, 6 metal feet and wheels, heavy duty, adjustable, black","5,950.00",,404,Active
+19,2019-09-053,,30,1,"Laptop, Apple Notebook, Macairbook 13.3'' x 1.8 Ghz Dual Core, Intel Core i5 18GB/126GB HD","65,100.00",from: R. Tubaña,404,Active
+20,2021-1203,2021-08-09,30,1,"Clip on portable microphone, rechargeable, clear sound","1,495.00",from: N. Orprecio,404,Active
+21,"ICS 16-313,ICS 16-314",2016-05-23,30,2,"Shelves, Pinewood","7,500.00",from: N. Orprecio,404,Active
+22,16-015,2016-05-23,30,1,"Shelves, Pinewood","15,000.00",from: N. Orprecio,404,Active
+23,2016-12-049,2017-12-13,30,1,Acer Veriton X4110G Desktop Set,"26,509.60",from: N. Orprecio,404,Active
+24,21-09-92,2021-09-03,30,1,Assembled CPU,"44,903.00",from: N. Orprecio,404,Active
+25,2017-140,1905-07-09,30,1,"Table, Pinewood","7,000.00",from: N. Orprecio,404,Active
+26,2020-1795,2020-11-09,30,1,"Ergonomic Chair, w/ armrest","4,990.00",from: N. Orprecio,404,Active
+27,218-14,2014-07-14,30,1,Assembled CPU,"19,176.19",from: N. Orprecio,404,Active
+28,2020-047C,2020-01-13,30,1,"PRINTER, 3-in-1, Refillable Ink Tank System Printer, EPSON L3110","8,050.00",from: N. Orprecio,404,Active
+29,21-09-133,2021-09-07,30,1,"Laptop Computer, Acer Nitro 5","50,562.00",from: N. Orprecio,404,Active
+30,859-11,2011-09-21,30,1,"Cabinet, 3 drawers, stainless","7,000.00",from: N. Orprecio,404,Active
+31,2019-01-026,2018-06-19,30,1,"Tablet, Samsung Tab S2, 8""","22,098.00",,404,Active
+32,2021-327,2021-03-24,30,1,Lactation Tent for Emergencies (Outdoor),"1,890.00",from: N. Orprecio,404,Active
+33,"2021-1029,2021-1036,2021-1067",2021-08-03,30,3,"UPS, EATON 5l 1200 USB, 1200VA/600W, 230V","6,800.00",from: N. Orprecio,404,Active
+34,2017-499,2017-12-04,30,1,"Swivel Chair, w. armrest, black, steelmate, with foam and padding","6,367.00",from: N. Orprecio,404,Active
+35,033-12,2012-02-01,30,1,"Refrigerartor, Sharp, 4 cu. Ft.","8,957.00",from: N. Orprecio,404,Active
+36,"2020-1187,2020-1188,2020-1189,2020-1190",2020-03-10,30,4,Spine Board,"8,400.00",from: N. Orprecio,404,Active
+37,073-12,2012-04-26,30,1,"Office Table, Pinewood","8,700.00",from: N. Orprecio,404,Active
+38,2021-1830,2021-11-25,30,1,"Mobile Phone, Samsung Galaxy A12 (6GB + 128GB)","9,990.00",from: N. Orprecio,404,Active
+39,2021-1598,2021-10-06,17,1,"Monitor, Viewplus 23.8""","6,678.00",from: N. Orprecio,404,Active
+40,2021-1329,2021-09-03,17,1,"Mouse, optical, USB connection type",400,from: N. Orprecio,404,Active
+41,"2020-1825,2020-1826,2020-1827,2020-1828,2020-1829",2020-11-27,30,5,Pallettes,"2,180.00",from: N. Orprecio,404,Active
+42,2021-1319,2021-09-03,17,1,"Keyboard, multimedia laser printing, USB wired and 1.5meter cable",700,from: N. Orprecio,404,Active
+43,2021-334,2021-03-25,30,1,Girl Toy Doll Model,"2,000.00",from: N. Orprecio,404,Active
+44,"2023-870,2023-871",2023-12-06,30,2,"Smart Tablet-Notebook, Samsung Galaxy Tab S9 FE 5G","48,990.00",,404,Active
+45,"2023-869,2023-931",2023-12-11,17,2,"Wireless Bluetooth Speaker, Edifier A3-8S","7,650.00",,404,Active
+46,2024-246,2024-01-17,17,1,"Smart Television, LG 55""","25,300.00",,404,Active
+47,2020-06-0145,2020-07-02,30,1,"Desktop computer w/ mouse and Keyboard, Acer Veriton M2640G","39,208.00",,404,Active
+48,2020-1554,2020-09-17,30,2,"Uninterruptible Power Supply, 550watts/1100VA, with two battery back ups, with universal & IEC sockets, with surge protector, heavy duty","7,000.00",,404,Active
+49,2020-06-0148,2020-07-02,30,1,"Desktop computer w/ mouse and Keyboard, Acer Veriton M2640G","39,208.00",,404,Active
+50,"2024-247,2024-248,2024-249,2024-250,2024-251,2024-252",2024-01-18,17,6,"Office Table, with glass top and side drawers","8,800.00",,404,Active
+51,2024-182,2023-12-28,17,1,"Camera, Nikon D3400 18-55 VR  Kit","48,999.00",,404,Active
+52,SPHV-2024-03-464,2024-03-20,30,1,"Airconditioner, Split Type, Whirlpool, Model: SAH12CIW, 230V, White","49,500.00",,404,Active
+53,SPHV-2024-04-540,2024-04-11,30,1,"Laptop,  Asus FA506NF-HN005W Ryzen 5 7535HS 8GB 512GB SSD, 15.6""Win 11, with bag","48,600.00",,404,Active
+54,"SPHV-2024-04-523,SPHV-2024-04-524,SPHV-2024-04-525,SPHV-2024-04-526",2024-03-20,30,4,"Office Chair, Gamdias Zelus E2, Multifunction PC GAming Chair","6,350.00",,404,Active
+55,"SPHV-2024-03-477,SPHV-2024-03-478,SPHV-2024-03-479",2024-03-22,30,3,"Desktop Computer, CPU i7, Monitor (Asus 23.8"") , Keyboard & Mouse (Logitech MK120), and UPS (Eaton 1200va/650W)","48,750.00",,404,Active
+56,SPHV-2024-09-807,2024-08-30,30,1,"Printer, HP Smart Tank 750, Wireless All-in-One","17,850.00",,404,Active
+57,SPLV-2024-09-808,2024-08-30,17,1,"Emergency Light, Omni","3,300.00",,404,Active
+58,SPHV-2024-10-965,2024-10-03,30,1,"Biometrics Machine, ZKTeco uFace 800","34,500.00",,404,Active
+59,"SPHV-2024-10-977,SPHV-2024-10-978",2024-10-21,30,2,"Printer, Brother DCP T720DW","14,400.00",,404,Active
+60,"SPHV-2024-12-1063,SPHV-2024-12-1064,SPHV-2024-12-1065,SPHV-2024-12-1066,SPHV-2024-12-1067,SPHV-2024-12-1068,SPHV-2024-12-1069",2024-11-08,30,7,Office Cubicles,"21,000.00",,404,Active
+61,SPLV-2024-12-1169,2024-12-17,23,1,"Fire Extinguisher, 10lbs with Wall brackets","1,800.00",,404,Active
+1,ARE 14-338,2014-09-18,30,1,Executive Swivel Chair,"2,106.38",,268,Active
+2,2019-01-015,2018-06-01,30,1,"TABLET, Android Samsung TAB S2, 8""","22,098.00",,268,Active
+3,"2019-410,2019-411",2019-05-01,17,2,Pocket Wifi,"3,918.85",,268,Active
+4,2019-12-080,2019-12-04,30,1,"Laptop, Hp Elitebook x 360 1030 G2, processor: Intel core i5-7th Gen processor base clock speed, 2.5 Ghz Max turbo frequency 3.1GHz Max turbo frequency 3.1 Ghz cache 3mb cache, 2 cores; Memory 8gb DDR4-2133onboard; storage/hard disk-256GB solid state drive; camera-720p HD camera: SN: 5CG84922V7","68,640.00",,268,Active
+5,2021-1816,2021-10-28,17,1,"Monitor, Viewplus 23""","6,678.00",,268,Active
+6,2021-1091,2021-08-03,17,1,"UPS, EATON 5L 1200 USB, 1200VA/600W, 230V","6,800.00",,268,Active
+7,2021-1385,2021-08-26,17,1,"Keyboard, Logitech",700,,268,Active
+8,2021-1438,2021-08-03,17,1,"Mouse, Logitech",400,,268,Active
+9,YP185-2k,2000-03-20,30,1,"Office table 28""x48""","5,950.00",from: M. Calpito,268,Active
+10,21-09-89,2021-09-03,30,1,Assembled CPU,"44,903.00",,268,Active
+11,2023-279,2023-06-01,17,1,"Gaming Chair, Black","7,000.00",,268,Active
+12,2023-553,2023-10-03,17,1,"Stereo Bluetooth Headset, Logitech","9,000.00",,268,Active
+13,2023-739,2023-11-17,17,1,"Office Table, glass top with side drawers","7,425.00",,268,Active
+1,2019-829,2019-11-18,17,1,Digital Audio Recorder Sony 6x533,"7,495.00",,287,Active
+2,2019-673,2019-09-02,30,1,"Stapler, heavy duty (Offer: SDI)",195,,287,Active
+3,16-592,,17,1,"Android Tablet, lenovo ","9,999.00",,287,Active
+4,2019-815,2019-11-04,17,1,"Multifunction Printer, Print, scan, copy and fax with ADF, Epson L5190","14,950.00",,287,Active
+5,2019-814,2019-11-04,17,1,"HDMI Cable, Nylon braided skin, gold plated, 3 M length",950,,287,Active
+6,2020-1072,2020-03-10,30,1,"Pedestal Steel Cabinet, 400mm W x 55mm H x 650mmD, gray color","4,725.00",,287,Active
+7,2020-1740,2020-10-22,30,1,"External Hard Drive, 1TB back up plus HDD USB 3.0, 113.5mm, black, Seagate Slim","3,450.00",,287,Active
+8,2020-1788,2020-11-17,30,1,"UPS, APC 1100 VA","7,100.00",,287,Active
+9,2021-1083,2021-08-03,17,1,"UPS, EATON 5L 1200 USB, 1200VA/600W,230V","6,800.00",,287,Active
+10,21-08-70,2021-08-03,30,1,CPU Assembled,"44,603.00",,287,Active
+11,2021-1801,2021-11-16,17,1,"Webcam Ultra HD, 4K, Logitech","13,950.00",,287,Active
+12,2021-1937,2021-12-20,17,1,"PC Headset, JBL 600BT Blue","5,495.00",,287,Active
+13,2022-06-042,2022-02-26,30,1,"Laptop, Acer Nitro, Windows 10 Home, Intel Core i5 11400H, 15.6"" FHD IPS 144hz, Nvidia RTX 3050 4gb, 16 GB DDR, 512 GB SSD Pcie + 1 TB HDD, w/ Bag","64,236.00",,287,Active
+14,2021-1572,2021-10-06,17,1,"Monitor, Viewplus 23.8""","6,678.00",from: R. Tubaña,287,Active
+15,2023-168,2023-04-18,17,1,"Water Dispenser, Hot and Cold, Kyowa","11,599.00",,287,Active
+16,2023-167,2023-04-12,17,1,"Paper Shredder, 27L","29,000.00",,287,Active
+17,2023-429,2023-08-02,17,1,"Executive Swivel Chair, High back with armrest, 5 metal feet and wheels, heavy duty adjustable","4,995.00",,287,Active
+18,SPLV-2024-03-0335,2024-03-05,17,1,"Puncher, heavy duty, 2 hoel guide",150,,287,Active
+1,2018-215,2018-06-19,17,1,Sleeping Bag,"1,380.00",,141,Active
+2,2019-168,2019-02-01,17,1,"EXTENSION CORD, 4-gang w/ individual switches",695,,141,Active
+3,2019-173,2019-02-01,17,1,"STORAGE BOX, Plastic: size, 50L",510,,141,Active
+4,35-14,2019-08-13,17,1,"Chair, Executive w/ Arm Leather Cover","3,294.56",,141,Active
+5,2021-050,2021-01-14,17,1,"Webcam, A4Tech, 1080p","1,493.00",,141,Active
+6,2021-582,2021-03-23,17,1,Mobile Pedestal Cabinet,"4,800.00",,141,Active
+7,2021-1014,2021-07-30,30,1,USB Headset with microphone and noise cancellation,"1,900.00",,141,Active
+8,21-08-83,2021-08-29,30,1,CPU Assembled,"38,478.00",,141,Active
+9,2021-1737(2),2021-11-04,17,1,"USB Wired Optical Mouse, Logiotech M100R",465,,141,Active
+10,2021-1741,2021-11-04,17,1,"USB Wired Keyboard, Logitech K1200",585,,141,Active
+11,2021-063,2021-01-14,17,1,Mouse/Wireless,480,,141,Active
+12,2022-180,2022-02-16,17,1,Ergonomic Office Chair,"4,500.00",,141,Active
+13,2017-289,2017-06-16,30,1,Epson Printer C360,"7,850.00",from: M. Lomboy,141,Active
+14,22-08-060,2021-11-26,30,1,"Laptop, Acer Nitro An515-57-53SB i5","64,950.00",,141,Active
+15,22-597,2022-01-31,30,1,"Printer, Brother MFC T920DW","14,150.00",,141,Active
+16,SPLV-2025-02-097,2025-02-25,17,1,"Laser Distance Meter, INGCO","4,925.00",,141,Active
+17,"SPLV-202-02-099,SPLV-2025-02-100",2025-02-25,17,1,"Scientific Calculator, Casio",982,,141,Active
+1,121-2K,1999-02-15,30,1,"Filing cabinet ,2 layers","6,948.00",,172,Active
+2,"2018-269,2018-270",2018-07-17,17,2,"Ladder, Aluminum, folding portable","3,650.00",warehouse,172,Stock
+3,"2018-108,2018-109",2018-02-13,30,2,"Industrial Trolley, Heavy Duty","7,000.00",,172,Active
+4,"2017-364,2017-365",,30,2,"Steel Filing Cabinet, 4 Drawers","6,995.00",,172,Active
+5,"2018-271,2018-272,2018-273,2018-274,2018-275",2018-07-17,17,5,"Grocery/Supermarket Pushcart, Stainless Steel","5,500.00",warehouse,172,Stock
+6,15-147,2015-06-10,30,1,"COMPUTER DESKTOP (ACER Model, X4620G)","25,000.00",,172,Active
+7,"2018-080,2018-083,2018-084",2018-02-01,17,3,"Dehumidifier, 220-240 volts MDEHU-IIP","8,430.00",warehouse,172,Stock
+8,"20-06-153,2020-06-153A",2020-08-10,30,1,"Desktop Computer w/ Mouse and Keyboard, Acer Veriton M2640G","39,208.00",Monitor-G. Almacen       Mouse & Keyboard - J. Mike,172,Active
+9,2021-039,2021-01-18,30,1,"Printer, Epson L5190","14,800.00",,172,Active
+10,2021-123,2021-01-22,17,1,"Speakerphone, Mid-range portable USB and Bluetooth Speakerphone Speak 510, Jabra Speak 510","8,985.00",,172,Active
+11,2021-160,2021-01-22,17,1,"4K Webcam with HDR abd Windows Hello support, 4K Ultra HD video calling, Logitech C930e","9,580.00",,172,Active
+12,2021-595,2021-04-14,17,1,Calculator-casio MS-120,595,,172,Active
+13,"2021-885,2021-886,2021-887,2021-888,2021-889,2021-890,2021-891,2021-892,2021-893,2021-894,2021-895,2021-896,2021-897,2021-898,2021-899,2021-900,2021-901,2021-902,2021-903,2021-904,2021-905,2021-906,2021-907,2021-908,2021-909,2021-910,2021-911,2021-912,2021-913,2021-914,2021-915,2021-916,2021-917,2021-918,2021-919,2021-920,2021-921,2021-922,2021-923,2021-924,2021-925,2021-926,2021-927,2021-928,2021-929,2021-930,2021-931,2021-932,2021-933,2021-934,2021-935,2021-936,2021-937,2021-938,2021-939,2021-940,2021-941,2021-942,2021-943,2021-944,2021-955,2021-956,2021-957,2021-958,2021-959,2021-960,2021-961,2021-962,2021-963,2021-964,2021-965,2021-966,2021-967,2021-968,2021-969,2021-970,2021-971,2021-972,2021-973,2021-974
+
+
+
+
+",2021-07-16,17,80,Industrial Pallettes,"2,490.00",,172,Active
+14,2021-1058,2021-08-03,17,1,"UPS, EATON 5L 1200USB, 1200VA/600W,230V","6,800.00",,172,Active
+15,2021-1216,2021-08-10,17,1,"Puncher/Perforator, paper, heavy duty, with 2 hole guide",150,,172,Active
+16,21-09-101,2021-07-09,30,1,"Laptop Computer,Acer Nitro 5","50,562.00",,172,Active
+17,2021-1193,2021-08-03,17,1,"LAN Switch,16ports","1,750.00",,172,Active
+18,2021-1228,2021-06-28,17,1,Dating & Stamping Machine,"1,035.00",,172,Active
+19,2019-862,2019-11-22,30,1,"Printer, 3-in-1, Brother T710W","13,995.00",from: D. Bulalin,172,Active
+20,2019-943.,2019-11-28,30,1,"TV Plus blackbox, ABS-CBN","1,595.00",from: D. Bulalin,172,Active
+21,16-501,2016-10-31,17,1,Steel Filing Cabinet,"6,050.00",from: D. Bulalin,172,Active
+22,2019-12-108,2019-12-06,30,1,CPU Assembled (details: see PAR 19-019),"28,345.00",from: D. Bulalin,172,Active
+23,2018-371,2018-07-31,30,1,Keyboard Multimedia,340,from: D. Bulalin,172,Active
+24,2019-142,2019-01-31,30,1,"Mouse, optical usb connection type",275,from: D. Bulalin,172,Active
+25,2019-379,2019-04-26,17,1,"Pencil Sharpener, Manual, Single cutterhead",365,from: D. Bulalin,172,Active
+26,2019-853,2019-11-21,30,1,"Paper Shredder, Aurora As800CD 5 x47mm, 8 sheet","6,250.00",from: D. Bulalin,172,Active
+27,2019-905,2020-06-22,30,1,"Bar Code Scanner/ Reader, 3D","5,999.00",from: D. Bulalin,172,Active
+28,2022-243,2022-01-31,30,1,"Printer, Brother MFC T920DW","14,150.00",from: D. Bulalin,172,Active
+29,2019-839,2019-11-22,17,1,"Wall Clock, Analog, Vintage-type, RIKON",350,from: D. Bulalin,172,Active
+30,508-10,2010-11-24,30,1,"Steel Cabinet, 3 drawers","7,000.00",,172,Active
+31,22-11-088,2022-11-02,30,1,CPU Assembled,"44,603.00",,172,Active
+32,2022-046,2022-01-10,30,1,"Monitor, Atlas 22""","6,500.00",,172,Active
+33,2022-187,2022-03-11,30,1,"Keyboard, A4Tech",330,,172,Active
+34, 2022-541,2022-09-30,17,1,"Mouse, A4Tech",150,,172,Active
+35,22-12-110,2022-12-14,30,1,"Cold Chain Equipment and Devices,Breakdown: 1. Walk-in Cold Room,2. Generator Set,3. Automatic Voltage Regulator","2,330,000.00",,172,Active
+36,2023-001,2022-12-28,17,1,"Extension Cord, 16 gang, Tower type","1,150.00",,172,Active
+37,2023-336,2023-07-11,17,1,"Stapler, standard type, SQI",165,,172,Active
+38,2023-409,2023-07-31,30,1,Central Processing Unit,"42,855.80",,172,Active
+39,2023-410,2023-07-31,30,1,"Monitor, Gamdias 24""","5,194.00",,172,Active
+40,2022-538,2022-09-30,17,1,"Keyboard, A4Tech",400,,172,Active
+41,2022-587,2022-09-30,17,1,"Mouse, A4Tech",150,,172,Active
+42,2023-484,2023-08-17,30,2,"Client Chair, heavy duty, fabric material, armrest, high and fixed back , Balck","3,500.00",,172,Active
+43,"2023-459,2023-460",2023-08-09,30,2,"UPS, APW 1500VA","5,070.00",,172,Active
+44,2023-465,2023-08-09,30,1,"Monitor, Skyworth 23.8""/IPS/144HZ","7,720.00",,172,Active
+45,2023-469,2023-08-09,30,1,"Portable Projector, Viewsonic MI Mini Plus","16,800.00",,172,Active
+46,2023-470,2023-08-07,30,1,"Heavy Duty Printer, Apeos 2150 NDA","47,400.00",,172,Active
+47,"2023-471,2023-472",2023-08-15,30,2,"Computer Central Processing Unit, Intel Core i7 12700, B660 Motherboard, Kingston 16GB DDR4, 512GB SSD M2, Seagate 1TB, Antec casing, Antec 850W Gold","41,300.00",,172,Active
+48,2023-808,2023-12-06,30,1,"Tape Dispenser, Black, DLOffice",150,,172,Active
+49,2024-047,2023-12-19,30,1,"Portable Tablet, Samsung S9 fe+, 12.4 inches, w/ book cover, keyboard and adapter","42,615.00",,172,Active
+50,"2024-272,2024-273,2024-274,2024-275,2024-276",2024-01-18,17,5,"Stapler, Standard type, SQI Brand",165,,172,Active
+51,"2023-716,2023-717,2023-718,2023-719,2023-720,2023-721,2023-722,2023-723,2023-724,2023-725",2023-11-23,30,10,"Wall Fan, Centrix 16""","1,990.00",,172,Active
+52,"2023-726,2023-727",2023-11-23,17,2,"Split Type Aircon, Asttron 1.5HP","38,990.00",,172,Active
+53,"2023-706,2023-707,2023-708,2023-709,2023-710",2023-11-23,17,5,"Fire Extinguisher, Tigronyx 11lbs.,","1,690.00",,172,Active
+54,2023-896,2023-12-21,30,1,"Wireless Mouse, A4Tech G3-300 1200 dpi",585,,172,Active
+55,SPLV-2024-08-735,2024-07-19,30,1,"Headset, Redragon H848 IRE Pro Ultra Light Wireless","1,900.00",,172,Active
+1,ARE 14-334,2014-09-18,30,1,Executive Swivel Chair," 2,106.38 ",,271,Active
+2,2019-321,2019-03-14,17,1,"Printer with Photocopy, Toner Ink, Brother T700"," 12,000.00 ",,271,Active
+3,2020-1807,2020-11-20,17,1,"Stapler, heavy duty, 30-150 sheets"," 1,200.00 ",,271,Active
+4,"2021-176,2021-177",2021-01-14,17,2,"Tape Dispenser, table top for 24, w/ tape", 90.00 ,,271,Active
+5,2016-12-046,12/13/2016,30,1,Acer Veriton X4110G Desktop Set," 25,509.60 ",,271,Active
+6,2022-017(1),2022-07-01,17,1,"Steel Rack Organizaer w/ wheels,  3 layers"," 3,400.00 ",From: M. Calpito,271,Active
+7,2023-276,2023-06-01,17,1,"Gaming Chair, Black"," 7,000.00 ",,271,Active
+8,2023-555,2023-10-03,17,1,"Stereo Bluetooth Headset, Logitech"," 9,000.00 ",,271,Active
+9,2023-742,2023-10-27,17,1,"Printer, Epson L6270"," 18,700.00 ",,271,Active
+10,2023-741,2023-11-17,17,1,"Office Table, glass top with side drawers"," 7,425.00 ",,271,Active
+1,"2019-697,2019-698",2019-09-24,17,2,"Storage and Organizer Box, 70L capacity, heavy duty, water proof, latching lid with 4 wheels, color-transparent", 685.00 ,,244,Active
+2,2019-885,2019-11-25,30,1,"Swivel Chair, Black leather managers office swivel chair, adjustable ( SHIVLAX)"," 4,250.00 ",,244,Active
+3,2019-813,2019-11-07,30,1,"Printer, Toner-type, monochrome-laser, HP M102N"," 9,990.00 ",,244,Active
+4,"2020-018,2020-019",2020-01-16,17,2,"Cork Pin Board, size 2'x3'"," 1,288.00 ",,244,Active
+5,2020-014,2020-01-16,30,1,"Tablet, 8"", Galaxy tab A, S Pen, 32GB, LTE, 8.0MP"," 14,800.00 ",,244,Active
+6,2020-1281,2020-06-23,17,1,"Mouse, optical, USB connection", 120.00 ,,244,Active
+7,2020-1793,2020-11-10,30,1,"Android Smart Phone for Barcode Track and Trace System Support, Samsung Galaxy A11"," 9,200.00 ",,244,Active
+8,2021-020,2021-01-08,30,1,"Printer, HP 615"," 14,500.00 ",,244,Active
+9,"2021-592,2021-593",2021-04-14,17,2,Calculator - Casio MS-120, 595.00 ,,244,Active
+10,2021-588,2020-10-16,17,1,OTG 3 in 1 USB Flash Drives USB 3.0 and Micro USB and Type-C," 1,000.00 ",,244,Active
+11,2021-1059,2021-08-03,17,1,"UPS, EATON 5L 1200 USB, 1200VA/600W, 230V"," 6,800.00 ",,244,Active
+12,2021-1596,2021-10-06,17,1,"Monitor, Viewplus 23.8"""," 6,678.00 ",,244,Active
+13,2019-966,2019-11-15,17,1,"Extension cord, 4 to 5 outlet, 5 meters long", 550.00 ,from: D. Bulalin,244,Active
+14,2022-456,2023-07-25,30,1,"Pedestal Cabinet, 3 drawers"," 4,800.00 ",,244,Active
+15,22-11-089,2022-11-02,30,1,CPU Assembled," 44,603.00 ",,244,Active
+16,2022-708,2022-12-09,30,1,"Laptop, Acer TravelMate P2, SN: NXVPXAP001212108907600"," 42,800.00 ",,244,Active
+17,2023-002,2022-12-28,17,1,"Extension Cord, 16 gang, Tower Type"," 1,150.00 ",,244,Active
+18,2022-00-10605020-0116-WH,2022-06-16,30,1,TCW-4000AC," 201,960.00 ",,244,Active
+19,2022-00-10605020-0117-WH,2022-06-16,30,1,TCW-4000AC," 201,960.00 ",,244,Active
+20,2022-00-10605020-0118-WH,2022-06-16,30,1,TFW -3000AC," 151,776.00 ",,244,Active
+21,2022-00-10605020-0119-WH,2022-06-16,30,1,TFW -3000AC," 151,776.00 ",,244,Active
+22,2023-00-10605020-0002-WH,2022-06-16,30,1,"Ultra Low Freezer, U701"," 360,000.00 ",,244,Active
+23,2023-00-10605020-0003-WH,2022-06-16,30,1,"Ultra Low Freezer, U701"," 360,000.00 ",,244,Active
+24,2023-573,2023-09-30,17,1,"Mouse, A4Tech", 150.00 ,,244,Active
+25,2023-685(1),2022-12-02,17,1,Gaming Mouse, 490.00 ,,244,Active
+26,"2023-489,2023-490",2023-08-17,30,2,"Client Chair, heavy duty, fabric material, armrest, high and fixed back , Balck"," 3,500.00 ",,244,Active
+27,2022-623,2022-10-26,17,1,"Speakerphone, Jabra Speak 510+ "," 10,000.00 ",,244,Active
+28,2023-532,2023-03-02,23,1,Compreaaor with Accessories for TCW4000 AC," 18,141.58 ",,244,Active
+29,2023-00-10605990-0009-LMS,2023-03-02,30,1,Ultra-Low Temperature Freezer Portable/ Benchtop," 495,153.00 ",,244,Active
+30,2023-464,2023-08-09,30,1,"UPS, AWP 1500VA"," 5,070.00 ",,244,Active
+31,2023-343,2023-07-17,23,1,"Keyboard and Mouse, Logitech", 700.00 ,,244,Active
+32,2024-054,2023-12-19,30,1,"Portable Tablet, Samsung S9 fe+, 12.4 inches, w/ book cover, keyboard and adapter"," 42,615.00 ",,244,Active
+33,2022-605,2022-10-18,17,1,"Computer Chair, Mesh Chair, Chrome Legs, with arm rest & gas lift, color black"," 3,495.00 ",from:E. Lagera,244,Active
+34,2019-522,2019-06-19,17,1,Portable Scanner Epson DS-310," 14,990.00 ",from: L.Ramos,244,Active
+35,SPHV-2025-03-110,2025-02-19,30,1,"UPS, Eaton 5A 12001-NEMA 1200VA/650W Line Interactive"," 6,000.00 ",,244,Active
+1,2021-1205,2021-08-10,30,1,"Mouse, optical, USB Connection type", 495.00 ,,324,Active
+2,"2021-1950, 2021-1951",2021-12-22,30,2,"Vertical Drawers, 3 drawers"," 7,700.00 ",,324,Active
+3,2021-1947,2021-12-22,17,1,"Monitor, 27"", BENQ, IPS"," 9,499.00 ",,324,Active
+4,2019-915,,30,1,"Barcode Scanner/ Reader, 3D"," 5,999.00 ",from: D. Babon,324,Active
+5,"2020-1351,2020-1352,2020-1353",2020-07-01,17,3,Stapler w/ staple wire remover, 120.00 ,from: D. Babon,324,Active
+6,2020-1398,2020-08-11,23,1,Portable Conference Speakerphone," 5,500.00 ",from: D. Babon,324,Active
+7,2020-1416,2020-07-16,30,1,"Xenon LED TV 32"""," 11,280.00 ",from: D. Babon,324,Active
+8,2021-133,2021-01-22,17,1,"Speakerphone, Mid-range portable USB and Bluetooth Speakerphone Speak 510, Jabra Speak 510"," 8,985.00 ",from: D. Babon,324,Active
+9,2021-550,2021-06-30,17,1,"Monitor, HKC 27"", Curved"," 9,995.00 ",from: D. Babon,324,Active
+10,2021-830,2021-07-07,30,1,Steel Vertical Filing Cabinet," 6,990.00 ",from: D. Babon,324,Active
+11,"2021-989,2021-990",2021-07-29,17,2,"Portable Hard Drive, 1TB, shockproof and scratch resistant"," 3,350.00 ",from: D. Babon,324,Active
+12,2021-1362,2021-08-06,30,1,"Keyboard, Logitech", 700.00 ,,324,Active
+13,2022-159,2022-02-24,17,1,"Puncher, Heavy Duty", 153.70 ,,324,Active
+14,2018-839,2018-10-28,17,1,"Table ( office table) 24"" x 18""x 30"" wood with drawers"," 3,800.00 ",from: V. Salacyao,324,Active
+15,21-06-47,2021-06-17,30,1,Assembled CPU," 43,700.00 ",from: D. Palangchao,324,Active
+16,2019-714,2019-10-01,30,1,"Office Chair, mid back 360 degrees swivel function, tilting mechanism, pneumatic height adjustment, 300mm, nylon base with PU casters 100kg, maximum weight capacity (C-NL2063)"," 3,495.00 ",from: D. Palangchao,324,Active
+17,2018-713,2018-11-26,17,1,"Anycast, m4plus, high definition, supports IOS & Android"," 1,790.00 ",from: D. Palangchao,324,Active
+18,2021-11-166,2021-10-28,30,1,Assembled CPU," 35,340.00 ",from: D. Palangchao,324,Active
+19,2019-737,2019-10-16,30,1,"All in ONe printer, Canon G4010, 4800 x 1200 dpi, Bordless printing, 88 ipm, Scanner flatbed-ADF can scan A4 to legal"," 13,400.00 ",from: D. Palangchao,324,Active
+20,2021-352,2021-05-24,17,1,"Monitor 27"", HKC"," 9,500.00 ",from: D. Palangchao,324,Active
+21,2018-260,2018-06-26,17,1,Wireless Keyboard," 1,219.00 ",from: D. Palangchao,324,Active
+22,2018-167,2018-04-04,30,1,"Binding & Puching Machine, U25-C24D"," 11,295.00 ",from: D. Palangchao,324,Active
+23,2018-277,2018-07-25,30,1,"Hot & Cold Water Dispenser, free standing with cabinet, White"," 4,200.00 ",from: D. Palangchao,324,Active
+24,2019-084,2019-01-28,17,1,"Cooling Fan Tower, 3 speed control 24 hour operation"," 2,299.75 ",from: D. Palangchao,324,Active
+25,ICS 16-285,2016-04-06,30,1,"Printer, HP Laserjet Pro"," 11,650.00 ",from: D. Palangchao,324,Active
+26,2021-508,2021-05-26,17,1,"Wireless Keyboard, Logitech MK 270"," 1,100.00 ",from: D. Palangchao,324,Active
+27,2021-509,2021-05-26,17,1,"Wireless Mouse, Logitech M331", 950.00 ,from: D. Palangchao,324,Active
+28,2019-1015,2019-12-16,30,1,"WIRELESS LAPEL MICROPHONE SYSTEM, 170MHz single channel with receiver, adapter and transmitter"," 3,950.00 ",from: D. Palangchao,324,Active
+29,2019-042,2019-01-11,17,1,Multimedia Presenter," 1,295.00 ",from: D. Palangchao,324,Active
+30,2018-385,2018-09-07,30,1,High Capacity Stapler, 950.00 ,from: D. Palangchao,324,Active
+31,2018-797,2018-10-01,17,1,"HDMI to VGA, Gold plated connector, input HDMI Output VGA", 595.00 ,from: D. Palangchao,324,Active
+32,2019-476,2019-05-31,30,1,"Extension Cord, Heavy Duty, Universal outlet, ICC Accredited, 4 gang 12 ft", 650.00 ,from: D. Palangchao,324,Active
+33,2020-1710,2020-09-22,17,1,"HP Pro Web Camera, Logitech C922 with tripod"," 10,100.00 ",from: D. Palangchao,324,Active
+34,2018-694,2018-11-26,30,1,"Heavy duty plastic box, 4 wheels, black/ dark blue"," 1,500.00 ",from: D. Palangchao,324,Active
+35,2019-858,2019-11-18,17,1,Heavy duty tape dispenser, 95.00 ,from: D. Palangchao,324,Active
+36,2019-859,2019-11-18,30,1,"Filing cabinet, 3 drawer mobile pedestal"," 4,320.00 ",from: D. Palangchao,324,Active
+37,2019-860,2019-11-18,30,1,"Storage and organized box, 70L capacity, heavy duty", 900.00 ,from: D. Palangchao,324,Active
+38,2021-1677,2021-10-28,17,1,"Keyboard, wireless, Rapoo"," 1,410.00 ",from: D. Palangchao,324,Active
+39,2021-1678,2021-10-28,17,1,"Mouse, wireless, Delux"," 1,000.00 ",from: D. Palangchao,324,Active
+40,2021-1679,2021-10-28,17,1,"Portable External Hard Drive, Silicon Powder 2TB"," 4,500.00 ",from: D. Palangchao,324,Active
+41,15-111,2015-06-10,30,1,"Desktop Computer, Acer Model X46020G, CPU"," 25,000.00 ",from: D. Palangchao,324,Active
+42,2021-1899,2021-11-23,30,1,"External Hard Disk Drive, 2TB, Adata"," 4,272.49 ",,324,Active
+43,2020-1101(2),2020-02-20,17,1,"Wooden Table, Height:0.7 meter, L-1 meter, W-0.8 meter, Thickness of wood-1 & 1/2"""," 6,300.00 ",fron: C. Dizon,324,Active
+45,2022-188,2022-03-11,17,1,"Keyboard, A4Tech", 330.00 ,,324,Active
+46,2023-831,2023-12-04,17,1,"Wireless Keyboard and Mouse Set, Logitech Mk220 Combo"," 1,100.00 ",,324,Active
+47,2023-832,2023-12-04,17,1,"Monitor, AOC 27"""," 6,900.00 ",,324,Active
+48,2023-833,2023-12-04,17,1,"UPS, Eaton 5A 12001-NEMA"," 6,000.00 ",,324,Active
+49,2023-834,2023-12-04,17,1,"Central Processing Unit, Intel i5-11400 12M Procesor, MSI LGA 1200 M-ATX, Kingston (2x8), Samsung Mz-V8T0BW SSD, Samsung MZ-77E SSD, Darkflash DK351 Gaming Case, Gigabyte GP Power Supply"," 38,150.00 ",,324,Active
+50,"2024-004,2024-005,2024-006",2023-12-27,17,3,"Heavy Duty Extension Cold, 10A 250V, 7 sockets, 2 USB Ports", 450.00 ,,324,Active
+51,SPHV-2024-02-0294,2024-02-08,30,1,"Portable Tablet, Samsung S9 fe+, 12.4 inches, w/ book cover, keyboard and adapter"," 46,000.00 ",,324,Active
+1,2018-684,2018-11-21,30,1,"LAPTOP, Notebook, ACER ASPIRE ES 14, intel celeron quadcore 2GB DDR31, 500GB, 11.6 HD 1366"," 14,950.00 ",,114,Active
+2,2019-664,2019-08-16,30,1,"Mouse, black, wireless bluetooth with 2 primary buttons and clickable scroll wheel, A4 Tech", 964.00 ,,114,Active
+3,2019-937,2019-11-21,17,1,"External hard drive, 1 TB"," 3,950.00 ",,114,Active
+4,2019-796,2019-11-07,17,1,"Android Tablet, 8"" Wuxga TFT capacitative display, 1290 x 1200 px. S-Pen support, OS: Samsung one IU (Android 9.0 Pie) Samsung Tab A"," 14,990.00 ",,114,Active
+5,2019-844,2019-11-19,17,1,"Scientific Calculator, FX-95MS ( Memory Store), Casio", 695.00 ,,114,Active
+6,2019-991,2019-12-11,30,1,"COMPUTER TABLE, 3 layered heavy duty, wood for small spaces"," 4,800.00 ",,114,Active
+7,2020-003,2020-01-07,30,1,"Computer Cahir with Arm rest, heavy duty, w/ low back rest, GD 2063"," 3,900.00 ",,114,Active
+8,2020-1074,2020-02-04,30,1,"MULTIFUNCTION PRINTER, inkjet, colored printing type, 120 x 6000 dpi, 27ppm for color, flatbed scanner type, refill tank system, EPSON L5190"," 13,992.00 ",,114,Active
+9,2021-128,2021-01-22,17,1,"Speakerphone, Mid-range portable USB and Bluetooth Speakerphone Speak 510, Jabra Speak 510"," 8,985.00 ",,114,Active
+10,2021-1424,2021-09-03,17,1,"Printer, Brother T420W"," 11,990.00 ",,114,Active
+11,2021-1565,2021-10-04,30,1,"Tower Fan, 3D TF10 40W"," 3,990.00 ",,114,Active
+12,2021-1567,2021-10-04,17,1,Computer Chair," 3,500.00 ",,114,Active
+13,2021-1557 ,2021-10-04,17,1,"Extension Cord, 10 meters with 6 universal gang"," 1,000.00 ",,114,Active
+14,2021-1563,2021-10-04,30,1,Paper Shredder," 3,760.00 ",,114,Active
+15,"2021-1545,2021-1570 ",2021-09-20,30,2,"UPS, 1500VA"," 5,075.00 ",,114,Active
+16,2021-1511,2021-09-15,30,1,"Scanner, Fujitsu S1100i"," 12,900.00 ",,114,Active
+17,"2021-1788,2021-1789,2021-1790,2021-1791",2021-10-29,17,4,"Stapler, standard type", 120.00 ,,114,Active
+18,2021-1792,2021-10-29,17,1,"Stapler, heavy duty, Joy HD-021", 840.00 ,,114,Active
+19,"2021-1887,2021-1888",2021-12-09,17,2,Posture Corrector Chair," 3,845.00 ",,114,Active
+20,2021-1898,2021-11-23,30,1,"External Hard Disk Drive , 2TB, Adata"," 4,273.49 ",,114,Active
+21,2016-12-0035,2016-12-13,30,1,Asus X550ZE Laptop with carrying case and mouse," 21,533.13 ",from : F. Carlos,114,Active
+22,"2022-126,2022-127,2022-128,2022-129,2022-130,2022-131",2022-01-31,17,6,"Falshdrive, 32GB, Kingston", 495.00 ,,114,Active
+23,21-08-72,2021-08-03,30,1,CPU Assembled," 44,603.00 ",from: C. Mamaradlo,114,Active
+24,2021-855,2021-07-19,30,1,HP Multi-Function Laserjet Printer," 11,180.00 ",from: J. Arellano,114,Active
+25,2021-125,2021-01-22,17,1,"Speakerphone, Mid-range portable USB and Bluetooth Speakerphone Speak 510, Jabra Speak 510"," 8,985.00 ",from: P. Castro,114,Active
+26,2021-162,2021-01-22,17,1,"4K Webcam with HDR abd Windows Hello support, 4K Ultra HD video calling, Logitech C930e"," 9,580.00 ",from: P. Castro,114,Active
+27,2021-1208 ,2021-10-08,17,1,"Stapler with stape remover, #35 staple wire", 95.00 ,from: P. Castro,114,Active
+28,2021-1333,2022-08-03,17,1,"Mouse, Logitech", 400.00 ,from: P. Castro,114,Active
+29,2021-525,2021-05-28,17,1,Cork Board with Frame 3ft. X 4ft.," 1,500.00 ",from: P. Castro,114,Active
+30,21-09-100,2021-07-09,30,1,"Laptop Computer, Acer Nitro 5"," 50,562.00 ",from: P. Castro,114,Active
+31,2021-1584,2021-10-06,17,1,"Monitor, Viewplus 23.8"""," 5,692.20 ",from: P. Castro,114,Active
+32,2021-1360,2021-08-26,17,1,"Keyboard, multi media laser printing", 700.00 ,from: P. Castro,114,Active
+33,2021-1273,2021-08-27,17,1,"Self-inking stamp ""Certified True Copy""", 995.00 ,from: P. Castro,114,Active
+34,2019-521,2019-06-13,17,1,"Portable Scanner, Epson DS-310"," 14,990.00 ",from: C. Kimmakim,114,Active
+35,21-08-57,2021-08-03,30,1,CPU Assembled," 44,603.00 ",from: C. Kimmakim,114,Active
+36,2021-1072,2021-08-03,17,1,"UPS, EATON 5L 1200 USB, 1200V/600W,230V"," 6,800.00 ",from: P. Castro,114,Active
+37,2022-271,2022-04-11,17,1,"Stapler, Standard Type", 180.00 ,,114,Active
+38,22-06-039,2022-06-14,30,1,Assembled CPU," 37,928.00 ",,114,Active
+39,2022-417,2022-06-14,17,1,"Office Table, with center drawer & 3 side drawers with lock, narra plywood, strong & durable, natural color, L100 x W50cm x H75cm"," 4,500.00 ",,114,Active
+40,2019-720,2019-10-01,17,1,"Stapler, standard", 125.00 ,from: C. Kimmakim,114,Active
+41,2018-070,2018-01-29,30,1,"Filing Cabinet, steel, 2 drawers w/ lock & key"," 3,995.00 ",from: C. Kimmakim,114,Active
+42,"2018-077,2018-078",2018-01-29,30,2,"Swivel Chair, Ergonomic design with foam covered with mesh bright colored, NL-2063"," 2,990.00 ",from: C. Kimmakim,114,Active
+43,2021-849,2021-07-19,30,1,HP Multi-Function Laserjet Printer," 11,180.00 ",from: C. Kimmakim,114,Active
+44,"2021-1052,2021-1073",2021-08-03,17,2,"UPS, EATON 5L 1200 USB, 1200VA/600W,230V"," 6,800.00 ",from: C. Kimmakim,114,Active
+45,2021-1107,2021-08-03,30,1,"Keyboard, Logitech", 700.00 ,from: C. Kimmakim,114,Active
+46,2021-1405,2021-08-03,30,1,"Mouse, Logitech", 400.00 ,from: C. Kimmakim,114,Active
+47,2021-1101,2021-06-28,17,1,"Heavy Duty Stapler, Binder Type", 545.00 ,from: C. Kimmakim,114,Active
+48,2021-1576,2021-10-06,30,1,"Monitor, Viewplus 23.8"""," 5,692.20 ",from: C. Kimmakim,114,Active
+49,"2022-153,2022-154",2022-02-23,17,2,"Stapler, standard type", 95.00 ,from: C. Kimmakim,114,Active
+50,2021-1272,2021-08-27,17,1,"Self-Inking stamp ""Certified True Copy""", 995.00 ,from: C. Kimmakim,114,Active
+51,2021-1275,2021-08-27,17,1,Self-Inking Stamp, 995.00 ,from: C. Kimmakim,114,Active
+52,2022-613,2022-10-20,17,1,"Executive Chair, heavy duty, high quality leatherette material, adjustable height, reclinable up to 150 degrees"," 3,850.00 ",,114,Active
+53,2022-497,2023-09-07,17,1,"Monitor, Atlas, Gamdias 21.5"""," 4,870.00 ",,114,Active
+54,2022-728,2022-12-15,30,1,CPU Assembled," 40,700.00 ",,114,Active
+55,2022-560,2022-09-30,17,1,"Mouse, A4Tech", 150.00 ,,114,Active
+56,2022-523,2022-09-30,17,1,"Keyboard, A4TEch", 400.00 ,,114,Active
+57,2022-193,2022-03-11,17,1,"Keyboard, A4TEch", 330.00 ,,114,Active
+58,2022-527,2022-09-30,17,1,"Keyboard, A4TEch", 400.00 ,,114,Active
+59,2022-498,2022-09-07,17,1,"Monitor, Atlas, Gamdias 21.5"""," 4,870.00 ",from: R. Marquez,114,Active
+60,"2023-068,2023-069,2023-070,2023-071",2023-03-01,17,4,"Client Chair, Black, stable"," 1,990.00 ",,114,Active
+61,2023-205,2023-05-11,17,1,"Stapler with staple remover, standard type, Joy Brand", 148.40 ,,114,Active
+62,2023-313,2023-07-07,30,1,"Printer, Brother DCP T720DW"," 12,490.00 ",,114,Active
+63,2023-448,2023-08-03,30,1,"CPU Assembled, Core i5  12400 processor, Asus board  B6604, 512 GB SSD, 16gb DDR4 memory, 1TB HDD drive, Casing w/ XPG 650 watts"," 44,000.00 ",,114,Active
+64,"2023-580,2023-581,2023-582",2023-10-09,30,3,"Extension Cord, Huntkey, 5 Ports, 2 USB Ports", 895.00 ,,114,Active
+65,2023-599,2023-10-16,17,1,"Puncher, 2 hole, heavy duty", 125.00 ,,114,Active
+66,2023-576,2023-10-11,30,1,"Automatic Paper Shredder, Deli E9952"," 10,850.00 ",,114,Active
+67,"2023-048,2023-049,2023-050",2023-01-19,30,3,CPU Assembled," 43,500.00 ",from: M. Bania-ao,114,Active
+68,2023-286,2023-06-06,17,1,"Monitor, 24"" , Phillips"," 6,150.00 ",from: M. Bania-ao,114,Active
+69,2023-025,2023-01-12,17,1,"Printer, HP 615"," 14,700.00 ",from: M. Bania-ao,114,Active
+70,"2023-042,2023-043,2023-044",2023-01-13,30,3,"Monitor, AOC 24"""," 8,900.00 ",from: M. Bania-ao,114,Active
+71,"2023-029,2023-030",2023-01-16,30,2,"UPS, AWP 1200VA-1500VA"," 5,200.00 ",from: M. Bania-ao,114,Active
+72,2023-031,2023-01-16,30,1,"Portable Scanner, Epson ES-60W"," 12,000.00 ",from: M. Bania-ao,114,Active
+73,2023-206,2023-05-11,17,1,"Stapler with staple remover, standard type, Joy Brand", 148.40 ,from: M. Bania-ao,114,Active
+74,2023-213,2023-04-18,17,1,"Whiteboard, 2ft. X 3ft., with metal frame", 995.00 ,from: M. Bania-ao,114,Active
+75,2023-283,2023-06-06,17,1,"Keyboard, A4TEch", 400.00 ,from: M. Bania-ao,114,Active
+76,2023-303,2023-06-14,30,1,"UPS, AWP 1500VA"," 4,990.00 ",from: M. Bania-ao,114,Active
+77,2023-686,2023-11-16,30,1,"CPU, Intel Core i7 12700/B660, Motherboard/Kingston 16GB DDR4 3200/XPG, 512GB SSD/Seagate, 1TB/Cronus Casing, Coolermaster 86Watts Gold"," 41,300.00 ",,114,Active
+78,"2023-752,2023-753",2023-11-16,30,2,"Keyboard, Rapoo", 450.00 ,,114,Active
+79,2023-759,2023-11-16,30,1,"Monitor, Viewplus 24"""," 5,500.00 ",,114,Active
+80,2023-762,2023-11-16,30,1,"UPS, AWP 1500VA"," 5,100.00 ",,114,Active
+81,2023-503,2023-08-31,30,1,"Tablet, Samsung Tab A8 LTE"," 15,158.00 ",from: J. Tomas,114,Active
+82,2020-1408,2020-07-16,30,1,"Xenon LED TV 32"""," 11,280.00 ",from: V. Sowaken,114,Active
+83,2023-701,2023-11-23,30,1,"Document Scanner, Epson DS-310"," 179,993.00 ",,114,Active
+84,2023-702,2023-11-23,30,1,"Wireless Router, Mercusys  M128X"," 3,295.00 ",,114,Active
+85,"2024-009,2024-010",2023-12-22,17,2,"Cooling Fan Tower, Kanazawa"," 2,850.00 ",,114,Active
+86,2024-043,2023-12-29,30,1,"Portable Tablet, Samsung S9 fe+, 12.4 inches, w/ book cover, keyboard and adapter"," 42,615.00 ",,114,Active
+87,2024-082,2024-01-03,30,1,"Powerbank, Romoss 30,000 MAH"," 1,950.00 ",,114,Active
+88,2024-147,2024-12-27,30,1,"Headset, Microsoft Modern, Wireless"," 5,800.00 ",,114,Active
+89,"SPLV-2024-03-396,SPLV-2024-03-397,SPLV-2024-03-398,SPLV-2024-03-399",2024-03-08,17,4,"Stapler, standard type, Joy Brand", 160.00 ,,114,Active
+90,"SPLV-2024-03-369,SPLV-2024-03-370,SPLV-2024-03-371",2024-03-08,17,3,"Calculator, Casio MX-12B", 450.00 ,,114,Active
+91,2022-585,2022-09-30,17,1,"Mouse, A4Tech", 150.00 ,,114,Active
+92,"2023-878,2023-879,2023-880",2023-12-07,17,3,"Calculator, 16 digits, Deli", 785.00 ,,114,Active
+93,21-09-98,2021-09-07,30,1,"Laptop Computer, Acer Nitro 5"," 50,562.00 ",from: M. Bania-ao,114,Active
+94,2022-436,2022-07-07,17,1,5-Layer Boltles Adjustable Rack Shelves Storage," 4,595.00 ",from: M. Bania-ao,114,Active
+95,2022-628,2022-10-27,30,1,"Mobile Phone, Samsung AO3"," 7,295.00 ",from: M. Bania-ao,114,Active
+96,"SPLV-2024-04-542,SPLV-2024-04-543,SPLV-2024-04-544,SPLV-2024-04-545,SPLV-2024-04-546,SPLV-2024-04-547",2024-04-05,30,6,"Executive Office Chair, Black Synthetic Leather, with lumbar support, heavy duty"," 4,500.00 ",,114,Active
+97,"SPLV-2024-541,SPLV-2024-04-574",2024-04-05,30,2,"16-Port Network Switch, Black", 185.00 ,,114,Active
+98,2022-290,2022-08-18,30,1,"Printer, HP Laser 107W"," 14,150.00 ",from: V. Zambrano,114,Active
+99,2021-1278,2021-08-31,17,1,"Webcam, Logitech "," 7,990.00 ",,114,Active
+100,"2021-1279,2021-1280",2021-08-31,17,2,"Webcam, Logitech "," 7,990.00 ",,114,Active
+101,SPLV-2024-08-738, ,30,1,"Headset, Redragon H848 IRE Pro Ultra Light Wireless"," 1,900.00 ",,114,Active
+102,SPHV-2024-08-757,2024-07-30,30,1,"Monitor, Samsung 24"""," 7,000.00 ",,114,Active
+103,SPHV-2024-08-758,2024-07-31,30,1,"Portable Scanner, Epson ES 60W"," 8,495.00 ",,114,Active
+104,SPLV-2024-08-759,2024-07-31,30,1,"Mouse, A4TEch", 250.00 ,,114,Active
+105,SPLV-2024-08-756,2024-07-30,30,1,"Keyboard, A4Tech", 482.00 ,,114,Active
+106,"SPHV-2024-08-775,SPHV-2024-08-776",2024-06-07,30,2,"Printer, Epson L5290"," 18,720.00 ",,114,Active
+107,"SPHV-2024-08-778,SPHV-2024-08-779,SPHV-2024-08-780",2024-06-07,30,3,"Headphone, Logitech Pro"," 7,950.00 ",,114,Active
+108,SPLV-2024-08-777,2024-06-07,30,1,"Gull HD Webcam, Logitech C920"," 4,960.00 ",,114,Active
+109,"SPLV-2024-09-851,SPLV-2024-09-852,SPLV-2024-09-853,SPLV-2024-09-854",2024-09-09,30,4,Wirder Posture Corrector Chair, 720.00 ,,114,Active
+110,"SPHV-2024-08-790,SPHV-2024-08-791,SPHV-2024-08-792,SPHV-2024-08-793",2024-08-22,30,4,"5-Layer Boltles Adjustable Rack Shelves Storage, Vistron"," 6,250.00 ",,114,Active
+111,SPHV-2024-08-794,2024-08-22,30,1,"Printer, Epson L5290"," 19,600.00 ",,114,Active
+112,SPLV-2024-08-795,2024-08-22,30,1,"UPS, Secure 1500VA"," 4,100.00 ",,114,Active
+113,2021-124,2021-01-22,17,1,"Speakerphone, Mid range portable USB And Bluetooth Speakerphone  Speak 510, Jabra Speak 510"," 8,985.00 ",from: A. Gawidan,114,Active
+114,2021-161,2021-01-22,17,1,"4K Webcam with HDR and Windows Hello Support, 4K Ultra HD Video calling ,Logitech C930e"," 9,580.00 ",from: A. Gawidan,114,Active
+115,2021-857,2021-07-19,30,1,HP Multi-Function Laserjet Printer," 11,180.00 ",from: A. Gawidan,114,Active
+116,2021-1054,2021-03-08,17,1,"UPS, EATON 5L 1200USB, 1200VA/600W, 230V"," 6,800.00 ",from: A. Gawidan,114,Active
+117,2021-1903,2021-11-23,30,1,"External Hard Disk Drive, 2TB, ADATA"," 4,273.49 ",from: A. Gawidan,114,Active
+118,2019-12-094,2019-12-04,30,1,"Desktop Computer, Acer Veriton M2640G"," 39,208.00 ",from: A. Gawidan,114,Active
+119,2016-061,2016-12-21,17,1,"Document Scanner, Image Formula P-215"," 10,200.00 ",from: A. Gawidan,114,Active
+120,537-10,2010-12-02,17,1,HP Laser printer P2035N," 25,800.00 ",from: A. Gawidan,114,Active
+121,21-01-07,2020-06-16,30,1,"Photocopier, Ineo 206"," 50,000.00 ",from: A. Gawidan,114,Active
+122,2017-380,2017-10-04,30,1,"Swivel Chair, Ergonomic "," 2,845.00 ",from: A. Gawidan,114,Active
+123,2021-1218,2021-08-10,17,1,"Puncher/Perforator, paper, ehavy duty, with 2 hole guide", 150.00 ,from: A. Gawidan,114,Active
+124,2021-1558,2021-10-04,17,1,"Extension Cord, 10 meters with 6 universal gang"," 1,000.00 ",from: A. Gawidan,114,Active
+125,21-09-104,2021-07-09,30,1,"Laptop Computer, Acer Nitro 5"," 50,562.00 ",from: A. Gawidan,114,Active
+126,2017-12-051,2017-12-08,30,1,"Desktop Computer, HP 280 G2 Microtower"," 49,151.74 ",from: V. Sowaken,114,Active
+127,2021-519,2021-08-03,17,1,"UPS, AP2 BX 1100 LI/MS/550W"," 8,000.00 ",from: V. Sowaken,114,Active
+128,SPHV-2024-10-963,2024-10-14,30,1,"Computer Central Processing Unit, Intel i5"," 33,600.00 ",,114,Active
+129,"SPHV-2024-11-1009,SPHV-2024-11-1010",2024-11-18,30,2,"Portable Scanner, Epson ES-6W"," 8,500.00 ",,114,Active
+130,SPLV-2024-11-1016,2024-11-22,30,1,"UPS, AWP 1500VA/900W"," 4,750.00 ",,114,Active
+131,"SPLV-2024-11-1017,SPLV-2024-11-1018",2024-11-22,30,2,"Wireless Presenter, Logitech R400"," 1,550.00 ",,114,Active
+132,"SPHV-2024-11-1014,SPHV-2024-11-1015",2024-11-18,30,2,"Monitor, HP Series 5 27"""," 11,900.00 ",,114,Active
+133,"SPHV-2024-12-1043,SPHV-2024-12-1044,SPHV-2024-12-1045",2024-11-29,30,3,"Movable Cabinet, 3 layers, steel"," 5,300.00 ",,114,Active
+134,SPHV-2024-12-1103,2024-12-06,30,1,"Laptop, MSI Thin 15.6"""," 44,900.00 ",,114,Active
+135,2023-483 ,2023-08-17,30,2,"Client Chair, heavy duty, fabric material, armrest, high and fixed back , Balck"," 3,500.00 ",from: F. Carlos,114,Active
+136,SPHV-2025-01-030,2025-01-14,30,1,"Coffee Percolator (with mug set, 6 set of mug with plate, with 6 pcs teaspoons, stainless, with 2 canister jar with wooden lid, with spoon conatiner with cover)"," 14,500.00 ",,114,Active
+1,"2020-1808, 2020-1809, 2020-1810, 2020-1811, 2020-1812",2020-11-23,17,5,"External Hard Drive, 2TB"," 5,450.00 ",,412,Active
+2,2019-12-073,2019-12-04,30,1,"Laptop, Hp Elitebook x 360 1030 G2, processor: Intel core i5-7th Gen processor base clock speed, 2.5 Ghz Max turbo frequency 3.1GHz Max turbo frequency 3.1 Ghz cache 3mb cache, 2 cores; Memory 8gb DDR4-2133onboard; storage/hard disk-256GB solid state drive; camera-720p HD camera: SN: 5CG84921B8"," 68,640.00 ",from: J. Copanut,412,Active
+3,ARE 15-67,2015-06-22,30,1,"Filing Cabinet with 4 drawers, gauge 20, plain, finish"," 7,701.96 ",from: J. Copanut,412,Active
+4,ARE 15-76,2015-06-22,30,1,Office Table with four drawers," 5,197.00 ",from: J. Copanut,412,Active
+5, 2019-395,,30,1,Huawei Pocket Wifi with globe and smart simcard," 3,918.85 ",,412,Active
+6,2021-1023,2021-08-03,17,1,"UPS, EATON 5L 1200 USB, 1200VA/600W,230V"," 6,800.00 ",,412,Active
+7,2022-120,2022-02-02,30,1,"Portable USB Image and Document Scanner, Epson DS310: SN: X35E006992"," 14,800.00 ",,412,Active
+8,2022-121,2022-02-02,17,1,"Whiteboard with stand, movable (caster wheels), 4x8"," 7,499.00 ",,412,Active
+9,22-04-017,2022-04-18,30,1,CPU Assembled," 34,335.00 ",,412,Active
+10,2022-250,2022-04-18,17,1,"Keyboard, Delux", 450.00 ,,412,Active
+11,2022-254,2022-04-18,17,1,"Mouse, Delux", 250.00 ,,412,Active
+12,2022-260,2022-04-18,17,1,"UPS, Kstar"," 6,500.00 ",,412,Active
+13,211-10,4/30/2010,30,1,"Cabinet, 2 drawers, steel"," 7,295.00 ",from: A. Bayubay,412,Active
+14,2021-040,2021-01-18,30,1,"Extension Cord (wheel type), heavy duty, 15 meters"," 1,945.00 ",from: P. Pineda,412,Active
+15,13-01,2001-01-03,30,1,Karaoke Sound System," 8,550.00 ",from: A. Bayubay,412,Active
+16,2021-1314,2021-06-10,30,1,"Keboard, Logitech", 700.00 ,from: A. Bayubay,412,Active
+17,2021-1324,2021-06-10,30,1,"Mouse, Logitech", 400.00 ,from: A. Bayubay,412,Active
+18,2020-2044,1905-07-12,30,1,"Keboard, Logitech", 525.00 ,from: A. Paneda ,412,Active
+19,20-11-467E,1905-07-12,30,1,Generator Set 5KVA," 48,250.00 ",from: A. Bayubay,412,Active
+20,22-01-002,2021-01-10,30,1,"Laptop, Lenovo Legion 5"," 67,000.00 ",from: A. Bayubay,412,Active
+21,54-14,2014-02-20,30,1,CPU Assembled," 23,996.27 ",from: A. Bayubay,412,Active
+22,2021-846,2021-07-19,30,1,HP Multi-Function Laserjet Printer," 11,180.00 ",from: A. Bayubay,412,Active
+23,2021-1030,2021-03-08,30,1,"UPS, EATON 5L 1200 USB, 1200VA/600W,230V"," 6,800.00 ",from: A. Bayubay,412,Active
+24,2022-078,2022-01-13,30,1,"Printer, Epson 3158"," 14,500.00 ",from: A. Bayubay,412,Active
+25,2022-055,2022-01-13,30,1,"All-in-One Wireless Printer, HP 615"," 13,990.00 ",from: A. Bayubay,412,Active
+26,2022-132,2021-10-12,30,1,Megaphone Speaker with Siren," 2,450.00 ", ,412,Active
+27,2022-138,2021-10-12,30,1,"Public Address, Konzert PA 12"," 7,500.00 ",from: A. Bayubay,412,Active
+28,2018-845,2018-12-17,30,1,Bamboo Sala Set," 8,000.00 ",from: A. Bayubay,412,Active
+29,2017-12-077,2017-12-08,30,1,"Desktop Computer, HP 280 G2 Microtower- CPU & MOnitor"," 49,151.74 ",from: A. Paneda ,412,Active
+30,2018-01-006,2017-12-21,30,1,"Projector, Epson"," 47,300.00 ",from: A. Bayubay,412,Active
+31,21-01-01,2020-06-16,30,1,"Photocopier, Ineo 206"," 50,000.00 ",from: A. Bayubay,412,Active
+32,577-10,2011-04-01,30,1,Computer Desktop," 48,050.00 ",from: A. Bayubay,412,Active
+33,2021-362,2021-11-03,30,1,Adapter C Type to LAN, 790.00 ,from: A. Bayubay,412,Active
+34,2021-713,2021-07-05,30,1,"HDMI Converter, male to female VGA", 695.00 ,from: A. Bayubay,412,Active
+35,2019-01-003,2018-06-01,30,1,"TABLET, Android, Samsung TAB S2, 8"""," 22,098.00 ",from: A. Bayubay,412,Active
+36,579-10,2011-04-01,30,1,"Computer Desktop, Acer"," 48,050.00 ",from: A. Bayubay,412,Active
+37,531-10,2010-02-12,30,1,"Projector, LCD ACER X1103P"," 25,000.00 ",from: A. Bayubay,412,Active
+38,225-10,2010-05-31,30,1,Split Type Aircon," 24,193.55 ",from: A. Bayubay,412,Active
+39,2021-1578,2021-10-06,30,1,"Monitor, Viewplus 23.8"""," 5,692.20 ",from: A. Bayubay,412,Active
+40,ARE 15-72,2015-06-22,30,1,Executive Office Chair," 3,713.00 ",from: A. Bayubay,412,Active
+41,ARE 15-69,2015-06-22,30,1,"Filing Cabinet with 4 drawers, gauge 20, plain, finish"," 7,701.96 ",from: A. Bayubay,412,Active
+42,ARE 15-75,2015-06-22,30,1,Office Table with 4 drawers," 5,197.00 ",from: A. Bayubay,412,Active
+43,"15-142,15-143",1905-07-07,30,2,"Table, monobloc, square 36"" x36"", green",,from: A. Bayubay,412,Active
+44,2018-769,2018-07-12,30,1,"Swivel Chair, Mesh chair"," 2,890.00 ",from: A. Bayubay,412,Active
+45,2019-1041,2019-12-23,30,1,Filing Stands for the Stockroom of PDOHO," 5,000.00 ",from: A. Bayubay,412,Active
+46,2019-226,2019-01-28,30,1,"Electric Fan, stand type, plastic, 6"""," 1,350.00 ",from: A. Bayubay,412,Active
+47,2019-236,2019-01-28,30,1,Office Table with 6 drawers," 5,400.00 ",from: A. Bayubay,412,Active
+48,2018-774,2018-07-02,30,1,"Swivel Chair, Mesh chair"," 2,890.00 ",from: A. Bayubay,412,Active
+49,2019-01-008,2019-06-01,30,1,"TABLET, Android, Samsung TAB S2, 8"""," 22,098.00 ",from: A. Bayubay,412,Active
+50,2018-455A,2018-09-26,17,1,Mascot For STII/HIV AIDS Advocacy (Condom)," 14,150.00 ",from: A. Bayubay,412,Active
+51,2021-336,2021-03-25,23,1,Girl Toy Doll Model," 2,000.00 ",from: A. Bayubay,412,Active
+52,SN 2019-0124,1905-07-11,17,5,CPR Mannequin (Adult)," 11,000.00 ",from: A. Bayubay,412,Active
+53,2019-229,2019-02-01,30,1,"Gas Stove, 2 burner, Standard"," 1,280.00 ",from: A. Bayubay,412,Active
+54,2019-230,2019-02-01,23,1,LPG Regulator and Hose, 424.00 ,from: A. Bayubay,412,Active
+55,2020-1492,2020-09-07,30,1,Jabra Speak 410 (Speakerphone for Voice Over Internet Protocol Calls)," 6,160.00 ",from: A. Bayubay,412,Active
+56,2021-1452,2021-11-25,30,1,"External; Hard Drive, 1TB, Toshiba"," 2,950.00 ",from: A. Bayubay,412,Active
+57,2020-1498,2020-07-08,30,1,Webcam for Voice Over Internet Protocol Calls," 8,900.00 ",from: A. Bayubay,412,Active
+58,2019-838,2019-11-18,17,1,"Stapler, binder-type, heavy duty, desktop", 832.00 ,from: A. Bayubay,412,Active
+59,2021-1826,2021-11-25,30,1,"Mobile Phone, Samsung Galaxy A12 (6GB + 128GB)"," 9,990.00 ",from: A. Bayubay,412,Active
+60,15-78,1905-07-07,30,1,Office Table w/ 4 drawers," 5,197.00 ",from: A. Bayubay,412,Active
+61,16-229,1905-07-08,30,1,"Biometrics, Fingerprints Reader"," 13,750.00 ",from: A. Bayubay,412,Active
+62,21-09-087,2021-03-09,30,1,Assembled CPU," 44,903.00 ",from: A. Bayubay,412,Active
+63,2016-09-0005,2016-09-05,30,1,"Aircondition, split type, 2.0HP, 220V, 60HZ"," 34,706.25 ",,412,Active
+64,2016-10-0020,1905-07-08,30,1,"Aircondition, split type, 2.0 HP, 100-200V"," 35,000.00 ",,412,Active
+65,2022-373,2022-06-13,30,1,"Refrigerator, Fujidenso"," 14,500.00 ",,412,Active
+66,2022-297,2022-04-29,30,1,Paper Shredder," 6,250.00 ",,412,Active
+1,2020-1024,2020-01-30,30,1,"Printer, Refillable, Print, Scan, Copy and Fax, HP SMART Tank 615"," 13,999.00 ",,361,Active
+2,2020-1170,2020-03-09,30,1,"Steel Cabinet, 400W x 550H x 650mmD, Black"," 3,880.00 ",,361,Active
+3,2019-918,1905-07-11,30,1,"Barcode Scanner/ Reader, 3D"," 5,999.00 ",,361,Active
+4,"2020-1103,2020-1104(2)",2020-06-22,17,2,"Multifunctional Wood Organizer, with FHC Cluster print design", 400.00 ,,361,Active
+5,2020-1287,2020-06-25,30,1,"Extension Cord, durable, made with high quality materials, easy install, 3 outlet with cord, 5 meter, OMNI", 300.00 ,,361,Active
+6,2020-1402,2020-08-07,17,1,Webcam for Voice Over Internet Protocol Calls," 8,900.00 ",,361,Active
+7,2020-1426,2020-08-27,17,1,"Stapler, heavy duty, for GSM 70 stapling", 880.00 ,,361,Active
+8,2020-1706,2020-10-19,30,1,"Desktop Monitor,27"" in panel LG 27MK400"," 11,000.00 ",,361,Active
+9,"2020-1708,2020-1709",2020-10-19,30,2,"Refillable Tank all-in-one Printer, HP 615"," 13,950.00 ",,361,Active
+10,2020-1758 ,2020-11-17,30,1,HD PRO Web Camera with tripod (Logitech C930e)," 9,900.00 ",,361,Active
+11,2020-1767,2020-10-22,30,1,USB Bluetooth Adapter for PC, 500.00 ,,361,Active
+12,2020-1775,2020-10-22,30,1,External USB Sound Card, 500.00 ,,361,Active
+13,2020-1791,2020-11-10,30,1,"Android Smart Phone for Barcode Track and Trace System Support, Samsung Galaxy A11"," 9,200.00 ",,361,Active
+14,"2020-1798,2020-1799",2020-11-20,30,2,"UPS, 600W/1000VA, APC UPS"," 3,990.00 ",,361,Active
+15,2020-11-179,,30,1,"LCD  Multimedia Projector, Epson EB-S41"," 30,450.00 ",,361,Active
+16,20-12-0180,2020-09-28,30,1,Portable Mini Projector," 19,000.00 ",,361,Active
+17,2020-1906,2020-12-09,30,1,"Universal Extension Wheel, (Omni Extension Wheel)"," 2,295.00 ",,361,Active
+18,"2020-1881,2020-18832,2020-1883",2020-12-04,17,3,"Tape Dispenser, table top, for 24mm width tape", 130.00 ,,361,Active
+19,"2020-1896,2020-1897",2020-12-09,17,2,VGA to HDMI Adapter Cable," 1,800.00 ",,361,Active
+20,21-01-014,2020-09-30,30,1,"Laptop, HP 14-DH 1062TX"," 57,000.00 ",,361,Active
+21,2021-026,2021-01-13,17,1,"Multimedia Presenter with USB Receiver 1, Pisen Rechargeable"," 1,100.00 ",,361,Active
+22,"2021-232,2021-233",2021-02-03,30,2,"External Hard Drive, 4TB"," 8,490.00 ",,361,Active
+23,2021-264,2021-02-15,30,1,"USB Speakerphone, Jabra Speak 510 UC Conference Kit"," 7,280.00 ",,361,Active
+24,2020-1965,2020-11-25,30,1,"Hard Disk Drive, 1TB"," 2,500.00 ",,361,Active
+25,2020-1978,2021-11-25,30,1,"Desktop Monitor, LG"," 10,350.00 ",,361,Active
+26,2021-285,2021-03-05,17,1,"Adapter, USB 2.0 to Rj45 Ethernet", 315.00 ,,361,Active
+27,2021-707,2021-05-10,17,1,"Puncher, heavy duty, 2-hole (7cm hole punch) with centering gauge", 220.00 ,,361,Active
+28,636-2K,,30,1,Pelvic Model USA ID," 9,664.00 ",from: A. Kilakil,361,Active
+29,2021-1803,2021-11-18,17,1,Universal Extension Wheel," 2,500.00 ",,361,Active
+30,2021-1380,2021-08-06,17,1,"Keyboard, Logitech", 700.00 ,,361,Active
+31,21-12-226,2021-01-07,30,1,CPU Assembled," 36,218.00 ",,361,Active
+32,21-12-227,2021-01-07,30,1,CPU Assembled," 36,218.00 ",,361,Active
+33,2019-1052,2020-01-10,30,5,"Stapler, Metal Casing, loading capacity-100 staples, stapling capacity 50 sheets, heavy duty"," 1,475.00 ",from: A. Kilakil,361,Active
+34,2022-656,2022-11-04,30,1,"Laptop, Lenovo Ideapad Slim 15.6"""," 42,800.00 ",,361,Active
+36,2024-171,2024-01-12,30,1,"Portable Tablet, Samsung S9 fe+, 12.4 inches, w/ book cover, keyboard and adapter"," 43,900.00 ",,361,Active
+37,"2024-179,2024-180,2024-181",2024-01-12,30,3,"Monitor, Asus 27"""," 11,300.00 ",,361,Active
+38,2024-088,2024-01-18,30,1,"Laptop, Asus TUF FX506, 15.6"""," 49,999.00 ",from: A. Kilakil,361,Active
+39,"2024-279,2024-280,2024-281",2024-01-18,17,3,"Stapler, Standard type, SQI Brand", 165.00 ,,361,Active
+40,2024-201,2024-01-18,17,1,"Wireless Bluetooth Speaker with Mic, Jabra Speak 510"," 7,940.00 ",,361,Active
+41,"SPHV-2024-06-637,SPHV-2024-06-638",2024-06-18,30,2,"Laptop, Acer A315-44P-R9WX"," 39,995.00 ",,361,Active
+42,2024-292,2024-01-08,30,1,Central Processing Unit," 36,990.00 ",,361,Active
+1,ARE 14-405,,30,1,"Computer Desktop, Intel i5, 2GB RAM, 1TB hard disk drive, with CD/DVD combo drive , mouse and keyboard, LCD monitor (Monitor Only)"," 23,231.65 ",from: L. Guerrero,134,Active
+2,2020-1546,2020-09-16,17,1,HDMI to VGA Converter, 625.00 ,from: L. Guerrero,134,Active
+3,2021-1400,2021-08-26,17,1,"Mouse, optical, USB connection type", 400.00 ,from: L. Guerrero,134,Active
+4,2020-1785 ,2020-11-17,30,1,"UPS, APC 1100 VA"," 7,100.00 ",from: L. Guerrero,134,Active
+6,2019-936,2019-11-21,17,1,"External Hard Drive, 1TB"," 3,950.00 ",from: L. Guerrero,134,Active
+7,2019-802,1905-07-11,17,1,Rotary Pencil Sharpener, 495.00 ,from: C. Dirige,134,Active
+8,21-09-111,2021-09-07,30,1,"Laptop Computer, Acer Nitro 5"," 50,562.00 ",from: L. Guerrero,134,Active
+9,2019-812,2019-11-05,17,1,"Individual switch extension cord, 6 gang Wed 360", 740.00 ,from: C. Dirige,134,Active
+10,2022-485,2022-09-05,17,1,"Keyboard, A4TEch", 400.00 ,,134,Active
+11,2022-554,2022-09-30,17,1,"Mouse, A4Tech", 150.00 ,,134,Active
+12,2022-727,2022-12-21,30,1,CPU Assembled," 40,700.00 ",,134,Active
+13,"2024-134,2024-135",2024-01-08,17,2,"Headphone, Jabra Evolve 65"," 14,500.00 ",,134,Active
+14,"2022-688,2022-689,2022-690",2022-12-02,17,3,Gaming Mouse, 490.00 ,,134,Active
+15,"2022-581,2022-582",2022-09-30,17,2,"Mouse, A4Tech", 150.00 ,,134,Active
+16,"2024-105,2024-106",2024-01-09,30,2,Synology Beedrive 1TB Personal Backup Hub," 8,850.00 ",,134,Active
+17,"2024-113, 2024-114, 2024-115",2024-01-09,17,5,"Monitor, AOC 27"""," 6,900.00 ",,134,Active
+18,"2024-130,2024-132",2024-01-09,17,5,"UPS, Eaton 5A 12001-NEMA 1200VA/650W"," 6,000.00 ",,134,Active
+19,"2023-891,2023-892",2023-12-21,30,2,"Laptop, Acer TravelMate P2, TMP 214-536-580M"," 46,995.00 ",,134,Active
+20,"2023-898,2023-899",2023-12-21,30,2,"Web Camera, Logitech C922HD Pro, 1080P"," 6,800.00 ",,134,Active
+21,"2023-901,2023-902",2023-12-21,30,2,"Wireless Presentation Clicker, Logitech R400"," 1,995.00 ",,134,Active
+22,2023-904,2023-12-21,30,1,"Projector, Epson RB-X51"," 31,800.00 ",,134,Active
+23,2024-277,2024-01-18,17,1,"Stapler, Standard type, SQI Brand", 165.00 ,,134,Active
+24,SPLV-2024-03-387,2024-03-08,17,1,"Tape Dispenser, Heavy Duty, Table Top, Sure Brand", 95.00 ,,134,Active
+25,SPLV-2024-03-338,2024-03-05,17,1,"Puncher, Heavy duty, 2-hole guide", 150.00 ,,134,Active
+26,"SPHV-2024-07-647,SPHV-2024-07-657",2024-06-20,30,2,"Ergonomic Office Chair, Gaming Chair"," 7,500.00 ",,134,Active
+27,SPHV-2024-07-707,2024-07-17,30,1,"Portable Tablet, Samsung Tab S9+"," 42,900.00 ",,134,Active
+28,SPLV-2024-10-958,2024-10-11,17,1,"Powerbank, Ugreen 10,000mAh"," 1,100.00 ",,134,Active
+1,32-14,2014-01-16,30,1,"Executive chair, arm leatherette cover"," 4,028.00 ",,161,Active
+2,ARE 14-407,,30,1,Computer desktop," 23,231.65 ",,161,Active
+3,15-120,2015-11-03,30,1,Triton Generator," 320,948.00 ",,161,Active
+4,ARE 14-406,,30,1,"Computer Desktop, Intel i5, 2GB RAM, 1Tb Hard disk Drive, with CD/DVD Combo drive , mouse and keyboard, LCD monitor"," 23,231.65 ",,161,Active
+5,ARE 14-423,2014-12-29,17,1,CPU assembled," 23,231.65 ",,161,Active
+6,ICS 16-350,2016-06-07,17,1,"Swivel chair, executive, leather, high back"," 3,950.00 ",,161,Active
+7,2017-317,2017-07-24,30,1,"Smart LED TV, My View"," 10,500.00 ",HEMS,161,Active
+8,2017-12-045,2017-12-08,30,1,"Desktop Computer, HP 280 G2 Microtower"," 49,151.74 ",,161,Active
+9,"2017-396,2017-397,2017-398",2017-10-24,17,3,Portable External Hard Drive," 5,388.00 ",,161,Active
+10,2018-672,2018-11-12,30,1,"Printer, All-in-One, Print-Scan-Copy, CANON G3010"," 10,200.00 ",,161,Active
+11,2018-513,,17,1,"Wireless Clicker, Pointer, PISEN"," 1,999.00 ",from V. Ingen,161,Active
+12,2020-091,2020-01-24,17,1,"Steel Cabinet, 4 layers"," 6,995.00 ",,161,Active
+13,2020-1165,2020-03-09,30,1,"Steel Cabinet, 400W x 550H x 650mmD, Black"," 3,880.00 ",,161,Active
+14,2020-1417,2020-07-16,30,1,"Xenon LED TV 32"""," 11,280.00 ",,161,Active
+15,2020-1120,2020-06-16,17,1,"BACKPACK, Ultralightweight"," 2,000.00 ",from: V. Lumbania,161,Active
+16,2019-176,,17,1,Storage Box, 510.00 ,from: V. Lumbania,161,Active
+17,ICS 15-294,2015-08-18,12,1,Biomedical Technical Kit," 3,415.00 ",from: V. Lumbania,161,Active
+18,"855-11,856-11",2011-09-21,30,2,"Cabinet, 3 drawers, stainless"," 7,000.00 ",from: E. Bugnosen,161,Active
+19,1016-11,2011-12-06,30,1,Kendrix Extradication Device," 6,751.50 ",from: E. Bugnosen,161,Active
+20,"503-10,500-10",2010-11-24,17,2,Cabinet 3 drawers (steel)," 7,000.00 ",from: E. Bugnosen,161,Active
+21,439-10,,17,1,"Nebulizer compressor, pulmo-Aid compact"," 7,000.00 ",from: E. Bugnosen,161,Active
+22,065-08,2008-07-22,17,1,"Resuscitator, Manual, pedia"," 9,800.00 ",from: E. Bugnosen,161,Active
+23,157-10,2010-02-17,17,1,"Resuscitator, Manual, Adult"," 9,800.00 ",from: E. Bugnosen,161,Active
+24,158-10,2010-08-17,17,1,"Resuscitator, Manual, child"," 9,800.00 ",from: E. Bugnosen,161,Active
+25,224-10,2010-05-14,17,1,Camping camp tents with DOH logo," 8,260.00 ",from: E. Bugnosen,161,Active
+26,"0325-13, 0326-13, 0327-13, 0328-13, 0329-13, 0330-13, 0331-13, 0332-13, 0333-13, 0334-13",2013-06-05,30,10,"Manikin, Infant w/ light sensor & clicker"," 9,500.00 ",from: E. Bugnosen,161,Active
+27,0407-11E,2011-03-14,30,1,"Oxygen Tank, 15lbs"," 5,980.00 ",from: E. Bugnosen,161,Active
+28,667-13,2013-12-10,30,1,CPR Manikin. Child," 9,900.00 ",,161,Active
+29,2021-043,2021-01-14,30,1,"UPS, Kstar 1000VA"," 4,500.00 ",,161,Active
+30,2021-051,2021-01-14,17,1,"Webcam, A4Tech, 1080p"," 1,493.00 ",,161,Active
+31,2021-189,2021-01-20,17,1,"Extension Cord, 6 gang, 5 meters w/ CE mark", 995.00 ,,161,Active
+32,2021-1010,2021-07-30,30,1,USB Headset with microphone and noise cancellation," 1,900.00 ",,161,Active
+33,2019-984,2019-12-11,30,1,"Office Table, 120cm x 60cm x75 width, 4 drawers"," 4,490.00 ",from: V. Salacyao,161,Active
+34,2017-400,2017-10-13,17,1,Swivel Chair," 5,250.00 ",from: C. Marquez,161,Active
+35,22-06-038,2022-06-14,30,1,Assembled CPU,"37,928.00",,161,Active
+36,2022-336,2022-05-30,30,1,"Keyboard & Mouse, A4Tech", 600.00 ,,161,Active
+37,2022-199,2022-03-11,30,9100,"Monitor, Viewsonic 24""","9,100.00",,161,Active
+38,1428-2K,1995-10-12,30,7500,"Planer, power, heavy duty 220V","7,500.00",,161,Active
+39,2022-716,2022-12-15,30,1,"Laptop Computer, Acer TravelMate P2","42,800.00",,161,Active
+40,2019-059,2019-01-17,30,1,"VOICE RECORDER, Sony PX 470"," 4,899.00 ",from: N. Cara,161,Active
+41,2023-387,2023-07-24,17,1,"Monitor, AOC 27"""," 7,050.00 ",,161,Active
+42, 2021-1379,2021-08-06,30,1,"Keyboard, Logitech", 700.00 ,from: J. Pira,161,Active
+43,2022-042 ,2022-01-10,30,1,"Monitor, Atlas 22"""," 6,500.00 ",from: J. Pira,161,Active
+44,2022-239,2021-12-29,17,1,Extension Cord, 430.00 ,from: J. Pira,161,Active
+45,22-05-021,2022-05-02,30,1,Assembled CPU," 56,650.00 ",from: J. Pira,161,Active
+46,2022-625,2022-01-31,30,1,"Printer, Brother MFC T920DW"," 14,150.00 ",from: J. Pira,161,Active
+47,2022-419,2022-06-14,17,1,"Office Table, with center drawer & 3 side drawers with lock, narra plywood, strong & durable, natural color, L100 x W50cm x H75cm"," 4,500.00 ",M. Bania-ao,161,Active
+48, 2022-421(1),2022-06-14,17,1,"Office Table, with center drawer & 3 side drawers with lock, narra plywood, strong & durable, natural color, L100 x W50cm x H75cm","4,500.00",from: J. Morareng,161,Active
+49,2019-977,2019-12-11,30,1,"OFFICE TABLE, 120cm x 60cm x 75 with 4 drawers"," 4,490.00 ",from: J. Morareng,161,Active
+50,SPHV-2024-12-1134,2024-12-16,30,1,"Laptop, MSI Modern 15"," 48,900.00 ",from: A. Sumadchat,161,Active
+1,2018-037,2017-10-13,17,1,"Scanner, sheed fed, optical res., Brother DS 620"," 11,650.00 ",,274,Active
+2,"2020-0080,2020-081",2020-01-21,17,2,HDMI Cable," 1,050.00 ",,274,Active
+3,2020-095,2020-01-21,30,1,Laptop," 14,990.00 ",,274,Active
+4,2020-047,2020-02-12,30,1,"Printer, 3-in-1 , refillable ink Tank systmen Printer, EPSON L3110"," 8,050.00 ",,274,Active
+5,2020-1028,2020-02-26,30,1,"Tape Dispenser, sonic slim", 117.00 ,from: M. Puguon,274,Active
+6,2020-1686,2020-10-29,30,1,"Computer Table, GP 1201"," 4,500.00 ",,274,Active
+7,2021-1599,2021-10-06,30,1,"Monitor, Viewplus 23.8"""," 6,678.00 ",,274,Active
+8,2021-1173,2021-09-03,17,1,"Keyboard, multi media laser printing, USB wired and 1.5meter cable", 700.00 ,,274,Active
+9,2021-1403,2021-09-03,17,1,"Mouse, optical, USB connection type", 400.00 ,,274,Active
+10,2022-535,2022-09-30,17,1,"Keyboard, A4Tech", 400.00 ,,274,Active
+11,"2022-574,2022-575",2022-09-30,17,2,"Mouse, A4TEch", 150.00 ,,274,Active
+12,2023-223,2023-05-17,17,1,"Tape Dispenser, Joy Brand", 95.00 ,,274,Active
+13,2023-273,2022-01-20,30,1,"Printer, HP 107W"," 8,176.00 ",,274,Active
+14,2023-238,2023-05-16,17,1,"Stapler, standard type, Joy Brand", 120.00 ,,274,Active
+15,2023-292,2023-06-14,17,1,"Calculator, TM-12", 200.00 ,,274,Active
+16,"2023-560, 2023-561, 2023-562, 2023-563, 2023-564, 2023-565, 2023-566, 2023-567, 2023-568",2023-10-05,17,9,"Flip Top Storage Box, Transparent, 95L", 525.00 ,,274,Active
+17,2023-572,2023-09-26,23,1,"Sofa Set, 4 pieces, 1 center table, 2 one seater chair, 1 4 seater chair"," 28,400.00 ",,274,Active
+18,"2023-588,2023-589",2023-10-09,17,2,"Trash Bin with swing cover, 50L capacity, plastic material, Black", 720.00 ,,274,Active
+19,"2023-590, 2023-591, 2023-592, 2023-593",2023-10-09,17,4,"Narrow Corner table, 2 drawers, Gray", 720.00 ,,274,Active
+20,"2023-594,2023-595",2023-10-09,17,2,"Heavy Duty Tower Fan, Blakk, 29"""," 42,000.00 ",,274,Active
+21,"2023-605,2023-606",2023-10-16,17,2,Bathroom Wall Mirror, 700.00 ,,274,Active
+22,"2023-607, 2023-608, 2023-609, 2023-610, 2023-611, 2023-612, 2023-613, 2023-614, 2023-615, 2023-616",2023-10-16,17,10,"Storage Box, transparent, 56L Capacity", 590.00 ,,274,Active
+23,"2023-617, 2023-618, 2023-619, 2023-620
+
+
+
+
+
+",2023-10-16,17,4,"Storage Box, transparent, 16L Capacity", 300.00 ,,274,Active
+24,2023-621,2023-10-16,17,1,Umbrella Stand," 1,100.00 ",,274,Active
+25,"2023-775,2023-776",2023-11-17,17,2,"Steel Cabinet, Large Size, 4 drawers, Jersey FC-4D"," 7,350.00 ",,274,Active
+26,SPHV-2024-08-782,2024-08-06,30,1,"Printer, Epson L5290"," 14,100.00 ",,274,Active
+1,"2018-293,2018-294,2018-295",2018-07-11,30,3,3.0 USB Ports External Hub, 600.00 ,,190,Active
+2,2018-296,2018-07-11,30,1,"Hard Disk Drive, External, 1TB Shockproof"," 3,130.00 ",,190,Active
+3,"2020-0107,2020-107A",2020-01-21,30,2,UPS (AWP)," 7,800.00 ",,190,Active
+4,2020-108,2020-01-21,30,1,"Mouse, Optical Wheel, Wireless", 890.00 ,,190,Active
+5,200-1176,2020-03-11,30,1,"Puncher, 2 hole heavy duty, 7cm", 140.00 ,,190,Active
+6,2019-917,1905-07-11,30,1,"Barcode Scanner/Reader, 3D"," 5,999.00 ",,190,Active
+7,2020-1357,2020-07-02,17,1,"Calculator, 12 digits, solar, two powered", 895.00 ,,190,Active
+8,2020-1862,2020-12-01,30,1,"Printer, Epson L5190"," 14,900.00 ",,190,Active
+9,2020-1914,2020-12-09,30,1,"Steel Cabinet, Mobile Pedestal cabinet"," 5,450.00 ",,190,Active
+10,"2021-275,2021-276",2021-03-04,17,2,"Office Chair, mid-back, 360 degrees swivel function, tilting mechanism, pneumatic height adjustment, 300mm, nylon bse with PU casters, 100kg maximum weight capacity"," 5,000.00 ",,190,Active
+11,2022-124,2022-02-03,30,1,"Mouse, A4Tech", 280.00 ,,190,Active
+12,2022-125,2022-02-03,30,1,"Keyboard, A4Tech", 450.00 ,,190,Active
+13,2022-152,2022-02-11,30,1,"Printer, Epson L3250"," 12,990.00 ",,190,Active
+14,2018-09-012,1905-07-08,30,1,LCD Projector," 42,000.00 ",from: G. Tiwing,190,Active
+15,0015-13,2013-01-16,30,1,Digital Camera," 8,900.00 ",from: G. Tiwing,190,Active
+16,2022-02-009,2022-03-15,30,1,Assembled CPU," 38,800.00 ",,190,Active
+17,2019-1000 ,2020-01-02,30,3,"Pedestal steel Cabinet, small size"," 14,550.00 ",from: R. Liwaliw,190,Active
+18,1185-2K,1995-12-31,30,1,"Filing Cabinet, Wooden, Open"," 6,500.00 ",,190,Active
+19,2021-1274,2021-08-27,17,1,"Self-inking stamp, "" Certified True Copy""", 995.00 ,,190,Active
+20,0005-2K,1995-09-30,30,1,Sala Set with upholstery," 13,619.00 ",,190,Active
+21,2017-12-055,2017-12-13,30,1,"Desktop Computer,HP 280 G2 Microtower"," 49,151.74 ",,190,Active
+22,158-06,2006-08-11,17,1,"Office Table, w/ glass top"," 6,200.00 ",,190,Active
+23,2022-049,2022-01-10,30,1,"Monitor, Atlas 22"""," 6,500.00 ",,190,Active
+24,2023-226,2023-05-17,17,1,"Tape Dispenser, Joy Brand", 95.00 ,,190,Active
+25,2023-248,2023-05-16,17,1,"Extension Cord, 5 meters, 4 gang, Deli Brand", 995.00 ,,190,Active
+26,2023-452,2023-08-14,17,1,"UPS, Secure 2000VA"," 5,300.00 ",,190,Active
+27,2024-235,2024-01-24,17,1,"Executive Office Chair, Leather, Fixed Arm Rest, High back, Black, Jersey - JS289"," 4,485.00 ",,190,Active
+28,2022-418 ,2022-06-14,17,1,"Office Table, with center drawer & 3 side drawers with lock, narra plywood, strong & durable, natural color, L100 x W50cm x H75cm"," 4,500.00 ",from: M. Bania-ao,190,Active
+29,2024-128 ,2024-01-09,17,1,"UPS, Eaton 5A 12001-NEMA 1200VA/650W"," 6,000.00 ",from: J. Dongbo,190,Active
+1,2024-068,2023-12-29,30,1,"Central Processing Unit, Intel i5, Adata 512GB, Kingston 16GB DDR4, Gigabyte GP-UD850GM 850W, Gigabyte GA-B760M-DS3H DDR4, Trendsonic HERMES HE19A Tempered Glass Panel ATX"," 37,000.00 ",,112,Active
+2,2024-074,2023-12-29,30,1,"Monitrt, AOC 27"""," 6,900.00 ",,112,Active
+3,2023-350,2023-07-17,23,1,"Keyaboard and Mouse, Logitech", 700.00 ,,112,Active
+4,SPLV-2024-04-549,2024-04-05,30,1,"Executive Office Chair, Black Synthetic Leather, with lumbar support, heavy duty"," 4,500.00 ",,112,Active
+5,"SPLV-2024-12-1114,SPLV-2024-12-1115",2024-12-11,17,2,"Stapler, standard type, MGK", 104.50 ,,112,Active
+6,"SPLV-2024-12-1110,SPLV-2024-12-1111",2024-12-11,17,2,"Puncher, MGK", 160.00 ,,112,Active
+1,2021-1020,2021-07-30,30,1,USB Headset with microphone and noise cancellation," 1,900.00 ",,143,Active
+2,2021-1742,2021-11-04,17,1,"USB Wired Keyboard, Logitech K1200", 585.00 ,,143,Active
+3,2021-12-199,2021-12-15,30,1,Assembled CPU," 54,690.00 ",,143,Active
+4,2021-1935,2021-03-11,30,1,"Printer, Brother DCP-T710W"," 12,100.00 ",,143,Active
+5,2022-077,2022-01-06,17,1,"External Hard Drive, 1TB Sandisk"," 2,950.00 ",,143,Active
+6,15-97,1905-07-07,17,1,"Swivel chair, full back rest, black color with arm rest, leather reclining"," 2,700.00 ",from: T. Abenes,143,Active
+7,2018-177,2018-04-24,30,1,"Office Table, w/ center drawer and side drawers, Narra plywood, strong & durable, natural color"," 3,985.00 ",from: T. Abenes,143,Active
+8,2022-041,2022-01-10,30,1,"Monitor, Atlas 21.5"""," 6,500.00 ",,143,Active
+9,2022-176,2022-02-16,17,1,Ergonomic Office Chair," 4,500.00 ",,143,Active
+10,2022-313,2022-01-20,30,1,"Printer, HP Laser 107W"," 8,176.00 ",,143,Active
+11,2021-046,2021-01-14,17,1,"Webcam, A4Tech, 1080p"," 1,493.00 ",from: V. Narciso,143,Active
+12,2019-447,2019-05-14,30,1,"Computer Monitor, 18.5 inches LED monitro w/ stand, VIEWSONIC"," 3,450.00 ",from: M. Lomboy,143,Active
+13,2022-651,2022-11-04,30,1,"Laptop, Lenovo Ideapad Slim, 15.6"""," 48,383.00 ",,143,Active
+14,2023-242,2023-05-16,17,1,"Extension Cord, 5 meters, 4 gang, Deli Brand", 995.00 ,,143,Active
+15,501-10,2010-11-24,30,1,"Steel Cabinet, 3 drawers"," 7,000.00 ",from: N. Cara,143,Active
+16,2021-1019,2021-07-30,30,1,USB Headset with microphone and noise cancellation," 1,900.00 ",from: M. Olarte,143,Active
+17,"2021-1520,2021-1521,2021-1522,2021-1524,2021-1525",2021-03-10,30,1,"Webcam, Logitech"," 7,990.00 ",from: C. Mamaradlo,143,Active
+18,"2024-257, 2024-258, 2024-259, 2024-260",2024-01-29,17,4,"Swivel Chair, high back, leatherette, PVC Black Starbase, Black"," 2,980.00 ",,143,Active
+19,SPLV-2024-02-306,2024-02-14,17,1,"Folding Table, 6ft., heavy duty"," 3,050.00 ",,143,Active
+21,2023-430,2023-08-03,17,1,"Office Table, with drawers and cabinet with lock"," 9,000.00 ",from: P. Copero,143,Active
+22,2023-432,2023-08-03,17,1,"Office Table, with drawers and cabinet with lock"," 9,000.00 ",from: R. Pili,143,Active
+1,2017-475,2017-10-05,30,1,"Printer, 3-in-1, HP GT5910"," 7,800.00 ",,69,Active
+2,169-06,2001-06-13,30,1,Filing cabinet 4 drawers (steel)," 7,954.55 ",fr. N. Pagadut,69,Active
+3,147-06,2001-06-13,30,1,Filing cabinet 4 drawers vertical HERMACO," 7,954.55 ",fr. N. Pagadut,69,Active
+4,2019-223,2019-02-15,30,1,"Wall clock, 18"" Big and clear numbers", 495.00 ,,69,Active
+5,2019-757,2019-10-18,17,1,"Calculator, two-way power, 12 digits, Tilt display, JS-120, Casio 512 OF, 12 digits/ Solar & battery", 725.00 ,,69,Active
+6,"2019-757A,2019-757B",2019-10-18,17,2,"Stapler,metal casing, loading capacity: 100 staples; stapling capacity: 50 sheets; heavy duty", 125.00 ,,69,Active
+7,"2019-784,2019-785",2019-10-30,30,2,"Swivel Chair, Executive, Faux leather, high back with head rest"," 5,000.00 ",,69,Active
+8,2019-12-109,2019-11-12,30,1,CPU ASSEMBLED (details: see PAR #: 19-020)," 32,050.00 ",,69,Active
+9,2020-1355,2020-07-02,17,1,"Calculator, 12 digits, solar, two powered", 895.00 ,,69,Active
+10,2019-909,2020-06-22,30,1,"Barcode Scanner/ Reader, 3D"," 5,999.00 ",,69,Active
+11,"2021-031,2021-032",2021-01-14,17,2,"Puncher, 2 holes, heavy duty", 130.00 ,,69,Active
+12,2021-119,2021-01-22,17,1,"Speakerphone, Mid-range portable USB and Bluetooth Speakerphone Speak 510, Jabra Speak 510"," 8,985.00 ",,69,Active
+13,2021-156,2021-01-22,17,1,"4K Webcam with HDR abd Windows Hello support, 4K Ultra HD video calling, Logitech C930e"," 9,580.00 ",,69,Active
+14,2021-578,2020-12-29,30,1,"Monitor (IPS Panel, 144-167 Hz, 27 inches, 0.5 - 1ms response time - HKC 27"" 1080 curved 1x4 HZ"," 12,500.00 ",,69,Active
+15,2021-518,2021-06-21,30,1,"All -in-One Printer, Brother T720DW"," 14,900.00 ",,69,Active
+16,"2021-1046,2021-1047,2021-1070",2021-08-03,17,3,"UPS, EATON 5L 1200 USB, 1200VA/600W,230V"," 6,800.00 ",,69,Active
+17,21-08-61,2021-08-03,30,1,CPU Assembled," 44,603.00 ",,69,Active
+18,2021-1111(1),2021-08-03,17,1,"Keyboard, Logitech", 700.00 ,,69,Active
+19,"2021-1408,2021-1409",2021-08-03,17,n,"Mouse, Logitech", 400.00 ,,69,Active
+20,21-09-97,2021-07-09,30,1,"Laptop Computer, Acer Nitro 5"," 50,562.00 ",,69,Active
+21,2021-1423,2021-03-09,30,1,"Printer, Brother T420W"," 11,990.00 ",from: V. Delposo,69,Active
+22,2021-1374,2021-08-26,17,1,"Keyboard, Logitech", 700.00 ,,69,Active
+23,"2019-987,2019-988",2019-12-11,30,2,"Office Table, 120cmx 60cm x75 width, 4 drawers"," 4,490.00 ",,69,Active
+24,2022-289,2021-08-18,30,1,"Printer, HP Laser 107W"," 14,150.00 ",,69,Active
+25,74-06,2003-04-14,30,1,Hanging cabinet," 15,925.00 ",from: V. Salacyao,69,Active
+26,2021-1597,2021-10-06,17,1,"Monitor, Viewplus 23.8"""," 6,678.00 ",,69,Active
+27,2018-029,2018-01-04,30,1,"Swivel Chair, Ergonomic design, with foam covered with mesh"," 2,990.00 ",from; P. Castro,69,Active
+28,2021-1209,2021-10-08,17,1,"Stapler with stape remover, #35 staple wire", 95.00 ,from; P. Castro,69,Active
+29,2021-1432,2021-08-03,17,1,"Mouse, Logitech", 400.00 ,from; P. Castro,69,Active
+30,2021-1375,2021-08-26,17,1,"Keyboard, Logitech", 700.00 ,from; P. Castro,69,Active
+31,"2023-478,2023-479",2023-08-15,30,2,"Computer Central Processing Unit, Intel Core i7 12700, B660 Motherboard, Kingston 16GB DDR4, 512GB SSD M2, Seagate 1TB, Antec casing, Antec 850W Gold"," 41,300.00 ",,69,Active
+32,2023-507,2023-07-19,17,1,"Whiteboard with metal frame, 72"" x 48"""," 2,300.00 ",,69,Active
+33,2023-754,2023-11-16,30,1,"Keyboard, A4Tech", 450.00 ,,69,Active
+34,2023-757,2023-11-16,30,1,"Mouse, A4Tech", 250.00 ,,69,Active
+35,2023-760,2023-11-16,30,1,"Monitor, Viewplus 24"""," 5,500.00 ",,69,Active
+36,2023-763,2023-11-16,30,1,"UPS, AWP 1500VA"," 5,100.00 ",,69,Active
+37,2017-12-040,2017-12-08,30,1,"Desktop Computer, HP 280 G2 Microtower"," 49,151.74 ",from: C. Mamaradlo,69,Active
+38,"2023-816, 2023-817, 2023-818, 2023-819, 2023-820",2023-12-01,17,5,"Puncher, 2 hole, Well's Brand", 150.00 ,,69,Active
+39,2024-061,2023-12-19,30,1,"Laptop, Acer Cons A315-59-74BZ, Intek Core, i7-1255U, 15.6"""," 49,000.00 ",,69,Active
+40,2023-357,2023-07-17,23,1,"Keyboard and Mouse, Logitech", 700.00 ,,69,Active
+41,SPHV-2024-03-454,2024-03-13,30,1,"UPS, Eaton 1200VA/650W"," 5,950.00 ",,69,Active
+42,"SPLV-2024-08-730,SPLV-2024-08-731",2024-07-19,30,2,"Headphone, Logitech H540"," 2,250.00 ",,69,Active
+43,SPLV-2024-08-732,2024-07-19,30,1,"Headset, Redragon H848 IRE Pro Ultra Light Wireless"," 1,900.00 ",,69,Active
+44,"SPHV-2024-08-744,SPHV-2024-08-745",2024-07-19,30,2,"Printer, Epson L5290"," 14,000.00 ",,69,Active
+45,"SPLV-2024-07-697,SPLV-2024-07-698,SPLV-2024-07-699",2024-07-17,30,3,"Extension Cord, Flat 2 core (5M) 220-250V", 260.00 ,,69,Active
+46,2024-00-10605030-10-PSU,2024-10-04,30,1,Computer Central Processing Unit," 51,950.00 ",,69,Active
+47,SPHV-2024-10-940,2024-10-04,17,1,"Monitor, Samsung 27"""," 6,950.00 ",,69,Active
+48,"SPLV-2024-12-1053,SPLV-2024-12-1054",2024-11-29,17,2,"External Heard Drive, Toshiba, 1TB"," 2,995.00 ",,69,Active
+49,SPLV-2024-12-1076,2024-12-05,30,1,"Wireless Mouse, Logitech", 700.00 ,,69,Active
+50,SPLV-2024-12-1085,2024-12-05,30,1,"UPS, Eaton 5A 700I-NEMA 700VA/360W"," 2,050.00 ",,69,Active
+51,"SPLV-2024-12-1093,SPLV-2024-12-1094,SPLV-2024-12-1095",2024-12-05,30,3,"Keyboard, Logitech K120", 450.00 ,,69,Active
+52,2024-00-10605030-13-CBCT,2024-10-04,30,1,Computer Central Processing Unit," 51,950.00 ",,69,Active
+53,SPHV-2024-10-943,2024-10-04,30,1,"Monitor, Samsung 27"""," 6,950.00 ",,69,Active
+54,SPLV-2025-01-046,2024-12-13,17,1,"Calculator, Joy JCA-1275", 350.00 ,,69,Active

@@ -1,0 +1,39 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@primevue/themes": "^4.2.5",
+    "@tailwindcss/vite": "^4.0.6",
+    "apexcharts": "^4.5.0",
+    "axios": "^1.7.9",
+    "dom-to-image": "^2.6.0",
+    "dom-to-image-more": "^3.5.0",
+    "html2canvas": "^1.4.1",
+    "html2pdf.js": "^0.9.0",
+    "htmltopdf": "^0.0.10",
+    "jspdf": "^3.0.0",
+    "jspdf-html2canvas": "^1.5.2",
+    "laravel-echo": "^2.0.2",
+    "notiflix": "^3.2.8",
+    "oh-vue-icons": "^1.0.0-rc3",
+    "primevue": "^4.2.5",
+    "print-js": "^1.6.0",
+    "pusher-js": "^8.4.0",
+    "tailwindcss": "^4.0.6",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0",
+    "vue3-apexcharts": "^1.8.0"
+  },
+  "devDependencies": {
+    "@iconify/vue": "^4.3.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.1.0"
+  }
+}

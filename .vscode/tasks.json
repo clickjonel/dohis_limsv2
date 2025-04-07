@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Laravel Host",
+            "type": "process",
+            "command": "php artisan serve --host=192.168.225.13 --port=8000",
+            // "problemMatcher": [],
+            // "group": {
+            //     "kind": "build",
+            //     "isDefault": true
+            // }
+        }
+    ]
+}

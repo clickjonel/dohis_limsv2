@@ -1,0 +1,100 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\DeliveryTrait;
+use App\Models\Delivery;
+use App\Models\DeliveryItem;
+use App\Models\DeliveryReceipts;
+use App\Models\Measurement;
+use App\Models\Property;
+use App\Models\StockCard;
+use App\Models\User;
+use App\UserTrait;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
+
+class DashboardController extends Controller
+{
+    use DeliveryTrait,UserTrait;
+
+    public function getUserDashboardData(Request $request)
+    {
+    
+        $user = User::with(['properties','deliveries.receipts','deliveries.items'])->find($request->user()->user_id);
+        $user_deliveries = $user->deliveries()->orderBy('id','desc')->get()->map(function($delivery){
+            return [
+                'id' => $delivery->id,
+                'source' => $delivery->source_name,
+                'receipts' => $delivery->receipts,
+                'items' => $delivery->items->map(function($item){
+                    $item['measurement_unit'] = $item->measurementUnit->name;
+                    return $item;
+                })
+            ];
+        });
+        // $user_section_stock_cards = StockCard::with('transactions')->where('req_office',$user->assignment->section_id);
+
+        $user_section_stock_cards = StockCard::with('transactions')->where('req_office',$user->assignment->section_id)->get()->map(function($stock_card){
+            if($stock_card->latestTransaction()->balance === $stock_card->quantity){
+                $stock_card['status'] = 'For Allocation';
+
+            }
+            else if($stock_card->latestTransaction()->balance < $stock_card->quantity && $stock_card->latestTransaction()->balance > 0){
+                $stock_card['status'] = 'Allocating';
+            }
+            else if($stock_card->latestTransaction()->balance === 0){
+                $stock_card['status'] = 'Allocated';
+            }
+            else{
+                $stock_card['status'] = 'Unknown';
+            }
+
+            return $stock_card;
+        });
+
+        $user_delivery_receipts = DeliveryReceipts::whereIn('id',$user->deliveries->pluck('id'))->whereYear('delivery_date',Carbon::now()->year)->get();
+        
+        $data = [
+            'deliveries' => [
+                'list' => $user_deliveries,
+                'total' => $user->deliveries->load('items')->count(),
+                'charge' => $user->deliveries->where('payment_term',1)->count(),
+                'donation' => $user->deliveries->where('payment_term',2)->count(),
+                'chart' =>  $this->getDeliveryTotalByMonth($user_delivery_receipts)
+            ],
+            'stocks' => [
+                'list' => $user_section_stock_cards,
+                'total' => $user_section_stock_cards->count(),
+                'series' =>  $user_section_stock_cards->groupBy('status')->map(function($stock_cards){
+                    return $stock_cards->count();
+                }),
+            ],
+            'properties' => [
+                'list' => $user->properties->map(function($property_user){
+                    $property = Property::find($property_user->property_id);
+                    return [
+                        'property' => $property,
+                        'user' => $this->getUserFullName($property_user->user_id),
+                        'measurement_unit' => Measurement::find($property->measurement_unit)->name,
+                        'acquisition_date' => $property_user->issuance_date
+                    ];
+                }),
+                'total' => $user->properties->count(),
+                'series' => [
+                    Property::whereIn('id', $user->properties()->pluck('property_id'))->where('status','Stock')->count(),
+                    Property::whereIn('id', $user->properties()->pluck('property_id'))->where('status','Active')->count(),
+                    Property::whereIn('id', $user->properties()->pluck('property_id'))->where('status','Waste')->count()
+                ],
+                'test' => Property::all()->groupBy('status')
+                ],
+               
+
+        ];
+
+ 
+        return response()->json([
+            'data' => $data, 
+        ]);
+    }
+}
