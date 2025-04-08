@@ -16,10 +16,19 @@ class PropertyController extends Controller
     public function list(Request $request):JsonResponse
     {
         $page = $request->page ?? 1;
-        $offset = ($page - 1) * 15;
-        $search_keyword = $request->keyword ?? '';
+        $perPage = $request->per_page ?? 15;
+        $search_keyword = trim($request->keyword ?? '');
 
-        $properties = Property::with('user')->orderBy('id','DESC')->offset($offset)->limit(15)->get();
+        $baseQuery =  Property::with('user')
+                        ->when($search_keyword, function ($query) use ($search_keyword) {
+                            $query->where('property_no', 'like', '%' . $search_keyword . '%')->orWhere('particulars', 'like', '%' . $search_keyword . '%');
+                        })->orderBy('id','DESC');
+
+        $properties = $baseQuery->clone()
+        ->offset(($page - 1) * $perPage)
+        ->limit($perPage)
+        ->get();
+
         $properties = $properties->map(function($property){
             $property['measurement_unit'] = Measurement::find($property['measurement_unit'])->name;
             //$property['user_name'] = $property['user']['user_id'];
@@ -27,7 +36,7 @@ class PropertyController extends Controller
             return $property;
         });
 
-        $total = Property::count();
+        $total = $baseQuery->count();
 
         return response()->json([
             'properties' => $properties,

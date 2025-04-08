@@ -4,8 +4,8 @@
 
            <div class="w-full min-h-[10%] flex justify-between items-center border-b">
                <div class="w-1/3 flex justify-start items-center gap-2 p-2">
-                   <Input type="text" label="Search Keyword" :errorMessage="''" :v-model="''"/>
-                   <Button text="Search" buttonType="default" icon="material-symbols:search" class="translate-y-2.5"/>
+                   <Input v-model="searchKeyword" type="text" label="Search Keyword" :errorMessage="''"/>
+                   <Button @click="fetchProperties" text="Search" buttonType="default" icon="material-symbols:search" class="translate-y-2.5"/>
                </div>
 
                <div class="flex justify-start items-center gap-2 p-2">
@@ -140,24 +140,14 @@
         total:0
     })
 
+    var searchKeyword = ref('');
+
     var addPropertyModal = ref(false)
 
    onMounted(() => {
        fetchProperties();
        fetchUserSelection();
        fetchMeasurements();
-
-        // Report.warning(
-        //     'Progress',
-        //     'Still in Progress, Properties are still being added to the system. Approximately 3000+ properties are still being added. Migration of data is still in progress and takes a lot of time for mapping data to users,numbers and histories is time consuming.',
-        //     'Okay',
-        //     () => {
-                
-        //     },
-        //     {
-        //         fontFamily:'Lexend Deca'
-        //     },
-        // );
    });
 
 
@@ -166,10 +156,11 @@
            clickToClose:false,
            fontFamily:'Lexend Deca'
        });
-
+       
        axios.get('property/list',{
            params:{
-               page:pagination.value.page,
+                page:pagination.value.page,
+                keyword:searchKeyword.value
            }
        })
        .then((response)=>{
