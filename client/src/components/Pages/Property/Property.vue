@@ -147,17 +147,17 @@
        fetchUserSelection();
        fetchMeasurements();
 
-        Report.warning(
-            'Progress',
-            'Still in Progress, Properties are still being added to the system. Approximately 3000+ properties are still being added. Migration of data is still in progress and takes a lot of time for mapping data to users,numbers and histories is time consuming.',
-            'Okay',
-            () => {
+        // Report.warning(
+        //     'Progress',
+        //     'Still in Progress, Properties are still being added to the system. Approximately 3000+ properties are still being added. Migration of data is still in progress and takes a lot of time for mapping data to users,numbers and histories is time consuming.',
+        //     'Okay',
+        //     () => {
                 
-            },
-            {
-                fontFamily:'Lexend Deca'
-            },
-        );
+        //     },
+        //     {
+        //         fontFamily:'Lexend Deca'
+        //     },
+        // );
    });
 
 
@@ -179,6 +179,7 @@
        })
        .catch((error)=>{
            Notify.failure('Something Went Wrong, Try again or Contact System Admin.',() => {},{fontFamily:'Lexend Deca'})
+           console.log(error.response.data)
        })
        .finally(()=>{
            Loading.remove()
