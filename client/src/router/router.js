@@ -10,6 +10,7 @@ import axios from '../axios/axios.js';
 import { useAuthStore } from '../stores/authStore.js';
 import Measurement from '../components/Pages/Measurement/Measurement.vue';
 import Form from '../components/Pages/Form/Form.vue';
+import MyDelivery from '../components/Pages/Delivery/MyDelivery.vue';
 
 const routes = [
     {
@@ -23,6 +24,13 @@ const routes = [
                 path:'/deliveries',
                 meta: { requiresAuth: true },
                 component:Delivery
+                
+            },
+            {
+                name:'My Delivery',
+                path:'/deliveries/user',
+                meta: { requiresAuth: true },
+                component:MyDelivery
                 
             },
             {

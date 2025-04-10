@@ -48,6 +48,7 @@ Route::post('/delivery/create',[DeliveryController::class,'create'])->middleware
 Route::post('/delivery/update',[DeliveryController::class,'update'])->middleware('auth:sanctum');
 Route::post('/delivery/validate/items',[DeliveryController::class,'validateDeliveryItems'])->middleware('auth:sanctum');
 Route::get('/delivery/list',[DeliveryController::class,'list'])->middleware('auth:sanctum');
+Route::get('/delivery/user',[DeliveryController::class,'fetchUserDeliveries'])->middleware('auth:sanctum');
 // Route::get('/delivery/generate/iar',[DeliveryController::class,'generateDeliveryIAR'])->middleware('auth:sanctum');
 Route::get('/delivery/find',[DeliveryController::class,'fetchDelivery'])->middleware('auth:sanctum');
 Route::get('/delivery/generate/iar',[DeliveryController::class,'fetchIARGenerationDetails'])->middleware('auth:sanctum');

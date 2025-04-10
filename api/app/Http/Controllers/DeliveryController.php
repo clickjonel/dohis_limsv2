@@ -507,6 +507,40 @@ class DeliveryController extends Controller
     //     ]);
     // }
 
+    public function fetchUserDeliveries(Request $request):JsonResponse
+    {
+        $page = $request->page ?? 1;
+        // $offset = ($page - 1) * 15;
+        $perPage = $request->per_page ?? 15;
+        $search_keyword = trim($request->keyword ?? '');
+
+        // $total = Delivery::count();
+
+        $baseQuery = Delivery::with(['invoices','receipts','items.measurementUnit'])
+                        ->where('end_user',$request->user()->user_id)
+                        ->when($search_keyword, function ($query) use ($search_keyword) {
+                            $query->where('iar_no', 'like', '%' . $search_keyword . '%');
+                        })->orderBy('id','DESC');
+
+        $deliveries = $baseQuery->clone()
+        ->offset(($page - 1) * $perPage)
+        ->limit($perPage)
+        ->get();
+
+        $total = $baseQuery->count();
+
+        return response()->json([
+            'deliveries' => $deliveries->map(function($delivery){
+
+                $delivery['req_office'] = Office::find($delivery['req_office'])->short_name;
+                $delivery['end_user'] = $this->getUserFullName($delivery['end_user']);
+                $delivery['payment_term'] = $delivery['payment_term'] === 1 ? 'Charge' : 'Donation';
+                return $delivery;
+            }),
+            'total' => $total
+        ]);
+    }
+
 }
 
 
