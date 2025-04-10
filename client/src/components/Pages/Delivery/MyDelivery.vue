@@ -1,5 +1,5 @@
 <template>
-    <AuthenticatedPage pageTitle="Deliveries">
+    <AuthenticatedPage pageTitle="My Deliveries">
         <div class="w-full min-h-[85%] flex flex-col justify-start items-center gap-4">
 
             <div class="w-full min-h-[10%] flex justify-between items-center border-b">
