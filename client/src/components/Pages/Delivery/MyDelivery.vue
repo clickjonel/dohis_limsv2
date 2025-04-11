@@ -88,7 +88,7 @@
             <span class="min-w-[20%]">Measurement Unit</span>
         </div>
         <div v-for="item in currentitems" class="w-full flex flex-col justify-start items-center gap-2 text-sm">
-            <div class="w-full flex justify-between items-start border-b py-2 hover:bg-emerald-500 font-light text-left">
+            <div v-if="item.availability === 1" @click="handleNavigation(`/item/allocation_list/${item.id}`)" class="w-full flex justify-between items-start border-b py-2 hover:bg-emerald-500 font-light text-left">
                 <span class="min-w-[50%] px-2" v-html="item.description.replace(/\n/g, '<br>')"></span>
                 <span class="min-w-[15%]">{{ item.unit_cost }}</span>
                 <span class="min-w-[15%]">{{ item.quantity }}</span>

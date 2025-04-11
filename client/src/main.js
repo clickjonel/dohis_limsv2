@@ -3,7 +3,8 @@ import './style.css'
 import App from './App.vue'
 import router from './router/router';
 import PrimeVue from 'primevue/config';
-import Aura from '@primevue/themes/aura';
+import Aura from '@primevue/themes/aura'
+import Nora from '@primevue/themes/nora';
 import { createPinia } from 'pinia'
 import VueApexCharts from "vue3-apexcharts";
 
@@ -15,10 +16,10 @@ app.use(pinia);
 app.use(router);
 app.use(PrimeVue, {
     theme: {
-        preset: Aura,
+        preset: Nora,
         options: {
             prefix: 'p',
-            darkModeSelector: 'system',
+            darkModeSelector: false,
             cssLayer: false
         }
     },

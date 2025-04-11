@@ -114,6 +114,12 @@ const routes = [
         component: () => import('../components/Pages/Stocks/GenerateStockCard.vue'),
         meta: { requiresAuth: true },
     },
+    {
+        name:'Create Item Allocation List',
+        path:'/item/allocation_list/:id',
+        component: () => import('../components/Pages/Delivery/CreateAllocationList.vue'),
+        meta: { requiresAuth: true },
+    },
     
 ]
 
