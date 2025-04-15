@@ -20,7 +20,7 @@
                     <span class="min-w-[20%]">Source</span>
                     <span class="min-w-[15%]">Delivery</span>
                     <span class="min-w-[10%]">Payment Term</span>
-                    <span class="min-w-[20%]">Actions</span>
+                    <span class="min-w-[20%]">PO/PTR #</span>
                 </div>
                 
                 <div v-if="deliveries.length > 0" v-for="delivery in deliveries" v-bind:key="delivery.id" class="w-full flex justify-start items-center border-b font-poppins text-center py-2 font-light text-sm bg-white/50 hover:bg-emerald-400">
@@ -33,13 +33,7 @@
                         <span v-if="delivery.items.length > 0" @click="showDeliveryItems(delivery.items)" class="text-xs rounded-full px-1 bg-blue-900 text-white cursor-pointer">Items</span>
                     </div>
                     <span class="min-w-[10%]">{{ delivery.payment_term }}</span>
-                    <!-- <div class="min-w-[20%] flex justify-center items-center gap-2">
-                       <span title="Update Delivery"><Icon @click="handleNavigation(`/delivery/update/${delivery.id}`)" icon="flowbite:edit-solid" class="text-xl text-blue-800 cursor-pointer hover:scale-125"/></span>
-                        <span title="Print IAR"><Icon @click="handleNavigation(`/delivery/iar/${delivery.id}`)" icon="material-symbols:print-rounded" class="text-xl text-emerald-800 cursor-pointer hover:scale-125"/></span>
-                        <span title="Add Item"><Icon icon="mdi:format-list-group-add" class="text-xl text-slate-800 cursor-pointer hover:scale-125"/></span>
-                        <span title="Add Invoice"><Icon icon="mdi:invoice-add" class="text-xl text-slate-800 cursor-pointer hover:scale-125"/></span>
-                        <span title="Add Receipt"><Icon icon="fluent:receipt-add-20-filled" class="text-xl text-slate-800 cursor-pointer hover:scale-125"/></span>
-                    </div> -->
+                    <span class="min-w-[20%]">{{ delivery.po_no ?? delivery.ptr_no }}</span>
                 </div>
 
                 <div v-if="deliveries.length===0" class="w-full h-[600px] flex justify-center items-center">
