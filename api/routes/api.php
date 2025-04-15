@@ -82,6 +82,7 @@ Route::get('/stock_card/user',[StockCardController::class,'fetchUserSectionStock
 
 // Property Routes
 Route::get('/property/list',[PropertyController::class,'list'])->middleware('auth:sanctum');
+Route::get('/property/user',[PropertyController::class,'fetchUserProperties'])->middleware('auth:sanctum');
 Route::post('/property/create',[PropertyController::class,'create'])->middleware('auth:sanctum');
 
 // User Routes

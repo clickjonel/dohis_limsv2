@@ -12,6 +12,7 @@ import Measurement from '../components/Pages/Measurement/Measurement.vue';
 import Form from '../components/Pages/Form/Form.vue';
 import MyDelivery from '../components/Pages/Delivery/MyDelivery.vue';
 import MyStocks from '../components/Pages/Stocks/MyStocks.vue';
+import MyProperty from '../components/Pages/Property/MyProperty.vue';
 
 const routes = [
     {
@@ -52,6 +53,12 @@ const routes = [
                 path:'/properties',
                 meta: { requiresAuth: true },
                 component:Property
+            },
+            {
+                name:'My Property',
+                path:'/properties/user',
+                meta: { requiresAuth: true },
+                component:MyProperty
             },
             {
                 name:'Dashboard',

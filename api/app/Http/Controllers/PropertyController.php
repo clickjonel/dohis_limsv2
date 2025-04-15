@@ -85,4 +85,38 @@ class PropertyController extends Controller
             return response()->json(['errors' => $e->getMessage()], 500);
         }
     }
+
+    public function fetchUserProperties(Request $request):JsonResponse
+    {
+        $page = $request->page ?? 1;
+        $perPage = $request->per_page ?? 15;
+        $search_keyword = trim($request->keyword ?? '');
+
+        $baseQuery =  Property::with('user')
+                        ->whereHas('user', function($query) use ($request){
+                            $query->where('user_id', $request->user()->user_id);
+                        })
+                        ->when($search_keyword, function ($query) use ($search_keyword) {
+                            $query->where('property_no', 'like', '%' . $search_keyword . '%')->orWhere('particulars', 'like', '%' . $search_keyword . '%');
+                        })->orderBy('id','DESC');
+
+        $properties = $baseQuery->clone()
+        ->offset(($page - 1) * $perPage)
+        ->limit($perPage)
+        ->get();
+
+        $properties = $properties->map(function($property){
+            $property['measurement_unit'] = Measurement::find($property['measurement_unit'])->name;
+            //$property['user_name'] = $property['user']['user_id'];
+            $property['user_name'] = $property['user']['user_id'] === 0 ? '' : $this->getUserFullName($property['user']['user_id']);
+            return $property;
+        });
+
+        $total = $baseQuery->count();
+
+        return response()->json([
+            'properties' => $properties,
+            'total' => $total
+        ]);
+    }
 }
