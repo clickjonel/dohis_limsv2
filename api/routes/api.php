@@ -78,6 +78,7 @@ Route::post('/stock_card/create',[StockCardController::class,'create'])->middlew
 Route::post('/stock_card/update',[StockCardController::class,'update'])->middleware('auth:sanctum');
 Route::get('/stock_card/generate/stock_card',[StockCardController::class,'fetchStockCardGenerationDetails'])->middleware('auth:sanctum');
 Route::post('/stock_card/transaction/issue',[StockCardController::class,'issue'])->middleware('auth:sanctum');
+Route::get('/stock_card/user',[StockCardController::class,'fetchUserSectionStockCards'])->middleware('auth:sanctum');
 
 // Property Routes
 Route::get('/property/list',[PropertyController::class,'list'])->middleware('auth:sanctum');

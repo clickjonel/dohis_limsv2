@@ -164,4 +164,37 @@ class StockCardController extends Controller
     
         return response()->json(['stock_card' => $stock_card]);
     }
+
+    public function fetchUserSectionStockCards(Request $request): JsonResponse
+    {
+        $page = $request->page ?? 1;
+        // $offset = ($page - 1) * 15;
+        $perPage = $request->per_page ?? 15;
+        $search_keyword = trim($request->keyword ?? '');
+
+        $baseQuery = StockCard::with(['transactions'])
+        ->where('req_office', $this->getUserSectionID($request->user()->user_id))
+        ->when($search_keyword, function ($query) use ($search_keyword) {
+            $query->where('stock_no', 'like', '%' . $search_keyword . '%');
+        })->orderBy('id','DESC');
+
+        $stock_cards = $baseQuery->clone()
+        ->offset(($page - 1) * $perPage)
+        ->limit($perPage)
+        ->get()
+        ->map(function($stock_card){
+            $stock_card['req_office'] = $this->findOffice($stock_card['req_office'])->section_name;
+            $stock_card['warehouse'] = $this->getWarehouseName($stock_card['warehouse']);
+            $stock_card['remaining'] = $stock_card->transactions()->latest('id')->first()->balance;
+
+            return $stock_card;
+        });
+
+        $total = $baseQuery->count();
+
+        return response()->json([
+            'stock_cards' => $stock_cards,
+            'total' => $total
+        ]);
+    }
 }

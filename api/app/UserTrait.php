@@ -33,4 +33,11 @@ trait UserTrait
         return $this->getUserFullName($division_chief_assignment->user_id);
     }
 
+    public function getUserSectionID($user_id)
+    {
+        $user_assignment = UserAssignment::where('user_id',$user_id)->latest('created_at')->first();
+
+        return  $user_assignment->section_id;
+    }
+
 }

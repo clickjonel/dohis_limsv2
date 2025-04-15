@@ -11,6 +11,7 @@ import { useAuthStore } from '../stores/authStore.js';
 import Measurement from '../components/Pages/Measurement/Measurement.vue';
 import Form from '../components/Pages/Form/Form.vue';
 import MyDelivery from '../components/Pages/Delivery/MyDelivery.vue';
+import MyStocks from '../components/Pages/Stocks/MyStocks.vue';
 
 const routes = [
     {
@@ -38,6 +39,13 @@ const routes = [
                 path:'/stocks',
                 meta: { requiresAuth: true },
                 component:Stock
+            },
+            {
+                name:'My Stock',
+                path:'/stocks/user',
+                meta: { requiresAuth: true },
+                component:MyStocks
+                
             },
             {
                 name:'Property',

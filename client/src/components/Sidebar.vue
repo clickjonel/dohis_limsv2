@@ -13,6 +13,7 @@
             <Button :text="'Warehouses'" :buttonType="'navigation'" :icon="''" :class="route.name === 'Warehouse' ? 'w-full bg-blue-800' : 'w-full' "/>
             <Button :text="'Calendar'" :buttonType="'navigation'" :icon="''" :class="route.name === 'Calendar' ? 'w-full bg-blue-800' : 'w-full' "/>
             <Button @click="handleNavigation('My Delivery')" :text="'My Deliveries'" :buttonType="'navigation'" :icon="'mdi:truck-delivery'" :class="route.name === 'My Delivery' ? 'w-full bg-blue-800' : 'w-full' "/>
+            <Button @click="handleNavigation('My Stock')" :text="'My Stocks'" :buttonType="'navigation'" :icon="'bi:boxes'" :class="route.name === 'My Stock' ? 'w-full bg-blue-800' : 'w-full' "/>
             <Button @click="handleNavigation('Form')" :text="'Forms'" :buttonType="'navigation'" :icon="'mdi:document-sign'" :class="route.name === 'Calendar' ? 'w-full bg-blue-800' : 'w-full' "/>
             
         </div>
