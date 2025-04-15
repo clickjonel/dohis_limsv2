@@ -66,6 +66,7 @@ Route::post('/delivery/update/item',[DeliveryController::class,'updateItem'])->m
 Route::delete('/delivery/delete/item',[DeliveryController::class,'deleteItem'])->middleware('auth:sanctum');
 
 Route::get('/delivery/exists/iar',[DeliveryController::class,'checkIARExists'])->middleware('auth:sanctum');
+Route::get('/delivery/item/find',[DeliveryController::class,'fetchDeliveryItem'])->middleware('auth:sanctum');
 // Route::get('/delivery/item/invalid_cost',[DeliveryController::class,'getInvalidCostDeliveryItems'])->middleware('auth:sanctum');
 // Route::get('/delivery/find/iar',[DeliveryController::class,'findDeliveryByIAR'])->middleware('auth:sanctum');
 

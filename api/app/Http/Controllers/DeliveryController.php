@@ -541,6 +541,25 @@ class DeliveryController extends Controller
         ]);
     }
 
+    public function fetchDeliveryItem(Request $request):JsonResponse
+    {
+        $item = DeliveryItem::with(['delivery','measurementUnit'])->find($request->id);
+
+        // End User of the Item Delivery
+        $item->end_user = User::find($item->delivery['end_user']);
+        $item->end_user['full_name'] =$this->getUserFullName($item->end_user['user_id']);
+        $item->end_user['position'] =$this->getUserPosition($item->end_user['user_id']);
+
+        // recommending approval
+        $item->recommending_approval = [
+            'full_name' => $this->getUserDivisionChief($item->end_user['user_id']),
+        ];
+
+        return response()->json([
+            'item' => $item
+        ]);
+    }
+
 }
 
 

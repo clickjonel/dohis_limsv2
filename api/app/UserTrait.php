@@ -24,4 +24,13 @@ trait UserTrait
         
         return $position;
     }
+
+    public function getUserDivisionChief($user_id)
+    {
+        $user_assignment = UserAssignment::where('user_id',$user_id)->latest('created_at')->first();
+        $division_chief_assignment = UserAssignment::where('designation_id',3)->where('division_id',$user_assignment->division_id)->first();
+
+        return $this->getUserFullName($division_chief_assignment->user_id);
+    }
+
 }
