@@ -33,13 +33,13 @@
                         <span v-if="delivery.items.length > 0" @click="showDeliveryItems(delivery.items)" class="text-xs rounded-full px-1 bg-blue-900 text-white cursor-pointer">Items</span>
                     </div>
                     <span class="min-w-[10%]">{{ delivery.payment_term }}</span>
-                    <div class="min-w-[20%] flex justify-center items-center gap-2">
+                    <!-- <div class="min-w-[20%] flex justify-center items-center gap-2">
                        <span title="Update Delivery"><Icon @click="handleNavigation(`/delivery/update/${delivery.id}`)" icon="flowbite:edit-solid" class="text-xl text-blue-800 cursor-pointer hover:scale-125"/></span>
                         <span title="Print IAR"><Icon @click="handleNavigation(`/delivery/iar/${delivery.id}`)" icon="material-symbols:print-rounded" class="text-xl text-emerald-800 cursor-pointer hover:scale-125"/></span>
-                        <!-- <span title="Add Item"><Icon icon="mdi:format-list-group-add" class="text-xl text-slate-800 cursor-pointer hover:scale-125"/></span>
+                        <span title="Add Item"><Icon icon="mdi:format-list-group-add" class="text-xl text-slate-800 cursor-pointer hover:scale-125"/></span>
                         <span title="Add Invoice"><Icon icon="mdi:invoice-add" class="text-xl text-slate-800 cursor-pointer hover:scale-125"/></span>
-                        <span title="Add Receipt"><Icon icon="fluent:receipt-add-20-filled" class="text-xl text-slate-800 cursor-pointer hover:scale-125"/></span> -->
-                    </div>
+                        <span title="Add Receipt"><Icon icon="fluent:receipt-add-20-filled" class="text-xl text-slate-800 cursor-pointer hover:scale-125"/></span>
+                    </div> -->
                 </div>
 
                 <div v-if="deliveries.length===0" class="w-full h-[600px] flex justify-center items-center">
@@ -88,7 +88,7 @@
             <span class="min-w-[20%]">Measurement Unit</span>
         </div>
         <div v-for="item in currentitems" class="w-full flex flex-col justify-start items-center gap-2 text-sm">
-            <div v-if="item.availability === 1" @click="handleNavigation(`/item/allocation_list/${item.id}`)" class="w-full flex justify-between items-start border-b py-2 hover:bg-emerald-500 font-light text-left">
+            <div v-if="item.availability === 1" @click="handleNavigation(`/item/allocation_list/${item.id}`)" class="w-full flex justify-between items-start border-b py-2 hover:bg-emerald-500 font-light text-left cursor-pointer" title="Click to Create Allocation List">
                 <span class="min-w-[50%] px-2" v-html="item.description.replace(/\n/g, '<br>')"></span>
                 <span class="min-w-[15%]">{{ item.unit_cost }}</span>
                 <span class="min-w-[15%]">{{ item.quantity }}</span>

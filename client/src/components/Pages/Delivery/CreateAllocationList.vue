@@ -26,9 +26,9 @@
         <div class="w-full flex flex-col justify-start items-center">
             <div class="w-full flex flex-col justify-center items-center font-noto py-2">
                 <span class="uppercase font-bold">Allocation List</span>
-                <span class="uppercase font-bold w-1/3"><input type="text" v-model="program" placeholder="Enter Program" class="border-b outline-none px-2 w-full text-center"></span>
-                <span class="uppercase font-bold w-1/3"><input type="text" v-model="period" placeholder="Enter Period" class="border-b outline-none px-2 w-full text-center"></span>
-                <span class="uppercase font-bold w-1/3"><input type="text" v-model="control_no" placeholder="Enter Control # if applicable" class="border-b outline-none px-2 w-full text-center"></span>
+                <span class="uppercase font-bold w-1/3"><input type="text" v-model="program" placeholder="Enter Program" class="border-b outline-none px-2 w-full text-center font-medium uppercase font-lexend text-sm"></span>
+                <span class="uppercase font-bold w-1/3"><input type="text" v-model="period" placeholder="Enter Period" class="border-b outline-none px-2 w-full text-center font-medium uppercase font-lexend text-sm"></span>
+                <span class="uppercase font-bold w-1/3"><input type="text" v-model="control_no" placeholder="Enter Control # if applicable" class="border-b outline-none px-2 w-full text-center font-medium uppercase font-lexend text-sm"></span>
             </div>
 
             <div class="w-full flex justify-start items-stretch font-poppins font-medium text-xs divide-x text-center uppercase border">
