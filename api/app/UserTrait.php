@@ -40,4 +40,20 @@ trait UserTrait
         return  $user_assignment->section_id;
     }
 
+    public function getUserRoles($user_id)
+    {
+        $user = User::find($user_id);
+        $user_assignment = UserAssignment::where('user_id',$user_id)->latest('created_at')->first();
+
+        $is_permanent = $user_assignment->employee_status_id === 1 ? true : false;
+        $is_supply_officer = $user_assignment->section_id === 28 ? true : false;
+
+        $roles = [
+            $is_permanent ? 'permanent' : 'contractual',
+            $is_supply_officer ? 'supply_officer' : 'non_supply_officer',
+        ];
+
+        return $roles;
+    }
+
 }
