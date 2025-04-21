@@ -87,13 +87,18 @@
   
       if (response.data.status) {
         Notify.success('Login Successfull');
-        localStorage.setItem('token', response.data.token);
+        // localStorage.setItem('token', response.data.token);
   
         store.setToken(response.data.token);
         store.setUser(response.data.user,response.data.status)
-        store.setPermissions(response.data.permissions);
+        store.setRoles(response.data.roles);
         
-        router.push({ path: '/dashboard' });
+        if(store.hasRole('supply_officer')){
+          router.push({ path: '/deliveries' });
+        }
+        else if(store.hasRole('permanent')){
+          router.push({ path: '/deliveries/user' });
+        }
       } 
       else {
         Notify.failure('Login Failed');

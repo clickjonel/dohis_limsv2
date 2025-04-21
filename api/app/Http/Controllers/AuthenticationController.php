@@ -30,7 +30,7 @@ class AuthenticationController extends Controller
                     'full_name' => $this->getUserFullName($user->user_id),
                     'nickname' => $user->nickname,
                 ],
-                'permissions' => ['delivery','delivery-add'],
+                'roles' => $this->getUserRoles($user->user_id),
                 'status' => true
             ]);
         }

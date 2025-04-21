@@ -42,7 +42,6 @@ trait UserTrait
 
     public function getUserRoles($user_id)
     {
-        $user = User::find($user_id);
         $user_assignment = UserAssignment::where('user_id',$user_id)->latest('created_at')->first();
 
         $is_permanent = $user_assignment->employee_status_id === 1 ? true : false;
