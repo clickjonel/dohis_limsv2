@@ -92,13 +92,14 @@
         store.setToken(response.data.token);
         store.setUser(response.data.user,response.data.status)
         store.setRoles(response.data.roles);
-        
-        if(store.hasRole('supply_officer')){
-          router.push({ path: '/deliveries' });
-        }
-        else if(store.hasRole('permanent')){
-          router.push({ path: '/deliveries/user' });
-        }
+
+        router.push({ path: '/dashboard/user' }); 
+        // if(store.hasRole('supply_officer')){
+        //   router.push({ path: '/deliveries' });
+        // }
+        // else if(store.hasRole('permanent')){
+        //   router.push({ path: '/deliveries/user' });
+        // }
       } 
       else {
         Notify.failure('Login Failed');
