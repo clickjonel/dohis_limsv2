@@ -5,7 +5,7 @@ import axios from '../axios/axios';
 export const useAuthStore = defineStore('auth', {
     state: () => ({
         user: null,
-        permissions: [],
+        roles: [],
         isAuthenticated: false,
         token: '',
     }),
@@ -14,34 +14,30 @@ export const useAuthStore = defineStore('auth', {
             this.user = user;
             this.isAuthenticated = status;
         },
-        setUserAssignment(assignment) {
-            this.user = user;
-            this.isAuthenticated = status;
-        },
         setToken(token){
             this.token = token;
             localStorage.setItem('token', token);
         },
-        setPermissions(permissions) {
-            this.permissions = permissions;
+        setRoles(roles) {
+            this.roles = roles;
         },
         clearUser() {
             this.user = null;
-            this.permissions = [];
+            this.roles = [];
             this.isAuthenticated = false;
         },
-        hasPermission(permission) {
-            return this.permissions.includes(permission);
+        hasRole(role) {
+            return this.roles.includes(role);
         },
         async fetchUser(){
             try {
                 const response = await axios.get('user/data');
                 this.setUser(response.data.user, true);
-                this.setPermissions(response.data.permissions);
-              } catch (error) {
+                this.setRoles(response.data.roles);
+            } catch (error) {
                 console.error('Fetch user failed:', error.response);
                 this.clearUser(); // Clear user data on error
-              }
+            }
         }
     },
     getters:{

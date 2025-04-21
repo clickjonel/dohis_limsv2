@@ -14,13 +14,13 @@ class UserController extends Controller
     {
         $user = $request->user();
         $user['full_name'] = $this->getUserFullName($user->user_id);
-        $permissions = [];
+        $roles = $this->getUserRoles($user->user_id);
 
        return response()->json([
             // 'full_name' => $this->getUserFullName($user->user_id),
             'user' => $user,
             'assignment' => $user->assignment,
-            'permissions' => $permissions,
+            'roles' => $roles,
         ]);
     }
 
