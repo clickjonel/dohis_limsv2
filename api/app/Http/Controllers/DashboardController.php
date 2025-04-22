@@ -12,6 +12,7 @@ use App\Models\StockCard;
 use App\Models\User;
 use App\UserTrait;
 use Carbon\Carbon;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -95,6 +96,56 @@ class DashboardController extends Controller
  
         return response()->json([
             'data' => $data, 
+        ]);
+    }
+
+    public function fetchPermanentUserDashboardData(Request $request):JsonResponse
+    {
+        $deliveriesCollection = Delivery::where('end_user',$request->user()->user_id)->get();
+        $deliveries = [
+            'total' => $deliveriesCollection->count(),
+            'procured' => $deliveriesCollection->where('payment_term',1)->count(),
+            'donated' => $deliveriesCollection->where('payment_term',2)->count(),
+            'this_month' => $deliveriesCollection->filter(function ($delivery) {
+                                return $delivery->receipts()->whereMonth('delivery_date', Carbon::now()->month)
+                                                ->whereYear('delivery_date', Carbon::now()->year)
+                                                ->exists();
+            })->count(),
+            'this_week' => $deliveriesCollection->filter(function ($delivery) {
+                return $delivery->receipts()->whereBetween('delivery_date', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()])
+                                            ->exists();
+            })->count(),
+        ];
+
+        $stockCollection = StockCard::where('req_office', $request->user()->assignment->section_id)
+                            ->get()
+                            ->map(function($stock_card) {
+                                $balance = $stock_card->latestTransaction()->balance;
+                                $stock_card->balance = $balance;
+                                return $stock_card;
+                            });
+
+        $stocks = [
+            'total' => $stockCollection->count(),
+            'allocated' => $stockCollection->filter(function($stock_card) {
+                                return $stock_card->balance === 0;
+                            })->count(),
+            'allocating' =>  $stockCollection->filter(function($stock_card) {
+                                    return $stock_card->balance > 0 && $stock_card->balance < $stock_card->quantity;
+                                })->count(),
+            'to_allocate' =>  $stockCollection->filter(function($stock_card) {
+                                    return $stock_card->balance === $stock_card->quantity;
+                                })->count(),
+        ];
+
+        $properties = Property::whereHas('user', function($query) use ($request) {
+            $query->where('user_id', $request->user()->user_id);
+        })->get();
+
+        return response()->json([
+            'delivery' => $deliveries,
+            'stock' => $stocks,
+            'properties' => $properties
         ]);
     }
 }
