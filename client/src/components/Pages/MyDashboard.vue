@@ -1,7 +1,6 @@
 <template>
     <AuthenticatedPage :pageTitle="'Welcome to your Dashboard'">
         <div v-if="store.getUser.assignment.employee_status_id === 1" class="w-full max-h-[90%] h-full flex justify-start items-center gap-4 p-4 font-lexend">
-        <!-- <div class="w-full max-h-[90%] h-full flex justify-start items-center gap-4 p-4 font-lexend"> -->
             <div class="w-2/3 max-h-full h-full flex flex-col justify-center items-center gap-4">
                 <div class="w-full h-1/2 flex flex-col justify-center items-center gap-4 shadow-md shadow-slate-600 rounded-xl bg-white dashboard">
                     <span class="w-full text-2xl uppercase text-center font-noto font-black">Your Deliveries</span>
