@@ -90,4 +90,5 @@ Route::get('/user/data',[UserController::class,'getUserData'])->middleware('auth
 Route::get('/user/selection',[UserController::class,'userSelectionList'])->middleware('auth:sanctum');
 
 // Dashboard Routes
-Route::get('/dashboard/user',[DashboardController::class,'getUserDashboardData'])->middleware('auth:sanctum');
+// Route::get('/dashboard/user',[DashboardController::class,'getUserDashboardData'])->middleware('auth:sanctum');
+Route::get('/dashboard/user',[DashboardController::class,'fetchPermanentUserDashboardData'])->middleware('auth:sanctum');
