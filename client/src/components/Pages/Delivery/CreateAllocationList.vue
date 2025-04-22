@@ -171,7 +171,7 @@
         })
         .catch((error)=>{
             Notify.failure('Something Went Wrong, Try again or Contact System Admin.',() => {},{fontFamily:'Lexend Deca'})
-            console.log(error)
+            console.log(error.response.data)
         })
         .finally(()=>{
             Loading.remove()
