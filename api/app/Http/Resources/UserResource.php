@@ -20,9 +20,9 @@ class UserResource extends JsonResource
 
         $user = [
             'user_id' => $this->user_id,
-            'user_name' => $this->getUserFullName($this->user_id),
-            'user_position' => $this->getUserPosition($this->user_id),
-            'user_assignment' => UserAssignment::where('user_id', $this->user_id)->latest('created_at')->first(),
+            'full_name' => $this->getUserFullName($this->user_id),
+            'position' => $this->getUserPosition($this->user_id),
+            'assignment' => UserAssignment::where('user_id', $this->user_id)->latest('created_at')->first(),
         ];
 
         return $user;

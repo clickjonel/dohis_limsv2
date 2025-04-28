@@ -4,7 +4,7 @@
          <div class="w-full min-h-[92%] flex flex-col justify-start items-center gap-4 font-lexend overflow-y-scroll">
  
             <div class="w-full flex justify-end items-center p-2">
-            <Button buttonType="update" text="Save Updates"/>
+            <Button @click="saveUpdates" buttonType="update" text="Save Updates"/>
             </div>
 
             <div class="w-full flex flex-col justify-start items-start gap-4 p-2">
@@ -12,17 +12,12 @@
                     <span class="w-full text-2xl uppercase font-poppins font-bold">Property</span>
                     
                     <div class="min-w-full flex justify-start items-start gap-4">
-                        <FloatLabel variant="on" class="font-light max-w-[25%] w-[25%]">
+                        <FloatLabel variant="on" class="font-light max-w-1/3 w-1/3">
                             <InputText v-model="property.property_no" :invalid="errors.property_no" class="w-full"/>
                             <label class="font-poppins" style="font-weight: 300; font-size: small;">Property Number</label>
                         </FloatLabel>
 
-                        <FloatLabel variant="on" class="font-light max-w-[25%] w-[25%]">
-                            <DatePicker v-model="property.acquisition_date" class="w-full"/>
-                            <label class="font-poppins" style="font-weight: 300; font-size: small;">Acquisition Date</label>
-                        </FloatLabel>
-
-                        <FloatLabel class="max-w-[25%] w-[25%]" variant="on">
+                        <FloatLabel class="max-w-1/3 w-1/3" variant="on">
                             <Select v-model="property.measurement_unit" :options="measurements" optionLabel="name" class="w-full font-light font-poppins">
                                 <template #option="slotProps">
                                     <div class="flex items-center font-poppins font-light text-sm">
@@ -33,7 +28,7 @@
                             <label class="font-poppins" style="font-weight: 300; font-size: small;">Measurement Unit</label>
                         </FloatLabel>
 
-                        <FloatLabel variant="on"  class="max-w-[25%] w-[25%]">
+                        <FloatLabel variant="on"  class="max-w-1/3 w-1/3">
                             <InputNumber v-model="property.unit_cost" mode="decimal" class="w-full font-light"/>
                             <label class="font-poppins" style="font-weight: 300; font-size: small;">Unit Cost</label>
                         </FloatLabel>
@@ -47,14 +42,14 @@
                         </FloatLabel>
 
                         <FloatLabel class="w-1/4" variant="on">
-                            <Select v-model="property.status" :options="statuses" optionLabel="name" class="w-full font-light font-poppins">
+                            <Select v-model="property.status" :options="statuses" optionLabel="name" class="w-full font-light font-poppins" disabled>
                                 <template #option="slotProps">
                                     <div class="flex items-center font-poppins font-light text-sm">
                                         <div>{{ slotProps.option.name }}</div>
                                     </div>
                                 </template>
                             </Select>
-                            <label class="font-poppins" style="font-weight: 300; font-size: small;">Measurement Unit</label>
+                            <label class="font-poppins" style="font-weight: 300; font-size: small;">Property Status</label>
                         </FloatLabel>
 
                     </div>
@@ -62,10 +57,41 @@
                 </div>
 
                 <div class="w-full flex flex-col justify-start items-start gap-4">
-                    <span class="w-full text-2xl uppercase font-poppins font-bold">Property User</span>
+                    <span class="w-full text-2xl uppercase font-poppins font-bold">Current User of Property</span>
+                    <div class="min-w-full flex justify-start items-start gap-4">
+                        <FloatLabel class="w-[50%]" variant="on">
+                            <Select v-model="property.user.user" :options="users" :invalid="errors.user ? true : false" filter optionLabel="full_name" class="w-full" disabled>
+                                <template #option="slotProps">
+                                    <div class="flex items-center font-lexend">
+                                        <div>{{ slotProps.option.full_name }}</div>
+                                    </div>
+                                </template>
+                            </Select>
+                            <label class="font-poppins" style="font-weight: 300; font-size: small;">Property User</label>
+                        </FloatLabel>
+
+                        <FloatLabel variant="on" class="font-light max-w-[50%] w-[50%]">
+                            <DatePicker v-model="property.user.acquisition_date" class="w-full" disabled/>
+                            <label class="font-poppins" style="font-weight: 300; font-size: small;">Acquisition Date</label>
+                        </FloatLabel>
+                    </div>
                 </div>
                 <div class="w-full flex flex-col justify-start items-start gap-4">
-                    <span class="w-full text-2xl uppercase font-poppins font-bold">Property History</span>
+                    <span class="w-full text-2xl uppercase font-poppins font-bold">User History of the Property</span>
+                    <div class="min-w-full flex flex-col justify-start items-start">
+                        <div class="w-full flex justify-center items-center gap-2 border-y p-2 uppercase bg-emerald-900/50 font-lexend text-md font-medium">
+                            <span class="w-1/2">Date of Acquisition</span>
+                            <span class="w-1/2">Name of User</span>
+                            <span class="w-1/2">Return Date</span>
+                            <span class="w-1/2">Remarks</span>
+                       </div>
+                       <div v-for="item in property.user_history" class="w-full flex justify-center items-center gap-2 border-b py-4 px-2 text-sm font-light">
+                            <span class="w-1/2">{{ item.acquisition_date }}</span>
+                            <span class="w-1/2">{{ item.full_name }}</span>
+                            <span class="w-1/2">{{ item.return_date }}</span>
+                            <span class="w-1/2">{{ item.remarks }}</span>
+                       </div>
+                    </div>
                 </div>
             </div>
 
@@ -95,6 +121,7 @@
 
 
      const route = useRoute()
+     const router = useRouter()
 
      var property = ref({
         property_no:'',
@@ -104,8 +131,11 @@
         measurement_unit:null,
         status:null,
         particulars:'',
-        user:null,
-        history:[]
+        user:{
+            user:null,
+            acquisition_date:''
+        },
+        user_history:[]
      })
      var errors = ref({})
 
@@ -116,7 +146,7 @@
      onMounted(()=>{
         fetchMeasurements()
         fetchProperty()
-        // fetchUserSelection()
+        fetchUserSelection()
         fetchPropertyStatuses()
      })
  
@@ -140,6 +170,11 @@
             property.value.measurement_unit =response.data.property.measurement_unit
             property.value.status =response.data.property.status
             property.value.particulars =response.data.property.particulars
+
+            property.value.user.user =response.data.property.user.user
+            property.value.user.acquisition_date =response.data.property.user.acquisition_date
+
+            property.value.user_history = response.data.property.user_history
             console.log(response.data.property)
         })
         .catch((error)=>{
@@ -202,9 +237,37 @@
         axios.get('property/statuses',{})
         .then((response)=>{
             statuses.value = response.data.statuses
+            // console.log(response.data.statuses)
         })
         .catch((error)=>{
             Notify.failure('Something Went Wrong, Try again or Contact System Admin.',() => {},{fontFamily:'Lexend Deca'})
+            console.log(error.response.data)
+        })
+        .finally(()=>{
+            Loading.remove()
+        })
+    }
+
+    function saveUpdates(){
+        Loading.dots('Updating Data, Please Wait...',{
+           clickToClose:false,
+           fontFamily:'Lexend Deca'
+       });
+
+        axios.post('property/update',{
+            property_no : property.value.property_no,
+            measurement_unit : property.value.measurement_unit.id,
+            particulars : property.value.particulars,
+            unit_cost : property.value.unit_cost,
+            status : property.value.status.name,
+            remarks : property.value.remarks,
+            id : route.params.id,
+        })
+        .then((response)=>{
+            Notify.success('Property Updated Successfully.',{fontFamily:'Lexend Deca',timeout: 1500})
+            router.push({name:'Property'})
+        })
+        .catch((error)=>{
             console.log(error.response.data)
         })
         .finally(()=>{

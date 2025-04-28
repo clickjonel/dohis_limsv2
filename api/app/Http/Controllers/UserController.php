@@ -26,7 +26,7 @@ class UserController extends Controller
 
     public function userSelectionList():JsonResponse
     {
-       $users = User::get()->map(function($user){
+       $users = User::where('user_id','!=',1)->get()->map(function($user){
             $user['full_name'] = $this->getUserFullName($user->user_id);
             return $user;
        }); 

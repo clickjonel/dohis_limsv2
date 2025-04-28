@@ -124,7 +124,6 @@ class PropertyController extends Controller
     public function fetchProperty(Request $request): JsonResponse
     {
         $property = Property::with(['user','userHistory'])->find($request->id);
-        // $property->measurement_unit = Measurement::find($property['measurement_unit']);
 
         return response()->json([
             'property' => PropertyResource::make($property),
@@ -137,4 +136,31 @@ class PropertyController extends Controller
             'statuses' => Property::STATUSES
         ]);
     }
+
+    public function updateProperty(Request $request): JsonResponse
+    {
+        $validated = $request->validate([
+            'property_no' => 'required|string|max:255',
+            'measurement_unit' => 'required|integer',
+            'particulars' => 'required|string|max:255',
+            'unit_cost' => 'required|numeric',
+            'status' => 'required|string|max:255',
+            'remarks' => 'nullable|string|max:255',
+            'id' => 'required|integer|exists:lims_properties,id',
+        ]);
+
+        $property = Property::find($validated['id'])->update([
+            'property_no' => $validated['property_no'],
+            'measurement_unit' => $validated['measurement_unit'],
+            'particulars' => $validated['particulars'],
+            'unit_cost' => $validated['unit_cost'],
+            'status' => $validated['status'],
+            'remarks' => $validated['remarks']
+        ]);
+
+        return response()->json([
+            'message' => $property,
+        ]);
+    }
+    
 }
