@@ -30,8 +30,8 @@
                    <span class="min-w-[15%] text-xs">{{ property.unit_cost }}</span>
                    <span class="min-w-[10%]">{{ property.user.issuance_date }}</span>
                    <div class="min-w-[20%] flex justify-center items-center gap-2">
-                      <span title="Update Delivery"><Icon icon="flowbite:edit-solid" class="text-xl text-blue-800 cursor-pointer hover:scale-125"/></span>
-                       <span title="Print IAR"><Icon icon="material-symbols:print-rounded" class="text-xl text-emerald-800 cursor-pointer hover:scale-125"/></span>
+                        <span @click="handleNavigation(`/property/update/${property.id}`)" title="Update Property"><Icon icon="flowbite:edit-solid" class="text-xl text-blue-800 cursor-pointer hover:scale-125"/></span>
+                        <span title="Print Sticker"><Icon icon="material-symbols:print-rounded" class="text-xl text-emerald-800 cursor-pointer hover:scale-125"/></span>
                    </div>
                </div>
            </div>
@@ -281,6 +281,8 @@
 
         })
     }
+
+
 
 
 </script>

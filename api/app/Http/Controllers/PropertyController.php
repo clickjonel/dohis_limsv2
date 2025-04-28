@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreatePropertyRequest;
+use App\Http\Resources\PropertyResource;
 use App\Models\Measurement;
 use App\Models\Property;
 use App\UserTrait;
@@ -117,6 +118,23 @@ class PropertyController extends Controller
         return response()->json([
             'properties' => $properties,
             'total' => $total
+        ]);
+    }
+
+    public function fetchProperty(Request $request): JsonResponse
+    {
+        $property = Property::with(['user','userHistory'])->find($request->id);
+        // $property->measurement_unit = Measurement::find($property['measurement_unit']);
+
+        return response()->json([
+            'property' => PropertyResource::make($property),
+        ]);
+    }
+
+    public function fetchPropertyStatuses(): JsonResponse
+    {
+        return response()->json([
+            'statuses' => Property::STATUSES
         ]);
     }
 }

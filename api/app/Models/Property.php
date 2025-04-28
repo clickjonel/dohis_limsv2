@@ -17,11 +17,24 @@ class Property extends Model
         'particulars',
         'unit_cost',
         'status',
-        'remarks'
+        'remarks',
+        'acquisition_date'
+    ];
+
+    public const STATUSES = [
+        ['name'=>'Active'],
+        ['name'=>'Wasted'],
+        ['name'=>'Disposed'],
     ];
 
     public function user()
     {
         return $this->hasOne(PropertyUser::class, 'property_id');
     }
+
+    public function userHistory()
+    {
+        return $this->hasMany(PropertyUser::class, 'property_id');
+    }
+
 }

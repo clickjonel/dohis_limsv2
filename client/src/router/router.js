@@ -131,6 +131,12 @@ const routes = [
         meta: { requiresAuth: true },
     },
     {
+        name:'Update Property',
+        path:'/property/update/:id',
+        component: () => import('../components/Pages/Property/UpdateProperty.vue'),
+        meta: { requiresAuth: true },
+    },
+    {
         name:'Generate Stock Card',
         path:'/stock_card/generate/:id',
         component: () => import('../components/Pages/Stocks/GenerateStockCard.vue'),
