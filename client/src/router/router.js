@@ -14,6 +14,7 @@ import MyDelivery from '../components/Pages/Delivery/MyDelivery.vue';
 import MyStocks from '../components/Pages/Stocks/MyStocks.vue';
 import MyProperty from '../components/Pages/Property/MyProperty.vue';
 import MyDashboard from '../components/Pages/MyDashboard.vue';
+import PropertyTransferRequest from '../components/Pages/Property/PropertyTransferRequest.vue';
 
 const routes = [
     {
@@ -84,6 +85,12 @@ const routes = [
                 path:'/forms',
                 meta: { requiresAuth: true },
                 component:Form
+            },
+            {
+                name:'Property Transfer Request',
+                path:'/property/transfer_requests',
+                meta: { requiresAuth: true },
+                component:PropertyTransferRequest
             }
         ]
     },

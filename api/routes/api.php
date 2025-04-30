@@ -86,7 +86,11 @@ Route::get('/property/user',[PropertyController::class,'fetchUserProperties'])->
 Route::get('/property/find',[PropertyController::class,'fetchProperty'])->middleware('auth:sanctum');
 Route::post('/property/create',[PropertyController::class,'create'])->middleware('auth:sanctum');
 Route::get('/property/statuses',[PropertyController::class,'fetchPropertyStatuses'])->middleware('auth:sanctum');
+Route::get('/property/transfer_requests',[PropertyController::class,'fetchPropertyTransferRequest'])->middleware('auth:sanctum');
 Route::post('/property/update',[PropertyController::class,'updateProperty'])->middleware('auth:sanctum');
+Route::post('/property/transfer_request/create',[PropertyController::class,'createPropertyTransferRequest'])->middleware('auth:sanctum');
+Route::post('/property/transfer_request/approve',[PropertyController::class,'approvePropertyTransferRequest'])->middleware('auth:sanctum');
+Route::post('/property/transfer_request/reject',[PropertyController::class,'rejectPropertyTransferRequest'])->middleware('auth:sanctum');
 
 // User Routes
 Route::get('/user/data',[UserController::class,'getUserData'])->middleware('auth:sanctum');

@@ -25,6 +25,7 @@ class Property extends Model
         ['name'=>'Active'],
         ['name'=>'Wasted'],
         ['name'=>'Disposed'],
+        ['name'=>'Transfer Approval Pending'],
     ];
 
     public function user()
@@ -40,6 +41,17 @@ class Property extends Model
     public static function getStatus($status_name){
         $status = collect(self::STATUSES)->firstWhere('name', $status_name);
         return $status;
+    }
+
+    public function transferRequests()
+    {
+        return $this->hasMany(PropertyTransferRequest::class, 'property_id');
+    }
+
+    public function currentTransferRequest()
+    {
+        return $this->hasOne(PropertyTransferRequest::class, 'property_id')
+        ->latest('id');
     }
 
 }

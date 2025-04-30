@@ -54,8 +54,19 @@ trait UserTrait
         $is_permanent = $user_assignment->employee_status_id === 1 ? $roles[] = 'permanent' : [];
         $is_supply_officer = $user_assignment->section_id === 28 ? $roles[] = 'supply_officer' : [];
         $is_superadmin = $user_id === 582 ? $roles[] = 'superadmin' : [];
+        $is_property_custodian = $user_assignment->user_id === 127 ? $roles[] = 'property_custodian' : [];
+        $is_division_chief = $user_assignment->designation_id === 3 ? $roles[] = 'division_chief' : [];
+
+        if ($user_assignment->designation_id === 3 & $user_assignment->user_id === 38) {
+            $roles[] = 'division_chief-approve_ptr';
+        }
         
         return $roles;
+    }
+
+    public function checkIfUserHasRole($role,$user_id){
+        $roles = $this->getUserRoles($user_id);
+        return in_array($role, $roles) ? true : false;
     }
 
 }

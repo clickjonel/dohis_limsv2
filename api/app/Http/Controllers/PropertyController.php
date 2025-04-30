@@ -3,9 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreatePropertyRequest;
+use App\Http\Requests\CreatePropertyRequestTransferRequest;
 use App\Http\Resources\PropertyResource;
+use App\Http\Resources\PropertyTransferRequestResource;
+use App\Http\Resources\UserResource;
 use App\Models\Measurement;
 use App\Models\Property;
+use App\Models\PropertyTransferRequest;
+use App\Models\User;
 use App\UserTrait;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -93,7 +98,7 @@ class PropertyController extends Controller
         $perPage = $request->per_page ?? 15;
         $search_keyword = trim($request->keyword ?? '');
 
-        $baseQuery =  Property::with('user')
+        $baseQuery =  Property::with(['user','currentTransferRequest'])
                         ->whereHas('user', function($query) use ($request){
                             $query->where('user_id', $request->user()->user_id);
                         })
@@ -108,8 +113,8 @@ class PropertyController extends Controller
 
         $properties = $properties->map(function($property){
             $property['measurement_unit'] = Measurement::find($property['measurement_unit'])->name;
-            //$property['user_name'] = $property['user']['user_id'];
             $property['user_name'] = $property['user']['user_id'] === 0 ? '' : $this->getUserFullName($property['user']['user_id']);
+            $property->currentTransferRequest = $property->currentTransferRequest ? PropertyTransferRequestResource::make($property->currentTransferRequest) : null;
             return $property;
         });
 
@@ -163,4 +168,67 @@ class PropertyController extends Controller
         ]);
     }
     
+
+    public function createPropertyTransferRequest(CreatePropertyRequestTransferRequest $request):JsonResponse
+    {
+        $validated = $request->validated();
+        
+        $property_transfer_request = PropertyTransferRequest::create($validated);
+
+        return response()->json([
+            'message' => 'Property transfer request created successfully',
+            'property_transfer_request' => $property_transfer_request
+        ]);
+
+    }
+
+    public function fetchPropertyTransferRequest(Request $request):JsonResponse
+    {
+        $page = $request->page ?? 1;
+        $perPage = $request->per_page ?? 15;
+
+        $transfer_requests =  PropertyTransferRequest::orderBy('id','DESC')
+                        ->when($this->checkIfUserHasRole('division_chief-approve_ptr',$request->user()->user_id),function($query){
+                            $query->where('status','PC Approved');
+                        })
+                        ->offset(($page - 1) * $perPage)
+                        ->limit($perPage)
+                        ->get();
+
+        $total = PropertyTransferRequest::count();
+
+        return response()->json([
+            'transfer_requests' => PropertyTransferRequestResource::collection($transfer_requests),
+            'total' => $total
+        ]);
+
+    }
+
+    public function approvePropertyTransferRequest(Request $request):JsonResponse
+    {
+            $request = PropertyTransferRequest::find($request->request_id)->update([
+                'pc_request_approved' => 1,
+                'pc_request_approved_date' => now(),
+                'status' => 'PC Approved'
+            ]);
+
+            return response()->json([
+                'request' => $request
+            ]);
+    }
+
+    public function rejectPropertyTransferRequest(Request $request):JsonResponse
+    {
+            $request = PropertyTransferRequest::find($request->request_id)->update([
+                'pc_request_approved' => 0,
+                'pc_request_approved_date' => now(),
+                'pc_request_rejection_reason' => $request->rejection_reason,
+                'status' => 'PC Rejected'
+            ]);
+
+            return response()->json([
+                'request' => $request
+            ]);
+    }
+
 }
