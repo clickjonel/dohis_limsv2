@@ -43,15 +43,4 @@ class Property extends Model
         return $status;
     }
 
-    public function transferRequests()
-    {
-        return $this->hasMany(PropertyTransferRequest::class, 'property_id');
-    }
-
-    public function currentTransferRequest()
-    {
-        return $this->hasOne(PropertyTransferRequest::class, 'property_id')
-        ->latest('id');
-    }
-
 }
