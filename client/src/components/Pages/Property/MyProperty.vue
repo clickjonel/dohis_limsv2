@@ -9,7 +9,7 @@
                </div>
                <div class="w-1/3 flex justify-center items-center gap-2 p-2 font-poppins">
                     <PrimevueButton @click="propertySelectionModal = true" label="Create ITR" class="shadow-md shadow-slate-600" severity="info"/>
-                    <PrimevueButton label="Create WMR" class="shadow-md shadow-slate-600" severity="warn"/>
+                    <PrimevueButton  @click="propertySelectionModal = true" label="Create WMR" class="shadow-md shadow-slate-600" severity="warn"/>
                </div>
 
            </div>
@@ -47,10 +47,11 @@
        <div class="w-full flex flex-col justify-between items-start gap-4  p-4 text-black">
             <FloatLabel class="w-full" variant="on">
                 <MultiSelect display="chip" size="small" v-model="selectedProperties" :options="propertySelection" optionLabel="particulars" optionValue="id" filter class="w-full" :overlayStyle="{ backgroundColor: 'lightgray',fontFamily:'Lexend Deca', width:'10rem' }"/>
-                <label>Select Properties to include in ITR</label>
+                <label>Select Properties to include in ITR/WMR</label>
             </FloatLabel>
             <div class="w-full flex justify-end items-center gap-2 p-2 font-poppins">
                 <PrimevueButton @click="navigateToCreateITRPage" label="Create ITR" class="shadow-md shadow-slate-600" severity="info"/>
+                <PrimevueButton @click="navigateToCreateWMRPage" label="Create WMR" class="shadow-md shadow-slate-600" severity="warn"/>
             </div>
        </div>
 
@@ -176,6 +177,20 @@
         if(selectedProperties.value.length > 0){
             router.push({
                 name: 'Create ITR',
+                query: {
+                    selectedProperties: selectedProperties.value
+                }
+            });
+        }
+        else{
+            Notify.failure('Please select at least one property.',() => {},{fontFamily:'Lexend Deca'})
+        }
+    }
+
+    function navigateToCreateWMRPage(){
+        if(selectedProperties.value.length > 0){
+            router.push({
+                name: 'Create WMR',
                 query: {
                     selectedProperties: selectedProperties.value
                 }

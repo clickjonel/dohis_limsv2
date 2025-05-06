@@ -155,6 +155,12 @@ const routes = [
         component: () => import('../components/Pages/Property/CreateITR.vue'),
         meta: { requiresAuth: true },
     },
+    {
+        name:'Create WMR',
+        path:'/property/wmr/create',
+        component: () => import('../components/Pages/Property/CreateWMR.vue'),
+        meta: { requiresAuth: true },
+    },
     
 ]
 
