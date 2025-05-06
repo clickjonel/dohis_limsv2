@@ -148,6 +148,13 @@ const routes = [
         component: () => import('../components/Pages/Delivery/CreateAllocationList.vue'),
         meta: { requiresAuth: true },
     },
+
+    {
+        name:'Create ITR',
+        path:'/property/itr/create',
+        component: () => import('../components/Pages/Property/CreateITR.vue'),
+        meta: { requiresAuth: true },
+    },
     
 ]
 

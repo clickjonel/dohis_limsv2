@@ -164,6 +164,29 @@ class PropertyController extends Controller
             'message' => $property,
         ]);
     }
+
+    public function fetchUserPropertiesSelection(Request $request):JsonResponse
+    {
+        $properties =  Property::with(['user'])
+                        ->whereHas('user', function($query) use ($request){
+                            $query->where('user_id', $request->user()->user_id);
+                        })
+                        ->get();
+
+        return response()->json([
+            'properties' => $properties,
+        ]);
+    }
+
+    public function findProperties(Request $request): JsonResponse
+    {
+
+        $properties = Property::whereIn('id', $request->ids)->get();
+
+        return response()->json([
+            'properties' => PropertyResource::collection($properties),
+        ]);
+    }
     
 
 }

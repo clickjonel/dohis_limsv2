@@ -38,9 +38,4 @@ class Property extends Model
         return $this->hasMany(PropertyUserHistory::class, 'property_id');
     }
 
-    public static function getStatus($status_name){
-        $status = collect(self::STATUSES)->firstWhere('name', $status_name);
-        return $status;
-    }
-
 }

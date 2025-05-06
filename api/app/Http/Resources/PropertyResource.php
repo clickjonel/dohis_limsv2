@@ -38,7 +38,7 @@ class PropertyResource extends JsonResource
             'measurement_unit' => Measurement::find($this->measurement_unit),
             'particulars' => $this->particulars,
             'unit_cost' => $this->unit_cost,
-            'status' => Property::getStatus($this->status),
+            'status' => $this->status,
             'remarks' => $this->remarks,
             'user' => [
                 'user' => $user,

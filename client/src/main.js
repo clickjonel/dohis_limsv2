@@ -28,3 +28,5 @@ app.use(PrimeVue, {
 
 
 app.mount('#app');
+
+document.title = import.meta.env.VITE_APP_NAME;

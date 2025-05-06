@@ -7,6 +7,10 @@
                    <Input v-model="searchKeyword" type="text" label="Search Keyword" :errorMessage="''"/>
                    <Button @click="fetchProperties" text="Search" buttonType="default" icon="material-symbols:search" class="translate-y-2.5"/>
                </div>
+               <div class="w-1/3 flex justify-center items-center gap-2 p-2 font-poppins">
+                    <PrimevueButton @click="propertySelectionModal = true" label="Create ITR" class="shadow-md shadow-slate-600" severity="info"/>
+                    <PrimevueButton label="Create WMR" class="shadow-md shadow-slate-600" severity="warn"/>
+               </div>
 
            </div>
 
@@ -26,8 +30,9 @@
                    <span class="min-w-[20%] text-xs">{{ property.unit_cost }}</span>
                    <span class="min-w-[15%]">{{ property.user.issuance_date }}</span>
                    <span class="min-w-[10%]">{{ property.status }}</span>
-                   <div class="min-w-[15%] flex justify-center items-start gap-2">
-                      
+                   <div class="min-w-[15%] flex flex-col justify-center items-start gap-1 text-xs">
+                        <!-- <Tag severity="info" class="cursor-pointer">Transfer Property</Tag>
+                        <Tag severity="info">Waste Property</Tag> -->
                    </div>
                </div>
            </div>
@@ -37,6 +42,20 @@
        <Pagination v-model="pagination.page" :total="pagination.total" @fetchPage="fetchProperties"/>
 
    </AuthenticatedPage>
+
+   <Dialog v-model:visible="propertySelectionModal" modal header="Select Property/ies" :style="{ width: '50%', height:'40%',  fontFamily: 'Lexend Deca' }" @hide="selectedProperties = []" :closeOnEscape="true" :dismissableMask="true" :showCloseIcon="true" :baseZIndex="10000" :appendTo="'self'">
+       <div class="w-full flex flex-col justify-between items-start gap-4  p-4 text-black">
+            <FloatLabel class="w-full" variant="on">
+                <MultiSelect display="chip" size="small" v-model="selectedProperties" :options="propertySelection" optionLabel="particulars" optionValue="id" filter class="w-full" :overlayStyle="{ backgroundColor: 'lightgray',fontFamily:'Lexend Deca', width:'10rem' }"/>
+                <label>Select Properties to include in ITR</label>
+            </FloatLabel>
+            <div class="w-full flex justify-end items-center gap-2 p-2 font-poppins">
+                <PrimevueButton @click="navigateToCreateITRPage" label="Create ITR" class="shadow-md shadow-slate-600" severity="info"/>
+            </div>
+       </div>
+
+       
+   </Dialog>
 
 </template>
 
@@ -48,21 +67,22 @@
     import Input from '../../Form/Input.vue';
     import Button from '../../Button.vue';
     import axios from '../../../axios/axios';
-    import { Icon } from '@iconify/vue/dist/iconify.js';
     import Dialog from 'primevue/dialog';
     import { Notify,Loading, Report } from 'notiflix';
-    import Select from 'primevue/select';
-    import InputText from 'primevue/inputtext';
-    import FloatLabel from 'primevue/floatlabel';
-    import InputNumber from 'primevue/inputnumber';
-    import DatePicker from 'primevue/datepicker';
     import { useAuthStore } from '../../../stores/authStore';
+    import PrimevueButton from 'primevue/button';
+    import MultiSelect from 'primevue/multiselect';
+    import FloatLabel from 'primevue/floatlabel';
 
     const router = useRouter();
     const properties = ref([]);
     const users = ref([]);
     const authStore = useAuthStore();
     
+    var propertySelectionModal = ref(false);
+    var propertySelection = ref([]);
+
+    var selectedProperties = ref([]);
 
     var pagination = ref({
         page:1,
@@ -76,38 +96,35 @@
    onMounted(() => {
        fetchProperties();
        fetchUserSelection();
+       fetchUserPropertySelection();
    });
 
 
-   function fetchProperties(){
-       Loading.dots('Loading Data, Please Wait...',{
-           clickToClose:false,
-           fontFamily:'Lexend Deca'
-       });
-       
-       axios.get('property/user',{
-           params:{
-                page:pagination.value.page,
-                keyword:searchKeyword.value
-           }
-       })
-       .then((response)=>{
-           properties.value = response.data.properties
-           pagination.value.total = response.data.total
-           console.log(response.data)
-       })
-       .catch((error)=>{
-           Notify.failure('Something Went Wrong, Try again or Contact System Admin.',() => {},{fontFamily:'Lexend Deca'})
-           console.log(error.response.data)
-       })
-       .finally(()=>{
-           Loading.remove()
-       })
-   }
-
-   function handleNavigation(path){
-      router.push({path:path})
-   }
+    function fetchProperties(){
+        Loading.dots('Loading Data, Please Wait...',{
+            clickToClose:false,
+            fontFamily:'Lexend Deca'
+        });
+        
+        axios.get('property/user',{
+            params:{
+                    page:pagination.value.page,
+                    keyword:searchKeyword.value
+            }
+        })
+        .then((response)=>{
+            properties.value = response.data.properties
+            pagination.value.total = response.data.total
+            console.log(response.data)
+        })
+        .catch((error)=>{
+            Notify.failure('Something Went Wrong, Try again or Contact System Admin.',() => {},{fontFamily:'Lexend Deca'})
+            console.log(error.response.data)
+        })
+        .finally(()=>{
+            Loading.remove()
+        })
+    }
 
     function fetchUserSelection(){
         Loading.dots('Loading Data, Please Wait...',{
@@ -129,6 +146,44 @@
         .finally(()=>{
             Loading.remove()
         })
+    }
+    
+    function fetchUserPropertySelection(){
+        Loading.dots('Loading Data, Please Wait...',{
+            clickToClose:false,
+            fontFamily:'Lexend Deca'
+        });
+        
+        axios.get('property/user/selection',{
+            params:{
+                   
+            }
+        })
+        .then((response)=>{
+            propertySelection.value = response.data.properties
+            console.log(response.data)
+        })
+        .catch((error)=>{
+            Notify.failure('Something Went Wrong, Try again or Contact System Admin.',() => {},{fontFamily:'Lexend Deca'})
+            console.log(error.response.data)
+        })
+        .finally(()=>{
+            Loading.remove()
+        })
+    }
+
+    function navigateToCreateITRPage(){
+        if(selectedProperties.value.length > 0){
+            router.push({
+                name: 'Create ITR',
+                query: {
+                    selectedProperties: selectedProperties.value
+                }
+            });
+        }
+        else{
+            Notify.failure('Please select at least one property.',() => {},{fontFamily:'Lexend Deca'})
+        }
     }
 
 

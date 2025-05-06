@@ -83,10 +83,12 @@ Route::get('/stock_card/user',[StockCardController::class,'fetchUserSectionStock
 // Property Routes
 Route::get('/property/list',[PropertyController::class,'list'])->middleware('auth:sanctum');
 Route::get('/property/user',[PropertyController::class,'fetchUserProperties'])->middleware('auth:sanctum');
+Route::get('/property/user/selection',[PropertyController::class,'fetchUserPropertiesSelection'])->middleware('auth:sanctum');
 Route::get('/property/find',[PropertyController::class,'fetchProperty'])->middleware('auth:sanctum');
 Route::post('/property/create',[PropertyController::class,'create'])->middleware('auth:sanctum');
 Route::get('/property/statuses',[PropertyController::class,'fetchPropertyStatuses'])->middleware('auth:sanctum');
 Route::post('/property/update',[PropertyController::class,'updateProperty'])->middleware('auth:sanctum');
+Route::get('/properties/find',[PropertyController::class,'findProperties'])->middleware('auth:sanctum');
 
 // User Routes
 Route::get('/user/data',[UserController::class,'getUserData'])->middleware('auth:sanctum');

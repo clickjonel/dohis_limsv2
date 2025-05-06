@@ -35,7 +35,7 @@
                     </div>
                     <span class="min-w-[10%]">{{ delivery.payment_term }}</span>
                     <div class="min-w-[20%] flex justify-center items-center gap-2">
-                       <span title="Update Delivery"><Icon @click="handleNavigation(`/delivery/update/${delivery.id}`)" icon="flowbite:edit-solid" class="text-xl text-blue-800 cursor-pointer hover:scale-125"/></span>
+                        <span title="Update Delivery"><Icon @click="handleNavigation(`/delivery/update/${delivery.id}`)" icon="flowbite:edit-solid" class="text-xl text-blue-800 cursor-pointer hover:scale-125"/></span>
                         <span title="Print IAR"><Icon @click="handleNavigation(`/delivery/iar/${delivery.id}`)" icon="material-symbols:print-rounded" class="text-xl text-emerald-800 cursor-pointer hover:scale-125"/></span>
                         <!-- <span title="Add Item"><Icon icon="mdi:format-list-group-add" class="text-xl text-slate-800 cursor-pointer hover:scale-125"/></span>
                         <span title="Add Invoice"><Icon icon="mdi:invoice-add" class="text-xl text-slate-800 cursor-pointer hover:scale-125"/></span>
