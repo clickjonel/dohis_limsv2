@@ -42,8 +42,6 @@ class MeasurementController extends Controller
 
         $measurements = Measurement::orderBy('id','asc')->get();
 
-        // $total = Measurement::count();
-
         return response()->json([
             'measurements' => $measurements,
         ]);

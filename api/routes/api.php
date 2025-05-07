@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeliveryController;
+use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\FundSourceController;
 use App\Http\Controllers\MeasurementController;
 use App\Http\Controllers\OfficeController;
@@ -39,6 +40,10 @@ Route::get('/fund_source/list',[FundSourceController::class,'list'])->middleware
 
 // Office Routes
 Route::get('/office/list',[OfficeController::class,'list'])->middleware('auth:sanctum');
+Route::get('/office/selection',[OfficeController::class,'selection'])->middleware('auth:sanctum');
+
+// Division Routes
+Route::get('/division/selection',[DivisionController::class,'selection'])->middleware('auth:sanctum');
 
 // Stock Card Category Routes
 Route::get('/stock_card_category/list',[StockCardCategoryController::class,'list'])->middleware('auth:sanctum');

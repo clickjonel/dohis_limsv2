@@ -27,6 +27,15 @@ class OfficeController extends Controller
         ]);
     }
 
+    public function selection()
+    {
+        $offices = Office::select(['section_id', 'section_name'])->get();
+    
+        return response()->json([
+            'offices' => $offices
+        ]);
+    }
+
     // public function fetchOfficePersonnel(Request $request)
     // {
     //     $personnel = Office::find('');

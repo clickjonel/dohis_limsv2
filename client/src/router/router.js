@@ -161,6 +161,12 @@ const routes = [
         component: () => import('../components/Pages/Property/CreateWMR.vue'),
         meta: { requiresAuth: true },
     },
+    {
+        name:'Create RIS',
+        path:'/property/ris/create',
+        component: () => import('../components/Pages/Property/CreateRIS.vue'),
+        meta: { requiresAuth: true },
+    },
     
 ]
 

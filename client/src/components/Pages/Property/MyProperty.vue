@@ -8,6 +8,7 @@
                    <Button @click="fetchProperties" text="Search" buttonType="default" icon="material-symbols:search" class="translate-y-2.5"/>
                </div>
                <div class="w-1/3 flex justify-center items-center gap-2 p-2 font-poppins">
+                    <PrimevueButton @click="navigateToCreateRISPage" label="Create RIS" class="shadow-md shadow-slate-600" severity="primary"/>
                     <PrimevueButton @click="propertySelectionModal = true" label="Create ITR" class="shadow-md shadow-slate-600" severity="info"/>
                     <PrimevueButton  @click="propertySelectionModal = true" label="Create WMR" class="shadow-md shadow-slate-600" severity="warn"/>
                </div>
@@ -199,6 +200,12 @@
         else{
             Notify.failure('Please select at least one property.',() => {},{fontFamily:'Lexend Deca'})
         }
+    }
+
+    function navigateToCreateRISPage(){
+        router.push({
+                name: 'Create RIS',
+            });
     }
 
 
