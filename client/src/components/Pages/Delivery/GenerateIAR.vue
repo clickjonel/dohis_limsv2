@@ -280,8 +280,8 @@
                         <span class="min-w-[12.5%] max-w-[12.5%]">{{item.quantity}}</span>
                     </div>
                 </div>
-                <span v-if="delivery.balance_items?.length > 0" class="w-full text-center">Balance</span>
-                <div v-if="delivery.balance_items?.length > 0" v-for="item in delivery.balance_items" v-bind:key="item.id" class="w-full flex justify-start items-stretch divide-x font-light text-left">
+                <span v-if="delivery.balance_items" class="w-full text-center">Balance</span>
+                <div v-if="delivery.balance_items" v-for="item in delivery.balance_items" v-bind:key="item.id" class="w-full flex justify-start items-stretch divide-x font-light text-left">
                     <span class="max-w-[20%] w-[20%] pl-1" v-html="item.description.replace(/\n/g, '<br>')"></span>
                     <div class="max-w-[80%] w-[80%] flex justify-start items-stretch divide-x text-center">
                         <span class="min-w-[12.5%] max-w-[12.5%]"></span>
@@ -294,9 +294,7 @@
                         <span class="min-w-[12.5%] max-w-[12.5%]">{{item.quantity}}</span>
                     </div>
                 </div>
-            </div>
-
-            <div class="w-full flex justify-start items-stretch divide-x font-light text-left">
+            </div>            <div class="w-full flex justify-start items-stretch divide-x font-light text-left">
                 <span class="max-w-[20%] w-[20%] pl-1">Total Quantity and Unit Delivered</span>
                 <span class="max-w-[80%] w-[80%] pl-1">{{ delivery.inspected_quantity }}</span>
             </div>

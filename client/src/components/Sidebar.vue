@@ -15,6 +15,9 @@
             <Button v-if="store.hasRole('permanent') || store.hasRole('superadmin')" @click="handleNavigation('My Delivery')" :text="'My Deliveries'" :buttonType="'navigation'" :icon="'mdi:truck-delivery'" :class="route.name === 'My Delivery' ? 'w-full bg-blue-800' : 'w-full' "/>
             <Button v-if="store.hasRole('permanent') || store.hasRole('superadmin')" @click="handleNavigation('My Stock')" :text="'My Stocks'" :buttonType="'navigation'" :icon="'bi:boxes'" :class="route.name === 'My Stock' ? 'w-full bg-blue-800' : 'w-full' "/>
             <Button v-if="store.hasRole('permanent') || store.hasRole('superadmin')" @click="handleNavigation('My Property')" :text="'My Properties'" :buttonType="'navigation'" :icon="'bi:boxes'" :class="route.name === 'My Property' ? 'w-full bg-blue-800' : 'w-full' "/>
+            
+            <Button v-if="store.hasRole('permanent') || store.hasRole('superadmin')" @click="handleNavigation('Preinspection Request')" :text="'Preinspection Requests'" :buttonType="'navigation'" :icon="'bi:boxes'" :class="route.name === 'Preinspection Request' ? 'w-full bg-blue-800' : 'w-full' "/>
+            <Button v-if="store.hasRole('permanent') || store.hasRole('superadmin')" @click="handleNavigation('My Preinspection Request')" :text="'My Preinspection Requests'" :buttonType="'navigation'" :icon="'bi:boxes'" :class="route.name === 'My Preinspection Request' ? 'w-full bg-blue-800' : 'w-full' "/>
             <!-- <Button v-if="store.hasRole('permanent')" @click="handleNavigation('Form')" :text="'Forms'" :buttonType="'navigation'" :icon="'mdi:document-sign'" :class="route.name === 'Calendar' ? 'w-full bg-blue-800' : 'w-full' "/> -->
             
         </div>

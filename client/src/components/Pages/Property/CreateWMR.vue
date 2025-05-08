@@ -110,29 +110,34 @@
                 </div>
 
                 <div v-for="(property,index) in properties" class="w-full flex justify-start items-stretch divide-x-2 text-center text-xs font-light font-lexend">
-                <span class="w-[10%] flex justify-center items-center">{{ index+1 }}</span>
-                <span class="w-[15%] flex justify-center items-center">1</span>
-                <span class="w-[10%] flex justify-center items-center">{{property.measurement_unit.name}}</span>
-                <span class="w-[35%] flex justify-center items-center">{{property.particulars}}</span>
-                <div class="w-[30%] flex flex-col justify-center items-stretch divide-y-2 text-center">
-                    <div class="w-full flex justify-start items-stretch divide-x-2">
-                            <span class="w-1/3">{{ property.property_no  }}</span>
-                            <span class="w-1/3">{{property.user.acquisition_date }}</span>
-                            <span class="w-1/3">{{ property.unit_cost }}</span>
+                    <span class="w-[10%] flex justify-center items-center">{{ index+1 }}</span>
+                    <span class="w-[15%] flex justify-center items-center">1</span>
+                    <span class="w-[10%] flex justify-center items-center">{{property.measurement_unit.name}}</span>
+                    <div class="w-[35%] flex flex-col justify-start items-start">
+                        <span class="pl-1">{{property.particulars}}</span>
+                        <span class="pl-1 mt-2">PN:{{property.property_no}}</span>
+                        <span class="pl-1">UC:{{property.unit_cost}}</span>
+                        <span class="pl-1">DA:{{property.user.acquisition_date === '0000-00-00' ? '' : property.user.acquisition_date }}</span>
                     </div>
-                </div>
+                    <div class="w-[30%] flex flex-col justify-center items-stretch divide-y-2 text-center">
+                        <div class="w-full flex justify-start items-stretch divide-x-2">
+                                <span class="w-1/3"></span>
+                                <span class="w-1/3"></span>
+                                <span class="w-1/3"></span>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="w-full flex justify-start items-stretch divide-x-2 text-center text-xs font-light font-lexend">
                 <span class="w-[10%] flex justify-center items-center"></span>
-                <span class="w-[15%] flex justify-center items-center">1</span>
+                <span class="w-[15%] flex justify-center items-center"></span>
                 <span class="w-[10%] flex justify-center items-center"></span>
-                <span class="w-[35%] flex justify-center items-center font-medium uppercase">Total</span>
+                <span class="w-[35%] flex justify-center items-center font-light italic">Submitted by {{ store.user.full_name }}</span>
                 <div class="w-[30%] flex flex-col justify-center items-stretch divide-y-2 text-center">
                     <div class="w-full flex justify-start items-stretch divide-x-2">
                             <span class="w-1/3"></span>
                             <span class="w-1/3"></span>
-                            <span class="w-1/3 font-medium">{{ totalUnitCost.toFixed(2) }}</span>
+                            <span class="w-1/3 font-medium"></span>
                     </div>
                 </div>
                 </div>
