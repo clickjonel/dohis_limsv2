@@ -97,12 +97,16 @@ class PropertyController extends Controller
         $search_keyword = trim($request->keyword ?? '');
 
         $baseQuery =  Property::with(['user'])
-                        ->whereHas('user', function($query) use ($request){
+                        ->whereHas('user', function($query) use ($request) {
                             $query->where('user_id', $request->user()->user_id);
                         })
                         ->when($search_keyword, function ($query) use ($search_keyword) {
-                            $query->where('property_no', 'like', '%' . $search_keyword . '%')->orWhere('particulars', 'like', '%' . $search_keyword . '%');
-                        })->orderBy('id','DESC');
+                            $query->where(function ($q) use ($search_keyword) {
+                                $q->where('property_no', 'like', '%' . $search_keyword . '%')
+                                ->orWhere('particulars', 'like', '%' . $search_keyword . '%');
+                            });
+                        })
+                        ->orderBy('id', 'DESC');
 
         $properties = $baseQuery->clone()
         ->offset(($page - 1) * $perPage)
@@ -185,6 +189,15 @@ class PropertyController extends Controller
 
         return response()->json([
             'properties' => PropertyResource::collection($properties),
+        ]);
+    }
+
+    public function findPropertyByPropertyNumber(Request $request): JsonResponse
+    {
+        $property = Property::with('user')->where('property_no',$request->property_no)->first();
+
+        return response()->json([
+            'property' => $property
         ]);
     }
     

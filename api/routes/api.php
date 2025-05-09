@@ -7,6 +7,7 @@ use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\FundSourceController;
 use App\Http\Controllers\MeasurementController;
 use App\Http\Controllers\OfficeController;
+use App\Http\Controllers\PreinspectionRequestController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\StockCardCategoryController;
 use App\Http\Controllers\StockCardController;
@@ -94,6 +95,7 @@ Route::post('/property/create',[PropertyController::class,'create'])->middleware
 Route::get('/property/statuses',[PropertyController::class,'fetchPropertyStatuses'])->middleware('auth:sanctum');
 Route::post('/property/update',[PropertyController::class,'updateProperty'])->middleware('auth:sanctum');
 Route::get('/properties/find',[PropertyController::class,'findProperties'])->middleware('auth:sanctum');
+Route::get('/property/find/property_number',[PropertyController::class,'findPropertyByPropertyNumber'])->middleware('auth:sanctum');
 
 // User Routes
 Route::get('/user/data',[UserController::class,'getUserData'])->middleware('auth:sanctum');
@@ -102,3 +104,9 @@ Route::get('/user/selection',[UserController::class,'userSelectionList'])->middl
 // Dashboard Routes
 // Route::get('/dashboard/user',[DashboardController::class,'getUserDashboardData'])->middleware('auth:sanctum');
 Route::get('/dashboard/user',[DashboardController::class,'fetchPermanentUserDashboardData'])->middleware('auth:sanctum');
+
+
+// Preinspection Request Routes
+Route::get('/preinspection_request/list',[PreinspectionRequestController::class,'list'])->middleware('auth:sanctum');
+Route::post('/preinspection_request/create',[PreinspectionRequestController::class,'createRequest'])->middleware('auth:sanctum');
+Route::get('/preinspection_request/list/user',[PreinspectionRequestController::class,'listUserRequests'])->middleware('auth:sanctum');

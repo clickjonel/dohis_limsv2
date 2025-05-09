@@ -30,7 +30,7 @@
                     <div class="min-w-[15%] flex justify-center items-center gap-2">
                         <span v-if="delivery.invoices.length > 0" @click="showDeliveryInvoices(delivery.invoices)" class="text-xs rounded-full px-1 bg-blue-900 text-white cursor-pointer">Invoices</span>
                         <span v-if="delivery.receipts.length > 0" @click="showDeliveryReceipts(delivery.receipts)" class="text-xs rounded-full px-1 bg-blue-900 text-white cursor-pointer">Receipts</span>
-                        <span v-if="delivery.items.length > 0" @click="showDeliveryItems(delivery.items)" class="text-xs rounded-full px-1 bg-blue-900 text-white cursor-pointer">Items</span>
+                        <span v-if="delivery.items.length > 0" @click="showDeliveryItems(delivery)" class="text-xs rounded-full px-1 bg-blue-900 text-white cursor-pointer">Items</span>
                     </div>
                     <span class="min-w-[10%]">{{ delivery.payment_term }}</span>
                     <span class="min-w-[20%]">{{ delivery.po_no ?? delivery.ptr_no }}</span>
@@ -74,19 +74,30 @@
         </div>
     </Dialog>
 
-    <Dialog v-model:visible="showItemModal" modal header="Delivery Item/s" :style="{ width: '80rem',  fontFamily: 'Lexend Deca' }">
+    <Dialog v-model:visible="itemModal.show" modal header="Delivery Item/s" :style="{ width: '80rem',  fontFamily: 'Lexend Deca' }">
         <div class="w-full flex justify-start items-center border-y-2  text-left uppercase py-2 bg-amber-200">
             <span class="min-w-[50%]">Description</span>
             <span class="min-w-[15%]">Unit Cost</span>
             <span class="min-w-[15%]">Quantity</span>
-            <span class="min-w-[20%]">Measurement Unit</span>
+            <span class="min-w-[10%]">Unit</span>
+            <span class="min-w-[10%]">Total</span>
         </div>
-        <div v-for="item in currentitems" class="w-full flex flex-col justify-start items-center gap-2 text-sm">
+        <div v-for="item in itemModal.data.items" class="w-full flex flex-col justify-start items-center gap-2 text-sm">
             <div v-if="item.availability === 1" @click="handleNavigation(`/item/allocation_list/${item.id}`)" class="w-full flex justify-between items-start border-b py-2 hover:bg-emerald-500 font-light text-left cursor-pointer" title="Click to Create Allocation List">
                 <span class="min-w-[50%] px-2" v-html="item.description.replace(/\n/g, '<br>')"></span>
                 <span class="min-w-[15%]">{{ item.unit_cost }}</span>
                 <span class="min-w-[15%]">{{ item.quantity }}</span>
-                <span class="min-w-[20%]">{{ item.measurement_unit.name }}</span>
+                <span class="min-w-[10%]">{{ item.measurement_unit.name }}</span>
+                <span class="min-w-[10%]">{{ (item.unit_cost * item.quantity).toFixed(2) }}</span>
+            </div>
+        </div>
+        <div class="w-full flex flex-col justify-start items-center gap-2 text-sm">
+            <div class="w-full flex justify-between items-start border-b py-2 hover:bg-emerald-500 font-light text-left cursor-pointer">
+                <span class="min-w-[50%] px-2 font-lexend font-medium text-base">Total</span>
+                <span class="min-w-[15%]"></span>
+                <span class="min-w-[15%]"></span>
+                <span class="min-w-[10%]"></span>
+                <span class="min-w-[10%] font-lexend font-medium text-base">{{ itemModal.data.total_cost }}</span>
             </div>
         </div>
     </Dialog>
@@ -110,11 +121,14 @@
 
     var showInvoiceModal = ref(false)
     var showReceiptModal = ref(false)
-    var showItemModal = ref(false)
+    // var showItemModal = ref(false)
 
     var currentInvoices = ref([])
     var currentReceipts = ref([])
-    var currentitems = ref([])
+    var itemModal = ref({
+        show:false,
+        data:null
+    })
 
     var pagination = ref({
         page:1,
@@ -147,6 +161,7 @@
             Loading.remove()
             deliveries.value = response.data.deliveries
             pagination.value.total = response.data.total
+            console.log(deliveries.value)
         })
         .catch((error)=>{
             Notify.failure('Something Went Wrong, Try again or Contact System Admin.',() => {},{fontFamily:'Lexend Deca'})
@@ -166,9 +181,9 @@
         currentReceipts.value = receipts
     }
 
-    function showDeliveryItems(items){
-        showItemModal.value = true
-        currentitems.value = items
+    function showDeliveryItems(delivery){
+        itemModal.value.show = true
+        itemModal.value.data = delivery
     }
 
     function showNote(){

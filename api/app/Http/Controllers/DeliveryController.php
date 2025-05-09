@@ -448,6 +448,8 @@ class DeliveryController extends Controller
             return $item;
         })->toArray();
 
+        $delivery['has_balance_items'] = count($delivery['balance_items']) > 0;
+
         $delivery['inspected_quantity'] = array_sum(array_map(function ($item) {
             return $item['quantity'];
         }, $delivery['delivered_items'] ?? []));
@@ -535,6 +537,11 @@ class DeliveryController extends Controller
                 $delivery['req_office'] = Office::find($delivery['req_office'])->short_name;
                 $delivery['end_user'] = $this->getUserFullName($delivery['end_user']);
                 $delivery['payment_term'] = $delivery['payment_term'] === 1 ? 'Charge' : 'Donation';
+                $delivery['items'] = $delivery['items']->map(function($item){
+                    $item['total'] = $item['unit_cost'] * $item['quantity'];
+                    return $item;
+                });
+                $delivery['total_cost'] = $delivery['items']->sum('total');
                 return $delivery;
             }),
             'total' => $total

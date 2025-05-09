@@ -47,7 +47,7 @@
     function goToNextPage(){
         if(currentPage.value < totalPages.value){
             currentPage.value += 1
-            emit('fetchPage','a1212')
+            emit('fetchPage',currentPage+1)
         }
     }
 
