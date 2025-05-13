@@ -17,25 +17,28 @@
                <div class="w-full flex justify-start items-center border-y-2 font-lexend uppercase bg-amber-200 text-center pb-2 sticky top-0 text-black gap-2">
                    <span class="min-w-[30%]">Equipment</span>
                    <span class="min-w-[10%]">Property #</span>
-                   <span class="min-w-[20%]">Requested By</span>
+                   <span class="min-w-[20%]">Section to Inspect</span>
                    <span class="min-w-[10%]">Defects</span>
                    <span class="min-w-[10%]">Date</span>
-                   <span class="min-w-[20%]">Actions</span>
+                   <span class="min-w-[20%]">Status</span>
                </div>
                <div v-for="request in requests" class="w-full flex justify-start items-center border-b font-poppins text-center py-2 font-light text-sm bg-white/50 hover:bg-emerald-400 text-black gap-2">
                     <span class="min-w-[30%] text-left pl-1">{{ request.equipment }}</span>
-                    <span class="min-w-[10%]">{{ request.property_no }} #</span>
-                    <span class="min-w-[20%]">{{ request.requestor }}</span>
-                    <span class="min-w-[10%]"><Tag @click="openDefectsModal(request.defects)" severity="info" value="Defect/s" class="text-xs shadow-sm shadow-slate-600 cursor-pointer"></Tag></span>
-                    <span class="min-w-[10%]">{{request.date}}</span>
-                    <span class="min-w-[20%]">Actions</span>
+                    <span class="min-w-[10%]">{{ request.property_no }}</span>
+                    <span class="min-w-[20%]">{{ request.inspection_section }}</span>
+                    <span class="min-w-[10%] flex flex-col gap-2">
+                        <Tag @click="openDefectsModal(request.defects)" severity="info" value="Defect/s" class="text-xs shadow-sm shadow-slate-600 cursor-pointer"></Tag>
+                        <Tag v-if="request.findings === ''" @click="openDefectsModal(request.findings)" severity="warn" value="Findings" class="text-xs shadow-sm shadow-slate-600 cursor-pointer"></Tag>
+                    </span>
+                    <span class="min-w-[10%]">{{request.date_requested}}</span>
+                    <span class="min-w-[20%]"></span>
                </div>
                
            </div>
 
        </div>
 
-       <!-- <Pagination v-model="pagination.page" :total="pagination.total" @fetchPage="fetchProperties"/> -->
+       <!-- <Pagination v-model="pagination.page" :total="pagination.total" @fetchPage="fetchRequests"/> -->
 
    </AuthenticatedPage>
 
@@ -90,8 +93,14 @@
        </div>
    </Dialog>
 
-   <Dialog v-model:visible="defectsModal" modal header="Create Preinspection Request" :style="{ width: '90%',  fontFamily: 'Lexend Deca' }" @hide="clearPreinspectionForm">
+   <Dialog v-model:visible="defectsModal" modal header="Equipment Defects" :style="{ width: '90%',  fontFamily: 'Lexend Deca' }">
        <div class="w-full flex flex-col justify-between items-start gap-4  p-4 text-black border-y" v-html="currentDefects">
+
+       </div>
+   </Dialog>
+
+   <Dialog v-model:visible="findingsModal" modal header="Equipment Inspection Findings" :style="{ width: '90%',  fontFamily: 'Lexend Deca' }">
+       <div class="w-full flex flex-col justify-between items-start gap-4  p-4 text-black border-y" v-html="currentFindings">
 
        </div>
    </Dialog>
@@ -154,6 +163,7 @@
 
     var preInspectionModal = ref(false);
     var defectsModal = ref(false)
+    var findingsModal = ref(false)
 
     var searchKeyword = ref('');
 
@@ -161,8 +171,7 @@
     var requests = ref([])
 
     var currentDefects = ref('')
-
-    // var errors})
+    var currentFindings = ref('')
 
    onMounted(() => {
       fetchUserSelection();
@@ -292,6 +301,12 @@
     function openDefectsModal(defects){
         currentDefects.value = defects
         defectsModal.value = true
+    }
+
+    
+    function openFindingsModal(findings){
+        currentFindings.value = defects
+        findingsModal.value = true
     }
 
 

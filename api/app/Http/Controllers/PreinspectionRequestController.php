@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PreinspectionRequest\CreatePreinspectionRequest;
+use App\Http\Resources\PreinspectionResource;
 use App\Models\PreinspectionRequest;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -11,10 +12,18 @@ class PreinspectionRequestController extends Controller
 {
     public function list(Request $request):JsonResponse
     {
-        $requests = PreinspectionRequest::all();
+        $requests = PreinspectionRequest::
+                    when($request->user()->assignment->section_id === 22 || 
+                        $request->user()->assignment->section_id === 25 &&
+                        $request->user()->assignment->section_id !== 582,function($query) use ($request){
+                            $query->where('inspection_section',$request->user()->assignment->section_id);
+                    })
+                    ->orderByDesc('created_at')
+                    ->get();
 
         return response()->json([
-            'requests' => $requests
+            'requests' => PreinspectionResource::collection($requests),
+            'user' => $request->user()->assignment->user_id
         ]);
     }
 
@@ -41,10 +50,10 @@ class PreinspectionRequestController extends Controller
 
     public function listUserRequests(Request $request):JsonResponse
     {
-        $user_requests = PreinspectionRequest::where('requestor',$request->user()->user_id)->get();
+        $user_requests = PreinspectionRequest::where('requestor',$request->user()->user_id)->orderByDesc('created_at')->get();
 
         return response()->json([
-            'requests' => $user_requests
+            'requests' => PreinspectionResource::collection($user_requests)
         ]);
     }
 }

@@ -56,9 +56,13 @@ trait UserTrait
         $is_superadmin = $user_id === 582 ? $roles[] = 'superadmin' : [];
         $is_property_custodian = $user_assignment->user_id === 127 ? $roles[] = 'property_custodian' : [];
         $is_division_chief = $user_assignment->designation_id === 3 ? $roles[] = 'division_chief' : [];
-
+ 
         if ($user_assignment->designation_id === 3 & $user_assignment->user_id === 38) {
             $roles[] = 'division_chief-approve_ptr';
+        }
+
+        if ($user_assignment->section_id === 25 || $user_assignment->section_id === 22) {
+            $roles[] = 'preinspection_sections';
         }
         
         return $roles;
