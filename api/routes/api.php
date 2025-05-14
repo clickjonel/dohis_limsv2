@@ -96,6 +96,8 @@ Route::get('/property/statuses',[PropertyController::class,'fetchPropertyStatuse
 Route::post('/property/update',[PropertyController::class,'updateProperty'])->middleware('auth:sanctum');
 Route::get('/properties/find',[PropertyController::class,'findProperties'])->middleware('auth:sanctum');
 Route::get('/property/find/property_number',[PropertyController::class,'findPropertyByPropertyNumber'])->middleware('auth:sanctum');
+Route::post('/property/transfer',[PropertyController::class,'transferProperties'])->middleware('auth:sanctum');
+
 
 // User Routes
 Route::get('/user/data',[UserController::class,'getUserData'])->middleware('auth:sanctum');

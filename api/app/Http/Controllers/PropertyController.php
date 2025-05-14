@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreatePropertyRequest;
 use App\Http\Requests\CreatePropertyRequestTransferRequest;
+use App\Http\Requests\Property\TransferPropertyRequest;
 use App\Http\Resources\PropertyResource;
 use App\Http\Resources\UserResource;
 use App\Models\Measurement;
@@ -197,6 +198,32 @@ class PropertyController extends Controller
         $property = Property::with('user')->where('property_no',$request->property_no)->first();
 
         return response()->json([
+            'property' => $property
+        ]);
+    }
+
+    public function transferProperties(TransferPropertyRequest $request):JsonResponse
+    {
+        $validated = $request->validated();
+
+        foreach($validated['properties'] as $property){
+            $property = Property::find($property['id']);
+            $property->userHistory()->create([
+                'property_id' => $property['id'],
+                'user_id' => $validated['transfer_to'],
+                'acquisition_date' => $validated['transfer_date'],
+                'return_date' => null,
+                'remarks' => null
+            ]);
+            $property->user()->update([
+                'user_id' => $validated['transfer_to'],
+                'issuance_date' => $validated['transfer_date'],
+            ]);
+
+        }
+
+        return response()->json([
+            'message' => 'Properties Successfully Transfered',
             'property' => $property
         ]);
     }

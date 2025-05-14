@@ -8,8 +8,9 @@
                    <Button @click="fetchProperties" text="Search" buttonType="default" icon="material-symbols:search" class="translate-y-2.5"/>
                </div>
 
-               <div class="flex justify-start items-center gap-2 p-2">
-                   <Button @click="addPropertyModal = true" text="Add A Property" buttonType="info" icon="material-symbols:add-rounded" class="translate-y-2.5"/>
+               <div class="flex justify-start items-center gap-2 p-2 font-lexend">
+                    <PrimevueButton @click="addPropertyModal = true" label="Add Property" severity="primary"/>
+                    <PrimevueButton @click="selectPropertiesModal = true" label="Transfer Property/ies" severity="info"/>
                </div>
            </div>
 
@@ -90,21 +91,52 @@
        </div>
    </Dialog>
 
+    <Dialog v-model:visible="selectPropertiesModal" modal header="Select Properties to Transfer" :style="{ width: '100rem', height:'100%',  fontFamily: 'Lexend Deca' }">
+
+        <div class="w-full flex justify-start items-start gap-4 p-4 text-black">
+            <PropertySelection @submit="setSelectedPropertiesFromSelection"/>
+        </div>
+        
+        <div v-if="transfer.selectedProperties.length > 0" class="w-full flex justify-end px-4  mt-4 gap-4">
+             <FloatLabel variant="on" class="w-full">
+                <DatePicker v-model="transfer.transfer_date" showIcon class="w-full" :panelStyle="{fontFamily:'Lexend Deca'}"/>
+                <label>Date of Transfer</label>
+            </FloatLabel>
+            <Select v-model="transfer.transfer_to" :options="end_users" filter optionLabel="full_name" optionValue="user_id" placeholder="Select End User" class="w-full font-lexend">
+                <template #option="slotProps">
+                    <div class="flex items-center font-lexend">
+                        <div>{{ slotProps.option.full_name }}</div>
+                    </div>
+                </template>
+            </Select>
+        </div>
+
+        <div v-if="transfer.selectedProperties.length > 0" class="w-full flex justify-end px-4 mt-4">
+            <PrimevueButton @click="transferSelectedProperties" label="Transfer Selected Properties" severity="info"/>
+        </div>
+
+    </Dialog>
+
 </template>
 
 <script setup>
-   import { ref,onMounted } from 'vue';
-   import { useRouter } from 'vue-router';
-   import AuthenticatedPage from '../../PageLayouts/AuthenticatedPage.vue';
-   import Pagination from '../../Pagination.vue';
-   import Input from '../../Form/Input.vue';
-   import Button from '../../Button.vue';
-   import axios from '../../../axios/axios';
-   import { Icon } from '@iconify/vue/dist/iconify.js';
-   import Dialog from 'primevue/dialog';
-   import { Notify,Loading, Report } from 'notiflix';
-   import Select from 'primevue/select';
-   import TextArea from '../../TextArea.vue';
+    import { ref,onMounted } from 'vue';
+    import { useRouter } from 'vue-router';
+    import AuthenticatedPage from '../../PageLayouts/AuthenticatedPage.vue';
+    import Pagination from '../../Pagination.vue';
+    import Input from '../../Form/Input.vue';
+    import Button from '../../Button.vue';
+    import axios from '../../../axios/axios';
+    import { Icon } from '@iconify/vue/dist/iconify.js';
+    import Dialog from 'primevue/dialog';
+    import { Notify,Loading, Report } from 'notiflix';
+    import Select from 'primevue/select';
+    import TextArea from '../../TextArea.vue';
+    import PrimevueButton from 'primevue/button';
+    import PropertySelection from '../../selections/PropertySelection.vue';
+    import DatePicker from 'primevue/datepicker';
+    import FloatLabel from 'primevue/floatlabel';
+
 
     const router = useRouter();
     const properties = ref([]);
@@ -144,6 +176,18 @@
 
     var addPropertyModal = ref(false)
 
+    var selectPropertiesModal = ref(false)
+    var selectedProperties = ref([])
+
+    var property_no = ref('')
+
+    var transfer = ref({
+        selectedProperties:[],
+        transfer_date:'',
+        transfer_to:0,
+        remarks:''
+    })
+
    onMounted(() => {
        fetchProperties();
        fetchUserSelection();
@@ -151,92 +195,92 @@
    });
 
 
-   function fetchProperties(){
-       Loading.dots('Loading Data, Please Wait...',{
-           clickToClose:false,
-           fontFamily:'Lexend Deca'
-       });
-       
-       axios.get('property/list',{
-           params:{
+    function fetchProperties(){
+        Loading.dots('Loading Data, Please Wait...',{
+            clickToClose:false,
+            fontFamily:'Lexend Deca'
+        });
+        
+        axios.get('property/list',{
+            params:{
+                    page:pagination.value.page,
+                    keyword:searchKeyword.value
+            }
+        })
+        .then((response)=>{
+            properties.value = response.data.properties
+            pagination.value.total = response.data.total
+            console.log(response.data)
+        })
+        .catch((error)=>{
+            Notify.failure('Something Went Wrong, Try again or Contact System Admin.',() => {},{fontFamily:'Lexend Deca'})
+            console.log(error.response.data)
+        })
+        .finally(()=>{
+            Loading.remove()
+        })
+    }
+
+    function fetchMeasurements(){
+        Loading.dots('Loading Data, Please Wait...',{
+            clickToClose:false,
+            fontFamily:'Lexend Deca'
+        });
+
+        axios.get('measurement/selection',{
+            params:{
                 page:pagination.value.page,
-                keyword:searchKeyword.value
-           }
-       })
-       .then((response)=>{
-           properties.value = response.data.properties
-           pagination.value.total = response.data.total
-           console.log(response.data)
-       })
-       .catch((error)=>{
-           Notify.failure('Something Went Wrong, Try again or Contact System Admin.',() => {},{fontFamily:'Lexend Deca'})
-           console.log(error.response.data)
-       })
-       .finally(()=>{
-           Loading.remove()
-       })
-   }
+            }
+        })
+        .then((response)=>{
+            measurements.value = response.data.measurements
+        })
+        .catch((error)=>{
+            Notify.failure('Something Went Wrong, Try again or Contact System Admin.',() => {},{fontFamily:'Lexend Deca'})
+        })
+        .finally(()=>{
+            Loading.remove()
+        })
+    }
 
-   function fetchMeasurements(){
-       Loading.dots('Loading Data, Please Wait...',{
-           clickToClose:false,
-           fontFamily:'Lexend Deca'
-       });
+    function fetchUserSelection(){
+        Loading.dots('Loading Data, Please Wait...',{
+            clickToClose:false,
+            fontFamily:'Lexend Deca'
+        });
 
-       axios.get('measurement/selection',{
-           params:{
-               page:pagination.value.page,
-           }
-       })
-       .then((response)=>{
-           measurements.value = response.data.measurements
-       })
-       .catch((error)=>{
-           Notify.failure('Something Went Wrong, Try again or Contact System Admin.',() => {},{fontFamily:'Lexend Deca'})
-       })
-       .finally(()=>{
-           Loading.remove()
-       })
-   }
+        axios.get('user/selection',{
+            params:{
+                
+            }
+        })
+        .then((response)=>{
+            end_users.value = response.data.users
+            //    pagination.value.total = response.data.total
+            console.log(response.data)
+        })
+        .catch((error)=>{
+            Notify.failure('Something Went Wrong, Try again or Contact System Admin.',() => {},{fontFamily:'Lexend Deca'})
+        })
+        .finally(()=>{
+            Loading.remove()
+        })
+    }
 
-   function fetchUserSelection(){
-       Loading.dots('Loading Data, Please Wait...',{
-           clickToClose:false,
-           fontFamily:'Lexend Deca'
-       });
+    function handleNavigation(path){
+        router.push({path:path})
+    }
 
-       axios.get('user/selection',{
-           params:{
-              
-           }
-       })
-       .then((response)=>{
-           end_users.value = response.data.users
-        //    pagination.value.total = response.data.total
-           console.log(response.data)
-       })
-       .catch((error)=>{
-           Notify.failure('Something Went Wrong, Try again or Contact System Admin.',() => {},{fontFamily:'Lexend Deca'})
-       })
-       .finally(()=>{
-           Loading.remove()
-       })
-   }
-
-   function handleNavigation(path){
-      router.push({path:path})
-   }
-
-   function clearAddPropertyForm(){
-        property.value.property_no =''
-        property.value.measurement_unit =0
-        property.value.particulars =''
-        property.value.unit_cost =0
-        property.value.status =''
-        property.value.remarks =''
-        property.value.end_user =0 
-        property.value.acquisition_date = ''
-   }
+    function clearAddPropertyForm(){
+            property.value.property_no =''
+            property.value.measurement_unit =0
+            property.value.particulars =''
+            property.value.unit_cost =0
+            property.value.status =''
+            property.value.remarks =''
+            property.value.end_user =0 
+            property.value.acquisition_date = ''
+    }
 
     function save(){
         axios.post('property/create',{
@@ -282,7 +326,49 @@
         })
     }
 
+    function setSelectedPropertiesFromSelection(selected_properties){
+        transfer.value.selectedProperties = selected_properties
+    }
 
+    function transferSelectedProperties(){
+        axios.post('property/transfer',{
+            transfer_to: transfer.value.transfer_to,
+            properties: transfer.value.selectedProperties,
+            transfer_date: transfer.value.transfer_date,
+            remarks: transfer.value.remarks
+        })
+        .then((response) => {
+            Report.success(
+                'Success',
+                `Message:${response.data.message}`,
+                'Okay',
+                () => {
+                    selectPropertiesModal.value = false
+                    fetchProperties()
+                },
+                {
+                    fontFamily:'Lexend Deca'
+                },
+            );
+        })
+        .catch((error) => {
+            errors.value = error.response.data.errors
+            Report.failure(
+                'Error',
+                `Errors:${error.response.data.errors}`,
+                'Okay',
+                () => {
 
+                },
+                {
+                    fontFamily:'Lexend Deca'
+                },
+            );
+        })
+        .finally(()=>{
+
+        })
+
+    }
 
 </script>

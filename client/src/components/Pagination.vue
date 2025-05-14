@@ -33,7 +33,7 @@
 
     const emit = defineEmits(['fetchPage'])
 
-    const totalPages = computed(() => Math.ceil(props.total / 16));
+    const totalPages = computed(() => Math.ceil(props.total / 15));
 
     var currentPage = defineModel()
 
