@@ -10,7 +10,7 @@
                <div class="w-1/3 flex justify-center items-center gap-2 p-2 font-poppins">
                     <PrimevueButton @click="navigateToCreateRISPage" label="Create RIS" class="shadow-md shadow-slate-600" severity="primary"/>
                     <PrimevueButton @click="propertySelectionModal = true" label="Create ITR" class="shadow-md shadow-slate-600" severity="info"/>
-                    <PrimevueButton  @click="propertySelectionModal = true" label="Create WMR" class="shadow-md shadow-slate-600" severity="warn"/>
+                    <!-- <PrimevueButton  @click="propertySelectionModal = true" label="Create WMR" class="shadow-md shadow-slate-600" severity="warn"/> -->
                </div>
 
            </div>
@@ -52,7 +52,7 @@
             </FloatLabel>
             <div class="w-full flex justify-end items-center gap-2 p-2 font-poppins">
                 <PrimevueButton @click="navigateToCreateITRPage" label="Create ITR" class="shadow-md shadow-slate-600" severity="info"/>
-                <PrimevueButton @click="navigateToCreateWMRPage" label="Create WMR" class="shadow-md shadow-slate-600" severity="warn"/>
+                <!-- <PrimevueButton @click="navigateToCreateWMRPage" label="Create WMR" class="shadow-md shadow-slate-600" severity="warn"/> -->
             </div>
        </div>
 
@@ -75,11 +75,15 @@
     import PrimevueButton from 'primevue/button';
     import MultiSelect from 'primevue/multiselect';
     import FloatLabel from 'primevue/floatlabel';
+    import useLoader from '../../../composables/notiflix_loading';
+    import { showToast } from '../../../composables/notiflix';
 
     const router = useRouter();
     const properties = ref([]);
     const users = ref([]);
     const authStore = useAuthStore();
+
+    const { showLoader,hideLoader } = useLoader()
     
     var propertySelectionModal = ref(false);
     var propertySelection = ref([]);
@@ -96,18 +100,23 @@
     var errors = ref({})
 
    onMounted(() => {
-       fetchProperties();
-       fetchUserSelection();
-       fetchUserPropertySelection();
+        loadPageData()
    });
+
+    async function loadPageData(){
+        showLoader();
+
+        await Promise.allSettled([
+            fetchProperties(),
+            fetchUserSelection(),
+            fetchUserPropertySelection(),
+        ]);
+        hideLoader()
+        showToast('success','Data fetched Successfully')
+    }
 
 
     function fetchProperties(){
-        Loading.dots('Loading Data, Please Wait...',{
-            clickToClose:false,
-            fontFamily:'Lexend Deca'
-        });
-        
         axios.get('property/user',{
             params:{
                     page:pagination.value.page,
@@ -124,16 +133,11 @@
             console.log(error.response.data)
         })
         .finally(()=>{
-            Loading.remove()
+
         })
     }
 
     function fetchUserSelection(){
-        Loading.dots('Loading Data, Please Wait...',{
-            clickToClose:false,
-            fontFamily:'Lexend Deca'
-        });
-
         axios.get('user/selection',{
             params:{
                 
@@ -146,16 +150,11 @@
             Notify.failure('Something Went Wrong, Try again or Contact System Admin.',() => {},{fontFamily:'Lexend Deca'})
         })
         .finally(()=>{
-            Loading.remove()
+        
         })
     }
     
     function fetchUserPropertySelection(){
-        Loading.dots('Loading Data, Please Wait...',{
-            clickToClose:false,
-            fontFamily:'Lexend Deca'
-        });
-        
         axios.get('property/user/selection',{
             params:{
                    
@@ -170,7 +169,7 @@
             console.log(error.response.data)
         })
         .finally(()=>{
-            Loading.remove()
+        
         })
     }
 
@@ -178,20 +177,6 @@
         if(selectedProperties.value.length > 0){
             router.push({
                 name: 'Create ITR',
-                query: {
-                    selectedProperties: selectedProperties.value
-                }
-            });
-        }
-        else{
-            Notify.failure('Please select at least one property.',() => {},{fontFamily:'Lexend Deca'})
-        }
-    }
-
-    function navigateToCreateWMRPage(){
-        if(selectedProperties.value.length > 0){
-            router.push({
-                name: 'Create WMR',
                 query: {
                     selectedProperties: selectedProperties.value
                 }

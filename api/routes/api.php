@@ -112,3 +112,4 @@ Route::get('/dashboard/user',[DashboardController::class,'fetchPermanentUserDash
 Route::get('/preinspection_request/list',[PreinspectionRequestController::class,'list'])->middleware('auth:sanctum');
 Route::post('/preinspection_request/create',[PreinspectionRequestController::class,'createRequest'])->middleware('auth:sanctum');
 Route::get('/preinspection_request/list/user',[PreinspectionRequestController::class,'listUserRequests'])->middleware('auth:sanctum');
+Route::post('/preinspection_request/action',[PreinspectionRequestController::class,'actionPreinspectionRequest'])->middleware('auth:sanctum');

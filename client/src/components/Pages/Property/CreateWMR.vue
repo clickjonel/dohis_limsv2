@@ -6,9 +6,7 @@
             <span class="w-full text-2xl font-poppins font-bold uppercase mb-4">Selected Properties</span>
             <PrimevueButton @click="preview = true" label="Preview" class="font-lexend uppercase text-xs"/>
         </div>
-       <div class="w-full flex flex-col justify-start items-start gap-2 font-light text-sm">
-            <span v-for="property in properties" class="w-full border-y py-4 px-2 bg-emerald-900/50">{{ property.particulars }}</span>
-       </div>
+        <PropertySelection @submit="setSelectedProperties"/>
 
        <div class="w-full flex flex-col justify-start items-start gap-4">
 
@@ -45,7 +43,7 @@
     <div v-if="preview" class="w-full flex flex-col justify-start items-start gap-4 p-4 font-lexend">
         <div id="header-preview" class="w-full flex justify-between items-center">
             <PrimevueButton @click="preview = false" label="Edit Details" class="font-lexend uppercase text-xs"/>
-            <PrimevueButton @click="print" label="Print ITR" class="font-lexend uppercase text-xs"/>
+            <PrimevueButton @click="print" label="Print WMR" class="font-lexend uppercase text-xs"/>
         </div>
         <div class="w-full grid grid-cols-3 gap-2 font-medium font-noto">
             <div></div>
@@ -200,7 +198,6 @@
         </div>
         
     </div>
- 
  </template>
  
  <script setup> 
@@ -212,7 +209,6 @@
     import Button from '../../Button.vue';
     import axios from '../../../axios/axios';
     import Dialog from 'primevue/dialog';
-    import { Notify,Loading, Report } from 'notiflix';
     import { useAuthStore } from '../../../stores/authStore';
     import PrimevueButton from 'primevue/button';
     import MultiSelect from 'primevue/multiselect';
@@ -220,11 +216,14 @@
     import Select from 'primevue/select';
     import { Icon } from '@iconify/vue/dist/iconify.js';
     import DatePicker from 'primevue/datepicker';
-
+    import useApi from '../../../composables/api_calls';
+    import PropertySelection from '../../selections/PropertySelection.vue';
+    import { showReport } from '../../../composables/notiflix';
 
      const route = useRoute()
      const router = useRouter()
      const store = useAuthStore()
+     const { fetchRequest } = useApi()
 
      var preview = ref(false)
 
@@ -241,68 +240,35 @@
 
 
      onMounted(()=>{
-       fetchProperties()
-       fetchFundSources()
+        showReport(
+            'warning',
+            'WMR Requirement/s',
+            'Please make sure that your preinspection requests are processed and have status of "For Waste" from the respective inspection team.If no preinspection is created, please navigate to the preinspection page to create and process inspection of the property',
+            'Okay',
+            fetchFundSources
+        )
+       
      })
 
-    const totalUnitCost = computed(() => {
-        return properties.value.reduce((sum, property) => {
-            const cost = parseFloat(property.unit_cost);
-            return isNaN(cost) ? sum : sum + cost;
-        }, 0);
-    });
-
-    function fetchProperties(){
-        Loading.dots('Loading Data, Please Wait...',{
-            clickToClose:false,
-            fontFamily:'Lexend Deca'
-        });
-        
-        axios.get('properties/find',{
-            params:{
-                ids:route.query.selectedProperties,
-            }
-        })
-        .then((response)=>{
-            properties.value = response.data.properties
-            // console.log(properties.value)
-        })
-        .catch((error)=>{
-            Notify.failure('Something Went Wrong, Try again or Contact System Admin.',() => {},{fontFamily:'Lexend Deca'})
-            console.log(error.response)
-        })
-        .finally(()=>{
-            Loading.remove()
-        })
+    async function fetchFundSources(){
+        var response = await fetchRequest('fund_source/list',{})
+        response.toast()
+        if(response.data.fund_sources){
+            fund_sources.value = response.data.fund_sources
+        }
+       
     }
 
-    function fetchFundSources(){
-        Loading.dots('Loading Data, Please Wait...',{
-            clickToClose:false,
-            fontFamily:'Lexend Deca'
-        });
-        
-        axios.get('fund_source/list',{
-            params:{
-              
-            }
-        })
-        .then((response)=>{
-            fund_sources.value = response.data.fund_sources
-            console.log(fund_sources.value)
-        })
-        .catch((error)=>{
-            Notify.failure('Something Went Wrong, Try again or Contact System Admin.',() => {},{fontFamily:'Lexend Deca'})
-            console.log(error.response)
-        })
-        .finally(()=>{
-            Loading.remove()
-        })
+    function setSelectedProperties(selected_properties){
+        properties.value = selected_properties
     }
 
     function print(){
         window.print()
+
     }
+
+
 
 
  

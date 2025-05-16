@@ -2,7 +2,10 @@
 
 namespace App\Models;
 
+use FontLib\TrueType\Collection;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Collection as SupportCollection;
 
 class Property extends Model
 {
@@ -37,5 +40,11 @@ class Property extends Model
     {
         return $this->hasMany(PropertyUserHistory::class, 'property_id');
     }
+
+    public function preInspection(): HasMany
+    {
+        return $this->hasMany(PreinspectionRequest::class, 'property_no', 'property_no');
+    }
+
 
 }

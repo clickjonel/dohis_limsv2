@@ -24,46 +24,32 @@
     import { ref, onMounted } from 'vue';
     import InputText from 'primevue/inputtext';
     import FloatLabel from 'primevue/floatlabel';
-    import { Notify,Loading, Report } from 'notiflix';
-    import axios from '../../axios/axios';
     import PrimevueButton from 'primevue/button';
+    import useApi from '../../composables/api_calls';
+    import { showToast } from '../../composables/notiflix';
+
 
     const emit = defineEmits(['submit'])
+    const { fetchRequest } = useApi()
 
-    // var properties = ref([])
     var selectedProperties = ref([])
-
-    var pagination = ref({
-        page:1,
-        total:0
-    })
     var property_no = ref('');
 
     onMounted(() => {
         
-    });
+    })
 
-    function fetchProperty(){
-        Loading.dots('Loading Data, Please Wait...',{
-            clickToClose:false,
-            fontFamily:'Lexend Deca'
-        });
-        
-        axios.get('/property/find/property_number',{
-            params:{
-                property_no:property_no.value
+    async function fetchProperty(){
+        if(property_no.value !== ''){
+            var response = await fetchRequest('property/find/property_number',{property_no:property_no.value})
+            if(response.data.data !== null){
+                pushProperty(response.data.property)
+                
             }
-        })
-        .then((response)=>{
-           pushProperty(response.data.property)
-        })
-        .catch((error)=>{
-            Notify.failure('Something Went Wrong, Try again or Contact System Admin.',{fontFamily:'Lexend Deca',timeout:1000})
-            console.log(error)
-        })
-        .finally(()=>{
-            Loading.remove()
-        })
+        }
+        else{
+            showToast('failure','Property Number Required')
+        }
     }
 
     function emitSubmit(){
@@ -71,7 +57,7 @@
             emit('submit',selectedProperties.value)
         }
         else{
-            Notify.failure('No properties selected',{fontFamily:'Lexend Deca',timeout:2000})
+            showToast('failure','No properties selected')
         }
 
     }
@@ -79,15 +65,15 @@
     function pushProperty(property){
         var duplicate = selectedProperties.value.some(selectedProperty => selectedProperty.property_no === property.property_no)
         if(property === null){
-            Notify.failure('Property number not found, try again',{fontFamily:'Lexend Deca',timeout:2000})
+            showToast('failure','Property number not found, try again')
         }
         else{
             if(duplicate){
-                Notify.failure('Property Already added to list, No duplicates allowed',{fontFamily:'Lexend Deca',timeout:2000})
+                showToast('failure','Property Already added to list, No duplicates allowed')
             }
             else{
                 selectedProperties.value.push(property)
-                Notify.success('Added to Selected Properties',{fontFamily:'Lexend Deca',timeout:2000})
+                showToast('success','Added to Selected Properties')
                 property_no.value = ''
             }
         }

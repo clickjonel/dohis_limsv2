@@ -9,7 +9,8 @@
                </div>
 
                <div class="flex justify-start items-center gap-2 p-2">
-                  <PrimevueButton @click="preInspectionModal = true" label="Create Pre Inspection Request" />
+                    <PrimevueButton v-if="wmr.selectedRequests.length > 0" @click="goToWMRPage" label="Create WMR" class="shadow-md shadow-slate-600" severity="warn"/>
+                    <PrimevueButton @click="preInspectionModal = true" label="Create Pre Inspection Request" />
                </div>
            </div>
 
@@ -22,7 +23,7 @@
                    <span class="min-w-[10%]">Date</span>
                    <span class="min-w-[20%]">Status</span>
                </div>
-               <div v-for="request in requests" class="w-full flex justify-start items-center border-b font-poppins text-center py-2 font-light text-sm bg-white/50 hover:bg-emerald-400 text-black gap-2">
+               <div v-for="request in requests" @click="pushToWMR(request)" class="w-full flex justify-start items-center border-b font-poppins text-center cursor-pointer py-2 font-light text-sm hover:bg-emerald-400 text-black gap-2" :class="wmr.selectedRequests.includes(request.property) ? 'bg-blue-500 text-white' : 'bg-white/50'">
                     <span class="min-w-[30%] text-left pl-1">{{ request.equipment }}</span>
                     <span class="min-w-[10%]">{{ request.property_no }}</span>
                     <span class="min-w-[20%]">{{ request.inspection_section }}</span>
@@ -31,7 +32,7 @@
                         <Tag v-if="request.findings === ''" @click="openDefectsModal(request.findings)" severity="warn" value="Findings" class="text-xs shadow-sm shadow-slate-600 cursor-pointer"></Tag>
                     </span>
                     <span class="min-w-[10%]">{{request.date_requested}}</span>
-                    <span class="min-w-[20%]"></span>
+                    <span class="min-w-[20%]">{{ request.inspection_result }}</span>
                </div>
                
            </div>
@@ -173,6 +174,12 @@
     var currentDefects = ref('')
     var currentFindings = ref('')
 
+
+    var wmr = ref({
+        selectedRequests:[]
+    })
+
+
    onMounted(() => {
       fetchUserSelection();
       fetchRequests()
@@ -307,6 +314,37 @@
     function openFindingsModal(findings){
         currentFindings.value = defects
         findingsModal.value = true
+    }
+
+    function pushToWMR(request){
+       if(request.inspection_result === 'For Waste'){
+            var duplicate = wmr.value.selectedRequests.some(selectedProperty => selectedProperty.property_no === request.property.property_no)
+            if(duplicate){
+                wmr.value.selectedRequests.splice(wmr.value.selectedRequests.indexOf(request.property),1)
+            }
+            else{
+                wmr.value.selectedRequests.push(request.property)
+                Notify.success('Added to Selected Properties',{fontFamily:'Lexend Deca',timeout:2000})
+            }
+       }
+       else{
+            Notify.failure('Cannot add to WMR list for it is either for repair or still under inspection',{fontFamily:'Lexend Deca',timeout:2000})
+       }
+    }
+
+    function goToWMRPage(){
+        var ids = []
+
+        wmr.value.selectedRequests.forEach(property => {
+            ids.push(property.id)
+        });
+
+        router.push({
+            name: 'Create WMR',
+            query: {
+                selectedProperties: ids
+            }
+        });
     }
 
 

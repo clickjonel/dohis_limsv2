@@ -195,7 +195,8 @@ class PropertyController extends Controller
 
     public function findPropertyByPropertyNumber(Request $request): JsonResponse
     {
-        $property = Property::with('user')->where('property_no',$request->property_no)->first();
+        $property = Property::with(['user'])->where('property_no',$request->property_no)->first();
+         $property['currentInspection'] = $property->preInspection()->latest('created_at')->first();
 
         return response()->json([
             'property' => $property

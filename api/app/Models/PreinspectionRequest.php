@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class PreinspectionRequest extends Model
 {
@@ -20,6 +21,12 @@ class PreinspectionRequest extends Model
         'findings',
         'inspection_section',
         'inspection_result',
+        'inspection_date',
         'date'
     ];
+
+    public function property():BelongsTo
+    {
+        return $this->belongsTo(Property::class, 'property_no', 'property_no');
+    }
 }

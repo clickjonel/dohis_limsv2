@@ -26,7 +26,11 @@ class PreinspectionResource extends JsonResource
             'requested_by' => $this->getUserFullName($this->requestor),
             'date_requested' => $this->date,
             'defects' => $this->defects,
-            'inspection_section' => Office::find($this->inspection_section)->section_name
+            'inspection_section' => Office::find($this->inspection_section)->section_name,
+            'inspection_findings' => $this->findings,
+            'inspection_result' => $this->inspection_result,
+            'inspection_date' => $this->inspection_date,
+            'property' => $this->property
         ];
     }
 }

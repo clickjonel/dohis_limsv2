@@ -56,4 +56,18 @@ class PreinspectionRequestController extends Controller
             'requests' => PreinspectionResource::collection($user_requests)
         ]);
     }
+
+    public function actionPreinspectionRequest(Request $request):JsonResponse
+    {
+        $preinspection_request = PreinspectionRequest::find($request->id)->update([
+            'findings' => $request->findings,
+            'inspection_result' => $request->inspection_result,
+            'inspection_date' => $request->inspection_date
+        ]);
+
+        return response()->json([
+            'message' => 'Successfully Updated Inspection Findings',
+            'preinspection_request' => $preinspection_request
+        ]);
+    }
 }

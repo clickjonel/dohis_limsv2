@@ -2,17 +2,6 @@
     <AuthenticatedPage pageTitle="Pre Inspection Requests">
        <div class="w-full min-h-[85%] flex flex-col justify-start items-center gap-4">
 
-           <!-- <div class="w-full min-h-[10%] flex justify-between items-center border-b">
-               <div class="w-1/3 flex justify-start items-center gap-2 p-2">
-                   <Input v-model="searchKeyword" type="text" label="Search Keyword" :errorMessage="''"/>
-                   <Button text="Search" buttonType="default" icon="material-symbols:search" class="translate-y-2.5"/>
-               </div>
-
-               <div class="flex justify-start items-center gap-2 p-2">
-                   <Button @click="addPropertyModal = true" text="Add A Property" buttonType="info" icon="material-symbols:add-rounded" class="translate-y-2.5"/>
-               </div>
-           </div> -->
-
           <div class="w-full flex flex-col justify-start items-center overflow-auto px-2">
                <div class="w-full flex justify-start items-center border-y-2 font-lexend uppercase bg-amber-200 text-center pb-2 sticky top-0 text-black gap-2">
                    <span class="min-w-[30%]">Equipment</span>
@@ -29,7 +18,8 @@
                     <span class="min-w-[10%]"><Tag @click="openDefectsModal(request)" severity="info" value="Defect/s" class="text-xs shadow-sm shadow-slate-600 cursor-pointer"></Tag></span>
                     <span class="min-w-[10%]">{{request.date_requested}}</span>
                     <span class="min-w-[20%] flex flex-col justify-start items-center gap-2">
-                        <Tag @click="openFindingsModal(request)" severity="secondary" value="Set Findings" class="text-xs shadow-sm shadow-slate-600 cursor-pointer"></Tag>
+                        <Tag v-if="request.inspection_result === null" @click="openFindingsModal(request)" severity="secondary" value="Set Findings" class="text-xs shadow-sm shadow-slate-600 cursor-pointer"></Tag>
+                        <Tag v-else :severity="request.inspection_result === 'For Waste' ? 'warn' : 'primary'" :value="request.inspection_result"></Tag>
                     </span>
                </div>
                
@@ -54,9 +44,13 @@
                 <Select v-model="findingsForm.inspection_action" :options="equipment_actions" optionLabel="action"  optionValue="action" class="w-full" :overlayStyle="{fontFamily:'Lexend Deca'}"/>
                 <label>Select Action for Equipment</label>
             </FloatLabel>
+             <FloatLabel variant="on" class="w-full">
+                <DatePicker v-model="findingsForm.inspection_date" showIcon class="w-full" :panelStyle="{fontFamily:'Lexend Deca'}"/>
+                <label>Date</label>
+            </FloatLabel>
        </div>
        <div class="w-full flex justify-end p-2">
-           <PrimevueButton label="Save Inspection"/>
+           <PrimevueButton @click="actionPreinspectionRequest" label="Save Inspection"/>
        </div>
     </Dialog>
 
@@ -78,6 +72,7 @@
     import Select from 'primevue/select';
     import FloatLabel from 'primevue/floatlabel';
     import PrimevueButton from 'primevue/button';
+    import DatePicker from 'primevue/datepicker';
 
 
 
@@ -104,7 +99,9 @@
 
     var findingsForm = ref({
         findings:'',
-        inspection_request:0
+        inspection_request:0,
+        inspection_action:'',
+        inspection_date:''
     })
 
    onMounted(() => {
@@ -140,10 +137,55 @@
         defectsModal.value = true
     }
 
-        function openFindingsModal(inspection_request){
+    function openFindingsModal(inspection_request){
         currentInspectionRequest.value = inspection_request
         findingsForm.value.inspection_request = inspection_request.id
         findingsModal.value = true
+    }
+
+    function actionPreinspectionRequest(){
+        Loading.dots('Loading Data, Please Wait...',{
+            clickToClose:false,
+            fontFamily:'Lexend Deca'
+        });
+
+       axios.post('preinspection_request/action',{
+            findings:findingsForm.value.findings,
+            inspection_result:findingsForm.value.inspection_action,
+            id:findingsForm.value.inspection_request,
+            inspection_date:findingsForm.value.inspection_date
+        })
+        .then((response) => {
+            Report.success(
+                'Success',
+                `Message:${response.data.message}`,
+                'Okay',
+                () => {
+                    findingsModal.value = false
+                    fetchRequests()
+                },
+                {
+                    fontFamily:'Lexend Deca'
+                },
+            );
+        })
+        .catch((error) => {
+            errors.value = error.response.data.errors
+            Report.failure(
+                'Error',
+                `Errors:${error.response.data.errors}`,
+                'Okay',
+                () => {
+
+                },
+                {
+                    fontFamily:'Lexend Deca'
+                },
+            );
+        })
+        .finally(()=>{
+            Loading.remove()
+        })
     }
 
 
