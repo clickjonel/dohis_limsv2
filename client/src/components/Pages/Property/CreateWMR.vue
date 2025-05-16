@@ -6,7 +6,7 @@
             <span class="w-full text-2xl font-poppins font-bold uppercase mb-4">Selected Properties</span>
             <PrimevueButton @click="preview = true" label="Preview" class="font-lexend uppercase text-xs"/>
         </div>
-        <PropertySelection @submit="setSelectedProperties"/>
+        <!-- <PropertySelection @submit="setSelectedProperties"/> -->
 
        <div class="w-full flex flex-col justify-start items-start gap-4">
 
@@ -229,7 +229,7 @@
 
     var properties = ref([]);
     var fund_sources = ref([]);
-   
+    var propertyUrlQuery =  Array.isArray(route.query.selectedProperties) ? route.query.selectedProperties : [route.query.selectedProperties]
 
      var wmr = ref({
         fund_cluster:'',
@@ -240,14 +240,8 @@
 
 
      onMounted(()=>{
-        showReport(
-            'warning',
-            'WMR Requirement/s',
-            'Please make sure that your preinspection requests are processed and have status of "For Waste" from the respective inspection team.If no preinspection is created, please navigate to the preinspection page to create and process inspection of the property',
-            'Okay',
-            fetchFundSources
-        )
-       
+        fetchProperties()
+        fetchFundSources() 
      })
 
     async function fetchFundSources(){
@@ -259,9 +253,19 @@
        
     }
 
-    function setSelectedProperties(selected_properties){
-        properties.value = selected_properties
+     async function fetchProperties(){
+        var response = await fetchRequest('/properties/find',{ids:propertyUrlQuery})
+        console.log(response)
+        response.toast()
+        if(response.data.properties){
+            properties.value = response.data.properties
+        }
+       
     }
+
+    // function setSelectedProperties(selected_properties){
+    //     properties.value = selected_properties
+    // }
 
     function print(){
         window.print()

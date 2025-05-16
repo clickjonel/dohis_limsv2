@@ -45,7 +45,8 @@ class PropertyResource extends JsonResource
                 'acquisition_date' => $this->user->issuance_date,
             ],
             'user_history' => $history,
-            'preInspections' => $this->preInspection
+            'preInspections' => $this->preInspection,
+            'currentPreinspection' => $this->preInspection()->latest('created_at')->first()
         ];
 
         return $property;
