@@ -231,24 +231,23 @@ class PropertyController extends Controller
 
     public function fetchInventoryUserPropertyReport(Request $request):JsonResponse
     {
-        $properties =  Property::with(['user','measurement'])
-                ->whereHas('user', function($query) use ($request) {
-                    $query->where('user_id', $request->user_id);
-                })
-                ->get();
-        
-        $user = [
-            'full_name' => $this->getUserFullName($request->user_id),
-            'position' => $this->getUserPosition($request->user_id)
-        ];
+        $users = User::with(['properties.property.measurement'])->findMany($request->user_ids)
+                    ->map(function($user){
+                        $user['full_name'] = $this->getUserFullName($user['user_id']);
+                        $user['position'] = $this->getUserPosition($user['user_id']);
+                       $user['property_total_cost'] = $user->properties->sum(function ($property) {
+                            return $property->property->unit_cost;
+                        });
+                        return $user;
+                    });
 
-        $total = $properties->sum('unit_cost');
+        // $total = $properties->sum('unit_cost');
 
          return response()->json([
             'message' => 'Properties Successfully Fetched',
-            'properties' => $properties,
-            'user' => $user,
-            'total' => $total
+            'users' => $users,
+            // 'user' => $user,
+            // 'total' => $total
         ]);
 
     }

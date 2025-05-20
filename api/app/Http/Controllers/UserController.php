@@ -27,13 +27,19 @@ class UserController extends Controller
 
     public function userSelectionList(Request $request):JsonResponse
     {
-       $users = User::where('user_id','!=',1)
-                ->where('account_status','Assigned')
-                ->get()
-                ->map(function($user){
+       $users = User::where('user_id', '!=', 1)
+                    ->where('account_status', 'Assigned')
+                    ->when($request->employee_status_id, function ($query) use ($request) {
+                        $query->whereHas('assignment', function($query) use ($request) {
+                            $query->where('employee_status_id', $request->employee_status_id);
+                        });
+                    })
+                    ->get()
+                    ->map(function ($user) {
                         $user['full_name'] = $this->getUserFullName($user->user_id);
                         return $user;
-                }); 
+                    });
+                
 
        return response()->json([
             'users' => $users

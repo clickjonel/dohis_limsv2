@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class PropertyUser extends Model
 {
@@ -15,5 +16,10 @@ class PropertyUser extends Model
         'user_id',
         'issuance_date',
     ];
+
+    public function property():BelongsTo
+    {
+        return $this->belongsTo(Property::class,'property_id','id');
+    }
 
 }
