@@ -130,7 +130,9 @@
                 <span class="w-[10%] flex justify-center items-center"></span>
                 <span class="w-[15%] flex justify-center items-center"></span>
                 <span class="w-[10%] flex justify-center items-center"></span>
-                <span class="w-[35%] flex justify-center items-center font-light italic">Submitted by {{ store.user.full_name }}</span>
+                <span class="w-[35%] flex flex-col justify-center items-center font-light italic">
+                    <span>Submitted by {{ store.user.full_name }} - {{ store.user.position }}</span>
+                </span>
                 <div class="w-[30%] flex flex-col justify-center items-stretch divide-y-2 text-center">
                     <div class="w-full flex justify-start items-stretch divide-x-2">
                             <span class="w-1/3"></span>
@@ -143,13 +145,13 @@
                     <div class="w-full flex flex-col justify-start items-center p-1">
                         <span class="w-full">Certified Correct:</span>
 
-                        <input type="text" class="w-[70%] border-b py-2">
+                        <input type="text" class="w-[70%] border-b py-2 text-center outline-0 text-lf font-semibold uppercase">
                         <span class="w-[70%] text-center">Signature over Printed Name of Supply and/or Property Custodian</span>
                     </div>
                     <div class="w-full flex flex-col justify-start items-center p-1">
                         <span class="w-full">Disposal Approved</span>
 
-                        <input type="text" class="w-[70%] border-b py-2">
+                        <input type="text" class="w-[70%] border-b py-2 text-center outline-0 text-lf font-semibold uppercase">
                         <span class="w-[70%] text-center">Signature over Printed Name of Head of Agency/Entity or his/her Authorized Representative</span>
                     </div>
                 </div>
@@ -184,20 +186,123 @@
                     <div class="w-full flex flex-col justify-start items-center p-1">
                         <span class="w-full">Certified Correct:</span>
 
-                        <input type="text" class="w-[70%] border-b py-2">
+                        <input type="text" class="w-[70%] border-b py-2 text-center outline-0 text-lf font-semibold uppercase">
                         <span class="w-[70%] text-center">Signature over Printed Name of Inspection Officer</span>
                     </div>
                     <div class="w-full flex flex-col justify-start items-center p-1">
                         <span class="w-full">Witness to Disposal</span>
 
-                        <input type="text" class="w-[70%] border-b py-2">
+                        <input type="text" class="w-[70%] border-b py-2 text-center outline-0 text-lf font-semibold uppercase">
                         <span class="w-[70%] text-center">Signature over Printed Name of Witnessc</span>
                     </div>
                 </div>
             </div>
         </div>
-        
     </div>
+
+
+    <!-- Pre inspection Requests -->
+    <div v-for="property in properties" :key="property.property_no" class="w-full flex flex-col justify-start items-start outline p-4 break-before-page" >
+            <div class="w-full flex justify-center items-center gap-4">
+                <div class="w-full flex flex-col justify-center items-center text-sm font-noto">
+                    <span>Republic of the Philippines</span>
+                    <span>Department of Health</span>
+                    <span>Center for Health Development</span>
+                    <span>Cordillera Administrative Regional Office</span>
+                    <span>Baguio City</span>
+                </div>
+            </div>
+
+            <span class="w-full text-center mt-4 font-bold font-noto text-xl">Request For Pre-Inspection/Repair</span>
+
+            <div class="w-full grid grid-cols-2 gap-4 py-2 mt-4 font-lexend text-base">
+                <div class="w-full flex justify-start items-center gap-2">
+                    <span class="font-light uppercase">Equipment:</span>
+                    <input type="text" class="w-full border-b outline-none" :value="property.currentPreinspection.equipment" disabled>
+                </div>
+                 <div class="w-full flex justify-start items-center gap-2">
+                    <span class="font-light uppercase">Model:</span>
+                    <input type="text" class="w-full border-b outline-none" :value="property.currentPreinspection.model" disabled>
+                </div>
+            </div>
+
+            <div class="w-full grid grid-cols-2 gap-4 py-2 mt-2 font-lexend text-base">
+                <div class="w-full flex justify-start items-center gap-2">
+                    <span class="font-light uppercase w-1/3">Serial/Engine No:</span>
+                    <input type="text" class="w-full border-b outline-none" disabled>
+                </div>
+                 <div class="w-full flex justify-start items-center gap-2">
+                    <span class="font-light uppercase w-1/5">Property No:</span>
+                    <input type="text" class="w-full border-b outline-none" :value="property.currentPreinspection.property_no" disabled>
+                </div>
+            </div>
+
+            <div class="w-full grid grid-cols-2 gap-4 py-2 mt-2 font-lexend text-base">
+                <div class="w-full flex justify-start items-center gap-2">
+                    <span class="font-light uppercase w-1/3">Acquisition Date:</span>
+                    <input type="text" class="w-full border-b outline-none" :value="property.currentPreinspection.acquisition_date" disabled>
+                </div>
+                 <div class="w-full flex justify-start items-center gap-2">
+                    <span class="font-light uppercase w-1/3">Acquisition Cost:</span>
+                    <input type="text" class="w-full border-b outline-none" :value="property.currentPreinspection.acquisition_cost" disabled>
+                </div>
+            </div>
+
+            <div class="w-full flex gap-4 py-2 mt-2 font-lexend text-base">
+                <div class="w-full flex justify-start items-center gap-2">
+                    <span class="font-light uppercase w-[14%]">Date of Repair:</span>
+                    <input type="text" class="w-full border-b outline-none" disabled>
+                </div>
+            </div>
+
+            <div class="w-full flex gap-4 py-2 mt-2 font-lexend text-base">
+                <div class="w-full flex justify-start items-start gap-2">
+                    <span class="font-light uppercase w-[15%]">Nature of Last Repair:</span>
+                    <div class="w-full flex flex-col justify-start items-start gap-4">
+                        <input type="text" class="w-full border-b outline-none" disabled>
+                        <input type="text" class="w-full border-b outline-none" disabled>
+                    </div>
+                </div>
+            </div>
+
+            <span class="w-full text-left mt-4 font-light font-lexend">DEFECTS/COMPLAINTS (Include missing parts/part to be replaced)</span>
+
+            <div class="w-full flex flex-col justify-start items-start gap-4 font-lexend border-b-2 py-2">
+                <div class="w-full" v-html="property.currentPreinspection.defects">
+
+                </div>
+
+                <div class="w-full flex justify-end items-center font-noto">
+                    <div class="w-1/3 flex flex-col justify-center items-center gap-2">
+                        <input type="text" class="w-full border-b text-center outline-0 font-medium" disabled :value="property.currentPreinspection.requested_by">
+                        <span class="text-sm font-lexend font-light">Requisition Property Officer</span>
+                        <input type="text" class="w-full border-b text-center outline-0 font-medium" disabled :value="property.currentPreinspection.date_requested">
+                        <span class="text-sm font-lexend font-light">Date</span>
+                    </div>
+                </div>
+            </div>
+
+             <div class="w-full flex flex-col justify-start items-start gap-4 font-lexend">
+                <span class="w-full text-center font-noto text-lg uppercase">Inspection Committee</span>
+                <span class="w-full text-left font-noto text-base uppercase font-light">Findings/Recommendation</span>
+                <div class="w-full" v-html="property.currentPreinspection.findings">
+
+                </div>
+                <div class="w-full flex flex-col justify-start items-center gap-2">
+                    <div class="w-full flex justify-start items-center font-lexend font-light uppercase gap-4">
+                        <span class="w-1/2">Inspected By:</span>
+                        <span class="w-1/2">Date:</span>
+                    </div>
+                    <div class="w-full flex justify-start items-center font-noto font-semibold uppercase gap-4">
+                        <input class="w-1/2 border-b text-center outline-none" :value="property.currentPreinspection.inspector_name"/>
+                        <input class="w-1/2  border-b text-center outline-none" :value="property.currentPreinspection.inspection_date"/>
+                    </div>
+                    <span class="text-left font-light font-noto text-xs italic">Preinspection Request has been processed through LIMS System.</span>
+                </div>
+            </div>
+
+    </div>
+
  </template>
  
  <script setup> 
@@ -242,6 +347,7 @@
      onMounted(()=>{
         fetchProperties()
         fetchFundSources() 
+        // console.log(store.user)
      })
 
     async function fetchFundSources(){
@@ -262,10 +368,6 @@
         }
        
     }
-
-    // function setSelectedProperties(selected_properties){
-    //     properties.value = selected_properties
-    // }
 
     function print(){
         window.print()

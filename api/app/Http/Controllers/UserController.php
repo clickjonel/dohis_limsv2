@@ -14,6 +14,7 @@ class UserController extends Controller
     {
         $user = $request->user();
         $user['full_name'] = $this->getUserFullName($user->user_id);
+        $user['position'] = $this->getUserPosition($user['user_id']);
         $roles = $this->getUserRoles($user->user_id);
 
        return response()->json([
@@ -24,12 +25,15 @@ class UserController extends Controller
         ]);
     }
 
-    public function userSelectionList():JsonResponse
+    public function userSelectionList(Request $request):JsonResponse
     {
-       $users = User::where('user_id','!=',1)->get()->map(function($user){
-            $user['full_name'] = $this->getUserFullName($user->user_id);
-            return $user;
-       }); 
+       $users = User::where('user_id','!=',1)
+                ->where('account_status','Assigned')
+                ->get()
+                ->map(function($user){
+                        $user['full_name'] = $this->getUserFullName($user->user_id);
+                        return $user;
+                }); 
 
        return response()->json([
             'users' => $users

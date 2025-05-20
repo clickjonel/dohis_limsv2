@@ -11,6 +11,8 @@ class Office extends Model
     protected $primaryKey = 'section_id';
     public $timestamps = false;
 
+    public const ICT_SECTION_HEAD_ID = 15;
+
     public function personnel()
     {
         return $this->belongsToMany(User::class, 'dohis_user_assignment', 'section_id', 'user_id');

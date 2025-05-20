@@ -55,6 +55,7 @@
   import { Notify } from 'notiflix/build/notiflix-notify-aio';
   import { useRouter } from 'vue-router';
   import { useAuthStore } from '../stores/authStore';
+  import { showToast } from '../composables/notiflix';
   
   const router = useRouter();
   const store = useAuthStore();
@@ -86,7 +87,7 @@
       });
   
       if (response.data.status) {
-        Notify.success('Login Successfull');
+       showToast('success','Login Successfull, Welcome to Dashboard')
         // localStorage.setItem('token', response.data.token);
   
         store.setToken(response.data.token);
@@ -102,7 +103,7 @@
         // }
       } 
       else {
-        Notify.failure('Login Failed');
+        showToast('failure','Login Failed, Try Again With Correct DOHIS Credentials')
       }
     } catch (error) {
       if (error.response) {
@@ -111,7 +112,7 @@
         console.log(error)
       } 
       else {
-        Notify.failure('Login Error');
+        showToast('failure','Login Failed, Try Again With Correct DOHIS Credentials')
       }
       console.log(error)
     } finally {

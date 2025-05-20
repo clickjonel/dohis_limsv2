@@ -32,6 +32,9 @@ class PropertyResource extends JsonResource
             ];
         });
 
+        $currentInspection = $this->preInspection()->latest('created_at')->first();
+        // $currentInspection['requestor_name'] = $this->getUserFullName($currentInspection['requestor']);
+
         $property = [
             'property_no' => $this->property_no,
             'issuance_date' => $this->userHistory()->first()->issuance_date,
@@ -46,7 +49,7 @@ class PropertyResource extends JsonResource
             ],
             'user_history' => $history,
             'preInspections' => $this->preInspection,
-            'currentPreinspection' => $this->preInspection()->latest('created_at')->first()
+            'currentPreinspection' => PreinspectionResource::make($currentInspection)
         ];
 
         return $property;

@@ -181,6 +181,12 @@ const routes = [
         component: () => import('../components/Pages/Property/CreateRIS.vue'),
         meta: { requiresAuth: true },
     },
+    {
+        name:'Create User Property Report',
+        path:'/property/user',
+        component: () => import('../components/Pages/Property/CreateUserInventoryReport.vue'),
+        meta: { requiresAuth: true },
+    },
     
 ]
 

@@ -3,7 +3,7 @@ import { showLoader,hideLoader, showToast } from "./notiflix";
 
 const useApi = () => {
   const fetchRequest = async (url, params = {}) => {
-    showLoader('Fetching Fund Sources');
+    showLoader('Please Wait...');
 
     try {
       const response = await axiosInstance.get(url, { params });

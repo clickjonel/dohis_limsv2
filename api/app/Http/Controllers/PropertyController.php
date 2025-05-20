@@ -196,7 +196,7 @@ class PropertyController extends Controller
     public function findPropertyByPropertyNumber(Request $request): JsonResponse
     {
         $property = Property::with(['user'])->where('property_no',$request->property_no)->first();
-         $property['currentInspection'] = $property->preInspection()->latest('created_at')->first();
+        $property['currentInspection'] = $property->preInspection()->latest('created_at')->first();
 
         return response()->json([
             'property' => $property
@@ -227,6 +227,30 @@ class PropertyController extends Controller
             'message' => 'Properties Successfully Transfered',
             'property' => $property
         ]);
+    }
+
+    public function fetchInventoryUserPropertyReport(Request $request):JsonResponse
+    {
+        $properties =  Property::with(['user','measurement'])
+                ->whereHas('user', function($query) use ($request) {
+                    $query->where('user_id', $request->user_id);
+                })
+                ->get();
+        
+        $user = [
+            'full_name' => $this->getUserFullName($request->user_id),
+            'position' => $this->getUserPosition($request->user_id)
+        ];
+
+        $total = $properties->sum('unit_cost');
+
+         return response()->json([
+            'message' => 'Properties Successfully Fetched',
+            'properties' => $properties,
+            'user' => $user,
+            'total' => $total
+        ]);
+
     }
     
 

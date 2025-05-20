@@ -21,6 +21,7 @@
                         <Tag v-if="request.inspection_result === null" @click="openFindingsModal(request)" severity="secondary" value="Set Findings" class="text-xs shadow-sm shadow-slate-600 cursor-pointer"></Tag>
                         <Tag v-else :severity="request.inspection_result === 'For Waste' ? 'warn' : 'primary'" :value="request.inspection_result"></Tag>
                     </span>
+                    <!-- {{ request }} -->
                </div>
                
            </div>
@@ -73,10 +74,11 @@
     import FloatLabel from 'primevue/floatlabel';
     import PrimevueButton from 'primevue/button';
     import DatePicker from 'primevue/datepicker';
-
+    import { useAuthStore } from '../../../stores/authStore';
 
 
     const router = useRouter();
+    const store = useAuthStore();
 
     var pagination = ref({
         page:1,

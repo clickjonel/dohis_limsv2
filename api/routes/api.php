@@ -97,6 +97,8 @@ Route::post('/property/update',[PropertyController::class,'updateProperty'])->mi
 Route::get('/properties/find',[PropertyController::class,'findProperties'])->middleware('auth:sanctum');
 Route::get('/property/find/property_number',[PropertyController::class,'findPropertyByPropertyNumber'])->middleware('auth:sanctum');
 Route::post('/property/transfer',[PropertyController::class,'transferProperties'])->middleware('auth:sanctum');
+Route::get('property/inventory/user/find',[PropertyController::class,'fetchInventoryUserPropertyReport'])->middleware('auth:sanctum');
+
 
 
 // User Routes
