@@ -1,90 +1,72 @@
 <template>
      <!-- Sidebar -->
-     <div class="min-w-[15%] h-full flex flex-col justify-start items-center p-2 font-lexend gap-4">
-        <span class="w-full text-center text-2xl font-bold font-noto uppercase border-b animate-pulse border">Navigate Here</span>
-
-        <div class="w-full min-h-[80%] flex flex-col justify-start items-center py-4 px-2 gap-4">
-            <!-- <Button @click="handleNavigation('Dashboard')" :text="'Dashboard'" :buttonType="'navigation'" :class="route.name === 'Dashboard' ? 'w-full bg-blue-800' : 'w-full' "/> -->
-            <Button v-if="store.hasRole('user')" @click="handleNavigation('My Dashboard')" :text="'My Dashboard'" :buttonType="'navigation'" :icon="'mdi:truck-delivery'" :class="route.name === 'My Dashboard' ? 'w-full bg-blue-800' : 'w-full' "/>
-            <Button v-if="store.hasRole('supply_officer') || store.hasRole('superadmin')" @click="handleNavigation('Delivery')" :text="'Deliveries'" :buttonType="'navigation'" :icon="'mdi:truck-delivery'" :class="route.name === 'Delivery' ? 'w-full bg-blue-800' : 'w-full' "/>
-            <Button v-if="store.hasRole('supply_officer') || store.hasRole('superadmin')" @click="handleNavigation('Stock')" :text="'Stocks'" :buttonType="'navigation'" :icon="'material-symbols:stacks'" :class="route.name === 'Stock' ? 'w-full bg-blue-800' : 'w-full' "/>
-            <Button v-if="store.hasRole('supply_officer') || store.hasRole('superadmin')" @click="handleNavigation('Property')" :text="'Properties'" :buttonType="'navigation'" :icon="'hugeicons:property-new'" :class="route.name === 'Property' ? 'w-full bg-blue-800' : 'w-full' "/>
-            <Button v-if="store.hasRole('supply_officer') || store.hasRole('superadmin')" @click="handleNavigation('Measurement')" :text="'Measurements'" :buttonType="'navigation'" :icon="''" :class="route.name === 'Measurement' ? 'w-full bg-blue-800' : 'w-full' "/>
-            <Button v-if="store.hasRole('supply_officer') || store.hasRole('superadmin')" :text="'Warehouses'" :buttonType="'navigation'" :icon="''" :class="route.name === 'Warehouse' ? 'w-full bg-blue-800' : 'w-full' "/>
-            <Button v-if="store.hasRole('supply_officer') || store.hasRole('superadmin')" :text="'Calendar'" :buttonType="'navigation'" :icon="''" :class="route.name === 'Calendar' ? 'w-full bg-blue-800' : 'w-full' "/>
-            <Button v-if="store.hasRole('permanent') || store.hasRole('superadmin')" @click="handleNavigation('My Delivery')" :text="'My Deliveries'" :buttonType="'navigation'" :icon="'mdi:truck-delivery'" :class="route.name === 'My Delivery' ? 'w-full bg-blue-800' : 'w-full' "/>
-            <Button v-if="store.hasRole('permanent') || store.hasRole('superadmin')" @click="handleNavigation('My Stock')" :text="'My Stocks'" :buttonType="'navigation'" :icon="'bi:boxes'" :class="route.name === 'My Stock' ? 'w-full bg-blue-800' : 'w-full' "/>
-            <Button v-if="store.hasRole('permanent') || store.hasRole('superadmin')" @click="handleNavigation('My Property')" :text="'My Properties'" :buttonType="'navigation'" :icon="'bi:boxes'" :class="route.name === 'My Property' ? 'w-full bg-blue-800' : 'w-full' "/>
-            
-            <Button v-if="store.hasRole('supply_officer') || store.hasRole('superadmin') || store.hasRole('preinspection_sections')" @click="handleNavigation('Preinspection Request')" :text="'Preinspection Requests'" :buttonType="'navigation'" :icon="'bi:boxes'" :class="route.name === 'Preinspection Request' ? 'w-full bg-blue-800' : 'w-full' "/>
-            <Button v-if="store.hasRole('permanent') || store.hasRole('supply_officer') || store.hasRole('superadmin')" @click="handleNavigation('My Preinspection Request')" :text="'My Preinspection Requests'" :buttonType="'navigation'" :icon="'bi:boxes'" :class="route.name === 'My Preinspection Request' ? 'w-full bg-blue-800' : 'w-full' "/>
-            <!-- <Button v-if="store.hasRole('permanent')" @click="handleNavigation('Form')" :text="'Forms'" :buttonType="'navigation'" :icon="'mdi:document-sign'" :class="route.name === 'Calendar' ? 'w-full bg-blue-800' : 'w-full' "/> -->
-            
+     <div class="min-w-[15%] max-w-[15%] max-h-[98%] min-h-[98%] flex flex-col justify-start items-center m-2 bg-white rounded-lg shadow-md shadow-slate-400 overflow-y-scroll">
+        <div class="w-full flex flex-col justify-center items-center bg-white p-2">
+             <span class="w-full text-center text-xl font-semibold font-lexend">Main Navigation</span>
         </div>
 
-        <div class="w-full min-h-[10%] flex justify-center items-center">
-            <Button @click="confirmLogout" :text="'Logout'" :buttonType="'info'"/>
+        <div class="w-full flex flex-col justify-start items-center font-poppins px-2 mt-2">
+            <div v-for="child in routes" class="w-full rounded-md">
+                <Panel v-if="child.children" :header="child.name" :toggleable="true" class="w-full text-black text-sm">
+                    <div class="flex flex-col justify-start items-center gap-2">
+                        <span v-for="link in child.children" @click="handleNavigation(link.path)" class="w-full text-left p-2 rounded-lg" :class="link.name === route.name ? 'bg-emerald-200' : 'hover:bg-emerald-200'">{{link.name}}</span>
+                    </div>
+                </Panel>
+                <Panel v-else :header="child.name" class="w-full text-black text-sm">
+                    <div class="flex flex-col justify-start items-center gap-2">
+                        <span @click="handleNavigation(child.path)" class="w-full text-left p-2 rounded-lg" :class="child.name === route.name ? 'bg-emerald-200' : 'hover:bg-emerald-200'">{{child.name}}</span>
+                    </div>
+                </Panel>
+            </div>
+            
         </div>
-
     </div>
 </template>
 
 
 
 <script setup>
-    import { ref } from 'vue';
+    import { ref,onMounted } from 'vue';
     import Button from './Button.vue';
     import { useRoute,useRouter } from 'vue-router';
     import axios from '../axios/axios.js';
     import { Confirm, Notify } from 'notiflix';
     import { useAuthStore } from '../stores/authStore.js';
+    import PrimevueButton from 'primevue/button';
+    import { Icon } from '@iconify/vue/dist/iconify.js';
+    import PanelMenu from 'primevue/panelmenu';
+    import Fieldset from 'primevue/fieldset';
+    import Menu from 'primevue/menu';
+    import SplitButton from 'primevue/splitbutton';
+    import Panel from 'primevue/panel';
+
    
     const route = useRoute();
     const router = useRouter();
-
+    const routes = router.getRoutes().find(routeRecord => routeRecord.name === 'Admin').children
+   
     const store = useAuthStore();
-    console.log(store.roles)
 
-    function handleNavigation(name){
-        router.push({name:name})
+
+    onMounted(()=>{
+        // routes.value = .filter(route => route.is_parent)
+        // console.log(routes.value.children)
+    })
+
+    function handleNavigation(path){
+        router.push({path:path})
+        console.log(path)
     }
 
-    function confirmLogout(){
-        Confirm.show(
-                'Confirm Logout',
-                'Are you sure you want to logout?',
-                'Yes',
-                'No',
-            () => {
-                handleLogout()
-            },
-            
-            () => {
-                Notify.success('Logout Cancelled')
-            },
-        );
-    }
-
-    function handleLogout(){
-       
-
-        axios.post('logout')
-        .then((response) => {
-            if (response.data.status) {
-                Notify.success('Logout Success')
-                localStorage.removeItem('token');
-                store.clearUser()
-                router.push({ path: '/login' });
-            }
-        })
-        .catch((error) => {
-            console.log(error);
-        })
-        .finally(() => {
-            // Any final actions
-        });
-        
-    }
 
 </script>
+
+<style scoped>
+   .p-panel {
+        border: none;
+        /* border-radius: var(--p-panel-border-radius);
+        background: var(--p-panel-background);
+        color: var(--p-panel-color); */
+    }
+</style>
 

@@ -5,11 +5,15 @@ namespace App\Http\Controllers;
 use App\Http\Requests\PreinspectionRequest\CreatePreinspectionRequest;
 use App\Http\Resources\PreinspectionResource;
 use App\Models\PreinspectionRequest;
+use App\Models\User;
+use App\UserTrait;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class PreinspectionRequestController extends Controller
 {
+    use UserTrait;
+
     public function list(Request $request):JsonResponse
     {
         $requests = PreinspectionRequest::
@@ -70,4 +74,56 @@ class PreinspectionRequestController extends Controller
             'preinspection_request' => $preinspection_request
         ]);
     }
+
+    public function fetchPreinspectionRequestsforPreinspectionListPage(Request $request):JsonResponse
+    {
+       $page = $request->page ?? 1;
+        $perPage = $request->per_page ?? 15;
+        $search_keyword = trim($request->keyword ?? '');
+
+        $preinspectionRequestObject = PreinspectionRequest::when($search_keyword, function ($query) use ($search_keyword) {
+                                $query->where('property_no', 'like', '%' . $search_keyword . '%');
+                            })->orderBy('id','DESC');
+        
+                        
+        $total = $preinspectionRequestObject->count();  
+        $preinspection_requests = $preinspectionRequestObject->offset(($page - 1) * $perPage)->limit($perPage)->get();
+
+        $preinspection_requests = $preinspection_requests->map(function (PreinspectionRequest $request): PreinspectionRequest{
+            $request['requestor'] = $this->getUserFullName($request['requestor']);
+            return $request;
+        });
+
+        return response()->json([
+            'preinspection_requests' => $preinspection_requests,
+            'total' => $total
+        ]);
+    }
+
+    public function fetchUserPreinspectionRequestsforPreinspectionListPage(Request $request):JsonResponse
+    {
+       $page = $request->page ?? 1;
+        $perPage = $request->per_page ?? 15;
+        $search_keyword = trim($request->keyword ?? '');
+
+        $preinspectionRequestObject = PreinspectionRequest::where('requestor',$request->user_id)
+                                        ->when($search_keyword, function ($query) use ($search_keyword) {
+                                            $query->where('property_no', 'like', '%' . $search_keyword . '%');
+                                        })->orderBy('id','DESC');
+        
+                        
+        $total = $preinspectionRequestObject->count();  
+        $preinspection_requests = $preinspectionRequestObject->offset(($page - 1) * $perPage)->limit($perPage)->get();
+
+        $preinspection_requests = $preinspection_requests->map(function (PreinspectionRequest $request): PreinspectionRequest{
+            $request['requestor'] = $this->getUserFullName($request['requestor']);
+            return $request;
+        });
+
+        return response()->json([
+            'preinspection_requests' => $preinspection_requests,
+            'total' => $total
+        ]);
+    }
+
 }

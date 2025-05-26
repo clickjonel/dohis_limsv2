@@ -19,7 +19,7 @@
             </div>
 
             <div class="w-full flex flex-col justify-start items-center overflow-auto px-2">
-                <div class="w-full flex justify-start items-center border-y font-lexend uppercase bg-emerald-600 text-center sticky top-0 font-medium">
+                <div class="w-full flex justify-start items-center border-y-2 font-lexend uppercase bg-emerald-600 text-center pb-2 sticky top-0 font-medium">
                     <span class="min-w-[10%]">IAR Details</span>
                     <span class="min-w-[15%]">PTR Details</span>
                     <span class="min-w-[25%]">Requisitioning <br> Office-End User</span>
@@ -37,7 +37,12 @@
                         <span v-for="date in delivery.delivery_dates" :key="date"><span class="text-xs">{{ date }}</span></span>
                     </div>
                     <div class="min-w-[20%] flex justify-center items-center gap-2">
-                        <Badge @click="router.push({path: `/delivery/view/${delivery.id}`})" value="View" class="text-xs shadow-slate-600 shadow-md cursor-pointer hover:scale-110" severity="info"></Badge>
+                         <span title="Update Delivery">
+                            <Icon @click="handleNavigation(`/delivery/update/${delivery.id}`)" icon="material-symbols:edit-square-outline" class="text-xl text-blue-800 cursor-pointer hover:scale-125"/>
+                        </span>
+                        <span title="Print IAR">
+                            <Icon @click="handleNavigation(`/delivery/iar/${delivery.id}`)" icon="material-symbols:print-outline" class="text-xl text-emerald-800 cursor-pointer hover:scale-125"/>
+                        </span>
                     </div>
                 </div>
 
@@ -48,7 +53,7 @@
 
         </div>
 
-        <Pagination v-model="pagination.page" :total="pagination.total" :perPage="pagination.perPage" @fetchPage="fetchDeliveries"/>
+         <Pagination v-model="pagination.page" :total="pagination.total" :perPage="pagination.perPage" @fetchPage="fetchDeliveries"/>
 
     </AuthenticatedPage>
 </template>
@@ -63,12 +68,9 @@
     import InputText from 'primevue/inputtext';
     import useApi from '../../../composables/api_calls';
     import PrimevueButton from 'primevue/button';
-    import { useAuthStore } from '../../../stores/authStore';
-    import Badge from 'primevue/badge';
 
     const router = useRouter();
     const deliveries = ref([]);
-    const store = useAuthStore();
     const { fetchRequest } = useApi();
 
     var pagination = ref({
@@ -88,10 +90,9 @@
     }
 
     async function fetchDeliveries(){
-        var response = await fetchRequest('deliveries/list/user',{
+        var response = await fetchRequest('deliveries/list',{
             page:pagination.value.page,
             keyword:searchKeyword.value,
-            user_id:store.user.user_id,
             per_page:pagination.value.perPage
         })
         response.toast()

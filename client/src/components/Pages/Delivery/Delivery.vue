@@ -200,30 +200,5 @@
         currentitems.value = items
     }
 
-    // function fetchDeliveryItemInvalids(){
-    //     Loading.dots('Loading Data, Please Wait...',{
-    //         clickToClose:false,
-    //         fontFamily:'Lexend Deca'
-    //     });
-
-    //     axios.get('delivery/item/invalid_cost',{
-
-    //     })
-    //     .then((response)=>{
-    //         Loading.remove()
-    //         invalidItems.value = response.data.items
-    //         if(invalidItems.value.length > 0){
-    //             showInvalidItemsModal.value = true
-    //         }
-    //         console.log(response.data)
-    //     })
-    //     .catch((error)=>{
-    //         Notify.failure('Something Went Wrong, Try again or Contact System Admin.',() => {},{fontFamily:'Lexend Deca'})
-    //     })
-    //     .finally(()=>{
-    //         Loading.remove()
-    //     })
-    // }
-
 
 </script>

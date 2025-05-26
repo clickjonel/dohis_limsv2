@@ -1,6 +1,6 @@
 <template>
      <!-- Pagination -->
-     <div class="w-full min-h-[5%] flex justify-between items-center p-2 font-lexend gap-2 border-y">
+     <div class="w-full min-h-[5%] flex justify-between items-center p-2 font-lexend gap-2">
         <div class="">
             <span class="font-light text-sm font-poppins">{{ props.total }} total entries</span>
         </div>
@@ -28,12 +28,13 @@
     import { Icon } from '@iconify/vue/dist/iconify.js';
 
     const props = defineProps({
-        total:Number
+        total:Number,
+        perPage:Number
     })
 
     const emit = defineEmits(['fetchPage'])
 
-    const totalPages = computed(() => Math.ceil(props.total / 15));
+    const totalPages = computed(() => Math.ceil(props.total / props.perPage));
 
     var currentPage = defineModel()
 

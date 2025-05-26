@@ -197,4 +197,72 @@ class StockCardController extends Controller
             'total' => $total
         ]);
     }
+
+    public function fetchStockCardsForStocksPage(Request $request):JsonResponse
+    {
+       $page = $request->page ?? 1;
+        $perPage = $request->per_page ?? 10;
+        $search_keyword = trim($request->keyword ?? '');
+
+        $stocks = StockCard::when($search_keyword, function ($query) use ($search_keyword) {
+                         $query->where('stock_no', 'like', '%' . $search_keyword . '%');
+                    })->orderBy('id','DESC')
+                    ->offset(($page - 1) * $perPage)
+                    ->limit($perPage)
+                    ->get();
+        
+        $stocks = $stocks->map(function (StockCard $stockCard): StockCard{
+            $status = $stockCard->latestTransaction()->balance;
+
+            $stockCard['measurement_unit'] = Measurement::find($stockCard['measurement_unit'])->name;
+            $stockCard['procurement_mode'] = $stockCard['procurement_mode'] === 1 ? 'Charge' : 'Donation';
+            $stockCard['fund_cluster'] = FundSource::find($stockCard['fund_cluster'])->name;
+            $stockCard['req_office'] = Office::find($stockCard['req_office'])->section_name;
+            $stockCard['balance'] = $status;
+            return $stockCard;
+        });
+
+        
+
+        $total = StockCard::count();
+
+        return response()->json([
+            'stocks' => $stocks,
+            'total' => $total
+        ]);
+    }
+
+    public function fetchStockCardsForSectionStocksPage(Request $request):JsonResponse
+    {
+       $page = $request->page ?? 1;
+        $perPage = $request->per_page ?? 10;
+        $search_keyword = trim($request->keyword ?? '');
+
+        $stockObject = StockCard::where('req_office',$request->section_id)
+                    ->when($search_keyword, function ($query) use ($search_keyword) {
+                         $query->where('stock_no', 'like', '%' . $search_keyword . '%');
+                    })->orderBy('id','DESC');
+        
+        $total = $stockObject->count();  
+        $stocks = $stockObject->offset(($page - 1) * $perPage)->limit($perPage)->get();  
+        
+        $stocks = $stocks->map(function (StockCard $stockCard): StockCard{
+            $status = $stockCard->latestTransaction()->balance;
+
+            $stockCard['measurement_unit'] = Measurement::find($stockCard['measurement_unit'])->name;
+            $stockCard['procurement_mode'] = $stockCard['procurement_mode'] === 1 ? 'Charge' : 'Donation';
+            $stockCard['fund_cluster'] = FundSource::find($stockCard['fund_cluster'])->name;
+            $stockCard['req_office'] = Office::find($stockCard['req_office'])->section_name;
+            $stockCard['balance'] = $status;
+            return $stockCard;
+        });
+
+        return response()->json([
+            'stocks' => $stocks,
+            'total' => $total
+        ]);
+    }
+
+
 }
+

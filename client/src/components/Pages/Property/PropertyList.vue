@@ -35,9 +35,8 @@
                     <span class="min-w-[15%] text-xs">{{ property.unit_cost }}</span>
                     <span class="min-w-[10%]">{{ property.user.issuance_date }}</span>
                     <div class="min-w-[20%] flex justify-center items-center gap-2">
-                            <!-- <span @click="handleNavigation(`/property/update/${property.id}`)" title="Update Property"><Icon icon="flowbite:edit-solid" class="text-xl text-blue-800 cursor-pointer hover:scale-125"/></span>
-                            <span title="Print Sticker"><Icon icon="material-symbols:print-rounded" class="text-xl text-emerald-800 cursor-pointer hover:scale-125"/></span> -->
-                            <Badge value="View" class="text-xs shadow-slate-600 shadow-md cursor-pointer hover:scale-110" severity="info"></Badge>
+                            <span @click="handleNavigation(`/property/update/${property.id}`)" title="Update Property"><Icon icon="flowbite:edit-solid" class="text-xl text-blue-800 cursor-pointer hover:scale-125"/></span>
+                            <span title="Print Sticker"><Icon icon="material-symbols:print-rounded" class="text-xl text-emerald-800 cursor-pointer hover:scale-125"/></span>
                     </div>
                 </div>
 
@@ -63,13 +62,10 @@
     import InputText from 'primevue/inputtext';
     import useApi from '../../../composables/api_calls';
     import PrimevueButton from 'primevue/button';
-    import { useAuthStore } from '../../../stores/authStore';
-    import Badge from 'primevue/badge';
 
     const router = useRouter();
     const properties = ref([]);
     const { fetchRequest } = useApi();
-    const store = useAuthStore();
 
     var pagination = ref({
         page:1,
@@ -88,11 +84,9 @@
     }
 
     async function fetchProperties(){
-        var response = await fetchRequest('properties/list/user',{
+        var response = await fetchRequest('properties/list',{
             page:pagination.value.page,
-            keyword:searchKeyword.value,
-            per_page:pagination.value.perPage,
-            user_id:store.user.user_id
+            keyword:searchKeyword.value
         })
         response.toast()
         if(response.data.properties){

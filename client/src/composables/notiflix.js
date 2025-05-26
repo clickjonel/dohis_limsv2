@@ -40,4 +40,27 @@ export const showReport = (type, title,message,buttonText,callback_function) => 
   );
 };
 
+// Notiflix Confirm
+export const showConfirm = (title,text,confirmText,cancelText,confirmCallback = null,cancelCallback = null) => {
+  Confirm.show(
+          title,
+          text,
+          confirmText,
+          cancelText,
+      () => {
+          if(confirmCallback){
+            confirmCallback()
+          }
+      },
+      
+      () => {
+         if(cancelCallback){
+           cancelCallback()
+         }
+      },
+      {
+        fontFamily:'Lexend Deca'
+      }
+  );
+}
 

@@ -20,11 +20,6 @@ class User extends Authenticatable
         return $this->hasOne(UserAssignment::class,'user_id');
     }
 
-    public function permissions()
-    {
-        
-    }
-
     public function properties()
     {
         return $this->hasMany(PropertyUser::class,'user_id');
@@ -33,6 +28,11 @@ class User extends Authenticatable
     public function deliveries()
     {
         return $this->hasMany(Delivery::class,'end_user');
+    }
+
+    public function preInspectionRequests()
+    {
+        return $this->hasMany(PreinspectionRequest::class,'requested_by');
     }
 
 }

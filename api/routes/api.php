@@ -14,6 +14,8 @@ use App\Http\Controllers\StockCardController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WarehouseController;
 use App\Models\Delivery;
+use App\Models\PreinspectionRequest;
+use App\Models\StockCard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -76,6 +78,16 @@ Route::get('/delivery/item/find',[DeliveryController::class,'fetchDeliveryItem']
 // Route::get('/delivery/item/invalid_cost',[DeliveryController::class,'getInvalidCostDeliveryItems'])->middleware('auth:sanctum');
 // Route::get('/delivery/find/iar',[DeliveryController::class,'findDeliveryByIAR'])->middleware('auth:sanctum');
 
+// delivery route group
+Route::group([
+    'middleware' => 'auth:sanctum',
+    'prefix' => 'deliveries',
+], function () {
+    Route::get('/list', [DeliveryController::class, 'fetchDeliveriesForDeliveriesPage']);
+    Route::get('/list/user', [DeliveryController::class, 'fetchDeliveriesForUserDeliveriesPage']);
+    Route::get('/find/id', [DeliveryController::class, 'fetchDeliveryForViewDeliveryPage']);
+});
+
 
 // Stock Card Routes
 Route::get('/stock_card/list',[StockCardController::class,'list'])->middleware('auth:sanctum');
@@ -85,6 +97,14 @@ Route::post('/stock_card/update',[StockCardController::class,'update'])->middlew
 Route::get('/stock_card/generate/stock_card',[StockCardController::class,'fetchStockCardGenerationDetails'])->middleware('auth:sanctum');
 Route::post('/stock_card/transaction/issue',[StockCardController::class,'issue'])->middleware('auth:sanctum');
 Route::get('/stock_card/user',[StockCardController::class,'fetchUserSectionStockCards'])->middleware('auth:sanctum');
+
+Route::group([
+    'middleware' => 'auth:sanctum',
+    'prefix' => 'stocks',
+], function () {
+    Route::get('/list', [StockCardController::class, 'fetchStockCardsForStocksPage']);
+    Route::get('/list/section', [StockCardController::class, 'fetchStockCardsForSectionStocksPage']);
+});
 
 // Property Routes
 Route::get('/property/list',[PropertyController::class,'list'])->middleware('auth:sanctum');
@@ -99,6 +119,13 @@ Route::get('/property/find/property_number',[PropertyController::class,'findProp
 Route::post('/property/transfer',[PropertyController::class,'transferProperties'])->middleware('auth:sanctum');
 Route::get('property/inventory/user/find',[PropertyController::class,'fetchInventoryUserPropertyReport'])->middleware('auth:sanctum');
 
+Route::group([
+    'middleware' => 'auth:sanctum',
+    'prefix' => 'properties',
+], function () {
+    Route::get('/list', [PropertyController::class, 'fetchPropertiesForPropertiesPage']);
+    Route::get('/list/user', [PropertyController::class, 'fetchPropertiesUserForPropertiesPage']);
+});
 
 
 // User Routes
@@ -108,6 +135,7 @@ Route::get('/user/selection',[UserController::class,'userSelectionList'])->middl
 // Dashboard Routes
 // Route::get('/dashboard/user',[DashboardController::class,'getUserDashboardData'])->middleware('auth:sanctum');
 Route::get('/dashboard/user',[DashboardController::class,'fetchPermanentUserDashboardData'])->middleware('auth:sanctum');
+Route::get('/dashboard',[DashboardController::class,'fetchSupplyDashboardDetails'])->middleware('auth:sanctum');
 
 
 // Preinspection Request Routes
@@ -115,3 +143,11 @@ Route::get('/preinspection_request/list',[PreinspectionRequestController::class,
 Route::post('/preinspection_request/create',[PreinspectionRequestController::class,'createRequest'])->middleware('auth:sanctum');
 Route::get('/preinspection_request/list/user',[PreinspectionRequestController::class,'listUserRequests'])->middleware('auth:sanctum');
 Route::post('/preinspection_request/action',[PreinspectionRequestController::class,'actionPreinspectionRequest'])->middleware('auth:sanctum');
+
+Route::group([
+    'middleware' => 'auth:sanctum',
+    'prefix' => 'preinspection_requests',
+], function () {
+    Route::get('/list', [PreinspectionRequestController::class, 'fetchPreinspectionRequestsforPreinspectionListPage']);
+    Route::get('/list/user', [PreinspectionRequestController::class, 'fetchUserPreinspectionRequestsforPreinspectionListPage']);
+});

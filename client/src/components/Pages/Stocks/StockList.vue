@@ -33,7 +33,7 @@
                     <span class="min-w-[15%]">{{ stock_card.quantity }}</span>
                     <span class="min-w-[10%]">{{ stock_card.balance }}</span>
                     <div class="min-w-[10%] flex justify-start items-center gap-2">
-                        <!-- <span @click="handleNavigation(`/stock_card/update/${stock_card.id}`)" title="Update Delivery">
+                        <span @click="handleNavigation(`/stock_card/update/${stock_card.id}`)" title="Update Delivery">
                             <Icon icon="material-symbols:edit-square-outline" class="text-xl text-blue-800 cursor-pointer hover:scale-125"/>
                         </span>
                         <span @click="handleNavigation(`/stock_card/generate/${stock_card.id}`)" title="Print IAR">
@@ -41,15 +41,14 @@
                         </span>
                         <span v-if="stock_card.balance > 0" @click="openIssueStockModal(stock_card)" title="Issue Stock">
                             <Icon icon="hugeicons:give-pill" class="text-xl text-purple-800 cursor-pointer hover:scale-125"/>
-                        </span> -->
-                        <Badge value="View" class="text-xs shadow-slate-600 shadow-md cursor-pointer hover:scale-110" severity="info"></Badge>
+                        </span>
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <Pagination v-model="pagination.page" :total="pagination.total" :perPage="pagination.perPage" @fetchPage="fetchStocks"/>
+         <Pagination v-model="pagination.page" :total="pagination.total" :perPage="pagination.perPage" @fetchPage="fetchStocks"/>
 
     </AuthenticatedPage>
 </template>
@@ -64,13 +63,10 @@
     import InputText from 'primevue/inputtext';
     import useApi from '../../../composables/api_calls';
     import PrimevueButton from 'primevue/button';
-    import { useAuthStore } from '../../../stores/authStore';
-    import Badge from 'primevue/badge';
 
     const router = useRouter();
     const stocks = ref([]);
     const { fetchRequest } = useApi();
-    const store = useAuthStore();
 
     var pagination = ref({
         page:1,
@@ -89,10 +85,9 @@
     }
 
     async function fetchStocks(){
-        var response = await fetchRequest('stocks/list/section',{
+        var response = await fetchRequest('stocks/list',{
             page:pagination.value.page,
             keyword:searchKeyword.value,
-            section_id:store.user.assignment.section_id,
             per_page:pagination.value.perPage
         })
         response.toast()

@@ -516,8 +516,6 @@ class DeliveryController extends Controller
         $perPage = $request->per_page ?? 15;
         $search_keyword = trim($request->keyword ?? '');
 
-        // $total = Delivery::count();
-
         $baseQuery = Delivery::with(['invoices','receipts','items.measurementUnit'])
                         ->where('end_user',$request->user()->user_id)
                         ->when($search_keyword, function ($query) use ($search_keyword) {
@@ -554,7 +552,7 @@ class DeliveryController extends Controller
 
         // End User of the Item Delivery
         $item->end_user = User::find($item->delivery['end_user']);
-        $item->end_user['full_name'] =$this->getUserFullName($item->end_user['user_id']);
+        $item->end_user['full_name'] = $this->getUserFullName($item->end_user['user_id']);
         $item->end_user['position'] =$this->getUserPosition($item->end_user['user_id']);
 
         // // recommending approval
@@ -566,6 +564,77 @@ class DeliveryController extends Controller
             'item' => $item
         ]);
     }
+
+    public function fetchDeliveriesForDeliveriesPage(Request $request):JsonResponse
+    {
+        $page = $request->page ?? 1;
+        $perPage = $request->per_page ?? 10;
+        $search_keyword = trim($request->keyword ?? '');
+
+        $deliveryObject = Delivery::when($search_keyword, function ($query) use ($search_keyword) {
+                        $query->where('iar_no', 'like', '%' . $search_keyword . '%');
+                    })->orderBy('id','DESC');
+
+        $total = $deliveryObject->count();  
+        $deliveries = $deliveryObject->offset(($page - 1) * $perPage)->limit($perPage)->get();  
+        
+        $deliveries = $deliveries->map(function (Delivery $delivery): Delivery{
+            $delivery['req_office'] = Office::find($delivery['req_office'])->section_name;
+            $delivery['end_user'] = $this->getUserFullName(User::find($delivery['end_user'])->user_id);
+            $delivery['delivery_dates'] = $delivery->receipts->pluck('delivery_date')->toArray();
+            $delivery['iar_date'] = Carbon::parse($delivery['iar_date'])->format('F d, Y');
+            $delivery['po_date'] = Carbon::parse($delivery['po_date'])->format('F d, Y') ?? null;
+            $delivery['ptr_date'] = Carbon::parse($delivery['ptr_date'])->format('F d, Y') ?? null;
+            return $delivery;
+        });
+
+        return response()->json([
+            'deliveries' => $deliveries,
+            'total' => $total
+        ]);
+    }
+
+
+    public function fetchDeliveriesForUserDeliveriesPage(Request $request):JsonResponse
+    {
+        $page = $request->page ?? 1;
+        $perPage = $request->per_page ?? 10;
+        $search_keyword = trim($request->keyword ?? '');
+
+        $deliveriesObject = Delivery::where('end_user',$request->user_id)
+                    ->when($search_keyword, function ($query) use ($search_keyword) {
+                        $query->where('iar_no', 'like', '%' . $search_keyword . '%');
+                    });
+
+        $total = $deliveriesObject->count();  
+        $deliveries = $deliveriesObject->offset(($page - 1) * $perPage)->limit($perPage)->get();          
+        
+        $deliveries = $deliveries->map(function (Delivery $delivery): Delivery{
+            $delivery['req_office'] = Office::find($delivery['req_office'])->section_name;
+            $delivery['end_user'] = $this->getUserFullName(User::find($delivery['end_user'])->user_id);
+            $delivery['delivery_dates'] = $delivery->receipts->pluck('delivery_date')->toArray();
+            $delivery['iar_date'] = Carbon::parse($delivery['iar_date'])->format('F d, Y');
+            $delivery['po_date'] = Carbon::parse($delivery['po_date'])->format('F d, Y') ?? null;
+            $delivery['ptr_date'] = Carbon::parse($delivery['ptr_date'])->format('F d, Y') ?? null;
+            return $delivery;
+        });
+
+
+        return response()->json([
+            'deliveries' => $deliveries,
+            'total' => $total
+        ]);
+    }
+
+     public function fetchDeliveryForViewDeliveryPage(Request $request):JsonResponse
+    {
+        $delivery = Delivery::find($request->id);
+
+        return response()->json([
+            'delivery' => $delivery,
+        ]);
+    }
+    
 
 }
 

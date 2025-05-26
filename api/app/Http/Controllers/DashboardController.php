@@ -10,6 +10,7 @@ use App\Models\Measurement;
 use App\Models\Property;
 use App\Models\StockCard;
 use App\Models\User;
+use App\Models\Warehouse;
 use App\UserTrait;
 use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;
@@ -148,4 +149,50 @@ class DashboardController extends Controller
             'properties' => $properties
         ]);
     }
+
+    public function fetchSupplyDashboardDetails(Request $request):JsonResponse
+    {
+        $totals = [
+            'deliveries' => Delivery::count(),
+            'stocks' => StockCard::count(),
+            'properties' => Property::count(),
+            'warehouses' => Warehouse::count()
+        ];
+
+        $charts = [
+            'deliveryDonut' => [Delivery::where('payment_term',1)->count(),Delivery::where('payment_term',2)->count()],
+            'deliveryColumn' => $this->fetchDeliveryByMonth()
+        ];
+
+        return response()->json([
+            'data' => [
+                'totals' => $totals,
+                'charts' => $charts,
+            ]
+
+        ]);
+    }
+
+
+    public function fetchDeliveryByMonth()
+    {
+        $months = collect(range(1, 12))->mapWithKeys(function ($monthNumber) {
+            $count = Delivery::whereHas('receipts', function($query) use ($monthNumber) {
+                $query->whereYear('delivery_date', Carbon::now()->year)
+                        ->whereMonth('delivery_date', $monthNumber);
+            })->count();
+
+            return [
+                Carbon::create()->month($monthNumber)->format('F') => $count
+            ];
+        });
+
+        return $months;
+    }
+
+    public function fetchStockCardByStatus(){
+
+    }
+
+
 }

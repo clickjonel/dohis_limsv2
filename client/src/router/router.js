@@ -6,16 +6,22 @@ import Stock from '../components/Pages/Stocks/Stock.vue';
 import Dashboard from '../components/Pages/Dashboard.vue';
 import Property from '../components/Pages/Property/Property.vue';
 import AuthenticatedLayout from '../components/PageLayouts/AuthenticatedLayout.vue';
-import axios from '../axios/axios.js';
 import { useAuthStore } from '../stores/authStore.js';
 import Measurement from '../components/Pages/Measurement/Measurement.vue';
-import Form from '../components/Pages/Form/Form.vue';
 import MyDelivery from '../components/Pages/Delivery/MyDelivery.vue';
-import MyStocks from '../components/Pages/Stocks/MyStocks.vue';
 import MyProperty from '../components/Pages/Property/MyProperty.vue';
 import MyDashboard from '../components/Pages/MyDashboard.vue';
 import PreInspection from '../components/Pages/PreinspectionRequest/PreInspection.vue';
 import MyPreinspectionRequest from '../components/Pages/PreinspectionRequest/MyPreinspectionRequest.vue';
+import DeliveryPage from '../components/Pages/Delivery/DeliveryPage.vue';
+import DeliveryList from '../components/Pages/Delivery/DeliveryList.vue';
+import StockPage from '../components/Pages/Stocks/StockPage.vue';
+import StockList from '../components/Pages/Stocks/StockList.vue';
+import MyStocks from '../components/Pages/Stocks/MyStocks.vue';
+import PropertyPage from '../components/Pages/Property/PropertyPage.vue';
+import PropertyList from '../components/Pages/Property/PropertyList.vue';
+import PreinspectionRequestPage from '../components/Pages/PreinspectionRequest/PreinspectionRequestPage.vue';
+import PreinspectionRequestList from '../components/Pages/PreinspectionRequest/PreinspectionRequestList.vue';
 
 const routes = [
     {
@@ -25,79 +31,131 @@ const routes = [
         meta: { requiresAuth: true },
         children:[
             {
-                name:'Delivery',
+                name:'DeliveryPage',
                 path:'/deliveries',
-                meta: { requiresAuth: true },
-                component:Delivery
-                
-            },
-            {
-                name:'My Delivery',
-                path:'/deliveries/user',
-                meta: { requiresAuth: true },
-                component:MyDelivery
+                meta: { 
+                    requiresAuth: true,
+                    roles:['superadmin','supply_officer'],
+                },
+                children:[
+                     {
+                        name:'Deliveries',
+                        path:'/deliveries',
+                        meta: { 
+                            requiresAuth: true,
+                            roles:['permanent','delivery'],
+                        },
+                        component:DeliveryList
+                        
+                    },
+                    {
+                        name:'My Delivery',
+                        path:'/deliveries/user',
+                        meta: { 
+                            requiresAuth: true,
+                            roles:['permanent','delivery'],
+                        },
+                        component:MyDelivery
+                        
+                    },
+                ],
+                component:DeliveryPage
                 
             },
             {
                 name:'Stock',
                 path:'/stocks',
-                meta: { requiresAuth: true },
-                component:Stock
-            },
-            {
-                name:'My Stock',
-                path:'/stocks/user',
-                meta: { requiresAuth: true },
-                component:MyStocks
-                
+                meta: { 
+                    requiresAuth: true,
+                    roles:['superadmin','supply_officer'],
+                },
+                children:[
+                     {
+                        name:'Stocks',
+                        path:'/stocks',
+                        meta: { 
+                            requiresAuth: true,
+                            roles:['permanent','stocks'],
+                        },
+                        component:StockList
+                        
+                    },
+                    {
+                        name:'My Stocks',
+                        path:'/stocks/section',
+                        meta: { 
+                            requiresAuth: true,
+                            roles:['permanent','stocks'],
+                        },
+                        component:MyStocks
+                        
+                    },
+                ],
+                component:StockPage
             },
             {
                 name:'Property',
                 path:'/properties',
-                meta: { requiresAuth: true },
-                component:Property
-            },
-            {
-                name:'My Property',
-                path:'/properties/user',
-                meta: { requiresAuth: true },
-                component:MyProperty
-            },
-            {
-                name:'Dashboard',
-                path:'/dashboard',
-                meta: { requiresAuth: true },
-                component:Dashboard
-            },
-            {
-                name:'My Dashboard',
-                path:'/dashboard/user',
-                meta: { requiresAuth: true },
-                component:MyDashboard
-            },
-            {
-                name:'Measurement',
-                path:'/measurements',
-                meta: { requiresAuth: true },
-                component:Measurement
-            },
-            {
-                name:'Form',
-                path:'/forms',
-                meta: { requiresAuth: true },
-                component:Form
+                meta: { 
+                    requiresAuth: true,
+                    roles:['superadmin','supply_officer'],
+                    is_parent:true
+                },
+                children:[
+                     {
+                        name:'Properties',
+                        path:'/properties',
+                        meta: { 
+                            requiresAuth: true,
+                            roles:['permanent','properties'],
+                        },
+                        component:PropertyList
+                        
+                    },
+                    {
+                        name:'My Properties',
+                        path:'/properties/user',
+                        meta: { 
+                            requiresAuth: true,
+                            roles:['permanent','properties'],
+                        },
+                        component:MyProperty
+                        
+                    },
+                ],
+                component:PropertyPage
             },
             {
                 name:'Preinspection Request',
                 path:'/preinspection_requests',
-                meta: { requiresAuth: true },
-                component:PreInspection
-            },
-            {
-                name:'My Preinspection Request',
-                path:'/preinspection_requests/user',
-                meta: { requiresAuth: true },
-                component:MyPreinspectionRequest
+                meta: { 
+                    requiresAuth: true,
+                    roles:['superadmin','supply_officer','preinspection_inspector'],
+                    is_parent:true
+                },
+                children:[
+                     {
+                        name:'Preinspection Requests',
+                        path:'/preinspection_requests',
+                        meta: { 
+                            requiresAuth: true,
+                            roles:['permanent','preinspection_requests'],
+                        },
+                        component:PreinspectionRequestList
+                        
+                    },
+                    {
+                        name:'My Preinspection Requests',
+                        path:'/preinspection_requests/user',
+                        meta: { 
+                            requiresAuth: true,
+                            roles:['permanent','preinspection_requests'],
+                        },
+                        component:MyPreinspectionRequest
+                        
+                    },
+                ],
+                component:PreinspectionRequestPage
             },
         ]
     },
@@ -185,6 +243,12 @@ const routes = [
         name:'Create User Property Report',
         path:'/property/user',
         component: () => import('../components/Pages/Property/CreateUserInventoryReport.vue'),
+        meta: { requiresAuth: true },
+    },
+    {
+        name:'View Delivery',
+        path:'/delivery/view/:id',
+        component: () => import('../components/Pages/Delivery/ViewDelivery.vue'),
         meta: { requiresAuth: true },
     },
     

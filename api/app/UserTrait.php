@@ -2,6 +2,9 @@
 
 namespace App;
 
+use App\Models\Delivery;
+use App\Models\Property;
+use App\Models\StockCard;
 use App\Models\User;
 use App\Models\UserAssignment;
 use App\Models\UserPosition;
@@ -48,14 +51,21 @@ trait UserTrait
     public function getUserRoles($user_id)
     {
         $user_assignment = UserAssignment::where('user_id',$user_id)->latest('created_at')->first();
+        $user = User::find($user_id);
 
         $roles = ['user'];
+        $permissions = [];
 
         $is_permanent = $user_assignment->employee_status_id === 1 ? $roles[] = 'permanent' : [];
         $is_supply_officer = $user_assignment->section_id === 28 ? $roles[] = 'supply_officer' : [];
         $is_superadmin = $user_id === 582 ? $roles[] = 'superadmin' : [];
         $is_property_custodian = $user_assignment->user_id === 127 ? $roles[] = 'property_custodian' : [];
         $is_division_chief = $user_assignment->designation_id === 3 ? $roles[] = 'division_chief' : [];
+
+        // $has_deliveries = $user->deliveries->count() > 0 ?  $permissions[] = 'deliveries' : [];
+        // $has_stocks = StockCard::where('req_office',$user_assignment->section_id)->count() > 0 ?  $permissions[] = 'stocks' : [];
+        // $has_property = $user->properties->count() > 0 ?  $permissions[] = 'stocks' : [];
+        // $has_preinspection_request = StockCard::where('req_office',$user_assignment->section_id) ?  $permissions[] = 'stocks' : [];
  
         if ($user_assignment->designation_id === 3 & $user_assignment->user_id === 38) {
             $roles[] = 'division_chief-approve_ptr';

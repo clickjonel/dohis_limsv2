@@ -28,7 +28,33 @@ const useApi = () => {
     }
   };
 
-  return { fetchRequest };
+    const postRequest = async (url, params = {}) => {
+    showLoader('Please Wait...');
+
+    try {
+      const response = await axiosInstance.post(url, params);
+          return {
+            data:response.data,
+            toast: () => {
+                showToast('success','Action performed successfully')
+            }
+        }
+    } 
+    catch (error) {
+        return {
+            error:error.response.data,
+            toast: () => {
+                showToast('failure',error.response.data.message)
+            }
+        }
+       
+    } 
+    finally {
+      hideLoader();
+    }
+  };
+
+  return { fetchRequest,postRequest };
 };
 
 export default useApi;
