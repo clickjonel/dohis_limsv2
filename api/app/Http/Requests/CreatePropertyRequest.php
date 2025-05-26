@@ -27,10 +27,10 @@ class CreatePropertyRequest extends FormRequest
             'measurement_unit'  => 'required|numeric',
             'particulars'       => 'required|string',
             'unit_cost'         => 'required|numeric',
-            'status'            => 'required|string',
+            'status'            => 'nullable|string',
             'remarks'           => 'nullable|string',
             'end_user'          => 'required|numeric',
-            'acquisition_date'  => 'nullable|date'
+            'acquisition_date'  => 'required|date'
         ];
     }
 }

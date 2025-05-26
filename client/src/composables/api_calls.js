@@ -37,7 +37,8 @@ const useApi = () => {
             data:response.data,
             toast: () => {
                 showToast('success','Action performed successfully')
-            }
+            },
+            apiResponseStatus:response.status
         }
     } 
     catch (error) {

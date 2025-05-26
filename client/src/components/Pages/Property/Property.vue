@@ -9,7 +9,7 @@
                </div>
 
                <div class="flex justify-start items-center gap-2 p-2 font-lexend">
-                    <PrimevueButton @click="addPropertyModal = true" label="Add Property" severity="primary"/>
+                    <PrimevueButton @click="handleNavigation('property/add')" label="Add Property" severity="primary"/>
                     <PrimevueButton @click="selectPropertiesModal = true" label="Transfer Property/ies" severity="info"/>
                     <PrimevueButton @click="handleNavigation('property/user')" label="Create Inventory Report" severity="info"/>
                </div>
@@ -99,7 +99,7 @@
         </div>
         
         <div v-if="transfer.selectedProperties.length > 0" class="w-full flex justify-end px-4  mt-4 gap-4">
-             <FloatLabel variant="on" class="w-full">
+            <FloatLabel variant="on" class="w-full">
                 <DatePicker v-model="transfer.transfer_date" showIcon class="w-full" :panelStyle="{fontFamily:'Lexend Deca'}"/>
                 <label>Date of Transfer</label>
             </FloatLabel>

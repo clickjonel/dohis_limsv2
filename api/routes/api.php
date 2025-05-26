@@ -111,7 +111,6 @@ Route::get('/property/list',[PropertyController::class,'list'])->middleware('aut
 Route::get('/property/user',[PropertyController::class,'fetchUserProperties'])->middleware('auth:sanctum');
 Route::get('/property/user/selection',[PropertyController::class,'fetchUserPropertiesSelection'])->middleware('auth:sanctum');
 Route::get('/property/find',[PropertyController::class,'fetchProperty'])->middleware('auth:sanctum');
-Route::post('/property/create',[PropertyController::class,'create'])->middleware('auth:sanctum');
 Route::get('/property/statuses',[PropertyController::class,'fetchPropertyStatuses'])->middleware('auth:sanctum');
 Route::post('/property/update',[PropertyController::class,'updateProperty'])->middleware('auth:sanctum');
 Route::get('/properties/find',[PropertyController::class,'findProperties'])->middleware('auth:sanctum');
@@ -125,6 +124,7 @@ Route::group([
 ], function () {
     Route::get('/list', [PropertyController::class, 'fetchPropertiesForPropertiesPage']);
     Route::get('/list/user', [PropertyController::class, 'fetchPropertiesUserForPropertiesPage']);
+    Route::post('/create',[PropertyController::class,'create'])->middleware('auth:sanctum');
 });
 
 

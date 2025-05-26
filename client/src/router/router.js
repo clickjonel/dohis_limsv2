@@ -251,6 +251,12 @@ const routes = [
         component: () => import('../components/Pages/Delivery/ViewDelivery.vue'),
         meta: { requiresAuth: true },
     },
+    {
+        name:'Add Property',
+        path:'/property/add',
+        component: () => import('../components/Pages/Property/AddProperty.vue'),
+        meta: { requiresAuth: true },
+    },
     
 ]
 
