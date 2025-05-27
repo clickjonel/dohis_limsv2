@@ -6,18 +6,6 @@
         </div>
 
         <div class="w-full flex flex-col justify-start items-center font-poppins px-2 mt-2">
-            <!-- <div v-for="child in routes" class="w-full rounded-md">
-                <Panel v-if="child.children" :header="child.name" :toggleable="true" class="w-full text-black text-sm">
-                    <div class="flex flex-col justify-start items-center gap-2">
-                        <span v-for="link in child.children" @click="handleNavigation(link.path)" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="link.name === route.name ? 'bg-emerald-200' : 'hover:bg-emerald-200'">{{link.name}}</span>
-                    </div>
-                </Panel>
-                <Panel v-else :header="child.name" class="w-full text-black text-sm">
-                    <div class="flex flex-col justify-start items-center gap-2">
-                        <span @click="handleNavigation(child.path)" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="child.name === route.name ? 'bg-emerald-200' : 'hover:bg-emerald-200'">{{child.name}}</span>
-                    </div>
-                </Panel>
-            </div> -->
             <div class="w-full rounded-md">
                 <Panel header="Dashboard" :toggleable="true" class="w-full text-black text-sm">
                     <div class="flex flex-col justify-start items-center gap-2">

@@ -23,7 +23,7 @@ class UpdateStockCardRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'stock_card_id' => 'required|numeric|exists:lims_stock_cards,id',
+            'id' => 'required|numeric|exists:lims_stock_cards,id',
             'contract_no' => 'required|string',
             'iar_no' => 'required|string',
             'entity_name' => 'required|string',
@@ -31,7 +31,7 @@ class UpdateStockCardRequest extends FormRequest
             'supplier_address' => 'required|string',
             'procurement_mode' => 'required|numeric|in:1,2',
             'req_office' => 'required|numeric',
-            'fund_source' => 'required|numeric|exists:lims_fund_sources,id',
+            'fund_cluster' => 'required|numeric|exists:lims_fund_sources,id',
     
             'stock_no' => 'required|string',
             'stock_name' => 'required|string',

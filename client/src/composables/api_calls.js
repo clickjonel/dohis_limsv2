@@ -11,7 +11,8 @@ const useApi = () => {
             data:response.data,
             toast: () => {
                 showToast('success','Data Fetched Successfuly')
-            }
+            },
+            apiResponseStatus:response.status
         }
     } 
     catch (error) {
@@ -46,7 +47,7 @@ const useApi = () => {
             error:error.response.data,
             toast: () => {
                 showToast('failure',error.response.data.message)
-            }
+            },
         }
        
     } 

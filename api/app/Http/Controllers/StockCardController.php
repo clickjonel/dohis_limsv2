@@ -104,7 +104,7 @@ class StockCardController extends Controller
     {
         $validated = $request->validated();
 
-        $stock_card = StockCard::find($validated['stock_card_id'])->update($validated);
+        $stock_card = StockCard::find($validated['id'])->update($validated);
 
         return response()->json([
             'status' => $stock_card
@@ -260,6 +260,16 @@ class StockCardController extends Controller
         return response()->json([
             'stocks' => $stocks,
             'total' => $total
+        ]);
+    }
+
+    public function fetchStockCardForUpdatePage(Request $request):JsonResponse
+    {
+        $stock_card = StockCard::find($request->id);
+
+
+        return response()->json([
+            'stock_card' => $stock_card
         ]);
     }
 

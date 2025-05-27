@@ -93,7 +93,6 @@ Route::group([
 Route::get('/stock_card/list',[StockCardController::class,'list'])->middleware('auth:sanctum');
 Route::get('/stock_card/find',[StockCardController::class,'find'])->middleware('auth:sanctum');
 Route::post('/stock_card/create',[StockCardController::class,'create'])->middleware('auth:sanctum');
-Route::post('/stock_card/update',[StockCardController::class,'update'])->middleware('auth:sanctum');
 Route::get('/stock_card/generate/stock_card',[StockCardController::class,'fetchStockCardGenerationDetails'])->middleware('auth:sanctum');
 Route::post('/stock_card/transaction/issue',[StockCardController::class,'issue'])->middleware('auth:sanctum');
 Route::get('/stock_card/user',[StockCardController::class,'fetchUserSectionStockCards'])->middleware('auth:sanctum');
@@ -104,6 +103,8 @@ Route::group([
 ], function () {
     Route::get('/list', [StockCardController::class, 'fetchStockCardsForStocksPage']);
     Route::get('/list/section', [StockCardController::class, 'fetchStockCardsForSectionStocksPage']);
+    Route::get('/fetch/update', [StockCardController::class, 'fetchStockCardForUpdatePage']);
+    Route::post('/update',[StockCardController::class,'update']);
 });
 
 // Property Routes
