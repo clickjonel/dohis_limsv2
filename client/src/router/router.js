@@ -1,16 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Login from '../components/Login.vue';
-import Delivery from '../components/Pages/Delivery/Delivery.vue';
-import Stock from '../components/Pages/Stocks/Stock.vue';
-import Dashboard from '../components/Pages/Dashboard.vue';
-import Property from '../components/Pages/Property/Property.vue';
 import AuthenticatedLayout from '../components/PageLayouts/AuthenticatedLayout.vue';
 import { useAuthStore } from '../stores/authStore.js';
 import Measurement from '../components/Pages/Measurement/Measurement.vue';
 import MyDelivery from '../components/Pages/Delivery/MyDelivery.vue';
 import MyProperty from '../components/Pages/Property/MyProperty.vue';
-import MyDashboard from '../components/Pages/MyDashboard.vue';
 import PreInspection from '../components/Pages/PreinspectionRequest/PreInspection.vue';
 import MyPreinspectionRequest from '../components/Pages/PreinspectionRequest/MyPreinspectionRequest.vue';
 import DeliveryPage from '../components/Pages/Delivery/DeliveryPage.vue';
@@ -22,6 +17,10 @@ import PropertyPage from '../components/Pages/Property/PropertyPage.vue';
 import PropertyList from '../components/Pages/Property/PropertyList.vue';
 import PreinspectionRequestPage from '../components/Pages/PreinspectionRequest/PreinspectionRequestPage.vue';
 import PreinspectionRequestList from '../components/Pages/PreinspectionRequest/PreinspectionRequestList.vue';
+import DashboardPage from '../components/Pages/Dashboard/DashboardPage.vue';
+import SCMUDashboard from '../components/Pages/Dashboard/SCMUDashboard.vue';
+import MyDashboard from '../components/Pages/Dashboard/MyDashboard.vue';
+
 
 const routes = [
     {
@@ -35,7 +34,7 @@ const routes = [
                 path:'/deliveries',
                 meta: { 
                     requiresAuth: true,
-                    roles:['superadmin','supply_officer'],
+                    roles:[],
                 },
                 children:[
                      {
@@ -43,7 +42,7 @@ const routes = [
                         path:'/deliveries',
                         meta: { 
                             requiresAuth: true,
-                            roles:['permanent','delivery'],
+                            roles:['supply_officer','ICT','superadmin'],
                         },
                         component:DeliveryList
                         
@@ -53,7 +52,7 @@ const routes = [
                         path:'/deliveries/user',
                         meta: { 
                             requiresAuth: true,
-                            roles:['permanent','delivery'],
+                            roles:['permanent'],
                         },
                         component:MyDelivery
                         
@@ -62,12 +61,44 @@ const routes = [
                 component:DeliveryPage
                 
             },
+             {
+                name:'DashboardPage',
+                path:'/dashboard',
+                meta: { 
+                    requiresAuth: true,
+                    roles:[],
+                },
+                children:[
+                     {
+                        name:'Dashoard',
+                        path:'/dashboard',
+                        meta: { 
+                            requiresAuth: true,
+                            roles:['supply_officer','ICT','superadmin'],
+                        },
+                        component:SCMUDashboard
+                        
+                    },
+                    {
+                        name:'My Dashboard',
+                        path:'/dashboard/user',
+                        meta: { 
+                            requiresAuth: true,
+                            roles:['permanent'],
+                        },
+                        component:MyDashboard
+                        
+                    },
+                ],
+                component:DashboardPage
+                
+            },
             {
                 name:'Stock',
                 path:'/stocks',
                 meta: { 
                     requiresAuth: true,
-                    roles:['superadmin','supply_officer'],
+                    roles:[],
                 },
                 children:[
                      {
@@ -75,7 +106,7 @@ const routes = [
                         path:'/stocks',
                         meta: { 
                             requiresAuth: true,
-                            roles:['permanent','stocks'],
+                            roles:['supply_officer','ICT','superadmin'],
                         },
                         component:StockList
                         
@@ -85,7 +116,7 @@ const routes = [
                         path:'/stocks/section',
                         meta: { 
                             requiresAuth: true,
-                            roles:['permanent','stocks'],
+                            roles:['permanent'],
                         },
                         component:MyStocks
                         
@@ -98,8 +129,8 @@ const routes = [
                 path:'/properties',
                 meta: { 
                     requiresAuth: true,
-                    roles:['superadmin','supply_officer'],
-                    is_parent:true
+                    roles:[],
+
                 },
                 children:[
                      {
@@ -107,7 +138,7 @@ const routes = [
                         path:'/properties',
                         meta: { 
                             requiresAuth: true,
-                            roles:['permanent','properties'],
+                            roles:['supply_officer','ICT','superadmin'],
                         },
                         component:PropertyList
                         
@@ -117,7 +148,7 @@ const routes = [
                         path:'/properties/user',
                         meta: { 
                             requiresAuth: true,
-                            roles:['permanent','properties'],
+                            roles:['permanent'],
                         },
                         component:MyProperty
                         
@@ -130,8 +161,7 @@ const routes = [
                 path:'/preinspection_requests',
                 meta: { 
                     requiresAuth: true,
-                    roles:['superadmin','supply_officer','preinspection_inspector'],
-                    is_parent:true
+                    roles:[],
                 },
                 children:[
                      {
@@ -139,7 +169,7 @@ const routes = [
                         path:'/preinspection_requests',
                         meta: { 
                             requiresAuth: true,
-                            roles:['permanent','preinspection_requests'],
+                            roles:['supply_officer','ICT','superadmin'],
                         },
                         component:PreinspectionRequestList
                         
@@ -149,7 +179,7 @@ const routes = [
                         path:'/preinspection_requests/user',
                         meta: { 
                             requiresAuth: true,
-                            roles:['permanent','preinspection_requests'],
+                            roles:['permanent'],
                         },
                         component:MyPreinspectionRequest
                         

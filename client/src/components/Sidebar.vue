@@ -6,15 +6,55 @@
         </div>
 
         <div class="w-full flex flex-col justify-start items-center font-poppins px-2 mt-2">
-            <div v-for="child in routes" class="w-full rounded-md">
+            <!-- <div v-for="child in routes" class="w-full rounded-md">
                 <Panel v-if="child.children" :header="child.name" :toggleable="true" class="w-full text-black text-sm">
                     <div class="flex flex-col justify-start items-center gap-2">
-                        <span v-for="link in child.children" @click="handleNavigation(link.path)" class="w-full text-left p-2 rounded-lg" :class="link.name === route.name ? 'bg-emerald-200' : 'hover:bg-emerald-200'">{{link.name}}</span>
+                        <span v-for="link in child.children" @click="handleNavigation(link.path)" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="link.name === route.name ? 'bg-emerald-200' : 'hover:bg-emerald-200'">{{link.name}}</span>
                     </div>
                 </Panel>
                 <Panel v-else :header="child.name" class="w-full text-black text-sm">
                     <div class="flex flex-col justify-start items-center gap-2">
-                        <span @click="handleNavigation(child.path)" class="w-full text-left p-2 rounded-lg" :class="child.name === route.name ? 'bg-emerald-200' : 'hover:bg-emerald-200'">{{child.name}}</span>
+                        <span @click="handleNavigation(child.path)" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="child.name === route.name ? 'bg-emerald-200' : 'hover:bg-emerald-200'">{{child.name}}</span>
+                    </div>
+                </Panel>
+            </div> -->
+            <div class="w-full rounded-md">
+                <Panel header="Dashboard" :toggleable="true" class="w-full text-black text-sm">
+                    <div class="flex flex-col justify-start items-center gap-2">
+                        <span v-if="store.roles.includes(['superadmin','supply_officer','ICT'])" class="w-full text-left p-2 rounded-lg cursor-pointer">SCMU Dashboard</span>
+                        <span v-if="store.roles.includes('permanent')" @click="handleNavigation('/dashboard/user')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'My Dashboard' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">My Dashboard</span>
+                    </div>
+                </Panel>
+            </div>
+            <div class="w-full rounded-md">
+                <Panel header="Deliveries" :toggleable="true" class="w-full text-black text-sm">
+                    <div class="flex flex-col justify-start items-center gap-2">
+                        <span v-if="store.roles.includes(['superadmin','supply_officer','ICT'])" @click="handleNavigation('/deliveries')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'Deliveries' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">Delivery List</span>
+                        <span v-if="store.roles.includes('permanent')" @click="handleNavigation('/deliveries/user')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'My Delivery' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">My Deliveries</span>
+                    </div>
+                </Panel>
+            </div>
+            <div class="w-full rounded-md">
+                <Panel header="Stocks" :toggleable="true" class="w-full text-black text-sm">
+                    <div class="flex flex-col justify-start items-center gap-2">
+                        <span v-if="store.roles.includes(['superadmin','supply_officer','ICT'])" @click="handleNavigation('/stocks')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'Stocks' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">Stocks List</span>
+                        <span v-if="store.roles.includes('permanent')" @click="handleNavigation('/stocks/section')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'My Stocks' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">My Stocks</span>
+                    </div>
+                </Panel>
+            </div>
+            <div class="w-full rounded-md">
+                <Panel header="Properties" :toggleable="true" class="w-full text-black text-sm">
+                    <div class="flex flex-col justify-start items-center gap-2">
+                        <span v-if="store.roles.includes(['superadmin','supply_officer','ICT'])" @click="handleNavigation('/properties')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'Properties' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">Properties List</span>
+                        <span v-if="store.roles.includes('permanent')" @click="handleNavigation('/properties/user')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'My Properties' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">My Properties</span>
+                    </div>
+                </Panel>
+            </div>
+            <div class="w-full rounded-md">
+                <Panel header="Preinspection" :toggleable="true" class="w-full text-black text-sm">
+                    <div class="flex flex-col justify-start items-center gap-2">
+                        <span v-if="store.roles.includes(['superadmin','supply_officer','ICT'])" @click="handleNavigation('/preinspection_requests')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'Preinspection Requests' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">Preinspection Requests List</span>
+                        <span v-if="store.roles.includes('permanent')" @click="handleNavigation('/preinspection_requests/user')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'My Preinspection Requests' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">My Preinspection Requests</span>
                     </div>
                 </Panel>
             </div>
@@ -43,14 +83,13 @@
    
     const route = useRoute();
     const router = useRouter();
-    const routes = router.getRoutes().find(routeRecord => routeRecord.name === 'Admin').children
+    const routes = ref([])
    
     const store = useAuthStore();
 
 
     onMounted(()=>{
-        // routes.value = .filter(route => route.is_parent)
-        // console.log(routes.value.children)
+        // console.log(store.roles.includes('permanent'))
     })
 
     function handleNavigation(path){

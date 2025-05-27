@@ -11,18 +11,17 @@
                 </div>
                 
 
-                <div class="flex justify-start items-center gap-2 p-2">
+                <!-- <div class="flex justify-start items-center gap-2 p-2">
                     <PrimevueButton @click="addPropertyModal = true" label="Add Property" severity="primary"/>
                     <PrimevueButton @click="selectPropertiesModal = true" label="Transfer Property/ies" severity="info"/>
                     <PrimevueButton @click="handleNavigation('property/user')" label="Create Inventory Report" severity="info"/>
-                </div>
+                </div> -->
             </div>
 
             <div class="w-full flex flex-col justify-start items-center overflow-auto px-2">
                 <div class="w-full flex justify-start items-center border-y-2 font-lexend uppercase bg-emerald-600 text-center pb-2 sticky top-0 font-medium">
                     <span class="min-w-[10%]">Property #</span>
-                    <span class="min-w-[25%]">Article</span>
-                    <span class="min-w-[20%]">End User/s</span>
+                    <span class="min-w-[45%]">Article</span>
                     <span class="min-w-[15%]">Cost</span>
                     <span class="min-w-[10%]">Acquisition Date</span>
                     <span class="min-w-[20%]">Actions</span>
@@ -30,8 +29,7 @@
                 
                 <div v-if="properties.length > 0" v-for="property in properties" v-bind:key="property.id" class="w-full flex justify-start items-center border-b font-poppins text-center py-2 font-light text-sm bg-white/50 hover:bg-emerald-400">
                     <span class="min-w-[10%]">{{ property.property_no }}</span>
-                    <span class="min-w-[25%] text-xs">{{ property.particulars }}</span>
-                    <span class="min-w-[20%] text-xs">{{ property.user_name }}</span>
+                    <span class="min-w-[45%] text-xs">{{ property.particulars }}</span>
                     <span class="min-w-[15%] text-xs">{{ property.unit_cost }}</span>
                     <span class="min-w-[10%]">{{ property.user.issuance_date }}</span>
                     <div class="min-w-[20%] flex justify-center items-center gap-2">
