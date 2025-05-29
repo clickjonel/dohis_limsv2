@@ -36,10 +36,10 @@
                         <span @click="handleNavigation(`/stock_card/update/${stock_card.id}`)" title="Update Delivery">
                             <Icon icon="material-symbols:edit-square-outline" class="text-xl text-blue-800 cursor-pointer hover:scale-125"/>
                         </span>
-                        <span @click="handleNavigation(`/stock_card/generate/${stock_card.id}`)" title="Print IAR">
+                        <span @click="handleNavigation(`/stock_card/generate/${stock_card.id}`)" title="Print Stock Card">
                             <Icon icon="material-symbols:print-outline" class="text-xl text-emerald-800 cursor-pointer hover:scale-125"/>
                         </span>
-                        <span v-if="stock_card.balance > 0" @click="openIssueStockModal(stock_card)" title="Issue Stock">
+                        <span v-if="stock_card.balance > 0" @click="handleNavigation(`/stock/transaction/issue/${stock_card.id}`)" title="Issue Stock">
                             <Icon icon="hugeicons:give-pill" class="text-xl text-purple-800 cursor-pointer hover:scale-125"/>
                         </span>
                     </div>

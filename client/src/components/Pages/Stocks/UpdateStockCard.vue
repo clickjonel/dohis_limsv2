@@ -235,7 +235,6 @@
     async function save(){
         var response = await postRequest('stocks/update',stockObject.value);
         response.toast();
-        console.log(response);
         // if(response.apiResponseStatus === 201){
         //     router.push({path:'/properties'});
         // }

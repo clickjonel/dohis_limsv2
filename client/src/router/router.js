@@ -287,6 +287,12 @@ const routes = [
         component: () => import('../components/Pages/Property/AddProperty.vue'),
         meta: { requiresAuth: true },
     },
+    {
+        name:'Add Stock Transaction',
+        path:'/stock/transaction/issue/:id',
+        component: () => import('../components/Pages/Stocks/IssueStocks.vue'),
+        meta: { requiresAuth: true },
+    },
     
 ]
 

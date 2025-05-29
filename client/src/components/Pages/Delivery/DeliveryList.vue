@@ -21,7 +21,7 @@
             <div class="w-full flex flex-col justify-start items-center overflow-auto px-2">
                 <div class="w-full flex justify-start items-center border-y-2 font-lexend uppercase bg-emerald-600 text-center pb-2 sticky top-0 font-medium">
                     <span class="min-w-[10%]">IAR Details</span>
-                    <span class="min-w-[15%]">PTR Details</span>
+                    <span class="min-w-[15%]">PTR/PO Details</span>
                     <span class="min-w-[25%]">Requisitioning <br> Office-End User</span>
                     <span class="min-w-[25%]">Source Details</span>
                     <span class="min-w-[10%]">Delivery Date/s</span>

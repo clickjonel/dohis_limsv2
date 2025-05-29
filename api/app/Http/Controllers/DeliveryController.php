@@ -15,6 +15,7 @@ use App\Http\Requests\Delivery\UpdateDeliveryReceiptRequest;
 use App\Http\Requests\Delivery\UpdateDeliveryRequest;
 use App\Http\Requests\Delivery\ValidateDeliveryItemsRequest;
 use App\Http\Requests\FetchIARsRequest;
+use App\Http\Requests\UpdateDeliveryDetailsRequest;
 use App\Models\Delivery;
 use App\Models\DeliveryInvoice;
 use App\Models\DeliveryItem;
@@ -28,6 +29,7 @@ use App\UserTrait;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Carbon\Carbon;
 use Exception;
+use Illuminate\Database\Eloquent\Casts\Json;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -626,12 +628,79 @@ class DeliveryController extends Controller
         ]);
     }
 
-     public function fetchDeliveryForViewDeliveryPage(Request $request):JsonResponse
+    public function fetchDeliveryForViewDeliveryPage(Request $request):JsonResponse
     {
         $delivery = Delivery::find($request->id);
 
         return response()->json([
             'delivery' => $delivery,
+        ]);
+    }
+
+    public function fetchDeliveryForUpdateDeliveryPage(Request $request):JsonResponse
+    {
+        $delivery = Delivery::find($request->id);
+        $invoices = $delivery->invoices;
+        $receipts = $delivery->receipts;
+        $items = $delivery->items;
+
+        return response()->json([
+            'delivery' => $delivery,
+            'invoices' => $invoices,
+            'receipts' => $receipts,
+            'items' => $items,
+        ]);
+    }
+
+    public function updateDetails(UpdateDeliveryDetailsRequest $request):JsonResponse
+    {
+        $validated = $request->validated();
+
+        $delivery = Delivery::find($validated['id'])->update($validated);
+        
+        return response()->json([
+            'status' => $delivery
+        ]);
+    }
+
+    public function updateInvoices(Request $request)
+    {
+        foreach($request->all() as $invoice){
+            DeliveryInvoice::find($invoice['id'])->update([
+                'invoice_no' => $invoice['invoice_no'],
+                'invoice_date' => $invoice['invoice_date']
+            ]);
+        }
+        
+        return response()->json([
+            'status' => 'Successfully updated invoices'
+        ]);
+    }
+
+    public function updateReceipts(Request $request)
+    {
+        foreach($request->all() as $receipt){
+            DeliveryReceipts::find($receipt['id'])->update([
+                'receipt_no' => $receipt['dr_no'],
+                'receipt' => $receipt['dr_date'],
+                'delivery_place' => $receipt['delivery_place'],
+                'delivery_date' => $receipt['delivery_date']
+            ]);
+        }
+        
+        return response()->json([
+            'status' => 'Successfully updated invoices'
+        ]);
+    }
+
+    public function updateItems(Request $request)
+    {
+        foreach($request->all() as $item){
+            DeliveryItem::find($item['id'])->update($item);
+        }
+        
+        return response()->json([
+            'status' => 'Successfully updated items'
         ]);
     }
     

@@ -86,6 +86,11 @@ Route::group([
     Route::get('/list', [DeliveryController::class, 'fetchDeliveriesForDeliveriesPage']);
     Route::get('/list/user', [DeliveryController::class, 'fetchDeliveriesForUserDeliveriesPage']);
     Route::get('/find/id', [DeliveryController::class, 'fetchDeliveryForViewDeliveryPage']);
+    Route::get('/fetch/update', [DeliveryController::class, 'fetchDeliveryForUpdateDeliveryPage']);
+    Route::post('/update/details',[DeliveryController::class,'updateDetails']);
+    Route::post('/update/invoices',[DeliveryController::class,'updateInvoices']);
+    Route::post('/update/receipts',[DeliveryController::class,'updateReceipts']);
+    Route::post('/update/items',[DeliveryController::class,'updateItems']);
 });
 
 
@@ -105,6 +110,9 @@ Route::group([
     Route::get('/list/section', [StockCardController::class, 'fetchStockCardsForSectionStocksPage']);
     Route::get('/fetch/update', [StockCardController::class, 'fetchStockCardForUpdatePage']);
     Route::post('/update',[StockCardController::class,'update']);
+    Route::post('/create',[StockCardController::class,'create']);
+    Route::post('/issue',[StockCardController::class,'issueStock']);
+    Route::get('/page/issue',[StockCardController::class,'fetchStockCardForCreateTransactionPage']);
 });
 
 // Property Routes

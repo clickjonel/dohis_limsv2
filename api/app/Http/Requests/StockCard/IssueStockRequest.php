@@ -23,12 +23,12 @@ class IssueStockRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'stock_card_id' => 'required|exists:lims_stock_cards,id',
-            'issued' => 'required|numeric|notin:0',
+            'id' => 'required|exists:lims_stock_cards,id',
+            'issued' => 'required|numeric',
             'remarks' => 'nullable|string',
             'recepient' => 'required|string',
             'ptr_no' => 'required|string',
-            'transaction_date' => 'required|date'
+            'transaction_date' => 'required|date',
         ];
     }
 

@@ -17,6 +17,7 @@ use App\OfficeTrait;
 use App\UserTrait;
 use App\WarehouseTrait;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Casts\Json;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
@@ -124,46 +125,46 @@ class StockCardController extends Controller
         ]);
     }
 
-    public function issue(IssueStockRequest $request):JsonResponse
-    {
-        $validated = $request->validated();
+    // public function issue(IssueStockRequest $request):JsonResponse
+    // {
+    //     $validated = $request->validated();
 
-        // Find the stock card
-        $stock_card = StockCard::find($validated['stock_card_id']);
+    //     // Find the stock card
+    //     $stock_card = StockCard::find($validated['stock_card_id']);
     
-        if (!$stock_card) {
-            return response()->json(['error' => 'Stock card not found'], 404);
-        }
+    //     if (!$stock_card) {
+    //         return response()->json(['error' => 'Stock card not found'], 404);
+    //     }
     
-        // Retrieve the maximum transaction ID
-        $maxTransactionId = $stock_card->transactions()->max('id');
+    //     // Retrieve the maximum transaction ID
+    //     $maxTransactionId = $stock_card->transactions()->max('id');
     
-        // Fetch the transaction with the maximum ID
-        $lastTransaction = $stock_card->transactions()->find($maxTransactionId);
+    //     // Fetch the transaction with the maximum ID
+    //     $lastTransaction = $stock_card->transactions()->find($maxTransactionId);
     
-        if (!$lastTransaction) {
-            return response()->json(['error' => 'No transactions found for this stock card'], 400);
-        }
+    //     if (!$lastTransaction) {
+    //         return response()->json(['error' => 'No transactions found for this stock card'], 400);
+    //     }
     
-        // Calculate the new balance
-        $newBalance = $lastTransaction->balance - $validated['issued'];
+    //     // Calculate the new balance
+    //     $newBalance = $lastTransaction->balance - $validated['issued'];
     
-        // Create a new transaction
-        $stock_card->transactions()->create([
-            'stock_card_id' => $validated['stock_card_id'],
-            'transaction_date' => $validated['transaction_date'],
-            'received' => null,
-            'issued' => $validated['issued'],
-            'balance' => $newBalance,
-            'total_cost' => $validated['issued'] * $stock_card->unit_cost,
-            'ptr_no' => $validated['ptr_no'],
-            'iar_no' => null,
-            'recepient' => $validated['recepient'],
-            'remarks' => $validated['remarks'] ?? null
-        ]);
+    //     // Create a new transaction
+    //     $stock_card->transactions()->create([
+    //         'stock_card_id' => $validated['stock_card_id'],
+    //         'transaction_date' => $validated['transaction_date'],
+    //         'received' => null,
+    //         'issued' => $validated['issued'],
+    //         'balance' => $newBalance,
+    //         'total_cost' => $validated['issued'] * $stock_card->unit_cost,
+    //         'ptr_no' => $validated['ptr_no'],
+    //         'iar_no' => null,
+    //         'recepient' => $validated['recepient'],
+    //         'remarks' => $validated['remarks'] ?? null
+    //     ]);
     
-        return response()->json(['stock_card' => $stock_card]);
-    }
+    //     return response()->json(['stock_card' => $stock_card]);
+    // }
 
     public function fetchUserSectionStockCards(Request $request): JsonResponse
     {
@@ -271,6 +272,41 @@ class StockCardController extends Controller
         return response()->json([
             'stock_card' => $stock_card
         ]);
+    }
+
+    public function fetchStockCardForCreateTransactionPage(Request $request):JsonResponse
+    {
+        $stock_card = StockCard::find($request->id);
+
+        return response()->json([
+            'stock_card' => $stock_card,
+            'latest_transaction' => $stock_card->latestTransaction()
+        ]);
+    }
+
+    public function issueStock(IssueStockRequest $request):JsonResponse
+    {
+        $validated = $request->validated();
+
+        $stock_card = StockCard::find($request->id);
+
+        $transaction = $stock_card->transactions()->create([
+            'transaction_date' => $validated['transaction_date'],
+            'received' => null,
+            'issued' => $validated['issued'],
+            'balance' => $stock_card->latestTransaction()->balance - $validated['issued'],
+            'total_cost' => $validated['issued'] * $stock_card->unit_cost,
+            'ptr_no' => $validated['ptr_no'],
+            'iar_no' => null,
+            'recepient' => $validated['recepient'],
+            'remarks' => $validated['remarks'] ?? null
+        ]);
+
+        return response()->json([
+            'message' => 'Stock issued successfully',
+        ]);
+
+
     }
 
 
