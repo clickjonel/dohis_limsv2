@@ -30,7 +30,7 @@ class CreateStockCardRequest extends FormRequest
             'supplier_address' => 'required|string',
             'procurement_mode' => 'required|numeric|in:1,2',
             'req_office' => 'required|numeric',
-            'fund_source' => 'required|numeric|exists:lims_fund_sources,id',
+            'fund_cluster' => 'required|numeric|exists:lims_fund_sources,id',
     
             'stock_no' => 'required|string',
             'stock_name' => 'required|string',

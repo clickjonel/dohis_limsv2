@@ -69,7 +69,7 @@ class StockCardController extends Controller
             'received' => $stock_card->quantity,
             'issued' => null,
             'balance' => $stock_card->quantity,
-            'total_cost' => (float) $stock_card->quantity * $stock_card->umit_cost,
+            'total_cost' => (float) $stock_card->quantity * $stock_card->unit_cost,
             'ptr_no' => null,
             'iar_no' => $stock_card->iar_no,
             'recepient' => 'DOH-CHD-CAR',

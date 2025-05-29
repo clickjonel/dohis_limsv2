@@ -126,6 +126,10 @@
                         <DatePicker v-model="stockObject.expiry_date" dateFormat="dd/mm/yy" class="w-full"/>
                         <label>Expiry Date</label>
                     </FloatLabel>
+                    <FloatLabel variant="on" class="w-full">
+                        <InputText v-model="stockObject.iar_no"  class="w-full"/>
+                        <label>IAR No</label>
+                    </FloatLabel>
                 </div>
             </div>
             

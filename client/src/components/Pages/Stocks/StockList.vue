@@ -12,7 +12,7 @@
                 
 
                 <div class="flex justify-start items-center gap-2 p-2">
-                    <PrimevueButton label="Add Stock Card" severity="info" class="shadow-md shadow-slate-600"/>
+                    <PrimevueButton @click="handleNavigation('stock_card/add')" label="Add Stock Card" severity="info" class="shadow-md shadow-slate-600"/>
                 </div>
             </div>
 

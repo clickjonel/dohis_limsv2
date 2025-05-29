@@ -628,14 +628,14 @@ class DeliveryController extends Controller
         ]);
     }
 
-    public function fetchDeliveryForViewDeliveryPage(Request $request):JsonResponse
-    {
-        $delivery = Delivery::find($request->id);
+    // public function fetchDeliveryForViewDeliveryPage(Request $request):JsonResponse
+    // {
+    //     $delivery = Delivery::find($request->id);
 
-        return response()->json([
-            'delivery' => $delivery,
-        ]);
-    }
+    //     return response()->json([
+    //         'delivery' => $delivery,
+    //     ]);
+    // }
 
     public function fetchDeliveryForUpdateDeliveryPage(Request $request):JsonResponse
     {
@@ -649,6 +649,25 @@ class DeliveryController extends Controller
             'invoices' => $invoices,
             'receipts' => $receipts,
             'items' => $items,
+        ]);
+    }
+
+    public function fetchDeliveryForViewDeliveryPage(Request $request):JsonResponse
+    {
+        $delivery = Delivery::find($request->id);
+        $invoices = $delivery->invoices;
+        $receipts = $delivery->receipts;
+        $items = $delivery->items->map(function($item){
+            $item['total'] = $item['unit_cost'] * $item['quantity'];
+            return $item;
+        });
+
+        return response()->json([
+            'delivery' => $delivery,
+            'invoices' => $invoices,
+            'receipts' => $receipts,
+            'items' => $items,
+            'total_cost' => $items->sum('total'),
         ]);
     }
 

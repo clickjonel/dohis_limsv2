@@ -87,6 +87,7 @@ Route::group([
     Route::get('/list/user', [DeliveryController::class, 'fetchDeliveriesForUserDeliveriesPage']);
     Route::get('/find/id', [DeliveryController::class, 'fetchDeliveryForViewDeliveryPage']);
     Route::get('/fetch/update', [DeliveryController::class, 'fetchDeliveryForUpdateDeliveryPage']);
+    Route::get('/fetch/view', [DeliveryController::class, 'fetchDeliveryForViewDeliveryPage']);
     Route::post('/update/details',[DeliveryController::class,'updateDetails']);
     Route::post('/update/invoices',[DeliveryController::class,'updateInvoices']);
     Route::post('/update/receipts',[DeliveryController::class,'updateReceipts']);
@@ -97,7 +98,6 @@ Route::group([
 // Stock Card Routes
 Route::get('/stock_card/list',[StockCardController::class,'list'])->middleware('auth:sanctum');
 Route::get('/stock_card/find',[StockCardController::class,'find'])->middleware('auth:sanctum');
-Route::post('/stock_card/create',[StockCardController::class,'create'])->middleware('auth:sanctum');
 Route::get('/stock_card/generate/stock_card',[StockCardController::class,'fetchStockCardGenerationDetails'])->middleware('auth:sanctum');
 Route::post('/stock_card/transaction/issue',[StockCardController::class,'issue'])->middleware('auth:sanctum');
 Route::get('/stock_card/user',[StockCardController::class,'fetchUserSectionStockCards'])->middleware('auth:sanctum');
@@ -113,6 +113,7 @@ Route::group([
     Route::post('/create',[StockCardController::class,'create']);
     Route::post('/issue',[StockCardController::class,'issueStock']);
     Route::get('/page/issue',[StockCardController::class,'fetchStockCardForCreateTransactionPage']);
+    Route::post('/create',[StockCardController::class,'create']);
 });
 
 // Property Routes
