@@ -293,6 +293,18 @@ const routes = [
         component: () => import('../components/Pages/Stocks/IssueStocks.vue'),
         meta: { requiresAuth: true },
     },
+    {
+        name:'Add Preinspection Request',
+        path:'/preinspection_request/create',
+        component: () => import('../components/Pages/PreinspectionRequest/CreateRequest.vue'),
+        meta: { requiresAuth: true },
+    },
+    {
+        name:'Transfer Properties',
+        path:'/properties/transfer',
+        component: () => import('../components/Pages/Property/TransferProperties.vue'),
+        meta: { requiresAuth: true },
+    },
     
 ]
 

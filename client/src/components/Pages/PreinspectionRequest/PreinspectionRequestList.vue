@@ -11,9 +11,9 @@
                 </div>
                 
 
-                <div class="flex justify-start items-center gap-2 p-2">
+                <!-- <div class="flex justify-start items-center gap-2 p-2">
                     <PrimevueButton label="Add Stock Card" severity="info" class="shadow-md shadow-slate-600"/>
-                </div>
+                </div> -->
             </div>
 
             <div class="w-full flex flex-col justify-start items-center overflow-auto px-2">

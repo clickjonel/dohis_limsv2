@@ -125,7 +125,6 @@ Route::get('/property/statuses',[PropertyController::class,'fetchPropertyStatuse
 Route::post('/property/update',[PropertyController::class,'updateProperty'])->middleware('auth:sanctum');
 Route::get('/properties/find',[PropertyController::class,'findProperties'])->middleware('auth:sanctum');
 Route::get('/property/find/property_number',[PropertyController::class,'findPropertyByPropertyNumber'])->middleware('auth:sanctum');
-Route::post('/property/transfer',[PropertyController::class,'transferProperties'])->middleware('auth:sanctum');
 Route::get('property/inventory/user/find',[PropertyController::class,'fetchInventoryUserPropertyReport'])->middleware('auth:sanctum');
 
 Route::group([
@@ -135,6 +134,9 @@ Route::group([
     Route::get('/list', [PropertyController::class, 'fetchPropertiesForPropertiesPage']);
     Route::get('/list/user', [PropertyController::class, 'fetchPropertiesUserForPropertiesPage']);
     Route::post('/create',[PropertyController::class,'create'])->middleware('auth:sanctum');
+    Route::get('/find/pn', [PropertyController::class, 'findPropertyThroughPN']);
+    Route::get('/find/autocomplete_search', [PropertyController::class, 'searchPropertyNoForAutocompleteSelection']);
+    Route::post('/transfer',[PropertyController::class,'transferProperties']);
 });
 
 

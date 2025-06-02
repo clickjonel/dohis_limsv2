@@ -41,7 +41,7 @@
             <div class="w-full rounded-md">
                 <Panel header="Preinspection" :toggleable="true" class="w-full text-black text-sm">
                     <div class="flex flex-col justify-start items-center gap-2">
-                        <span v-if="checkRole('superadmin') || checkRole('supply_officer')" @click="handleNavigation('/preinspection_requests')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'Preinspection Requests' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">Preinspection Requests List</span>
+                        <span v-if="store.user.assignment.section_id === 22 || store.user.assignment.section_id === 25" @click="handleNavigation('/preinspection_requests')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'Preinspection Requests' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">Preinspection Requests List</span>
                         <span v-if="checkRole('permanent')" @click="handleNavigation('/preinspection_requests/user')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'My Preinspection Requests' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">My Preinspection Requests</span>
                     </div>
                 </Panel>

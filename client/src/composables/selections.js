@@ -1,0 +1,21 @@
+import useApi from "./api_calls"; 
+
+const { fetchRequest } = useApi();
+
+const useSelection = () => {
+
+  const userSelection = async (options) => {
+    var response = await fetchRequest('user/selection',options)
+    response.toast()
+    
+    if(response.apiResponseStatus === 200 && response.data.users){
+        // console.log(response.data.users)
+        return response.data.users;
+    }
+
+  };
+
+  return { userSelection };
+};
+
+export default useSelection;

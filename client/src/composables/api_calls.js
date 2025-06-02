@@ -2,8 +2,10 @@ import axiosInstance from "../axios/axios";
 import { showLoader,hideLoader, showToast } from "./notiflix";
 
 const useApi = () => {
-  const fetchRequest = async (url, params = {}) => {
-    showLoader('Please Wait...');
+  const fetchRequest = async (url, params = {},loader = true) => {
+    if(loader){
+      showLoader('Please Wait...')
+    };
 
     try {
       const response = await axiosInstance.get(url, { params });
@@ -25,7 +27,9 @@ const useApi = () => {
        
     } 
     finally {
-      hideLoader();
+      if(loader){
+        hideLoader();
+      };
     }
   };
 

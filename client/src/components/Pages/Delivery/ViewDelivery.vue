@@ -4,7 +4,7 @@
          <div class="w-full min-h-[92%] flex flex-col justify-start items-center gap-4 overflow-y-scroll font-poppins p-4">
             <div class="w-full flex flex-col justify-start items-start gap-2">
 
-                <Panel header="Details" toggleable class="w-full mt-4" >
+                <Panel header="Details" toggleable class="w-full mt-4 shadow-md shadow-slate-600" >
                    <div v-if="deliveryObject.delivery" class="w-full flex flex-col justify-start items-start gap-6 p-2 font-poppins">
                         <div class="w-full flex flex-col justify-start items-start gap-2">
                             <span class="text-xl font-semibold uppercase">Selections</span>
@@ -124,56 +124,50 @@
                     </div>
                 </Panel>
 
-                <Panel v-if="deliveryObject.invoices?.length > 0" header="Invoices" toggleable collapsed class="w-full mt-4" >
-                   <div class="w-full flex flex-col justify-start items-start gap-2 font-poppins">
-                        <div class="w-full flex justify-start items-start gap-4">
-                             <Panel v-for="(invoice,index) in deliveryObject.invoices" :header="`Invoice ${index+1}`" toggleable class="w-full mt-4">
-                                <div class="w-full flex justify-start items-start gap-4">
-                                    <FloatLabel variant="on" class="w-full">
-                                        <InputText v-model="invoice.invoice_no" disabled class="w-full"/>
-                                        <label>Invoice No.</label>
-                                    </FloatLabel>
-                                    <FloatLabel variant="on" class="w-full">
-                                        <DatePicker v-model="invoice.invoice_date" dateFormat="dd/mm/yy" disabled class="w-full"/>
-                                        <label>Invoice Date</label>
-                                    </FloatLabel>
-                                </div>
-                            </Panel>
-                        </div>
-                    </div>
-                </Panel>
-
-                 <Panel v-if="deliveryObject.receipts?.length > 0" header="Receipts" toggleable collapsed class="w-full mt-4" >
-                   <div class="w-full flex flex-col justify-start items-start gap-2 font-poppins">
-                         <div class="w-full flex flex-col justify-start items-start gap-2 font-poppins">
-                            <div class="w-full flex justify-start items-start gap-4">
-                                <Panel v-for="(receipt,index) in deliveryObject.receipts" :header="`Receipt ${index+1}`" toggleable class="w-full mt-4" >
-                                    <div class="w-full flex justify-start items-start gap-4">
-                                        <FloatLabel variant="on" class="w-full">
-                                            <InputText v-model="receipt.dr_no" disabled class="w-full"/>
-                                            <label>Receipt No.</label>
-                                        </FloatLabel>
-                                        <FloatLabel variant="on" class="w-full">
-                                            <DatePicker v-model="receipt.dr_date" disabled dateFormat="dd/mm/yy" class="w-full"/>
-                                            <label>Receipt Date</label>
-                                        </FloatLabel>
-                                        <FloatLabel variant="on" class="w-full">
-                                            <DatePicker v-model="receipt.delivery_date" disabled dateFormat="dd/mm/yy" class="w-full"/>
-                                            <label>Delivery Date</label>
-                                        </FloatLabel>
-                                        <FloatLabel variant="on" class="w-full">
-                                            <InputText v-model="receipt.delivery_place" disabled  class="w-full"/>
-                                            <label>Delivery Place</label>
-                                        </FloatLabel>
-                                    </div>
-                                </Panel>
+                <Panel v-if="deliveryObject.invoices?.length > 0" header="Invoices" toggleable collapsed class="w-full mt-4 shadow-md shadow-slate-600" >
+                   <div class="w-full flex flex-col justify-start items-start gap-4 font-poppins">
+                        <div v-for="(invoice,index) in deliveryObject.invoices" class="w-full justify-start items-start gap-4">
+                             <div class="w-full flex justify-start items-start gap-4">
+                                <FloatLabel variant="on" class="w-full">
+                                    <InputText v-model="invoice.invoice_no" disabled class="w-full"/>
+                                    <label>Invoice No.</label>
+                                </FloatLabel>
+                                <FloatLabel variant="on" class="w-full">
+                                    <DatePicker v-model="invoice.invoice_date" dateFormat="dd/mm/yy" disabled class="w-full"/>
+                                    <label>Invoice Date</label>
+                                </FloatLabel>
                             </div>
                         </div>
                     </div>
                 </Panel>
 
-                <Panel header="Items" toggleable collapsed class="w-full mt-4" >
-                    <Panel v-for="(item,index) in deliveryObject.items" :header="`Item ${index+1}`" toggleable collapsed class="w-full mt-4">
+                 <Panel v-if="deliveryObject.receipts?.length > 0" header="Receipts" toggleable collapsed class="w-full mt-4 shadow-md shadow-slate-600" >
+                   <div class="w-full flex flex-col justify-start items-start gap-2 font-poppins">
+                         <div class="w-full flex flex-col justify-start items-start gap-4 font-poppins">
+                            <div v-for="(receipt,index) in deliveryObject.receipts" class="w-full flex justify-start items-start gap-4">
+                                <FloatLabel variant="on" class="w-full">
+                                    <InputText v-model="receipt.dr_no" disabled class="w-full"/>
+                                    <label>Receipt No.</label>
+                                </FloatLabel>
+                                <FloatLabel variant="on" class="w-full">
+                                    <DatePicker v-model="receipt.dr_date" disabled dateFormat="dd/mm/yy" class="w-full"/>
+                                    <label>Receipt Date</label>
+                                </FloatLabel>
+                                <FloatLabel variant="on" class="w-full">
+                                    <DatePicker v-model="receipt.delivery_date" disabled dateFormat="dd/mm/yy" class="w-full"/>
+                                    <label>Delivery Date</label>
+                                </FloatLabel>
+                                <FloatLabel variant="on" class="w-full">
+                                    <InputText v-model="receipt.delivery_place" disabled  class="w-full"/>
+                                    <label>Delivery Place</label>
+                                </FloatLabel>
+                            </div>
+                        </div>
+                    </div>
+                </Panel>
+
+                <Panel header="Items" toggleable collapsed class="w-full mt-4 shadow-md shadow-slate-600" >
+                    <Panel v-for="(item,index) in deliveryObject.items" :header="`Item ${index+1}`" toggleable collapsed class="w-full mt-4 ">
                         <div class="w-full flex justify-start items-start gap-4">
                             <div class="w-full flex flex-col justify-start items-start gap-2">
                                 <div class="w-full flex flex-col justify-start items-start gap-2">

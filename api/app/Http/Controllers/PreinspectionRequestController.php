@@ -82,8 +82,12 @@ class PreinspectionRequestController extends Controller
         $search_keyword = trim($request->keyword ?? '');
 
         $preinspectionRequestObject = PreinspectionRequest::when($search_keyword, function ($query) use ($search_keyword) {
-                                $query->where('property_no', 'like', '%' . $search_keyword . '%');
-                            })->orderBy('id','DESC');
+                                            $query->where('property_no', 'like', '%' . $search_keyword . '%');
+                                        })
+                                        ->when($request->user()->assignment->section_id === 22 || $request->user()->assignment->section_id === 25 && $request->user()->user_id !== 582, function ($query) use ($request) {
+                                            $query->where('inspection_section', $request->user()->assignment->section_id);
+                                        })
+                                        ->orderBy('id','DESC');
         
                         
         $total = $preinspectionRequestObject->count();  
@@ -102,14 +106,15 @@ class PreinspectionRequestController extends Controller
 
     public function fetchUserPreinspectionRequestsforPreinspectionListPage(Request $request):JsonResponse
     {
-       $page = $request->page ?? 1;
+        $page = $request->page ?? 1;
         $perPage = $request->per_page ?? 15;
         $search_keyword = trim($request->keyword ?? '');
 
         $preinspectionRequestObject = PreinspectionRequest::where('requestor',$request->user_id)
                                         ->when($search_keyword, function ($query) use ($search_keyword) {
                                             $query->where('property_no', 'like', '%' . $search_keyword . '%');
-                                        })->orderBy('id','DESC');
+                                        })
+                                        ->orderBy('id','DESC');
         
                         
         $total = $preinspectionRequestObject->count();  

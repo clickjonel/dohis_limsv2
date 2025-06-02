@@ -11,6 +11,7 @@ use App\Models\Measurement;
 use App\Models\Property;
 use App\Models\User;
 use App\UserTrait;
+use Illuminate\Database\Eloquent\Casts\Json;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -299,6 +300,30 @@ class PropertyController extends Controller
         return response()->json([
             'properties' => $properties,
             'total' => $total
+        ]);
+    }
+
+    public function findPropertyThroughPN(Request $request): JsonResponse
+    {
+        $property = Property::where('property_no', $request->property_no)
+                    ->with(['user'])
+                    ->first();
+        
+        return response()->json([
+            'property' => $property,
+        ]);
+    }
+
+    public function searchPropertyNoForAutocompleteSelection(Request $request):JsonResponse
+    {
+        $search_keyword = $request->keyword;
+
+        $properties = Property::where('property_no', 'like', '%' . $search_keyword . '%')
+                        ->orderBy('id','DESC')
+                        ->get(['id', 'property_no','particulars']);
+
+        return response()->json([
+            'properties' => $properties,
         ]);
     }
 

@@ -13,7 +13,7 @@
 
                 <div class="flex justify-start items-center gap-2 p-2">
                     <PrimevueButton @click="handleNavigation('property/add')" label="Add Property" severity="primary"/>
-                    <PrimevueButton @click="selectPropertiesModal = true" label="Transfer Property/ies" severity="info"/>
+                    <PrimevueButton @click="handleNavigation('properties/transfer')" label="Transfer Property/ies" severity="info"/>
                     <PrimevueButton @click="handleNavigation('property/user')" label="Create Inventory Report" severity="info"/>
                 </div>
             </div>

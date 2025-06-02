@@ -12,7 +12,7 @@
                 
 
                 <div class="flex justify-start items-center gap-2 p-2">
-                    <PrimevueButton label="Create Request" severity="info" class="shadow-md shadow-slate-600"/>
+                    <PrimevueButton @click="router.push({path:'/preinspection_request/create'})" label="Create Request" severity="info" class="shadow-md shadow-slate-600"/>
                     <PrimevueButton label="Create WMR" severity="info" class="shadow-md shadow-slate-600"/>
                 </div>
             </div>
