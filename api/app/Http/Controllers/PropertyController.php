@@ -9,6 +9,7 @@ use App\Http\Resources\PropertyResource;
 use App\Http\Resources\UserResource;
 use App\Models\Measurement;
 use App\Models\Property;
+use App\Models\PropertyInspectionRequest;
 use App\Models\User;
 use App\UserTrait;
 use Illuminate\Database\Eloquent\Casts\Json;
@@ -329,10 +330,17 @@ class PropertyController extends Controller
 
     public function fetchPropertiesforWMRCreatePage(Request $request):JsonResponse
     {
-        $properties = Property::with(['user'])->whereIn('id',$request->ids)->get();
+        // $properties = Property::with(['user'])->whereIn('id',$request->ids)->get();
+        $requests = PropertyInspectionRequest::with(['property.measurement','property.user'])->whereIn('id',$request->ids)->get();
+        $requests = $requests->map(function($request){
+            $request['requested_by'] = $this->getUserFullName($request['requested_by']);
+            $request['inspected_by'] = $this->getUserFullName($request['inspection_section'] === 25 ? 15 : 65);
+            return $request;
+        });
 
         return response()->json([
-            'properties' => $properties,
+            // 'properties' => $properties,
+            'requests' => $requests
         ]);
     }
 

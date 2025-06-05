@@ -6,7 +6,6 @@
             <span class="w-full text-2xl font-poppins font-bold uppercase mb-4">Selected Properties</span>
             <PrimevueButton @click="preview = true" label="Preview" class="font-lexend uppercase text-xs"/>
         </div>
-        <!-- <PropertySelection @submit="setSelectedProperties"/> -->
 
        <div class="w-full flex flex-col justify-start items-start gap-4">
 
@@ -107,15 +106,15 @@
                 </div>
                 </div>
 
-                <div v-for="(property,index) in properties" class="w-full flex justify-start items-stretch divide-x-2 text-center text-xs font-light font-lexend">
+                <div v-for="(request,index) in requests" class="w-full flex justify-start items-stretch divide-x-2 text-center text-xs font-light font-lexend">
                     <span class="w-[10%] flex justify-center items-center">{{ index+1 }}</span>
                     <span class="w-[15%] flex justify-center items-center">1</span>
-                    <span class="w-[10%] flex justify-center items-center">{{property.measurement_unit.name}}</span>
+                    <span class="w-[10%] flex justify-center items-center">{{request.property.measurement_unit.name}}</span>
                     <div class="w-[35%] flex flex-col justify-start items-start">
-                        <span class="pl-1">{{property.particulars}}</span>
-                        <span class="pl-1 mt-2">PN:{{property.property_no}}</span>
-                        <span class="pl-1">UC:{{property.unit_cost}}</span>
-                        <span class="pl-1">DA:{{property.user.acquisition_date === '0000-00-00' ? '' : property.user.acquisition_date }}</span>
+                        <span class="pl-1">{{request.property.particulars}}</span>
+                        <span class="pl-1 mt-2">PN:{{request.property.property_no}}</span>
+                        <span class="pl-1">UC:{{request.property.unit_cost}}</span>
+                        <span class="pl-1">DA:{{request.property.user.acquisition_date === '0000-00-00' ? '' : request.property.user.acquisition_date }}</span>
                     </div>
                     <div class="w-[30%] flex justify-center items-stretch divide-y-2 text-center">
                         <div class="w-full flex justify-start items-stretch divide-x-2">
@@ -202,7 +201,7 @@
 
 
     <!-- Pre inspection Requests -->
-    <!-- <div v-for="property in properties" :key="property.property_no" class="w-full flex flex-col justify-start items-start outline p-4 break-before-page" >
+    <div v-if="preview" v-for="request in requests" :key="request.id" class="w-full flex flex-col justify-start items-start outline p-4 break-before-page" >
             <div class="w-full flex justify-center items-center gap-4">
                 <div class="w-full flex flex-col justify-center items-center text-sm font-noto">
                     <span>Republic of the Philippines</span>
@@ -218,11 +217,11 @@
             <div class="w-full grid grid-cols-2 gap-4 py-2 mt-4 font-lexend text-base">
                 <div class="w-full flex justify-start items-center gap-2">
                     <span class="font-light uppercase">Equipment:</span>
-                    <input type="text" class="w-full border-b outline-none" :value="property.currentPreinspection.equipment" disabled>
+                    <input type="text" class="w-full border-b outline-none" :value="request.property.particulars" disabled>
                 </div>
                  <div class="w-full flex justify-start items-center gap-2">
                     <span class="font-light uppercase">Model:</span>
-                    <input type="text" class="w-full border-b outline-none" :value="property.currentPreinspection.model" disabled>
+                    <input type="text" class="w-full border-b outline-none" disabled>
                 </div>
             </div>
 
@@ -233,18 +232,18 @@
                 </div>
                  <div class="w-full flex justify-start items-center gap-2">
                     <span class="font-light uppercase w-1/5">Property No:</span>
-                    <input type="text" class="w-full border-b outline-none" :value="property.currentPreinspection.property_no" disabled>
+                    <input type="text" class="w-full border-b outline-none" :value="request.property.property_no" disabled>
                 </div>
             </div>
 
             <div class="w-full grid grid-cols-2 gap-4 py-2 mt-2 font-lexend text-base">
                 <div class="w-full flex justify-start items-center gap-2">
                     <span class="font-light uppercase w-1/3">Acquisition Date:</span>
-                    <input type="text" class="w-full border-b outline-none" :value="property.currentPreinspection.acquisition_date" disabled>
+                    <input type="text" class="w-full border-b outline-none" :value="request.property.user.issuance_date" disabled>
                 </div>
                  <div class="w-full flex justify-start items-center gap-2">
                     <span class="font-light uppercase w-1/3">Acquisition Cost:</span>
-                    <input type="text" class="w-full border-b outline-none" :value="property.currentPreinspection.acquisition_cost" disabled>
+                    <input type="text" class="w-full border-b outline-none" :value="request.property.unit_cost" disabled>
                 </div>
             </div>
 
@@ -268,15 +267,15 @@
             <span class="w-full text-left mt-4 font-light font-lexend">DEFECTS/COMPLAINTS (Include missing parts/part to be replaced)</span>
 
             <div class="w-full flex flex-col justify-start items-start gap-4 font-lexend border-b-2 py-2">
-                <div class="w-full" v-html="property.currentPreinspection.defects">
+                <div class="w-full" v-html="request.defects">
 
                 </div>
 
                 <div class="w-full flex justify-end items-center font-noto">
                     <div class="w-1/3 flex flex-col justify-center items-center gap-2">
-                        <input type="text" class="w-full border-b text-center outline-0 font-medium" disabled :value="property.currentPreinspection.requested_by">
+                        <input type="text" class="w-full border-b text-center outline-0 font-medium" disabled :value="request.requested_by">
                         <span class="text-sm font-lexend font-light">Requisition Property Officer</span>
-                        <input type="text" class="w-full border-b text-center outline-0 font-medium" disabled :value="property.currentPreinspection.date_requested">
+                        <input type="text" class="w-full border-b text-center outline-0 font-medium" disabled :value="request.request_date">
                         <span class="text-sm font-lexend font-light">Date</span>
                     </div>
                 </div>
@@ -285,7 +284,7 @@
              <div class="w-full flex flex-col justify-start items-start gap-4 font-lexend">
                 <span class="w-full text-center font-noto text-lg uppercase">Inspection Committee</span>
                 <span class="w-full text-left font-noto text-base uppercase font-light">Findings/Recommendation</span>
-                <div class="w-full" v-html="property.currentPreinspection.findings">
+                <div class="w-full" v-html="request.findings">
 
                 </div>
                 <div class="w-full flex flex-col justify-start items-center gap-2">
@@ -294,14 +293,14 @@
                         <span class="w-1/2">Date:</span>
                     </div>
                     <div class="w-full flex justify-start items-center font-noto font-semibold uppercase gap-4">
-                        <input class="w-1/2 border-b text-center outline-none" :value="property.currentPreinspection.inspector_name"/>
-                        <input class="w-1/2  border-b text-center outline-none" :value="property.currentPreinspection.inspection_date"/>
+                        <input class="w-1/2 border-b text-center outline-none" :value="request.inspected_by"/>
+                        <input class="w-1/2  border-b text-center outline-none" :value="request.inspection_date"/>
                     </div>
                     <span class="text-left font-light font-noto text-xs italic">Preinspection Request has been processed through LIMS System.</span>
                 </div>
             </div>
 
-    </div> -->
+    </div>
 
  </template>
  
@@ -332,7 +331,7 @@
 
      var preview = ref(false)
 
-    var properties = ref([]);
+    var requests = ref([]);
     var fund_sources = ref([]);
     var propertyUrlQuery =  Array.isArray(route.query.ids) ? route.query.ids : [route.query.ids]
 
@@ -363,8 +362,8 @@
         var response = await fetchRequest('/properties/wmr',{ids:propertyUrlQuery})
         console.log(response)
         response.toast()
-        if(response.data.properties){
-            properties.value = response.data.properties
+        if(response.data.requests){
+            requests.value = response.data.requests
         }
        
     }

@@ -34,8 +34,8 @@
                     <span class="min-w-[20%] max-w-[20%]">{{ request.defects }}</span>
                     <span class="min-w-[10%] max-w-[10%] flex flex-col justify-start items-center gap-2">{{ request.status }}</span>
                     <span class="min-w-[10%] max-w-[10%] flex flex-col justify-start items-center gap-2">
-                         <Badge v-if="request.status === 'WMR' && !selected.includes(request.property_id)" @click="addToSelected(request.property_id)" value="Select" class="text-xs shadow-slate-600 shadow-md cursor-pointer hover:scale-110" severity="info"></Badge>
-                         <Badge v-if="request.status === 'WMR' && selected.includes(request.property_id)" @click="removeToSelected(request.property_id)" value="Remove" class="text-xs shadow-slate-600 shadow-md cursor-pointer hover:scale-110" severity="info"></Badge>
+                         <Badge v-if="request.status === 'WMR' && !selected.includes(request.id)" @click="addToSelected(request.id)" value="Select" class="text-xs shadow-slate-600 shadow-md cursor-pointer hover:scale-110" severity="info"></Badge>
+                         <Badge v-if="request.status === 'WMR' && selected.includes(request.id)" @click="removeToSelected(request.id)" value="Remove" class="text-xs shadow-slate-600 shadow-md cursor-pointer hover:scale-110" severity="info"></Badge>
                     </span>
                 </div>
             </div>
