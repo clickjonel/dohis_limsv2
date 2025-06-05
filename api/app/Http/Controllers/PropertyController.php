@@ -262,6 +262,7 @@ class PropertyController extends Controller
 
         $propertyObject = Property::when($search_keyword, function ($query) use ($search_keyword) {
                                 $query->where('property_no', 'like', '%' . $search_keyword . '%');
+                                $query->orWhere('particulars', 'like', '%' . $search_keyword . '%');
                             })->orderBy('id','DESC');
         
                         
@@ -359,4 +360,40 @@ class PropertyController extends Controller
         ]);
     }
 
+    public function fetchPropertiesForCategorizePage(Request $request):JsonResponse
+    {
+       $page = $request->page ?? 1;
+        $perPage = $request->per_page ?? 15;
+        $search_keyword = trim($request->keyword ?? '');
+
+        $propertyObject = Property::when($search_keyword, function ($query) use ($search_keyword) {
+                                $query->where('property_no', 'like', '%' . $search_keyword . '%');
+                                $query->orWhere('particulars', 'like', '%' . $search_keyword . '%');
+                            })->where('main_category_id',0)->orderBy('id','DESC');
+        
+                        
+        $total = $propertyObject->count();  
+        $properties = $propertyObject->offset(($page - 1) * $perPage)->limit($perPage)->get();
+
+        $properties = $properties->map(function (Property $property): Property{
+            $property['end_user'] = $this->getUserFullName(User::find($property->user->user_id)->user_id);
+            return $property;
+        });
+
+        return response()->json([
+            'properties' => $properties,
+            'total' => $total
+        ]);
+    }
+
+    public function updatePropertiesCategory(Request $request):JsonResponse
+    {
+        $properties = $request->all();
+
+        foreach($properties as $property){
+            Property::find($property['id'])->update(['main_category_id'=>$property['main_category_id']]);
+        }
+
+        return response()->json('Updated Successfully');
+    }
 }

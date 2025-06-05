@@ -22,7 +22,8 @@ class Property extends Model
         'unit_cost',
         'status',
         'remarks',
-        'acquisition_date'
+        'acquisition_date',
+        'main_category_id'
     ];
 
     public const STATUSES = [

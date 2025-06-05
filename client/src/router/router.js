@@ -304,6 +304,12 @@ const routes = [
         component: () => import('../components/Pages/Property/ViewProperty.vue'),
         meta: { requiresAuth: false },
     },
+    {
+        name:'Categorize Property',
+        path:'/property/categorize',
+        component: () => import('../components/Pages/Property/SetPropertyCategory.vue'),
+        meta: { requiresAuth: false },
+    },
     
 ]
 

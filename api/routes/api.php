@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeliveryController;
 use App\Http\Controllers\DivisionController;
@@ -139,6 +140,8 @@ Route::group([
     Route::get('/find/autocomplete_search', [PropertyController::class, 'searchPropertyNoForAutocompleteSelection']);
     Route::get('/wmr', [PropertyController::class, 'fetchPropertiesforWMRCreatePage']);
     Route::post('/transfer',[PropertyController::class,'transferProperties']);
+    Route::get('/categorize', [PropertyController::class, 'fetchPropertiesForCategorizePage']);
+    Route::post('/update/category', [PropertyController::class, 'updatePropertiesCategory']);
 });
 Route::get('properties/qr/view',[PropertyController::class,'fetchPropertyforViewPage']);
 
@@ -176,4 +179,12 @@ Route::group([
     Route::post('/inspect', [PropertyInspectionRequestController::class, 'inspect']);
     Route::get('/list', [PropertyInspectionRequestController::class, 'list']);
     Route::post('/wmr', [PropertyInspectionRequestController::class, 'setWMRStatus']);
+});
+
+// Category Routes
+Route::group([
+    'middleware' => 'auth:sanctum',
+    'prefix' => 'categories',
+], function () {
+    Route::get('/selection', [CategoryController::class, 'selection']);
 });

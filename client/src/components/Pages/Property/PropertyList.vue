@@ -6,7 +6,7 @@
                 <div class="w-1/3 flex justify-start items-center gap-2 p-2">
                     <FloatLabel variant="on" class="w-full font-poppins">
                         <InputText v-model="searchKeyword"  class="w-full" @change="fetchProperties"/>
-                        <label>Search Keyword | Property No.</label>
+                        <label>Search Keyword</label>
                     </FloatLabel>
                 </div>
                 
@@ -36,7 +36,7 @@
                     <span class="min-w-[10%]">{{ property.user.issuance_date }}</span>
                     <div class="min-w-[20%] flex justify-center items-center gap-2">
                         <span @click="handleNavigation(`/property/update/${property.id}`)" title="Update Property"><Icon icon="flowbite:edit-solid" class="text-xl text-blue-800 cursor-pointer hover:scale-125"/></span>
-                        <span @click="(modals.qr.show = true,modals.qr.text=`http://192.168.225.100:3000/property/view/${property.id}`)" title="Print QR Code"><Icon icon="ic:baseline-qr-code" class="text-xl text-emerald-800 cursor-pointer hover:scale-125"/></span>
+                        <span @click="(modals.qr.show = true,modals.qr.text=`http://192.168.224.24:5001/property/view/${property.id}`)" title="Print QR Code"><Icon icon="ic:baseline-qr-code" class="text-xl text-emerald-800 cursor-pointer hover:scale-125"/></span>
                     </div>
                 </div>
 
@@ -74,7 +74,7 @@
 
     const router = useRouter();
     const properties = ref([]);
-    const { fetchRequest } = useApi();
+    const { fetchRequest,postRequest } = useApi();
 
     var pagination = ref({
         page:1,
