@@ -9,6 +9,7 @@ use App\Http\Controllers\MeasurementController;
 use App\Http\Controllers\OfficeController;
 use App\Http\Controllers\PreinspectionRequestController;
 use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\PropertyInspectionRequestController;
 use App\Http\Controllers\StockCardCategoryController;
 use App\Http\Controllers\StockCardController;
 use App\Http\Controllers\UserController;
@@ -136,8 +137,10 @@ Route::group([
     Route::post('/create',[PropertyController::class,'create'])->middleware('auth:sanctum');
     Route::get('/find/pn', [PropertyController::class, 'findPropertyThroughPN']);
     Route::get('/find/autocomplete_search', [PropertyController::class, 'searchPropertyNoForAutocompleteSelection']);
+    Route::get('/wmr', [PropertyController::class, 'fetchPropertiesforWMRCreatePage']);
     Route::post('/transfer',[PropertyController::class,'transferProperties']);
 });
+Route::get('properties/qr/view',[PropertyController::class,'fetchPropertyforViewPage']);
 
 
 // User Routes
@@ -162,4 +165,15 @@ Route::group([
 ], function () {
     Route::get('/list', [PreinspectionRequestController::class, 'fetchPreinspectionRequestsforPreinspectionListPage']);
     Route::get('/list/user', [PreinspectionRequestController::class, 'fetchUserPreinspectionRequestsforPreinspectionListPage']);
+});
+
+// Property Inspection Request Routes
+Route::group([
+    'middleware' => 'auth:sanctum',
+    'prefix' => 'property_inspection_requests',
+], function () {
+    Route::post('/create', [PropertyInspectionRequestController::class, 'create']);
+    Route::post('/inspect', [PropertyInspectionRequestController::class, 'inspect']);
+    Route::get('/list', [PropertyInspectionRequestController::class, 'list']);
+    Route::post('/wmr', [PropertyInspectionRequestController::class, 'setWMRStatus']);
 });

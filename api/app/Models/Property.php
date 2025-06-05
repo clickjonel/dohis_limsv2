@@ -39,7 +39,7 @@ class Property extends Model
 
     public function userHistory()
     {
-        return $this->hasMany(PropertyUserHistory::class, 'property_id');
+        return $this->hasMany(PropertyUserHistory::class, 'property_id')->orderBy('acquisition_date', 'asc');
     }
 
     public function preInspection(): HasMany

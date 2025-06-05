@@ -6,8 +6,6 @@ import { useAuthStore } from '../stores/authStore.js';
 import Measurement from '../components/Pages/Measurement/Measurement.vue';
 import MyDelivery from '../components/Pages/Delivery/MyDelivery.vue';
 import MyProperty from '../components/Pages/Property/MyProperty.vue';
-import PreInspection from '../components/Pages/PreinspectionRequest/PreInspection.vue';
-import MyPreinspectionRequest from '../components/Pages/PreinspectionRequest/MyPreinspectionRequest.vue';
 import DeliveryPage from '../components/Pages/Delivery/DeliveryPage.vue';
 import DeliveryList from '../components/Pages/Delivery/DeliveryList.vue';
 import StockPage from '../components/Pages/Stocks/StockPage.vue';
@@ -15,11 +13,12 @@ import StockList from '../components/Pages/Stocks/StockList.vue';
 import MyStocks from '../components/Pages/Stocks/MyStocks.vue';
 import PropertyPage from '../components/Pages/Property/PropertyPage.vue';
 import PropertyList from '../components/Pages/Property/PropertyList.vue';
-import PreinspectionRequestPage from '../components/Pages/PreinspectionRequest/PreinspectionRequestPage.vue';
-import PreinspectionRequestList from '../components/Pages/PreinspectionRequest/PreinspectionRequestList.vue';
 import DashboardPage from '../components/Pages/Dashboard/DashboardPage.vue';
 import SCMUDashboard from '../components/Pages/Dashboard/SCMUDashboard.vue';
 import MyDashboard from '../components/Pages/Dashboard/MyDashboard.vue';
+import PropertyInspectionRequestList from '../components/Pages/PropertyInspectionRequests/PropertyInspectionRequestList.vue';
+import MyPropertyInspectionRequest from '../components/Pages/PropertyInspectionRequests/MyPropertyInspectionRequest.vue';
+import PropertyInspectionRequestPage from '../components/Pages/PropertyInspectionRequests/PropertyInspectionRequestPage.vue';
 
 
 const routes = [
@@ -157,35 +156,35 @@ const routes = [
                 component:PropertyPage
             },
             {
-                name:'Preinspection Request',
-                path:'/preinspection_requests',
+                name:'Property Inspection Request',
+                path:'/property_inspection_request',
                 meta: { 
                     requiresAuth: true,
                     roles:[],
                 },
                 children:[
                      {
-                        name:'Preinspection Requests',
-                        path:'/preinspection_requests',
+                        name:'Property Inspection Requests',
+                        path:'/property_inspection_requests',
                         meta: { 
                             requiresAuth: true,
                             roles:['supply_officer','ICT','superadmin'],
                         },
-                        component:PreinspectionRequestList
+                        component:PropertyInspectionRequestList
                         
                     },
                     {
-                        name:'My Preinspection Requests',
-                        path:'/preinspection_requests/user',
+                        name:'My Property Inspection Requests',
+                        path:'/property_inspection_requests/user',
                         meta: { 
                             requiresAuth: true,
                             roles:['permanent'],
                         },
-                        component:MyPreinspectionRequest
+                        component:MyPropertyInspectionRequest
                         
                     },
                 ],
-                component:PreinspectionRequestPage
+                component:PropertyInspectionRequestPage
             },
         ]
     },
@@ -294,16 +293,16 @@ const routes = [
         meta: { requiresAuth: true },
     },
     {
-        name:'Add Preinspection Request',
-        path:'/preinspection_request/create',
-        component: () => import('../components/Pages/PreinspectionRequest/CreateRequest.vue'),
-        meta: { requiresAuth: true },
-    },
-    {
         name:'Transfer Properties',
         path:'/properties/transfer',
         component: () => import('../components/Pages/Property/TransferProperties.vue'),
         meta: { requiresAuth: true },
+    },
+    {
+        name:'View Property',
+        path:'/property/view/:id',
+        component: () => import('../components/Pages/Property/ViewProperty.vue'),
+        meta: { requiresAuth: false },
     },
     
 ]

@@ -44,7 +44,8 @@ class PreinspectionRequestController extends Controller
             'defects' => $validated['defects'],
             'requestor' => $validated['requestor'],
             'inspection_section' => $validated['equipment_type'] === 'ICT Equipments' ? 25 : 22,
-            'date' => $validated['date']
+            'date' => $validated['date'],
+            'status' => 'For Inspection'
         ]);
 
         return response()->json([

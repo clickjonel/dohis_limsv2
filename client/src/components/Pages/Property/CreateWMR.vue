@@ -99,7 +99,7 @@
                     <div class="w-full flex justify-start items-center">
                             <span class="w-full text-center font-medium">Official Receipt</span>
                     </div>
-                    <div class="w-full flex justify-start items-center divide-x-2">
+                    <div class="w-full flex justify-start items-stretch divide-x-2">
                             <span class="w-1/3">No.</span>
                             <span class="w-1/3">Date</span>
                             <span class="w-1/3">Amount</span>
@@ -117,11 +117,11 @@
                         <span class="pl-1">UC:{{property.unit_cost}}</span>
                         <span class="pl-1">DA:{{property.user.acquisition_date === '0000-00-00' ? '' : property.user.acquisition_date }}</span>
                     </div>
-                    <div class="w-[30%] flex flex-col justify-center items-stretch divide-y-2 text-center">
+                    <div class="w-[30%] flex justify-center items-stretch divide-y-2 text-center">
                         <div class="w-full flex justify-start items-stretch divide-x-2">
-                                <span class="w-1/3"></span>
-                                <span class="w-1/3"></span>
-                                <span class="w-1/3"></span>
+                            <span class="w-1/3"></span>
+                            <span class="w-1/3"></span>
+                            <span class="w-1/3"></span>
                         </div>
                     </div>
                 </div>
@@ -202,7 +202,7 @@
 
 
     <!-- Pre inspection Requests -->
-    <div v-for="property in properties" :key="property.property_no" class="w-full flex flex-col justify-start items-start outline p-4 break-before-page" >
+    <!-- <div v-for="property in properties" :key="property.property_no" class="w-full flex flex-col justify-start items-start outline p-4 break-before-page" >
             <div class="w-full flex justify-center items-center gap-4">
                 <div class="w-full flex flex-col justify-center items-center text-sm font-noto">
                     <span>Republic of the Philippines</span>
@@ -301,7 +301,7 @@
                 </div>
             </div>
 
-    </div>
+    </div> -->
 
  </template>
  
@@ -334,7 +334,7 @@
 
     var properties = ref([]);
     var fund_sources = ref([]);
-    var propertyUrlQuery =  Array.isArray(route.query.selectedProperties) ? route.query.selectedProperties : [route.query.selectedProperties]
+    var propertyUrlQuery =  Array.isArray(route.query.ids) ? route.query.ids : [route.query.ids]
 
      var wmr = ref({
         fund_cluster:'',
@@ -347,7 +347,7 @@
      onMounted(()=>{
         fetchProperties()
         fetchFundSources() 
-        // console.log(store.user)
+        // console.log(propertyUrlQuery)
      })
 
     async function fetchFundSources(){
@@ -360,7 +360,7 @@
     }
 
      async function fetchProperties(){
-        var response = await fetchRequest('/properties/find',{ids:propertyUrlQuery})
+        var response = await fetchRequest('/properties/wmr',{ids:propertyUrlQuery})
         console.log(response)
         response.toast()
         if(response.data.properties){

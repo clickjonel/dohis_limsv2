@@ -35,8 +35,8 @@
                     <span class="min-w-[15%] text-xs">{{ property.unit_cost }}</span>
                     <span class="min-w-[10%]">{{ property.user.issuance_date }}</span>
                     <div class="min-w-[20%] flex justify-center items-center gap-2">
-                            <span @click="handleNavigation(`/property/update/${property.id}`)" title="Update Property"><Icon icon="flowbite:edit-solid" class="text-xl text-blue-800 cursor-pointer hover:scale-125"/></span>
-                            <span title="Print Sticker"><Icon icon="material-symbols:print-rounded" class="text-xl text-emerald-800 cursor-pointer hover:scale-125"/></span>
+                        <span @click="handleNavigation(`/property/update/${property.id}`)" title="Update Property"><Icon icon="flowbite:edit-solid" class="text-xl text-blue-800 cursor-pointer hover:scale-125"/></span>
+                        <span @click="(modals.qr.show = true,modals.qr.text=`http://192.168.225.100:3000/property/view/${property.id}`)" title="Print QR Code"><Icon icon="ic:baseline-qr-code" class="text-xl text-emerald-800 cursor-pointer hover:scale-125"/></span>
                     </div>
                 </div>
 
@@ -50,6 +50,13 @@
         <Pagination v-model="pagination.page" :total="pagination.total" :perPage="pagination.perPage" @fetchPage="fetchProperties"/>
 
     </AuthenticatedPage>
+
+    <Dialog v-model:visible="modals.qr.show" modal header="Property QR Code" :style="{ width: '40%',  fontFamily: 'Lexend Deca' }">
+        <div class="w-full flex justify-center items-center">
+            <QrcodeVue :value="modals.qr.text" :size="250" class="border-2 p-2"/>
+        </div>
+    </Dialog>
+
 </template>
 
 <script setup>
@@ -62,6 +69,8 @@
     import InputText from 'primevue/inputtext';
     import useApi from '../../../composables/api_calls';
     import PrimevueButton from 'primevue/button';
+    import Dialog from 'primevue/dialog';
+    import QrcodeVue from 'qrcode.vue'
 
     const router = useRouter();
     const properties = ref([]);
@@ -74,6 +83,13 @@
     })
 
     var searchKeyword = ref('');
+
+    var modals = ref({
+        qr:{
+            show:false,
+            text:''
+        }
+    })
 
     onMounted(()=>{
         fetchProperties()

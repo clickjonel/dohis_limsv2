@@ -327,4 +327,28 @@ class PropertyController extends Controller
         ]);
     }
 
+    public function fetchPropertiesforWMRCreatePage(Request $request):JsonResponse
+    {
+        $properties = Property::with(['user'])->whereIn('id',$request->ids)->get();
+
+        return response()->json([
+            'properties' => $properties,
+        ]);
+    }
+
+    public function fetchPropertyforViewPage(Request $request):JsonResponse
+    {
+        $property = Property::with(['user'])->find($request->id);
+        $property['user']['full_name'] = $this->getUserFullName($property['user']->user_id);
+        $property['user_history'] = $property->userHistory->map(function($history) {
+            $history['full_name'] = $this->getUserFullName($history->user_id);
+            return $history;
+        });
+        $property['acquisition_date'] = $property['user_history'][0]->acquisition_date;
+
+        return response()->json([
+            'property' => $property,
+        ]);
+    }
+
 }

@@ -22,7 +22,8 @@ class PreinspectionRequest extends Model
         'inspection_section',
         'inspection_result',
         'inspection_date',
-        'date'
+        'date',
+        'status'
     ];
 
     public function property():BelongsTo
