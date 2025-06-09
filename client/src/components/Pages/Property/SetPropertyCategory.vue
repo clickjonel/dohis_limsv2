@@ -1,18 +1,18 @@
 <template>
 
     <AuthenticatedPage>
-         <div class="w-full min-h-[92%] flex flex-col justify-start items-start gap-4 font-lexend overflow-y-scroll p-4">
+         <div class="w-full min-h-[92%] flex flex-col justify-center items-center gap-4 font-lexend overflow-y-scroll p-4">
             <FloatLabel variant="on" class="w-full font-poppins mb-4">
                 <InputText v-model="searchKeyword"  class="w-full" @change="fetchProperties"/>
                 <label>Search Keyword</label>
             </FloatLabel>
 
-            <div v-for="property in properties" class="w-full flex justify-start items-start gap-2 text-xs">
+            <div v-for="property in properties" class="w-full flex justify-center items-center gap-2">
                 <FloatLabel variant="on" class="w-full font-poppins">
                     <InputText v-model="property.particulars"  class="w-full" @change="fetchProperties"/>
                     <label>Search Keyword</label>
                 </FloatLabel>
-                <FloatLabel class="w-[20%]" variant="on">
+                <FloatLabel class="w-[20%] font-poppins" variant="on">
                     <Select v-model="property.main_category_id" :options="categories" optionLabel="name"  optionValue="id" class="w-full" :overlayStyle="{fontFamily:'Lexend Deca'}"/>
                     <label>Category</label>
                 </FloatLabel>
@@ -50,7 +50,7 @@
     var pagination = ref({
         page:1,
         total:0,
-        perPage:15
+        perPage:100
     })
 
     var searchKeyword = ref('');
