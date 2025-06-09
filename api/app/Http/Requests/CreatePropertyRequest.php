@@ -30,7 +30,8 @@ class CreatePropertyRequest extends FormRequest
             'status'            => 'nullable|string',
             'remarks'           => 'nullable|string',
             'end_user'          => 'required|numeric',
-            'acquisition_date'  => 'required|date'
+            'acquisition_date'  => 'required|date',
+            'main_category_id' => 'nullable|numeric|exists:categories,id'
         ];
     }
 }

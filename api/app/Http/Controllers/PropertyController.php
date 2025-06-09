@@ -64,7 +64,8 @@ class PropertyController extends Controller
                 'particulars'       => $validated['particulars'],
                 'unit_cost'         => (float) $validated['unit_cost'],
                 'status'            => $validated['status'],
-                'remarks'           => $validated['remarks']
+                'remarks'           => $validated['remarks'],
+                'main_category_id' => $validated['main_category_id'] ?? 0
             ]);
 
             if($validated['end_user']){

@@ -38,6 +38,10 @@
                         <InputText v-model="property.status" disabled class="w-full"/>
                         <label>Status</label>
                     </FloatLabel>
+                    <FloatLabel class="w-full" variant="on">
+                        <Select v-model="property.main_category_id" :options="selections.categories" optionLabel="name"  optionValue="id" class="w-full" :overlayStyle="{fontFamily:'Lexend Deca'}"/>
+                        <label>Category</label>
+                    </FloatLabel>
                 </div>
                 
             </div>
@@ -57,13 +61,16 @@
     import useApi from '../../../composables/api_calls';
     import DatePicker from 'primevue/datepicker';
     import PrimevueButton from 'primevue/button';
+    import useSelection from '../../../composables/selections';
     
     const { fetchRequest,postRequest } = useApi();
+    const { categorySelection } = useSelection()
     const router = useRouter();
 
     var selections = ref({
         measurements: [],
-        end_users: []
+        end_users: [],
+        categories:[]
     });
 
     var property = ref({
@@ -71,9 +78,10 @@
         remarks:''
     })
 
-    onMounted(()=>{
+    onMounted( async ()=>{
         fetchMeasurements()
         fetchUsers()
+        selections.value.categories = await categorySelection()
     })
 
     async function fetchMeasurements(){

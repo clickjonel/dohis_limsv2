@@ -14,7 +14,7 @@
             <div v-for="property in properties" class="w-full flex justify-center items-center gap-2">
                 <FloatLabel variant="on" class="w-full font-poppins">
                     <InputText v-model="property.particulars"  class="w-full" @change="fetchProperties"/>
-                    <label>Search Keyword</label>
+                    <label>{{ property }}</label>
                 </FloatLabel>
                 <FloatLabel class="w-[20%] font-poppins" variant="on">
                     <Select v-model="property.main_category_id" :options="categories" optionLabel="name"  optionValue="id" class="w-full" :overlayStyle="{fontFamily:'Lexend Deca'}"/>
