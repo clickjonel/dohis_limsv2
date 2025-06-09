@@ -6,6 +6,10 @@
                 <InputText v-model="searchKeyword"  class="w-full" @change="fetchProperties"/>
                 <label>Search Keyword</label>
             </FloatLabel>
+            <FloatLabel variant="on" class="w-full font-poppins mb-4">
+                <InputNumber v-model="category"  class="w-full" @input="setDefaultCategories"/>
+                <label>Set Default for List</label>
+            </FloatLabel>
 
             <div v-for="property in properties" class="w-full flex justify-center items-center gap-2">
                 <FloatLabel variant="on" class="w-full font-poppins">
@@ -37,6 +41,7 @@
     import PrimevueButton from 'primevue/button';
     import DatePicker from 'primevue/datepicker';
     import InputText from 'primevue/inputtext';
+    import InputNumber from 'primevue/inputnumber';
 
 
     const route = useRoute()
@@ -54,6 +59,7 @@
     })
 
     var searchKeyword = ref('');
+    var category = ref(0)
 
     onMounted(async () => {
         categories.value = await categorySelection()
@@ -81,6 +87,13 @@
         if(response.apiResponseStatus === 200){
             console.log(response.data)
         }
+    }
+
+    function setDefaultCategories(){
+        properties.value.forEach(property => {
+            property.main_category_id = category
+        });
+        // console.log('asd')
     }
  
 
