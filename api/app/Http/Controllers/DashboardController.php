@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\DeliveryTrait;
+use App\Models\Category;
 use App\Models\Delivery;
 use App\Models\DeliveryItem;
 use App\Models\DeliveryReceipts;
@@ -152,25 +153,18 @@ class DashboardController extends Controller
 
     public function fetchSupplyDashboardDetails(Request $request):JsonResponse
     {
-        $totals = [
-            'deliveries' => Delivery::count(),
-            'stocks' => StockCard::count(),
+        $property_categories = Category::withCount('properties')->withSum('properties', 'unit_cost')->get();
+        $counts = [
             'properties' => Property::count(),
-            'warehouses' => Warehouse::count()
-        ];
-
-        $charts = [
-            'deliveryDonut' => [Delivery::where('payment_term',1)->count(),Delivery::where('payment_term',2)->count()],
-            'deliveryColumn' => $this->fetchDeliveryByMonth()
+            'deliveries' => Delivery::count(),
+            'stocks' => StockCard::count() 
         ];
 
         return response()->json([
-            'data' => [
-                'totals' => $totals,
-                'charts' => $charts,
-            ]
+            'property_categories' => $property_categories,
+            'counts' => $counts
 
-        ]);
+        ],200);
     }
 
 

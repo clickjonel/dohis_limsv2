@@ -60,7 +60,7 @@ const routes = [
                 component:DeliveryPage
                 
             },
-             {
+            {
                 name:'DashboardPage',
                 path:'/dashboard',
                 meta: { 
@@ -69,7 +69,7 @@ const routes = [
                 },
                 children:[
                      {
-                        name:'Dashoard',
+                        name:'Dashboard',
                         path:'/dashboard',
                         meta: { 
                             requiresAuth: true,
@@ -308,6 +308,12 @@ const routes = [
         name:'Categorize Property',
         path:'/property/categorize',
         component: () => import('../components/Pages/Property/SetPropertyCategory.vue'),
+        meta: { requiresAuth: false },
+    },
+    {
+        name:'Property Stickers',
+        path:'/property/sticker',
+        component: () => import('../components/Pages/Property/PrintStickers.vue'),
         meta: { requiresAuth: false },
     },
     

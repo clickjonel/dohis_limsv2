@@ -53,5 +53,8 @@ class Property extends Model
         return $this->hasOne(Measurement::class, 'id', 'measurement_unit');
     }
 
-
+    public function mainCategory()
+    {
+        return $this->belongsTo(Category::class, 'main_category_id');
+    }
 }

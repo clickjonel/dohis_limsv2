@@ -9,7 +9,7 @@
             <div class="w-full rounded-md">
                 <Panel header="Dashboard" :toggleable="true" class="w-full text-black text-sm">
                     <div class="flex flex-col justify-start items-center gap-2">
-                        <span v-if="checkRole('superadmin') || checkRole('supply_officer')" class="w-full text-left p-2 rounded-lg cursor-pointer">SCMU Dashboard</span>
+                        <span v-if="checkRole('superadmin') || checkRole('supply_officer')" @click="handleNavigation('/dashboard')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'Dashboard' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">SCMU Dashboard</span>
                         <span v-if="checkRole('permanent')" @click="handleNavigation('/dashboard/user')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'My Dashboard' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">My Dashboard</span>
                     </div>
                 </Panel>

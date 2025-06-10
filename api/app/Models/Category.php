@@ -12,5 +12,9 @@ class Category extends Model
         'name'
     ];
 
+    public function properties()
+    {
+        return $this->hasMany(Property::class, 'main_category_id');
+    }
     
 }

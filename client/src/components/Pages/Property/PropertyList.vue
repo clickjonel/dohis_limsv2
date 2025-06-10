@@ -12,9 +12,7 @@
                 
 
                 <div class="flex justify-start items-center gap-2 p-2">
-                    <PrimevueButton @click="handleNavigation('property/add')" label="Add Property" severity="primary"/>
-                    <PrimevueButton @click="handleNavigation('properties/transfer')" label="Transfer Property/ies" severity="info"/>
-                    <PrimevueButton @click="handleNavigation('property/user')" label="Create Inventory Report" severity="info"/>
+                    <PrimevueButton label="Actions" severity="info" @click="toggleActions" class="font-poppins" style="font-family: 'Poppins';"/>
                 </div>
             </div>
 
@@ -57,6 +55,15 @@
         </div>
     </Dialog>
 
+        <Popover ref="actionsPopover">
+            <div class="flex flex-col gap-4 w-[25rem] font-lexend justify-start items-start">
+                <PrimevueButton @click="handleNavigation('property/add')" label="Add Property" severity="primary" class="w-full"/>
+                <PrimevueButton @click="handleNavigation('properties/transfer')" label="Transfer Property/ies" severity="info" class="w-full"/>
+                <PrimevueButton @click="handleNavigation('property/user')" label="Create Inventory Report" severity="info" class="w-full"/>
+                <PrimevueButton @click="handleNavigation('property/sticker')" label="Print Stickers" severity="info" class="w-full"/>
+            </div>
+        </Popover>
+
 </template>
 
 <script setup>
@@ -71,10 +78,12 @@
     import PrimevueButton from 'primevue/button';
     import Dialog from 'primevue/dialog';
     import QrcodeVue from 'qrcode.vue'
+    import Popover from 'primevue/popover';
 
     const router = useRouter();
     const properties = ref([]);
     const { fetchRequest,postRequest } = useApi();
+    const actionsPopover = ref();
 
     var pagination = ref({
         page:1,
@@ -111,6 +120,10 @@
             console.log(response.data)
         }
     
+    }
+
+    function toggleActions(event){
+        actionsPopover.value.toggle(event)
     }
 
 
