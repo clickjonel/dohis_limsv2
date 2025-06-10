@@ -2,7 +2,7 @@
     <AuthenticatedPage pageTitle="Deliveries">
         <div class="w-full min-h-[100%] flex flex-col justify-start items-center gap-4 font-poppins p-2">
             <div class="w-full h-full flex flex-col justify-start items-start gap-4">
-                <div class="w-full h-1/4 flex justify-start items-start gap-2">
+                <div class="w-full flex justify-start items-start gap-2">
                     <Card class="w-full h-full">
                         <template #title>Welcome Back</template>
                         <template #content>
@@ -14,7 +14,7 @@
                     </Card>
                 </div>
 
-                <div class="w-full h-1/2 flex flex-col justify-start items-start gap-2 p-2">
+                <div class="w-full flex flex-col justify-start items-start gap-2 p-2">
                    <div class="w-full flex justify-start items-start gap-2 bg-emerald-900/50 p-2 font-semibold uppercase text-center">
                         <span class="w-1/3">Category</span>
                         <span class="w-1/3">Total Count</span>
@@ -27,7 +27,7 @@
                    </div>
                 </div>
 
-                <div class="w-full h-1/4 flex justify-start items-start gap-2 p-2">
+                <div class="w-full flex justify-start items-start gap-2 p-2">
                     <Card class="w-full h-full">
                         <template #title>Properties</template>
                         <template #content>

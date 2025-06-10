@@ -321,9 +321,13 @@ class PropertyController extends Controller
     {
         $search_keyword = $request->keyword;
 
-        $properties = Property::where('property_no', 'like', '%' . $search_keyword . '%')
+        $properties = Property::with('user')->where('property_no', 'like', '%' . $search_keyword . '%')
                         ->orderBy('id','DESC')
-                        ->get(['id', 'property_no','particulars']);
+                        ->get(['id', 'property_no','particulars','unit_cost'])
+                        ->map(function($property){
+                            $property['user']['full_name'] = $this->getUserFullName($property['user']['user_id']);
+                            return $property;
+                        });
 
         return response()->json([
             'properties' => $properties,
