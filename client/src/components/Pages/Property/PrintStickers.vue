@@ -11,11 +11,11 @@
                 <Select v-model="options.sticker_type" :options="[{name:'Small Sticker'},{name:'Large Sticker'}]" optionLabel="name" optionValue="name" class="w-full" filter :overlayStyle="{fontFamily:'Lexend Deca'}"/>
                 <label>Select Sticker Type</label>
             </FloatLabel>
-
+<!-- 
             <FloatLabel class="w-full" variant="on">
                 <InputText v-model="options.coa_representative" class="w-full"/>
                 <label>COA Representative</label>
-            </FloatLabel>
+            </FloatLabel> -->
 
             <FloatLabel class="w-full" variant="on">
                 <DatePicker v-model="options.date_counted" class="w-full" dateFormat="dd/mm/yy"/>

@@ -179,6 +179,7 @@ Route::group([
     Route::post('/inspect', [PropertyInspectionRequestController::class, 'inspect']);
     Route::get('/list', [PropertyInspectionRequestController::class, 'list']);
     Route::post('/wmr', [PropertyInspectionRequestController::class, 'setWMRStatus']);
+    Route::post('/finished', [PropertyInspectionRequestController::class, 'setRequestsAsFinished']);
 });
 
 // Category Routes

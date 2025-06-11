@@ -87,5 +87,23 @@ class PropertyInspectionRequestController extends Controller
 
     }
 
+    public function setRequestsAsFinished(Request $request):JsonResponse
+    {
+        $data = [];
+
+        foreach($request->all() as $property_request){
+            $requestObject = PropertyInspectionRequest::find($property_request);
+            $property = Property::find($requestObject->property_id)->update(['status'=>'Wasted']);
+
+            $requestObject->update(['status'=>'Finished']);
+        }
+
+
+
+        return response()->json([
+            'message' => 'Property inspection request status updated successfully',
+        ], 200);
+
+    }
 
 }

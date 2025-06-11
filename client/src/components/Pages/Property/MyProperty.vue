@@ -12,9 +12,8 @@
                 
 
                 <div class="flex justify-start items-center gap-2 p-2">
-                    <!-- <PrimevueButton label="Create Preinspection Request" severity="info"/> -->
-                    <PrimevueButton label="Create PTR" severity="info"/>
-                    <PrimevueButton label="Create Inventory Report" severity="info"/>
+                    <!-- <PrimevueButton label="Create PTR" severity="info"/> -->
+                    <!-- <PrimevueButton label="Create Inventory Report" severity="info"/> -->
                 </div>
             </div>
 

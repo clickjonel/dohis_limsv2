@@ -12,8 +12,8 @@
                 
 
                 <div class="flex justify-start items-center gap-2 p-2">
-                    <PrimevueButton v-if="selected.length > 0" @click="goToWMRPage" label="Create WMR" severity="info" class="shadow-md shadow-slate-600"/>
-                    <!-- <PrimevueButton label="Create WMR" severity="info" class="shadow-md shadow-slate-600"/> -->
+                    <PrimevueButton v-if="selected.length > 0" @click="goToWMRPage" label="Create WMR" severity="info" class="shadow-md shadow-slate-600 uppercase" :style="{fontFamily:'Poppins'}"/>
+                    <PrimevueButton v-if="selected.length > 0" @click="setRequestsAsFinished" label="Mark Request/s as Finished" severity="info" class="shadow-md shadow-slate-600 uppercase" :style="{fontFamily:'Poppins'}"/>
                 </div>
             </div>
 
@@ -66,7 +66,7 @@
 
     const router = useRouter();
     const store = useAuthStore();   
-    const { fetchRequest } = useApi();
+    const { fetchRequest,postRequest } = useApi();
 
     var pagination = ref({
         page:1,
@@ -121,5 +121,10 @@
         router.push({path:'/property/wmr/create',query:{ids:selected.value}})
     }
   
+    async function setRequestsAsFinished(){
+        const response = await postRequest('property_inspection_requests/finished',selected.value)
+        response.toast()
+        console.log(response)
+    }
 
 </script>
