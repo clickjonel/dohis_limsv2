@@ -124,7 +124,9 @@
     async function setRequestsAsFinished(){
         const response = await postRequest('property_inspection_requests/finished',selected.value)
         response.toast()
-        console.log(response)
+        if(response.apiResponseStatus === 200){
+            fetchPreinspectionRequests()
+        }
     }
 
 </script>

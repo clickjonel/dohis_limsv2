@@ -19,6 +19,8 @@ import MyDashboard from '../components/Pages/Dashboard/MyDashboard.vue';
 import PropertyInspectionRequestList from '../components/Pages/PropertyInspectionRequests/PropertyInspectionRequestList.vue';
 import MyPropertyInspectionRequest from '../components/Pages/PropertyInspectionRequests/MyPropertyInspectionRequest.vue';
 import PropertyInspectionRequestPage from '../components/Pages/PropertyInspectionRequests/PropertyInspectionRequestPage.vue';
+import ICTUDashboard from '../components/Pages/Dashboard/ICTUDashboard.vue';
+import BorrowedProperties from '../components/Pages/Property/BorrowedProperties.vue';
 
 
 const routes = [
@@ -88,6 +90,16 @@ const routes = [
                         component:MyDashboard
                         
                     },
+                    {
+                        name:'ICT Dashboard',
+                        path:'/dashboard/ict',
+                        meta: { 
+                            requiresAuth: true,
+                            roles:['ict'],
+                        },
+                        component:ICTUDashboard
+                        
+                    },
                 ],
                 component:DashboardPage
                 
@@ -150,6 +162,16 @@ const routes = [
                             roles:['permanent'],
                         },
                         component:MyProperty
+                        
+                    },
+
+                    {
+                        name:'Borrowed Properties',
+                        path:'/properties/borrow',
+                        meta: { 
+                            requiresAuth: true,
+                        },
+                        component:BorrowedProperties
                         
                     },
                 ],

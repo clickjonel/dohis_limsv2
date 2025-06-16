@@ -9,15 +9,16 @@
             <div class="w-full rounded-md">
                 <Panel header="Dashboard" :toggleable="true" class="w-full text-black text-sm">
                     <div class="flex flex-col justify-start items-center gap-2">
-                        <span v-if="checkRole('superadmin') || checkRole('supply_officer')" @click="handleNavigation('/dashboard')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'Dashboard' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">SCMU Dashboard</span>
+                        <span v-if="checkRole('superadmin') || checkRole('supply_officer') || checkRole('ict')" @click="handleNavigation('/dashboard')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'Dashboard' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">SCMU Dashboard</span>
                         <span v-if="checkRole('permanent')" @click="handleNavigation('/dashboard/user')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'My Dashboard' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">My Dashboard</span>
+                          <span v-if="checkRole('superadmin') || checkRole('ict')" @click="handleNavigation('/dashboard/ict')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'ICT Dashboard' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">ICT Dashboard</span>
                     </div>
                 </Panel>
             </div>
             <div class="w-full rounded-md">
                 <Panel header="Deliveries" :toggleable="true" class="w-full text-black text-sm">
                     <div class="flex flex-col justify-start items-center gap-2">
-                        <span v-if="checkRole('superadmin') || checkRole('supply_officer')" @click="handleNavigation('/deliveries')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'Deliveries' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">Delivery List</span>
+                        <span v-if="checkRole('superadmin') || checkRole('supply_officer') || checkRole('ict')" @click="handleNavigation('/deliveries')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'Deliveries' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">Delivery List</span>
                         <span v-if="checkRole('permanent')" @click="handleNavigation('/deliveries/user')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'My Delivery' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">My Deliveries</span>
                     </div>
                 </Panel>
@@ -25,7 +26,7 @@
             <div class="w-full rounded-md">
                 <Panel header="Stocks" :toggleable="true" class="w-full text-black text-sm">
                     <div class="flex flex-col justify-start items-center gap-2">
-                        <span v-if="checkRole('superadmin') || checkRole('supply_officer')" @click="handleNavigation('/stocks')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'Stocks' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">Stocks List</span>
+                        <span v-if="checkRole('superadmin') || checkRole('supply_officer') || checkRole('ict')" @click="handleNavigation('/stocks')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'Stocks' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">Stocks List</span>
                         <span v-if="checkRole('permanent')" @click="handleNavigation('/stocks/section')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'My Stocks' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">My Stocks</span>
                     </div>
                 </Panel>
@@ -33,8 +34,9 @@
             <div class="w-full rounded-md">
                 <Panel header="Properties" :toggleable="true" class="w-full text-black text-sm">
                     <div class="flex flex-col justify-start items-center gap-2">
-                        <span v-if="checkRole('superadmin') || checkRole('supply_officer')" @click="handleNavigation('/properties')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'Properties' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">Properties List</span>
+                        <span v-if="checkRole('superadmin') || checkRole('supply_officer') || checkRole('ict')" @click="handleNavigation('/properties')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'Properties' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">Properties List</span>
                         <span v-if="checkRole('permanent')" @click="handleNavigation('/properties/user')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'My Properties' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">My Properties</span>
+                        <span v-if="checkRole('ict')" @click="handleNavigation('/properties/borrow')" class="w-full text-left p-2 rounded-lg cursor-pointer" :class="route.name === 'Borrowed Properties' ? 'bg-emerald-200' : 'hover:bg-emerald-200'">Borrowed Properties</span>
                     </div>
                 </Panel>
             </div>
@@ -86,12 +88,12 @@
 
 
     onMounted(()=>{
-        console.log(store.roles)
+        // console.log(store.roles)
     })
 
     function handleNavigation(path){
         router.push({path:path})
-        console.log(path)
+        // console.log(path)
     }
 
     function checkRole(role){

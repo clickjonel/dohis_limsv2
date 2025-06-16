@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\BorrowerController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DeliveryController;
@@ -188,4 +189,15 @@ Route::group([
     'prefix' => 'categories',
 ], function () {
     Route::get('/selection', [CategoryController::class, 'selection']);
+});
+
+
+// Borrower Routes
+Route::group([
+    'middleware' => 'auth:sanctum',
+    'prefix' => 'borrowers',
+], function () {
+    Route::post('/create', [BorrowerController::class, 'create']);
+    Route::post('/return', [BorrowerController::class, 'return']);
+    Route::get('/list', [BorrowerController::class, 'list']);
 });

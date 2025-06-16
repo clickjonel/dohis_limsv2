@@ -61,6 +61,7 @@ trait UserTrait
         $is_superadmin = $user_id === 582 ? $roles[] = 'superadmin' : [];
         $is_property_custodian = $user_assignment->user_id === 127 ? $roles[] = 'property_custodian' : [];
         $is_division_chief = $user_assignment->designation_id === 3 ? $roles[] = 'division_chief' : [];
+        $is_ict = $user_assignment->section_id === 25 ? $roles[] = 'ict' : [];
 
         // $has_deliveries = $user->deliveries->count() > 0 ?  $permissions[] = 'deliveries' : [];
         // $has_stocks = StockCard::where('req_office',$user_assignment->section_id)->count() > 0 ?  $permissions[] = 'stocks' : [];
