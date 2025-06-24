@@ -261,7 +261,8 @@ class PropertyController extends Controller
         $perPage = $request->per_page ?? 15;
         $search_keyword = trim($request->keyword ?? '');
 
-        $propertyObject = Property::when($search_keyword, function ($query) use ($search_keyword) {
+        $propertyObject = Property::where('status' , 'Active')
+                            ->when($search_keyword, function ($query) use ($search_keyword) {
                                 $query->where('property_no', 'like', '%' . $search_keyword . '%');
                                 $query->orWhere('particulars', 'like', '%' . $search_keyword . '%');
                             })->orderBy('id','DESC');
@@ -287,10 +288,11 @@ class PropertyController extends Controller
         $perPage = $request->per_page ?? 15;
         $search_keyword = trim($request->keyword ?? '');
 
-        $propertyObject = Property::whereRelation('user','user_id',$request->user_id)
+       $propertyObject = Property::where('status' , 'Active')
                             ->when($search_keyword, function ($query) use ($search_keyword) {
                                 $query->where('property_no', 'like', '%' . $search_keyword . '%');
-                            });
+                                $query->orWhere('particulars', 'like', '%' . $search_keyword . '%');
+                            })->orderBy('id','DESC');
 
         $total = $propertyObject->count();  
         $properties = $propertyObject->offset(($page - 1) * $perPage)->limit($perPage)->get();  
@@ -367,7 +369,7 @@ class PropertyController extends Controller
 
     public function fetchPropertiesForCategorizePage(Request $request):JsonResponse
     {
-       $page = $request->page ?? 1;
+        $page = $request->page ?? 1;
         $perPage = $request->per_page ?? 15;
         $search_keyword = trim($request->keyword ?? '');
 

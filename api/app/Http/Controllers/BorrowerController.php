@@ -14,13 +14,12 @@ class BorrowerController extends Controller
 
     public function create(Request $request):JsonResponse
     {
-        foreach($request->properties as $property){
-            Borrower::create([
-                'property_id' => $property['id'],
-                'borrower_id' => $request->borrower_id,
-                'borrow_date' => $request->borrow_date,
-            ]);
-        }
+        Borrower::create([
+            'property_no' => $request->property_no,
+            'borrower_id' => $request->borrower_id,
+            'borrow_date' => $request->borrow_date,
+            'item' => $request->item
+        ]);
 
         return response()->json([
             'message' => 'Borrower Saved',

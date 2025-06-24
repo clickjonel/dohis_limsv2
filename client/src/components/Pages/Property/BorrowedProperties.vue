@@ -26,8 +26,8 @@
                 </div>
                 
                 <div v-for="borrower in borrowers" class="w-full flex justify-start items-center border-b font-poppins text-center py-2 font-light text-sm bg-white/50 hover:bg-emerald-400">
-                    <span class="min-w-[10%]">{{ borrower.property.property_no }}</span>
-                    <span class="min-w-[50%]">{{ borrower.property.particulars }}</span>
+                    <span class="min-w-[10%]">{{ borrower.property_no }}</span>
+                    <span class="min-w-[50%]">{{ borrower.item }}</span>
                     <span class="min-w-[10%]">{{ borrower.borrow_date }}</span>
                     <span class="min-w-[20%]">{{ borrower.borrower.full_name }}</span>
                     <span class="min-w-[10%]">
@@ -48,9 +48,13 @@
             <div class="w-full flex flex-col justify-between items-start gap-4 p-4 text-black border-y">
                 <div class="w-full flex flex-col justify-start items-start gap-4">
                     <div class="w-full flex justify-start items-start gap-2 mt-4">
+                        <FloatLabel variant="on" class="w-1/3">
+                           <InputText v-model="modals.borrow.fields.property_no" class="w-full"/>
+                            <label>Property Number</label>
+                        </FloatLabel>
                         <FloatLabel variant="on" class="w-full">
-                            <AutoComplete v-model="modals.borrow.fields.properties" :suggestions="modals.borrow.suggestions" :optionLabel="'property_no'" :optionValue="'id'" @complete="searchProperty" multiple class="w-full" :overlayStyle="{fontFamily:'Poppins'}"/>
-                            <label>Search Property Number/s</label>
+                           <InputText v-model="modals.borrow.fields.item" class="w-full"/>
+                            <label>Item</label>
                         </FloatLabel>
                     </div>
                     <div class="w-full flex justify-start items-start gap-2">

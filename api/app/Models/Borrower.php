@@ -12,10 +12,11 @@ class Borrower extends Model
 
     public $timestamps = false;
     protected $fillable = [
-        'property_id',
+        'property_no',
         'borrower_id',
         'borrow_date',
-        'return_date'
+        'return_date',
+        'item'
     ];
 
     public function property():HasOne
