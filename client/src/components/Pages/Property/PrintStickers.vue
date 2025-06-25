@@ -43,7 +43,7 @@
                 <span>Date Acquired: {{ property.user.issuance_date }}</span>
                 <span>Acquisition Cost: {{ property.unit_cost }}</span>
                 <span>End User/MR to: {{ property.user.full_name }}</span>
-                <span>Date Counted: {{ new Date(options.date_counted).toLocaleDateString() }}</span>
+                <span>Date Counted: {{ options.date_counted ?  new Date(options.date_counted).toLocaleDateString() : ''}}</span>
                 <span>Inventory Conducted By: Shayne</span>
                 
                 <div class="w-full flex justify-center items-center">
