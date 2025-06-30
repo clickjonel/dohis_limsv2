@@ -139,7 +139,7 @@
                          <div class="w-full flex justify-end items-center p-2">
                             <PrimevueButton @click="updateInvoices" label="Save Changes to Invoices" severity="info" class="shadow-md shadow-slate-600"/>
                         </div>
-                        <div class="w-full flex justify-start items-start gap-4">
+                        <div class="w-full flex flex-col justify-start items-start gap-4">
                              <Panel v-for="(invoice,index) in deliveryObject.invoices" :header="`Invoice ${index+1}`" toggleable class="w-full mt-4">
                                 <div class="w-full flex justify-start items-start gap-4">
                                     <FloatLabel variant="on" class="w-full">
@@ -161,7 +161,7 @@
                             <div class="w-full flex justify-end items-center p-2">
                                 <PrimevueButton @click="updateReceipts" label="Save Changes to Receipts" severity="info" class="shadow-md shadow-slate-600"/>
                             </div>
-                            <div class="w-full flex justify-start items-start gap-4">
+                            <div class="w-full flex flex-col justify-start items-start gap-4">
                                 <Panel v-for="(receipt,index) in deliveryObject.receipts" :header="`Receipt ${index+1}`" toggleable class="w-full mt-4" >
                                     <div class="w-full flex justify-start items-start gap-4">
                                         <FloatLabel variant="on" class="w-full">
@@ -351,6 +351,7 @@
     }
 
     async function updateInvoices(){
+        console.log(deliveryObject.value.invoices)
         var response = await postRequest('deliveries/update/invoices',deliveryObject.value.invoices);
         response.toast();
     }

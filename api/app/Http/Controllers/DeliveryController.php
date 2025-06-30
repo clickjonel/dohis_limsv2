@@ -685,6 +685,7 @@ class DeliveryController extends Controller
     public function updateInvoices(Request $request)
     {
         foreach($request->all() as $invoice){
+            $invoice['invoice_date'] = Carbon::parse($invoice['invoice_date'])->format('Y-m-d');
             DeliveryInvoice::find($invoice['id'])->update([
                 'invoice_no' => $invoice['invoice_no'],
                 'invoice_date' => $invoice['invoice_date']
@@ -699,6 +700,7 @@ class DeliveryController extends Controller
     public function updateReceipts(Request $request)
     {
         foreach($request->all() as $receipt){
+            $receipt['delivery_date'] = Carbon::parse($receipt['delivery_date'])->format('Y-m-d');
             DeliveryReceipts::find($receipt['id'])->update([
                 'receipt_no' => $receipt['dr_no'],
                 'receipt' => $receipt['dr_date'],
