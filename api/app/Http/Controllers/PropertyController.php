@@ -403,4 +403,15 @@ class PropertyController extends Controller
 
         return response()->json('Updated Successfully');
     }
+
+    public function wmrProperty(Request $request):JsonResponse
+    {
+        $property = Property::find($request->id)->update([
+            'status' => 'Wasted',
+        ]);
+
+        return response()->json([
+            'message' => 'Property marked as Wasted successfully',
+        ]);
+    }
 }

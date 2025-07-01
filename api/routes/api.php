@@ -143,6 +143,7 @@ Route::group([
     Route::post('/transfer',[PropertyController::class,'transferProperties']);
     Route::get('/categorize', [PropertyController::class, 'fetchPropertiesForCategorizePage']);
     Route::post('/update/category', [PropertyController::class, 'updatePropertiesCategory']);
+    Route::post('/wmr', [PropertyController::class, 'wmrProperty']);
 });
 Route::get('properties/qr/view',[PropertyController::class,'fetchPropertyforViewPage']);
 

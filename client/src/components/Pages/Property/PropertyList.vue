@@ -35,6 +35,7 @@
                     <div class="min-w-[20%] flex justify-center items-center gap-2">
                         <span @click="handleNavigation(`/property/update/${property.id}`)" title="Update Property"><Icon icon="flowbite:edit-solid" class="text-xl text-blue-800 cursor-pointer hover:scale-125"/></span>
                         <span @click="(modals.qr.show = true,modals.qr.text=`http://192.168.224.24:5001/property/view/${property.id}`)" title="Print QR Code"><Icon icon="ic:baseline-qr-code" class="text-xl text-emerald-800 cursor-pointer hover:scale-125"/></span>
+                        <span @click="wmr(property.id)" title="WMR"><Icon icon="material-symbols:delete-rounded" class="text-xl text-red-800 cursor-pointer hover:scale-125"/></span>
                     </div>
                 </div>
 
@@ -124,6 +125,15 @@
 
     function toggleActions(event){
         actionsPopover.value.toggle(event)
+    }
+
+    async function wmr(id){
+        var response = await postRequest('properties/wmr',{id:id});
+        response.toast();
+        console.log(response);
+        if(response.apiResponseStatus === 200){
+            router.push({path:'/properties'});
+        }
     }
 
 
