@@ -412,6 +412,6 @@ class PropertyController extends Controller
 
         return response()->json([
             'message' => 'Property marked as Wasted successfully',
-        ]);
+        ],200);
     }
 }

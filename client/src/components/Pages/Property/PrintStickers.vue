@@ -40,6 +40,7 @@
                 </div>
                 <span>Article: {{ property.particulars }}</span>
                 <span>Serial Number: {{ property.serial_number }}</span>
+                <span>Property Number: {{ property.property_no }}</span>
                 <span>Date Acquired: {{ property.user.issuance_date }}</span>
                 <span>Acquisition Cost: {{ property.unit_cost }}</span>
                 <span>End User/MR to: {{ property.user.full_name }}</span>

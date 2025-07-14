@@ -132,7 +132,7 @@
         response.toast();
         console.log(response);
         if(response.apiResponseStatus === 200){
-            router.push({path:'/properties'});
+            fetchProperties()
         }
     }
 
